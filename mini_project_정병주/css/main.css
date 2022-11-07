@@ -1,0 +1,290 @@
+
+#section {
+    /*background-color: bisque;*/
+    width: 100%;
+}
+
+/*공통*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    letter-spacing: -0.3px;   
+    line-height: 1.15;
+}
+button {
+    cursor: pointer;
+}
+a {
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+ul{
+    list-style: none;
+}
+button {
+    /* 버튼의 배경 및 선 지우기 */
+    border: 0;
+    background-color: transparent;
+}
+
+/*event배너*/
+#event {
+    background-color: rgb(95, 0, 128);
+}
+.e_link {
+    background-color: rgb(95, 0, 128);
+    width: 1050px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    justify-content : center;
+}
+.e_link a p{
+    color: white;
+    height: 42px;
+    line-height: 42px;
+}
+.e_link button {
+    position: absolute;
+    right: 0;
+    height: 42px;
+    color: white;
+    line-height: 42px;
+    font-size: 2em;
+
+}
+
+/*header 큰 영역 설정*/
+.h_first {
+    height: 100px;
+    width: 1050px;
+    margin: 0 auto;
+}
+.h_second {
+    width: 100%;
+    height: 56px;
+}
+
+/* header-h_first*/
+/* h_f_1 */
+.h_f_1 {
+    overflow: hidden;
+}
+.h_f_1 > div{
+    float: right;
+}
+.h_f_1 > div a {
+    display: block;
+    float: left;
+}
+.h_f_1 > div a:first-of-type {
+    color: #5f0080;
+}
+.h_f_1 > div div {
+    float: left;
+}
+/* h_f_2 */
+.h_f_2 {
+    clear: both;
+    position: relative;
+    height: 63px;
+}
+.h_f_2 #main_logo {
+    align-items: center;
+    height: 63px;
+    display: flex;
+}
+.h_f_2 #search {
+    width: 400px;
+    height: 48px;
+    padding-left: 14px;
+    border: 1px solid rgb(95, 0 , 128);
+    border-radius: 7px;
+    position: absolute;
+    left: 325px;
+    top: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+.h_f_2 #search input {
+    width: 300px;
+    border: 0px;
+}
+.h_f_2 #search button {
+    margin: 5px;
+}
+.h_f_2 #buttons {
+    position: absolute;
+    width: 148px;
+    right: 0;
+    top: 14px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*header h_second*/
+.h_s_1 {
+    width: 1050px;
+    height: 56px;
+    margin: 0 auto;
+    display: flex;
+    justify-content : space-between;
+}
+.h_s_1 span:not(#s_link span){
+    cursor: pointer;
+}
+.h_s_1 #s_category {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+.h_s_1 #s_category span:first-of-type {
+    margin-right: 14px;
+}
+.h_s_1 #s_list {
+    display: flex;
+    margin-left: 30px;
+    /* margin-block-start: 1em;
+    margin-block-end: 1em; */
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+.h_s_1 #s_list li{
+    display: flex;
+    justify-content: center;
+    width: 150px;
+    height: 55px;
+    padding-top: 20px;
+    line-height: 20px;
+    text-align: center;
+}
+.h_s_1 #s_link {
+    display: flex;
+    align-items: center;
+}
+.h_s_1 #s_link > a {
+    border-radius: 18px;
+    border: 1px solid rgb(238, 238, 238);
+    color: rgb(102, 102, 102);
+    height: 32px;
+    line-height: 32px;
+}
+
+/*footer*/
+#footer {
+    padding-top: 30px;
+    border-top: 1px solid rgb(247, 247, 247);
+}
+.f_f {
+    width: 1050px;
+    margin: 0 auto;
+}
+/* f_f_1 */
+.f_f_1 {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+}
+.f_f_1 > div {
+    /* 각 div안에 아이템들의 정렬방식 위에서 아래로 */
+    display: flex;
+    flex-direction: column;
+}
+.f_f_1_1 > div:first-of-type > div {
+    display: flex;
+    flex-direction: row;
+}
+
+.f_f_1_1 > div:first-of-type > div  button {
+    display: block;
+    width: 140px;
+    height: 40px;
+    border: 1px solid rgb(226, 226, 226);
+    border-radius: 3px;
+    margin-right: 16px;
+    margin-bottom: 16px;
+}
+.f_f_1_1 > h2 {
+    padding-bottom: 17px;
+    font-size : 20px;
+    font-style : bold;
+    color: #333333;
+    line-height : 29px;            
+}
+.f_f_1_1 > p{
+    padding-bottom: 20px;
+    font-weight : 700;
+    font-style : normal;
+    font-size : 28px;
+    line-height : 40px;
+    color : #333333
+
+}
+.f_f_1_1 > p > span{
+    font-style : normal;
+    font-weight : 400px;
+    font-size : 16px;
+    line-height : 40px;
+    color : #333333
+}
+.f_f_1_1 > div{
+    font-style : normal;
+    font-weight : 500;
+    font-size : 14px;
+    line-height : 17px;
+    color : #999999
+}
+.f_f_1_1 > div > a{
+    font-style : normal;
+    font-weight : 500;
+    font-size : 14px;
+    line-height : 17px;
+    color : #999999
+}
+.f_f_1_2 > ul {
+    display: flex;
+    flex-direction: row;
+}
+.f_f_1_2 > ul:first-of-type {
+    width: 100%;
+    padding-bottom: 29px;
+}
+.f_f_1_2 > ul > li {
+    margin-left: 14px;
+}
+.f_f_1_2 > ul > li:first-of-type {
+    margin-left: 0px;
+}
+.f_f_1_2 > div {
+    margin-bottom: 40px;
+}
+.f_f_1_2 > div a {
+    color: #5f0080;
+}
+/* f_f_2 */
+.f_f_2 {
+    display: flex;
+    justify-content: space-between;
+    padding: 26px 0px 33px;
+    border-top: 1px solid rgb(238, 238, 238);
+}
+.f_f_2 button {
+    display: flex;
+    flex-direction: row;
+}
+.f_f_2 button img {
+    margin-right: 10px;
+}
+.f_f_2 button p {
+    
+    text-align: left;
+    font-size: 10px;
+    font-weight: bold;
+    color:rgb(150, 148, 148)
+    
+}
