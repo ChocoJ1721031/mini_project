@@ -31,7 +31,6 @@
 }
 
 /* <!-- header 큰 영역 설정 --> */
-
 .h_first {
     height: 100px;
     width: 1050px;
@@ -60,16 +59,22 @@
 }
 
 .h_f_1 > div div {
-    margin: 0px 12px;
+    font-size: 14px;
+    margin: 0px 9px;
     color: rgb(217, 217, 217);
 }
 
 .h_f_1>div a:first-of-type {
     color: #5f0080;
 }
+.h_f_1>div a:last-of-type {
+    line-height: 35px;
+}
 .h_f_1>div a:last-of-type img {
-    width: 7px;
-    height: 7px;
+    width: 8px;
+    height: 5px;
+    margin-left: 5px;
+    margin-bottom: 1px;
 }
 
 
@@ -128,12 +133,17 @@
 }
 
 /* <!-- header h_second --> */
+/* .h_second {
+    position: sticky;
+    top: 0;
+} */
 .h_s_1 {
     width: 1050px;
     height: 56px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    position: relative;
 }
 
 .h_s_1 span:not(#s_link span) {
@@ -189,7 +199,87 @@
     padding: 6px 16px;
 }
 .h_s_1 #s_link > a span {
-    color: rgb(95, 0, 128);;
+    color: rgb(95, 0, 128);
+}
+
+#s_category:hover > div {
+    display: block;
+} #s_category:hover > span {
+    color: rgb(95, 0, 128);
+} 
+#s_category > div {
+    min-height: 200px;
+    position: absolute;
+    display: flex;
+    top: 46px;
+    padding-top: 10px;
+    display: none;
+}
+#s_category > div > div {
+    position: relative;
+    z-index: 21;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+.s_c_list {
+    overflow-y: scroll;
+    width: 247px;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(221, 221, 221);
+    cursor: pointer;
+}
+.s_c_list > li {
+    padding: 7px 0px 9px 14px;
+}
+.s_c_list > li img {
+    width: 24px;
+    height: 24px;
+}
+.s_c_list > li > div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+.s_c_list > li > div:hover ~ ul {
+    display: block;
+}
+.s_c_list > li > div > span {
+    padding: 1px 20px 0px 10px;
+    color: rgb(51, 51, 51);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+}
+.s_c_list ul {
+    background-color: rgb(247, 247, 247);
+    border: 1px solid rgb(221, 221, 221);
+    width: 255px;
+    height: 100%;
+    position: absolute;
+    overflow-y: scroll;
+    top: 0px;
+    left: 247px;
+    z-index: 20;
+    display: none;
+}
+.s_c_list > li > ul div {
+    padding: 11px 20px 11px 18px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    font-weight: 400;
+    font-size: 14px;
+    color: rgb(51, 51, 51);
+    line-height: 22px;
+}
+.s_c_list > li > ul div span {
+    line-height: 18px;
+}
+.s_c_list > li > ul div:hover span {
+    color: rgb(95, 0, 108);
+    box-shadow: rgb(95 0 128) 0px -1px 0px 0px inset;
+    font-weight: 500px;
 }
 
 /* <!-- footer --> */
