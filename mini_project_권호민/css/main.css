@@ -22,11 +22,12 @@
 .e_link button {
     position: absolute;
     right: 0;
-    height: 42px;
-    color: white;
-    line-height: 42px;
-    font-size: 2em;
+    padding: 0;
 
+}
+.e_link button img {
+    width: 42px;
+    height: 42px;
 }
 
 /* <!-- header 큰 영역 설정 --> */
@@ -51,20 +52,26 @@
 
 .h_f_1>div {
     float: right;
+    height: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
 }
 
-.h_f_1>div a {
-    display: block;
-    float: left;
+.h_f_1 > div div {
+    margin: 0px 12px;
+    color: rgb(217, 217, 217);
 }
 
 .h_f_1>div a:first-of-type {
     color: #5f0080;
 }
-
-.h_f_1>div div {
-    float: left;
+.h_f_1>div a:last-of-type img {
+    width: 7px;
+    height: 7px;
 }
+
 
 /* h_f_2 */
 .h_f_2 {
@@ -79,9 +86,12 @@
     display: flex;
 }
 
-.h_f_2 #main_logo>button {
+.h_f_2 #main_logo > button {
     margin-left: 20px;
-    color: #5f0080;
+    padding: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(95, 0, 128);
 }
 
 .h_f_2 #search {
@@ -118,7 +128,6 @@
 }
 
 /* <!-- header h_second --> */
-
 .h_s_1 {
     width: 1050px;
     height: 56px;
@@ -135,6 +144,8 @@
     display: flex;
     height: 100%;
     align-items: center;
+    font-size: 16px;
+    font-weight: 500;
 }
 
 .h_s_1 #s_category span:first-of-type {
@@ -149,6 +160,8 @@
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     padding-inline-start: 40px;
+    font-size: 16px;
+    font-weight: 500;
 }
 
 .h_s_1 #s_list li {
@@ -164,6 +177,7 @@
 .h_s_1 #s_link {
     display: flex;
     align-items: center;
+    font-size: 13px;
 }
 
 .h_s_1 #s_link>a {
@@ -171,7 +185,11 @@
     border: 1px solid rgb(238, 238, 238);
     color: rgb(102, 102, 102);
     height: 32px;
-    line-height: 32px;
+    line-height: 16px;
+    padding: 6px 16px;
+}
+.h_s_1 #s_link > a span {
+    color: rgb(95, 0, 128);;
 }
 
 /* <!-- footer --> */
@@ -231,9 +249,10 @@
     color: #333333
 }
 
-.f_f_1_1>p>span {
+.f_f_1_1 > P > span {
+    margin-left: 8px;
     font-style: normal;
-    font-weight: 400px;
+    font-weight: 400;
     font-size: 16px;
     line-height: 40px;
     color: #333333
@@ -244,6 +263,7 @@
     font-weight: 500;
     font-size: 14px;
     line-height: 17px;
+    letter-spacing: -0.5px;
     color: #999999
 }
 
@@ -267,6 +287,7 @@
 
 .f_f_1_2>ul>li {
     margin-left: 14px;
+    font-size: 14px;
 }
 
 .f_f_1_2>ul>li:first-of-type {
@@ -275,6 +296,10 @@
 
 .f_f_1_2>div {
     margin-bottom: 40px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: rgb(153, 153, 153);
 }
 
 .f_f_1_2>div a {
@@ -299,10 +324,11 @@
 }
 
 .f_f_2 button p {
-
     text-align: left;
     font-size: 10px;
     font-weight: bold;
+    line-height: 14.5px;
+    letter-spacing: -0.4px;
     color: rgb(150, 148, 148)
 }
 

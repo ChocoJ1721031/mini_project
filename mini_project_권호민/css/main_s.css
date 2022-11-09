@@ -1,0 +1,15 @@
+/* #section {
+   position: relative;
+}
+.s_nav {
+    position: absolute;
+    width: 80px;
+    right: 20px;
+    top: 400px;
+    font-size: 12px;
+    line-height: 16px;
+    color: rgb(51, 51, 51);
+    letter-spacing: -0.3px;
+    transition: top 0.2s ease 0s;
+    z-index: 1;
+} */
