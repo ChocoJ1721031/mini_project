@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Document</title>
+    <style>
+        #section {
+            background-color: bisque;
+            width: 100%;
+            
+        }
+    </style>
+    <!-- 전체공통 -->
+    <style>
+        html {
+            font-family: var(--kurly_font);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div id="event">
+            <div class="e_link">
+                <a href="#"><p>지금 가입하고 인기상품 <strong>100원</strong>에 받아가세요!</p></a>
+                <button type="button">X</button>
+            </div>
+        </div>
+        <div id="header">
+            <div class="h_first">
+                <div class="h_f_1">
+                    <div>
+                        <a href="#">회원가입</a>
+                        <div>|</div>
+                        <a href="#">로그인</a>
+                        <div>|</div>
+                        <a href="#">고객센터</a>
+                    </div>
+                </div>
+                <div class="h_f_2">
+                    <div id="main_logo">
+                        <img src="./images/마켓컬리로고.svg" alt="main_logo">
+                        <button type="button">마켓컬리</button>
+                    </div>
+                    <div id="search">
+                        <input type="text" placeholder="검색어를 입력해주세요.">
+                        <button type="button"><img src="./images/search_logo.svg" alt=""></button>
+                    </div>
+                    <div id="buttons">
+                        <button type="button"><img src="./images/배송지로고.svg"></button>
+                        <button type="button"><img src="./images/찜하기로고.svg"></button>
+                        <button type="button"><img src="./images/장바구니로고.svg"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="h_second">
+                <div class="h_s_1">
+                    <div id="s_category">
+                        <span><img src="./images/category_logo.svg"></span>
+                        <span>카테고리</span>
+                    </div>
+                    <ul id="s_list">
+                        <li><span>신상품</span></li>
+                        <li><span>베스트</span></li>
+                        <li><span>알뜰쇼핑</span></li>
+                        <li><span>특가/혜택</span></li>
+                    </ul>
+                    <div id="s_link">
+                        <a href="#"><span>샛별 &#8226; 낮</span> 배송안내</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="section">
+            <div id="lnbMenu" class="lnb_menu">
+                <div class="inner_lnb">
+                    <div class="ico_cate">
+                        <span class="tit">레시피</span>
+                    </div>
+                    
+                </div>
+            </div>
+            </div>
+            <div class="layout-wrapper">
+                <div id="recipe" class="wrap">
+                    <table width="100%" align="center">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <form name="frmList" action="#"
+                                        onsubmit="return chkFormList(this)">
+                                    <input type="hidden" name="id" value="recipe">
+                                    <table width="100%" id="recipe_table">
+                                        <tbody>
+                                            <tr class="recipe_tr">
+                                                <td align="left" valign="top">
+                                                    <div>
+                                                        <ul>
+                                                            <li class="recipe_item" onclick="viewContentRecipe('479','1','치킨 야채 수프')">
+                                                            <a href="#">
+                                                                <img src="./images/s1.png" width="480" height="480">
+                                                                <p class="tit_recipe">치킨 야채 수프</p>
+                                                            </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                                <td align="left" valign="top">
+                                                    <div>
+                                                        <ul>
+                                                            <li class="recipe_item" onclick="#">
+                                                           <a href="#">
+                                                            <img src="./images/s2.png" width="480" height="480">
+                                                            <p class="tit_recipe">로스티드 닭 다리&날개</p>
+                                                           </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="recipe_tr">
+                                                <td align="left" valign="top">
+                                                    <div>
+                                                        <ul>
+                                                            <li class="recipe_item" onclick="#">
+                                                            <a href="#">
+                                                                <img src="./images/s3.png" width="480" height="480">
+                                                                <p class="tit_recipe">닭 껍질 튀김</p>
+                                                            </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                                <td align="left" valign="top">
+                                                    <div>
+                                                        <ul>
+                                                            <li class="recipe_item" onclick="#">
+                                                            <a href="#">
+                                                                <img src="./images/s4.png" width="480" height="480">
+                                                                <p class="tit_recipe">토마토 빙수</p>
+                                                       </a>
+                                                    </li>
+                                                </ul>
+                                               </div>
+                                              </td>              
+                                            </tr>
+                                            <tr class="recipe_tr">
+                                                <td align="left" valign="top">
+                                                    <div>
+                                                        <ul>
+                                                            <li class="recipe_item" onclick="#">
+                                                            <a href="#">
+                                                                <img src="./images/s5.png" width="480" height="480">
+                                                                <p class="tit_recipe">토마토 스테이크</p>
+                                                            </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                                <td align="left" valign="top">
+                                                    <div>
+                                                        <ul>
+                                                            <li class="recipe_item" onclick="#">
+                                                            <a href="#">
+                                                                <img src="./images/s6.png" width="480" height="480">
+                                                                <p class="tit_recipe">카바텔리 알라 노르마</p>
+                                                            </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="recipe_tr">
+                                                <td align="left" valign="top">
+                                                    <div>
+                                                        <ul>
+                                                            <li class="recipe_item" onclick="#">
+                                                            <a href="#">
+                                                                <img src="./images/s7.png" width="480" height="480">
+                                                                <p class="tit_recipe">카바텔리</p>
+                                                            </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                                <td align="left" valign="top">
+                                                    <div>
+                                                        <ul>
+                                                            <li class="recipe_item" onclick="#">
+                                                            <a href="#">
+                                                                <img src="./images/s8.png" width="480" height="480">
+                                                                <p class="tit_recipe">돼지 안심 스테이크</p>
+                                                            </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="recipe_tr">
+                                                <td align="left" valign="top">
+                                                    <div>
+                                                        <ul>
+                                                            <li class="recipe_item" onclick="#">
+                                                            <a href="#">
+                                                                <img src="./images/s9.png" width="480" height="480">
+                                                                <p class="tit_recipe">버크셔K 묵은지말이찜</p>
+                                                            </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </td> 
+                                                <td align="left" valign="top">
+                                                    <div>
+                                                        <ul>
+                                                            <li class="recipe_item" onclick="#">
+                                                            <a href="#">
+                                                                <img src="./images/s10.png" width="480" height="480">
+                                                                <p class="tit_recipe">세 가지 허브전과 애플민트 양념간장</p>
+                                                            </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </td> 
+                                                </tr>
+                                                <tr class="recipe_tr">
+                                                    <td align="left" valign="top">
+                                                        <div>
+                                                            <ul>
+                                                                <li class="recipe_item" onclick="#">
+                                                                <a href="#">
+                                                                    <img src="./images/s11.png" width="480" height="480">
+                                                                    <p class="tit_recipe">골뱅이 딜 무침</p>
+                                                                </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </td> 
+                                                    <td align="left" valign="top">
+                                                        <div>
+                                                            <ul>
+                                                                <li class="recipe_item" onclick="#">
+                                                                <a href="#">
+                                                                    <img src="./images/s12.png" width="480" height="480">
+                                                                    <p class="tit_recipe">밀도 허니 러스크</p>
+                                                                </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </td> 
+                                                    </tr>
+                                                    <tr class="recpie_tr"> </tr>
+                                                    </tbody>
+                                                    </table>
+                                                <div class="layout-pagination">
+                                                    <div class="pagediv">
+                                                        <a href="#" class="#">맨 처음 페이지로 가기</a>
+                                                        <a href="#" class="#">이전 페이지로 가기</a>
+                                                        <strong class="#">1</strong>
+                                                        <a href="#" class="#">2</a>
+                                                        <a href="#" class="#">3</a>
+                                                        <a href="#" class="#">4</a>
+                                                        <a href="#" class="#">5</a>
+                                                        <a href="#" class="#">6</a>
+                                                        <a href="#" class="#">7</a>
+                                                        <a href="#" class="#">8</a>
+                                                        <a href="#" class="#">9</a>
+                                                        <a href="#" class="#">10</a>
+                                                        <a href="#" class="#">다음 페이지로 가기</a>
+                                                        <a href="#" class="#">맨 끝 페이지로 가기</a>
+
+                                                    </div>
+                                                </div>
+                                                <table width="100%">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td align="right">
+                                                                <table calss="xans-board-search xans-board-search2">
+                                                                    <tobdy>
+                                                                        <tr>
+                                                                            <td class="input_txt">
+                                                                                <img src="./images/s13.png">"검색어"
+                                                                            </td>
+                                                                            <td class="stxt" style="text-align:left">
+                                                                            <input type="checkbox" name="search[name]">
+                                                                            "이름"
+                                                                            <input type="checkbox" name="search[subject]">
+                                                                            "제목"
+                                                                            <input type="checkbox" name="search[contents]">
+                                                                            "내용"
+                                                                            <input type="checkbox" name="search[tag]">
+                                                                            "태그 &nbsp;"
+                                                                            </td>
+                                                                            <td class="input_txt">&nbsp;</td>
+                                                                            <td>
+                                                                                <div class="search_bt" onclick="#">
+                                                                                <img src="./images/s14.png" allign="absmiddle">
+                                                                                <input type="text" name="search[word]" value required>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tobdy>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            
+                                        </tbody>
+                                    </table>
+                                    </form>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+
+        </div>
+        <div id="footer">
+            <div class="f_f">
+                <div class="f_f_1">
+                    <div class="f_f_1_1">
+                        <h2>고객행복센터</h2>
+                        <p>1644-1107<span>월~토요일 오전 7시 - 오후 6시</span></p>
+                        <div>
+                            <div>
+                                <button>카카오톡 문의</button>
+                                <div>월~토요일 | 오전7시-오후6시<br>일/공휴일 | 오전7시-오후1시</div>
+                            </div>
+                            <div>
+                                <button>1:1 문의</button>
+                                <div>365일<br>고객센터 운영시간에 순차적으로 답변드리겠습니다.</div>
+                            </div>
+                            <div>
+                                <button>대량주문 문의</button>
+                                <div>월~금요일 | 오전9시-오후6시<br>점심시간 | 낮12시-오후1시</div>
+                            </div>
+                        </div>
+                        <div>비회원 문의 : <a href="#">help@kurlycorp.com</a>
+                            <br>비회원 대량주문 문의 : <a href="#">kurlygift@kurlycorp.com</a>
+                        </div>
+                    </div>
+                    <div class="f_f_1_2">
+                        <ul>
+                            <li><a href="#">컬리소개</a></li>
+                            <li><a href="#">컬리소개영상</a></li>
+                            <li><a href="#">인재채용</a></li>
+                            <li><a href="#">이용약관</a></li>
+                            <li><a href="#"><strong>개인정보처리방침</strong></a></li>
+                            <li><a href="#">이용안내</a></li>
+                        </ul>
+                        <div>
+                            법인명 (상호) : 주식회사 컬리 | 사업자등록번호 : 261-81-23567 <a href="#">사용자정보 확인</a>
+                            <br>통신판매업 : 제 2018-서울강남-01646 호 | 개인정보보호책임자 : 이원준
+                            <br>주소 : 서울특별시 강남구 테헤란로 133, 18층(역삼동) | 대표이사 : 김슬아
+                            <br>입점문의 : <a href="#">입점문의하기</a> | 제휴문의 : <a href="#">business@kurlycorp.com</a>
+                            <br>채용문의 : <a href="#">recruit@kurlycorp.com</a>
+                            <br>팩스 : 070 - 7500 - 6098
+                        </div>
+                        <ul>
+                            <li><a href="#"><img src="./images/instagram_logo.png" width="30" height="30"></a></li>
+                            <li><a href="#"><img src="./images/facebook_logo.png" width="30" height="30"></a></li>
+                            <li><a href="#"><img src="./images/naverblog_logo.png" width="30" height="30"></a></li>
+                            <li><a href="#"><img src="./images/naverpost_logo.png" width="30" height="30"></a></li>
+                            <li><a href="#"><img src="./images/youtube_logo.png" width="30" height="30"></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="f_f_2">
+                    <button>
+                        <img src="https://res.kurly.com/pc/ico/2208/logo_isms.svg">
+                        <p>[인증범위] 마켓컬리 쇼핑몰 서비스 개발 &#8226; 운영<br>(심사받지 않은 물리적 인프라 제외)<br>[유효기간] 2022.01.19 ~ 2025.01.18</p>
+                    </button>
+                    <button>
+                        <img src="https://res.kurly.com/pc/ico/2208/logo_privacy.svg">
+                        <p>개인정보보호 우수 웹사이트 &#8226;<br>개인정보처리시스템 인증 (ePRIVACY PLUS)</p>
+                    </button>
+                    <button>
+                        <img src="https://res.kurly.com/pc/ico/2208/logo_tosspayments.svg">
+                        <p>토스페이먼츠 구매안전(에스크로)<br>서비스를 이용하실 수 있습니다.</p>
+                    </button>
+                    <button>
+                        <img src="https://res.kurly.com/pc/ico/2208/logo_wooriBank.svg">
+                        <p>고객님이 현금으로 결제한 금액에 대해 우리은행과<br>채무지급보증 계약을 체결하여 안전거래를 보장하고<br>있습니다.</p>
+                    </button>
+                </div>
+            </div>
+            <div class="f_s">
+                <p>마켓컬리에서 판매되는 상품 중에는 마켓컬리에 입점한 개별 판매자가 판매하는 마켓플레이스(오픈마켓) 상품이 포함되어 있습니다.
+                    <br>마켓플레이스(오픈마켓) 상품의 경우 컬리는 통신판매중개자로서 통신판매의 당사자가 아닙니다. 컬리는 해당 상품의 주문, 품질, 교환/환불 등 의무와 책임을 부담하지 않습니다.
+                </p>
+                <p>&#169; KURLY CORP. ALL RIGHTS RESERVED</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
