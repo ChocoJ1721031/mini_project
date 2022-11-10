@@ -19,8 +19,9 @@
     </style>
     <!-- 전체공통 -->
     <style>
-        html {
-            font-family: var(--kurly_font);
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+        html, button, input, select, textarea, span, a, p {
+            font-family: "Noto Sans KR", "malgun gothic", /*AppleGothic*/dotum, sans-serif;
         }
     </style>
 </head>
@@ -52,7 +53,7 @@
                     </div>
                     <div id="search">
                         <input type="text" placeholder="검색어를 입력해주세요.">
-                        <button type="button"><img src="./images/search_logo.svg" alt=""></button>
+                        <button type="button"><img src="./images/search_logo.svg"></button>
                     </div>
                     <div id="buttons">
                         <button type="button"><img src="./images/배송지로고.svg"></button>
@@ -75,44 +76,89 @@
                                             <span>선물하기</span>
                                         </div>
                                         <ul>
-                                            <li><div><span>홍삼&#8226;즙</span></div></li>
+                                            <li><div><span>홍삼·즙</span></div></li>
                                             <li><div><span>건강식품</span></div></li>
-                                            <li><div><span>과일&#8226;수산&#8226;정육</span></div></li>
-                                            <li><div><span>베이커리&#8226;커피&#8226;차</span></div></li>
-                                            <li><div><span>간편식&#8226;오일&#8226;캔류</span></div></li>
-                                            <li><div><span>뷰티&#8226;향수&#8226;꽃</span></div></li>
-                                            <li><div><span>리빙&#8226;생활&#8226;유아동</span></div></li>
+                                            <li><div><span>과일·수산·정육</span></div></li>
+                                            <li><div><span>베이커리·커피·차</span></div></li>
+                                            <li><div><span>간편식·오일·캔류</span></div></li>
+                                            <li><div><span>뷰티·향수·꽃</span></div></li>
+                                            <li><div><span>리빙·생활·유아동</span></div></li>
                                         </ul>
                                     </li>
                                     <li>
                                         <div>
                                             <img src="https://collection-image.kurly.com/site-category-groups/6/kwat5Szmq0ONTpMd4hlbcGmCOBd3FsMPyTzWxKBb.png" alt="">
-                                            <span>샐러드&#8226;간편식</span>
+                                            <span>샐러드·간편식</span>
                                         </div>
+                                        <ul>
+                                            <li><div><span>샐러드·닭가슴살</span></div></li>
+                                            <li><div><span>도시락·밥류</span></div></li>
+                                            <li><div><span>파스타·면류</span></div></li>
+                                            <li><div><span>떡볶이·튀김·순대</span></div></li>
+                                            <li><div><span>피자·핫도그·만두</span></div></li>
+                                            <li><div><span>폭립·떡갈비·안주</span></div></li>
+                                            <li><div><span>죽·스프·카레</span></div></li>
+                                            <li><div><span>선식·시리얼</span></div></li>
+                                        </ul>
                                     </li>
                                     <li>
                                         <div>
                                             <img src="https://collection-image.kurly.com/site-category-groups/5/CkyoRnUe2q9ngIOLW3bJPRYBw9xq9BHZ3fNQIq1c.png" alt="">
-                                            <span>국&#8226;반찬&#8226;메인요리</span>
+                                            <span>국·반찬·메인요리</span>
                                         </div>
+                                        <ul>
+                                            <li><div><span>국·탕·찌개</span></div></li>
+                                            <li><div><span>밀키트·메인요리</span></div></li>
+                                            <li><div><span>밑반찬</span></div></li>
+                                            <li><div><span>김치·젓갈·장류</span></div></li>
+                                            <li><div><span>두부·어묵·부침개</span></div></li>
+                                            <li><div><span>베이컨·햄·통조림</span></div></li>
+                                        </ul>
                                     </li>
                                     <li>
                                         <div>
                                             <img src="https://collection-image.kurly.com/site-category-groups/7/CL0LpJynh8Nh2Vqmnm62RVTPePWVU84VkWwQPjdO.png" alt="">
-                                            <span>면&#8226;양념오일</span>
+                                            <span>면·양념·오일</span>
                                         </div>
+                                        <ul>
+                                            <li><div><span>파스타·면류</span></div></li>
+                                            <li><div><span>식초·소스·드레싱</span></div></li>
+                                            <li><div><span>양념·액젓·장류</span></div></li>
+                                            <li><div><span>식용유·참기름·오일</span></div></li>
+                                            <li><div><span>소금·설탕·향신료</span></div></li>
+                                            <li><div><span>밀가루·가루·믹스</span></div></li>
+                                        </ul>
                                     </li>
                                     <li>
                                         <div>
                                             <img src="https://collection-image.kurly.com/site-category-groups/4/jj6zZg2sY94aytlc2k1udIAmWWvmUignR9VYaMcm.png" alt="">
-                                            <span>정육&#8226;계란</span>
+                                            <span>정육·계란</span>
                                         </div>
+                                        <ul>
+                                            <li><div><span>국내산 소고기</span></div></li>
+                                            <li><div><span>수입산 소고기</span></div></li>
+                                            <li><div><span>돼지고기</span></div></li>
+                                            <li><div><span>계란류</span></div></li>
+                                            <li><div><span>닭·오리고기</span></div></li>
+                                            <li><div><span>양념육·돈까스</span></div></li>
+                                            <li><div><span>양고기</span></div></li>
+                                        </ul>
                                     </li>
                                     <li>
                                         <div>
                                             <img src="https://collection-image.kurly.com/site-category-groups/1/4IYbd0CEWkokpqiN00CAL9cDC2Q7nT101TDEn0tF.png" alt="">
                                             <span>채소</span>
                                         </div>
+                                        <ul>
+                                            <li><div><span>친환경</span></div></li>
+                                            <li><div><span>고구마·감자·당근</span></div></li>
+                                            <li><div><span>시금치·쌈채소·나물</span></div></li>
+                                            <li><div><span>브로콜리·파프리카·양배추</span></div></li>
+                                            <li><div><span>양파·대파·마늘·배추</span></div></li>
+                                            <li><div><span>오이·호박·고추</span></div></li>
+                                            <li><div><span>냉동·이색·간편채소</span></div></li>
+                                            <li><div><span>콩나물·버섯</span></div></li>
+                                        </ul>
                                     </li>
                                 </ul>
                             </div>
@@ -125,7 +171,7 @@
                         <li><span>특가/혜택</span></li>
                     </ul>
                     <div id="s_link">
-                        <a href="#"><span>샛별 &#8226; 낮</span> 배송안내</a>
+                        <a href="#"><span>샛별 · 낮</span> 배송안내</a>
                     </div>
                 </div>
             </div>
@@ -163,7 +209,7 @@
                             <li><a href="#">컬리소개영상</a></li>
                             <li><a href="#">인재채용</a></li>
                             <li><a href="#">이용약관</a></li>
-                            <li><a href="#"><strong>개인정보처리방침</strong></a></li>
+                            <li><a href="#">개인정보처리방침</a></li>
                             <li><a href="#">이용안내</a></li>
                         </ul>
                         <div>
@@ -186,11 +232,11 @@
                 <div class="f_f_2">
                     <button>
                         <img src="https://res.kurly.com/pc/ico/2208/logo_isms.svg">
-                        <p>[인증범위] 마켓컬리 쇼핑몰 서비스 개발 &#8226; 운영<br>(심사받지 않은 물리적 인프라 제외)<br>[유효기간] 2022.01.19 ~ 2025.01.18</p>
+                        <p>[인증범위] 마켓컬리 쇼핑몰 서비스 개발 · 운영<br>(심사받지 않은 물리적 인프라 제외)<br>[유효기간] 2022.01.19 ~ 2025.01.18</p>
                     </button>
                     <button>
                         <img src="https://res.kurly.com/pc/ico/2208/logo_privacy.svg">
-                        <p>개인정보보호 우수 웹사이트 &#8226;<br>개인정보처리시스템 인증 (ePRIVACY PLUS)</p>
+                        <p>개인정보보호 우수 웹사이트 ·<br>개인정보처리시스템 인증 (ePRIVACY PLUS)</p>
                     </button>
                     <button>
                         <img src="https://res.kurly.com/pc/ico/2208/logo_tosspayments.svg">
