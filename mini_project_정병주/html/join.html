@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/font.css">
-    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/join.css">
     <script src="../js/top_navbar_scroll_action.js"></script>
     <title>Document</title>
     <!-- 전체공통 -->
@@ -127,30 +127,87 @@
         
         <div id="section">
             <div id="section_child_1">
-                <div class="login_area" id="login_txt">로그인</div>
-                <div class="login_area" id="login_user_area">
-                    <form action="main.html" method="post">
-                        <div class="input_area">
-                            <input type="text" id="input_ID" name="ID" placeholder="아이디를 입력해주세요">
-                            <input type="password" id="input_PW" name="PW" placeholder="비밀번호를 입력해주세요">
+                <span>회원가입</span>
+            </div>
+            <div id="section_child_2">
+                <div id="form_area">
+                    <div>
+                        <span>* </span>필수입력사항
+                    </div>
+                    <form action="./login.html" method="post">
+                        <div id="login_tbl_frame">
+                            <table id="login_tbl">
+                                <tr>
+                                    <td><label>아이디<span>*</span></label></td>
+                                    <td><input type="text" id="input_id" name="id" placeholder="아이디를 입력해주세요"></td>
+                                    <td><button type="button">중복확인</button></td>
+                                </tr>
+                                <tr>
+                                    <td><label>비밀번호<span>*</span></label></td>
+                                    <td><input type="text" id="input_pw" name="pw" placeholder="비밀번호를 입력해주세요"></td>
+                                </tr>
+                                <tr>
+                                    <td><label>비밀번호확인<span>*</span></label></td>
+                                    <td><input type="text" id="input_pw_check" name="pw_check" placeholder="비밀번호를 한번 더 입력해주세요"></td>
+                                </tr>
+                                <tr>
+                                    <td><label>이름<span>*</span></label></td>
+                                    <td><input type="text" id="input_user_name" name="user_name" placeholder="이름을 입력해주세요"></td>
+                                </tr>
+                                <tr>
+                                    <td><label>이메일<span>*</span></label></td>
+                                    <td><input type="text" id="input_mail" name="mail" placeholder="예: marketkurly@kurly.com"></td>
+                                    <td><button type="button">이메일 확인</button></td>
+                                </tr>
+                                <tr>
+                                    <td><label>휴대폰<span>*</span></label></td>
+                                    <td><input type="text" id="input_phone" name="phone" placeholder="숫자만 입력해주세요"></td>
+                                    <td><button type="button">인증번호 받기</button></td>
+                                </tr>
+                                <tr>
+                                    <td><label>주소<span>*</span></label></td>
+                                    <td><button type="button">(돋보기) 주소 검색</button></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span>배송지에 따라 상품 정보가 달라질 수 있습니다.</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label><input type="radio" name="gender">남자</label>
+                                        <label><input type="radio" name="gender">여자</label>
+                                        <label><input type="radio" name="gender">선택 안함</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>생년월일</td>
+                                    <td>
+                                        <div>
+                                            <input type="text" id="input_birth_year" name="birth_year" placeholder="YYYY">
+                                            <input type="text" id="input_birth_month" name="birth_month" placeholder="MM">
+                                            <input type="text" id="input_birth_day" name="birth_day" placeholder="DD">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>추가 입력사항</td>
+                                    <td>
+                                        <input type="radio" name="friend_">
+                                        <input type="radio" name="event_join">
+                                    </td>
+                                </tr>
+                            </table>
                         </div>
-                        <div id="search_user_account">
-                            <a href="#">아이디 찾기</a>
-                            <span></span>
-                            <a href="#">비밀번호 찾기</a>
-                        </div>
-                        <div id="submit_area">
-                            <button type="submit" id="login_btn">
-                                <span>로그인</span>
+                        <div>약관동의</div>
+                        <div>
+                            <button type="submit">
+                                <span>가입하기</span>
                             </button>
-                            <button type="button" id="join_btn">
-                                <span>회원가입</span>
-                            </button>
                         </div>
-                        
                     </form>
                 </div>
-            </div>
+            </div>    
         </div>
 
         <div id="footer">

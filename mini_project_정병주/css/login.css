@@ -1,3 +1,8 @@
+#section {
+    width: 100%;
+    min-width: 1050px;
+    margin-top: 50px;
+}
 #section_child_1 {
     margin: 90px 0 60px 0;
     display: flex;
@@ -16,10 +21,10 @@
 #login_user_area {width: 340px;}
 .input_area {display: flex; flex-direction: column;}
 #input_ID, #input_PW {
-    width: 100%;
-    height: 54px;
+    width: 92%;
+    height: 50px;
     padding: 0px 11px 1px 15px;
-    margin-bottom: 17px;
+    margin-bottom: 13px;
     border: 1px solid rgb(221, 221, 221);
     border-radius: 4px;
 
@@ -33,12 +38,14 @@
 #search_user_account {
     display: flex;
     justify-content: flex-end;
+    font-size: 13px;
+    letter-spacing: -0.6px;
 }
 #search_user_account > a {
     color: rgb(51, 51, 51);
 }
 #search_user_account > span {
-    margin: 3px 6px 0;
+    margin: 5px 6px 0;
     width: 1px;
     height: 10px;
     background-color: black;
@@ -63,3 +70,4 @@
     color: rgb(95, 0, 128);
 }
 #submit_area > button > span {font-size: 16px; font-weight: 500;}
+

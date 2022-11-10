@@ -1,0 +1,60 @@
+#section {
+    width: 100%;
+    min-width: 1050px;
+    margin-top: 50px;
+}
+#section > div:first-child {
+    text-align: center;
+}
+#section > div:nth-child(2) {
+    display: flex;
+    justify-content: center;
+}
+#section_child_1 {
+    margin-bottom: 50px;
+}
+#section_child_1 > span {
+    font-size: 28px;
+    line-height: 35px;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: -1px;
+    color: rgb(51, 51, 51);
+}
+#section_child_2 > div {
+    width: 640px;
+}
+#form_area > div:first-child {
+    text-align: right;
+    padding-bottom: 10px;
+    border-bottom: 2px solid black;
+}
+#login_tbl {
+    border-collapse: separate;
+    border-spacing: 0 20px;
+}
+#login_tbl tr > td:first-child {
+    width: 139px;
+    padding: 12px 0 0 0;
+    text-align: left;
+    vertical-align: top;
+}
+#login_tbl tr > td:first-child > label > span {
+    color: red;
+}
+#login_tbl_frame input[type="text"]:not(input[id*="birth"]) {
+    height : 46px;
+    width: 305px;
+    padding: 0 11px 1px 15px;
+    border-radius: 4px;
+    border: 1px solid rgb(51, 51, 51);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+
+
+
+
+

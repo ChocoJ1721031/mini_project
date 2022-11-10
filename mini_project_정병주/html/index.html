@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="kurlycorp">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,14 +7,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans:wght@100&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/font.css">
-    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/main_s.css">
     <script src="../js/top_navbar_scroll_action.js"></script>
     <title>Document</title>
     <!-- 전체공통 -->
     <style>
-        #h_second {
-            position: relative; top:0;
+        html {
+            font-family: var(--kurly_font);
         }
     </style>
 </head>
@@ -124,35 +123,9 @@
                 </div>
             </div>
         </div>
-        
         <div id="section">
-            <div id="section_child_1">
-                <div class="login_area" id="login_txt">로그인</div>
-                <div class="login_area" id="login_user_area">
-                    <form action="main.html" method="post">
-                        <div class="input_area">
-                            <input type="text" id="input_ID" name="ID" placeholder="아이디를 입력해주세요">
-                            <input type="password" id="input_PW" name="PW" placeholder="비밀번호를 입력해주세요">
-                        </div>
-                        <div id="search_user_account">
-                            <a href="#">아이디 찾기</a>
-                            <span></span>
-                            <a href="#">비밀번호 찾기</a>
-                        </div>
-                        <div id="submit_area">
-                            <button type="submit" id="login_btn">
-                                <span>로그인</span>
-                            </button>
-                            <button type="button" id="join_btn">
-                                <span>회원가입</span>
-                            </button>
-                        </div>
-                        
-                    </form>
-                </div>
-            </div>
+            
         </div>
-
         <div id="footer">
             <div class="f_f">
                 <div class="f_f_1">
