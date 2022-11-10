@@ -2,7 +2,10 @@
     position: relative;
     font-size: 14px;
     color: #333;
-
+}
+/* 메인 각 섹션의 wrap */
+.main_section > div{
+    height: 100%;
 }
 /* 메인 섹션 1st */
 .m_s_1{
@@ -264,4 +267,118 @@
     font-weight: normal;
     line-height: 1.3;
     overflow: hidden;
+}
+
+/* 메인 section_3 - instagram */
+.m_s_3 {
+    width: 1050px;
+    margin: 0px auto;
+    padding: 40px 0px;
+}
+/* 메인 section_3 title */
+.m_s_3_title {
+    margin-bottom: 27px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.m_s_3_title > div {
+    padding: 8px 0px 8px 8px;
+}
+.m_s_3_title > div > span {
+    color: rgb(51, 51, 51);
+    font-size: 28px;
+    line-height: 1.15;
+    letter-spacing: -0.26px;
+    font-weight: 500;
+}
+.m_s_3_title > p {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.45;
+    letter-spacing: -0.2px;
+    text-align: center;
+    color: rgb(153, 153, 153);
+    margin-top: 2px;
+}
+/* 메인 section_3 - list */
+.m_s_3_list {
+    position: relative;
+    width: 1050px;
+    margin: 0px auto;
+}
+.m_s_3_list_wrap {
+    position: relative;
+    width: 1050px;
+    margin: 0px auto;
+}
+.m_s_3_list_swiper {
+    position: relative;
+    overflow: hidden;
+    width: 1050px;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 1;
+}
+.m_s_3_list_swiper_wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    box-sizing: content-box;
+}
+.m_s_3_list_swiper_wrap > div {
+    width: 160px;
+    margin-right: 18px;
+    flex-shrink: 0;
+    height: 100%;
+    position: relative;
+}
+.m_s_3_list_swiper_wrap > div > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 175px;
+    height: 175px;
+    outline: none;
+}
+.m_s_3_list_swiper_wrap a > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.m_s_3_list_wrap > button {
+    overflow: visible;
+    position: absolute;
+    z-index: 100;
+    border: 0px;
+    outline: 0px;
+    width: 60px;
+    height: 60px;
+    background: url(../images/instagram_button.svg) 50% 50% no-repeat;
+    /* transition: background 0.5s ease 0s; */
+    top: calc(50% - 0px);
+    right: 0px;
+    transform: translate(50%, -50%) rotate(180deg);
+}
+/* 메인 section_3 - tlink */
+.m_s_3_tlink {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    line-height: 1.9;
+    font-size: 16px;
+    letter-spacing: -0.05em;
+}
+.m_s_3_tlink > p {
+    color: rgb(153, 153, 153);
+    font-weight: 400;
+}
+.m_s_3_tlink > a {
+    color: rgb(51, 51, 51);
+    font-weight: 500;
 }
