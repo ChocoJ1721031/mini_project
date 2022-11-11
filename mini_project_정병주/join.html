@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="./css/font.css">
     <link rel="stylesheet" href="./css/join.css">
     <link rel="stylesheet" href="./css/radio_check_action.css">
+    <link rel="stylesheet" href="./css/checkbox_check_action.css">
+
     <script src="./js/top_navbar_scroll_action.js"></script>
     <title>Document</title>
     <!-- 전체공통 -->
@@ -17,6 +19,8 @@
         #h_second {
             position: relative; top:0;
         }
+
+        
     </style>
 </head>
 <body>
@@ -170,7 +174,7 @@
                                     <td><button type="button" class="info_check_button" id="search_loc">(돋보기) 주소 검색</button><span id="search_loc_warn">배송지에 따라 상품 정보가 달라질 수 있습니다.</span></td>
                                 </tr>
                                 <tr>
-                                    <td>성별</td>
+                                    <td><label>성별</label></td>
                                     <td>
                                         <div id="gender_radio_parent">
                                             <label class="gender_radio"><input type="radio" name="gender"><span>남자</span></label>
@@ -180,7 +184,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>생년월일</td>
+                                    <td><label>생년월일</label></td>
                                     <td>
                                         <div id="input_birthday_area">
                                             <input type="text" id="input_birth_year" name="birth_year" placeholder="YYYY"><span>/</span>
@@ -190,15 +194,56 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>추가 입력사항</td>
+                                    <td><label>추가입력 사항</label></td>
                                     <td>
-                                        <input type="radio" name="friend_">
-                                        <input type="radio" name="event_join">
+                                        <div id="extra_event_parent">
+                                            <label class="extra_event"><input type="radio" id="friend_id" name="event_join"><span>친구초대 추천인 아이디</span></label>
+                                            <label class="extra_event"><input type="radio" id="join_event" name="event_join"><span>참여 이벤트명</span></label>
+                                        </div>
                                     </td>
                                 </tr>
                             </table>
                         </div>
-                        <div>약관동의</div>
+                        <div id="info_agreement">
+                            <div><span>이용약관동의</span><span>*</span></div>
+                            <div>
+                                <div>
+                                    <div>
+                                        <label><input type="checkbox" name=""><span>전체 동의합니다.</span></label>
+                                    </div>
+                                    <p id="agreement_warn">선택항목에 동의하지 않은 경우도 회원가입 및 일반적인 서비스를 이용할 수 있습니다.</p>
+                                </div>
+                                <div>
+                                    <div>
+                                        <label><input type="checkbox" name=""><span>이용약관 동의</span></label><span class="user_select">(필수)</span>
+                                    </div>
+                                    <a href="" class="agreement_detail">약관보기</a>
+                                </div>
+                                <div>
+                                    <div>
+                                        <label><input type="checkbox" name=""><span>개인정보 수집&#8729;이용 동의</span></label><span class="user_select">(필수)</span>
+                                    </div>
+                                    <a href="" class="agreement_detail">약관보기</a>
+                                </div>
+                                <div>
+                                    <div>
+                                        <label><input type="checkbox" name=""><span>개인정보 수집&#8729;이용 동의</span></label><span class="user_select">(선택)</span>
+                                    </div>
+                                    <a href="" class="agreement_detail">약관보기</a>
+                                </div>
+                                <div>
+                                    <div>
+                                        <label><input type="checkbox" name=""><span>무료배송, 할인쿠폰 등 혜택/정보 수신 동의</span></label><span class="user_select">(선택)</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div>
+                                        <label><input type="checkbox" name=""><span>본인은 14세 이상입니다.</span></label><span class="user_select">(필수)</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
                         <div>
                             <button type="submit">
                                 <span>가입하기</span>
