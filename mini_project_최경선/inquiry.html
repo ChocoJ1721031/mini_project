@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inquiry</title>
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/inquiry.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+        html, button, input, select, textarea, p, span {
+            font-family: "Noto Sans KR";
+        }
+    </style>
+</head>
+<body>
+    <div id="inquiry" class="inquiry_wrap">
+        
+        <div class="inquiry_content">
+            
+            <!-- 문의하기 버튼 -->
+            <div class="btn_inquiry_wrap">
+                <button type="button" width="120" height="40">
+                    <span>문의하기</span>
+                </button>
+            </div>
+
+            <!-- 제목 부분 -->
+            <div class="inquiry_title_wrap">
+                <strong>상품 문의</strong>
+                <ul>
+                    <li>
+                        상품에 대한 문의를 남기는 공간입니다. 해당 게시판의 성격과 다른 글은 사전동의 없이 담당 게시판으로 이동될 수 있습니다.
+                    </li>
+                    <li>
+                        배송관련, 주문(취소/교환/환불)관련 문의 및 요청사항은 마이컬리 내
+                        <a href="#"> 1:1 문의</a>에 남겨주세요.
+                    </li>
+                </ul>
+            </div>
+
+
+            <!-- 게시글 부분 -->
+            <div class="inquiry_post_wrap">
+
+                <table class="inquiry_post_table">
+
+                    <thead>
+                        <tr>
+                            <th class="title">제목</th>
+                            <th class="author">작성자</th>
+                            <th class="created-date">작성일</th>
+                            <th class="status">답변상태</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr class="inquiry_post">
+                            <td class="notice">
+                                <span>공지</span> 판매(일시)중단 제품 안내 (22.11.04 업데이트)
+                            </td>
+                            <td>Marketkurly</td>
+                            <td>2017.02.01</td>
+                            <td>-</td>
+                        </tr>
+                        <tr class="inquiry_post">
+                            <td class="secret">
+                                <div>
+                                    <span>비밀글입니다.</span><span class="secret_icon"></span>
+                                </div>
+                            </td>
+                            <td>김*은</td>
+                            <td>2022.10.25</td>
+                            <td class="answered">답변완료</td>
+                        </tr>
+                        <tr class="inquiry_post">
+                            <td class="secret">
+                                <div>
+                                    <span>비밀글입니다.</span><span class="secret_icon"></span>
+                                </div>
+                            </td>
+                            <td>김*숙</td>
+                            <td>2022.10.24</td>
+                            <td>답변대기</td>
+                        </tr>
+                        <tr class="inquiry_post">
+                            <td>상세페이지에 제품표기사항이 다른게 들어있습니다.</td>
+                            <td>박*안</td>
+                            <td>2022.10.22</td>
+                            <td>답변대기</td>
+                        </tr>
+                        <tr class="inquiry_post">
+                            <td>현재 품절인데 언제 재입고 되나요?</td>
+                            <td>김*주</td>
+                            <td>2022.10.17</td>
+                            <td class="answered">답변완료</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+            </div>
+
+            <!-- 하단 좌우 버튼 -->
+            <div class="btn_pre_next_wrapper">
+
+                <button disabled type="button" class="btn_pre"></button>
+                <button type="button" class="btn_next"></button>
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>

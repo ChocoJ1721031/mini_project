@@ -1,0 +1,145 @@
+.inquiry_wrap {
+    position: relative;
+    width: 1010px;
+    padding-bottom: 100px;
+    font-size: 14px;
+    color: #333;
+}
+.inquiry_content {
+    margin-bottom: 60px;
+}
+
+/* 문의하기 버튼 */
+.btn_inquiry_wrap {
+    position: absolute;
+    right: 0px;
+}
+.btn_inquiry_wrap button {
+    display: block;
+    width: 120px;
+    height: 40px;
+    border-radius: 3px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(95, 0, 128);
+}
+.btn_inquiry_wrap span {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* 제목 부분 */
+.inquiry_title_wrap {
+    padding-bottom: 40px;
+    letter-spacing: -0.5px;
+}
+.inquiry_title_wrap strong {
+    display: block;
+    padding-bottom: 16px;
+    font-size: 18px;
+}
+.inquiry_title_wrap ul {
+    line-height: 19px;
+    font-weight: 400;
+    color: rgb(153, 153, 153);
+}
+.inquiry_title_wrap li {
+    padding-left: 10px;
+}
+.inquiry_title_wrap li::before {
+    display: inline-block;
+    width: 2px;
+    height: 2px;
+    margin: 11px 6px 0px -10px;
+    background: rgb(153, 153, 153);
+    vertical-align: top;
+    content: "";
+}
+.inquiry_title_wrap a {
+    font-weight: bold;
+    text-decoration: underline;
+    color: rgb(153, 153, 153);
+}
+
+
+/* 게시글 부분 */
+.inquiry_post_table {
+    width: 100%;
+}
+.inquiry_post_table thead {
+    height: 58px;
+    border-top: 2px solid rgb(51, 51, 51);
+    border-bottom: 1px solid rgb(51, 51, 51);
+}
+.inquiry_post_table thead tr th {
+    font-weight: 500;
+    color: rgb(51, 51, 51);
+}
+.inquiry_post_table thead tr .title {
+    width: 710px;
+}
+
+.inquiry_post {
+    height: 64px;
+    border-bottom: 1px solid rgb(244, 244, 244);
+}
+.inquiry_post .notice span {
+    display: inline-block;
+    border-radius: 4px;
+    margin-right: 12px;
+    padding: 4px 8px;
+    font-size: 12px;
+    font-weight: 500;
+    color: rgb(102, 102, 102);
+    background-color: rgba(102, 102, 102, 0.06);
+}
+.inquiry_post_table tbody td:first-of-type {
+    padding: 0px 20px;
+    cursor: pointer;
+}
+.inquiry_post_table tbody td:not(:first-of-type) {
+    text-align: center;
+    color: rgb(153, 153, 153);
+}
+.inquiry_post .secret {
+    padding: 0px 20px;
+    cursor: pointer;
+    color: rgb(153, 153, 153);
+}
+.inquiry_post .secret div {
+    display: flex;
+    align-items: center;
+}
+.inquiry_post .secret_icon {
+    width: 14px;
+    height: 14px;
+    background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxMiAxNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9IiNCNUI1QjUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTExLjA0MyAxMi41NzVhLjI1OS4yNTkgMCAwIDEtLjI1OC4yNTdIMS4yMTRhLjI1OS4yNTkgMCAwIDEtLjI1OC0uMjU3VjUuNDJjMC0uMTQyLjExNy0uMjU4LjI1OC0uMjU4aDkuNTdjLjE0NCAwIC4yNi4xMTYuMjYuMjU4djcuMTU1ek0zLjY4NSAzLjIzN0EyLjI4MyAyLjI4MyAwIDAgMSA1Ljk2Ni45NTdhMi4yODIgMi4yODIgMCAwIDEgMi4yODEgMi4yOHYuOTY4SDMuNjg1di0uOTY4em03LjEuOTY4aC0xLjU4di0uOTY4QTMuMjQxIDMuMjQxIDAgMCAwIDUuOTY1IDAgMy4yNCAzLjI0IDAgMCAwIDIuNzMgMy4yMzd2Ljk2OEgxLjIxNEMuNTQ0IDQuMjA1IDAgNC43NSAwIDUuNDJ2Ny4xNTVjMCAuNjY5LjU0NSAxLjIxNCAxLjIxNCAxLjIxNGg5LjU3Yy42NzEgMCAxLjIxNi0uNTQ1IDEuMjE2LTEuMjE0VjUuNDJjMC0uNjctLjU0NS0xLjIxNS0xLjIxNS0xLjIxNXoiLz4KICAgICAgICA8cGF0aCBkPSJNNSA4LjJjMCAuMzQzLjE4NC42MzIuNDQ4LjgxMnYxLjMzaDEuMTAzdi0xLjMzQS45ODYuOTg2IDAgMCAwIDcgOC4yYTEgMSAwIDAgMC0yIDB6Ii8+CiAgICA8L2c+Cjwvc3ZnPgo=") no-repeat;
+    margin-left: 6px;
+}
+.inquiry_post .answered {
+    color: rgb(95, 0, 128) !important;
+}
+
+
+/* 하단 좌우 버튼 */
+.btn_pre_next_wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 60px 0px 30px;
+}
+.btn_pre {
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+    background-image: url("https://res.kurly.com/kurly/ico/2021/paging-prev-activated.svg");
+}
+.btn_pre:disabled {
+    background-image: url("https://res.kurly.com/kurly/ico/2021/paging-prev-disabled.svg");
+    cursor: default;
+}
+.btn_next {
+    width: 44px;
+    height: 44px;
+    margin-left: 12px;
+    cursor: pointer;
+    background-image: url("https://res.kurly.com/kurly/ico/2021/paging-next-activated.svg");
+}
