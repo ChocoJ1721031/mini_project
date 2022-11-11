@@ -42,6 +42,13 @@
     border-collapse: separate;
     border-spacing: 0 20px;
 }
+#login_tbl tr > td:nth-child(2) > p {
+    padding: 10px 0;
+    font-size: 13px;
+    color: rgb(240, 63, 64);
+    margin-top: -4px;
+    display:  none;
+}
 #login_tbl tr > td:first-child {
     width: 139px;
     padding: 12px 0 0 0;
@@ -59,7 +66,7 @@
     width: 333px;
     padding: 0;
 }
-#login_tbl_frame input[type="text"]:not(input[id*="birth"]) {
+#login_tbl_frame input[type="text"]:not(input[id*="birth"]), #login_tbl_frame input[type="password"]:not(input[id*="birth"]) {
     height : 43px;
     width: 305px;
     padding: 0 11px 1px 15px;
@@ -83,6 +90,10 @@
     margin: 0 0 0 8px;
     font-weight: bold;
 }
+.info_check_button:disabled {
+    border-color: rgb(221, 221, 221);
+    color: rgb(221, 221, 221);
+}
 #search_loc {
     width: 333px;
     font-weight: bold;
@@ -92,18 +103,18 @@
     font-size: 12px;
     font-weight: normal;
 }
-#gender_radio_parent {
+#radio_button_parent {
     display: flex;
     justify-content: space-between;
     width: 333px;
 
 }
-.gender_radio {
+.radio_button {
     display: flex;
     padding: 12px 0 0 0;
     height: 45px;
 }
-.gender_radio > span {
+.radio_button > span {
     font-size: 14px;
     margin-left: 12px;
     line-height: 20px;
@@ -195,7 +206,31 @@
     padding: 8px 0 8px 0;
 }
 
-
+#sms_agreement {
+    display: flex;
+    flex-direction: column;
+}
+#sms_agreement > div:nth-child(2) {
+    padding: 0 0 0 24px;
+    display: flex;
+}
+#sms_agreement > div:nth-child(2) label {
+    padding-top: 14px;
+    padding-right: 80px;
+    padding-bottom: 9px;
+}
+#sms_merit_text_parent {
+    padding-left: 24px;
+}
+#sms_merit_text {
+    margin-left: 36px;
+    padding-left: 16px;
+    background: url(../images/ico_sub_dot.svg) 0px 0px / 16px 20px no-repeat;
+    font-size: 12px;
+    color: rgb(95, 0, 128);
+    line-height: 18px;
+    letter-spacing: -0.5px;
+}
 .user_select {
     padding-left: 5px;
     color: rgb(153, 153, 153);
@@ -203,4 +238,34 @@
 }
 .agreement_detail {
     padding-right: 22px;
+    color: rgb(95, 0, 128);
+    letter-spacing: 0px;
+}
+.agreement_detail::after {
+    content: "";
+    display: inline-block;
+    margin-left: 4px;
+    width: 6px;
+    height: 9px;
+    background: url(../images/after_arrow.svg) 50% 50% / 6px 9px no-repeat;
+}
+
+#submit_area {
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid rgb(247, 247, 247);
+    padding: 40px 0px;
+}
+#submit_area > button {
+    width: 240px;
+    height: 56px;
+    border-radius: 3px;
+    padding: 0 10px;
+    border: 0px none;
+    color: rgb(255, 255, 255);
+    background-color: rgb(95, 0, 128);
+}
+#submit_area > button > span {
+    font-size: 16px;
+    font-weight: 500;
 }
