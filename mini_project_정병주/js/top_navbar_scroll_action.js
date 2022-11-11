@@ -4,6 +4,7 @@ function nav_fix() {
         document.getElementById('h_second').style.position = "fixed";
         document.getElementById('h_second').style.width = "100%";
         document.getElementById('section').style.margin = "56px 0 0 0";
+        document.getElementById('h_second').style.zIndex = "1";
     } else {
         document.getElementById('h_second').style.position = "relative";
         document.getElementById('section').style.margin = "0";
