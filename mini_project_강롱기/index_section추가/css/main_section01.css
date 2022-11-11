@@ -52,7 +52,7 @@
     outline: 0px;
     width: 60px;
     height: 60px;
-    background: url(./images/left_button.svg) 50% 50% no-repeat;
+    background: url(../images/left_button.svg) 50% 50% no-repeat;
     transition: background 0.5s ease 0s;
     top: calc(50% - 50px);
     left: 0px;
@@ -65,7 +65,7 @@
     outline: 0px;
     width: 60px;
     height: 60px;
-    background: url(./images/left_button.svg) 50% 50% no-repeat;
+    background: url(../images/left_button.svg) 50% 50% no-repeat;
     transition: background 0.5s ease 0s;
     top: calc(50% - 50px);
     right: 0px;
@@ -167,12 +167,7 @@
     position: relative;
     display: flex;
     padding: 8px 0px 8px 8px;
-}
-.m_s_2_title_1_span_1{
-    color: rgb(51, 51, 51);
-    font-size: 28px;
-    line-height: 1.15;
-    font-weight: 500;
+    cursor: pointer;
 }
 .m_s_2_title_1_span_1{
     color: rgb(51, 51, 51);
@@ -196,6 +191,7 @@
     margin: 0px auto;
 }
 .m_s_2_list_0{
+    overflow: hidden;
     margin-left: auto;
     margin-right: auto;
     position: relative;
@@ -210,7 +206,7 @@
     outline: 0px;
     width: 60px;
     height: 60px;
-    background: url(./images/left_button.svg) 50% 50% no-repeat;
+    background: url(../images/left_button.svg) 50% 50% no-repeat;
     transition: background 0.5s ease 0s;
     top: calc(50% - 25px);
     left: 0px;
@@ -223,7 +219,7 @@
     outline: 0px;
     width: 60px;
     height: 60px;
-    background: url(./images/left_button.svg) 50% 50% no-repeat;
+    background: url(../images/left_button.svg) 50% 50% no-repeat;
     transition: background 0.5s ease 0s;
     top: calc(50% - 25px);
     right: 0px;
@@ -242,7 +238,10 @@
     height: 100%;
     margin-right: 18px;
     position: relative;
-    transition-property: transform;
+    flex-shrink: 0;
+}
+.m_s_2_list_1 .m_s_2_list_1_product:not(:first-of-type){
+    margin-left: 10px;
 }
 .m_s_2_list_1_product_1_a{
     display: block;
@@ -381,4 +380,254 @@
 .m_s_3_tlink > a {
     color: rgb(51, 51, 51);
     font-weight: 500;
+}
+
+/* 메인 섹션 상단 버튼 추가 섹션 */
+.m_s_4{
+    width: 1050px;
+    margin: 0px auto;
+    padding: 40px 0px;
+}
+.m_s_4_list_0{
+    margin: 20px 0px 30px;
+}
+/* 메인 섹션 div 타이틀 */
+.m_s_4_title{
+    margin-bottom: 27px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.m_s_4_title_1{
+    position: relative;
+    display: flex;
+    padding: 8px 0px 8px 8px;
+}
+.m_s_4_title_1_span{
+    color: rgb(51, 51, 51);
+    font-size: 28px;
+    line-height: 1.15;
+    font-weight: 500;
+}
+/* 메인 섹션 ul */
+.m_s_4_ul{
+    display: flex;
+    flex-wrap: wrap;
+    place-content: center;
+}
+.m_s_4_ul li{
+    display: list-item;
+}
+.m_s_4_ul_button{
+    display: block;
+    padding: 10px 20px;
+    border-radius: 22px;
+    margin: 0px 5px 20px;
+    font-size: 14px;
+    height: 40px;
+    line-height: 16px;
+    background-color: rgb(247, 247, 247);
+    color: rgb(51, 51, 51);
+    cursor: pointer;
+}
+/* 메인 섹션 a */
+.m_s_4_a{
+    margin: 0px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 516px;
+    height: 56px;
+    border-radius: 3px;
+    border: 1px solid rgb(227, 227, 227);
+    cursor: pointer;
+}
+.m_s_4_a_span{
+    padding: 0px 17px;
+    font-size: 16px;
+    line-height: 15px;
+}
+/* 메인 섹션 상품 리스트 */
+.m_s_4_list{
+    position: relative;
+    width: 1050px;
+    margin: 0px auto;
+}
+.m_s_4_list_0{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    box-sizing: content-box;
+}
+.m_s_4_list_1{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    box-sizing: content-box;
+}
+.m_s_4_list_1_product{
+    width: 249px;
+    height: 100%;
+    margin-right: 18px;
+    position: relative;
+}
+.m_s_4_list_1_product_1{
+    color: rgb(51, 51, 51);
+    cursor: pointer;
+    width: 249px;
+}
+.m_s_4_list_1_product_1_img{
+    height: 320px;
+    overflow: hidden;
+    position: relative;
+    background-color: rgb(245, 245, 245);
+}
+.m_s_4_list_1_product_1_img > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.m_s_4_list_1_product_1_button{
+    right: 16px;
+    bottom: 16px;
+    z-index: 10;
+    position: absolute;
+}
+.m_s_4_list_1_product_1_content{
+    position: relative;
+    padding: 14px 10px 0px 0px;
+}
+.m_s_4_list_1_product_1_content_title{
+    font-size: 16px;
+    line-height: 1.45;
+    font-weight: 400;
+    margin-bottom: 8px;
+    overflow: hidden;
+}
+.m_s_4_list_1_product_1_content_price{
+    display: flex;
+    justify-content: space-between;
+
+}
+.m_s_4_list_1_product_1_content_price_1{
+    display: flex;
+}
+.m_s_4_list_1_product_1_content_price_1_1{
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 1.5;
+}
+
+
+/* 메인 기타 섹션 타이틀 우측 바로가기 > 추가 */
+.m_s_5{
+    width: 1050px;
+    margin: 0px auto;
+    padding: 40px 0px;
+}
+.m_s_5_list_0{
+    margin: 20px 0px 30px;
+}
+/* 메인 섹션 div 타이틀 */
+.m_s_5_title{
+    margin-bottom: 27px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.m_s_5_title_1{
+    position: relative;
+    display: flex;
+    padding: 8px 0px 8px 8px;
+    cursor: pointer;
+}
+.m_s_5_title_1_span_1{
+    color: rgb(51, 51, 51);
+    font-size: 28px;
+    line-height: 1.15;
+    font-weight: 500;
+}
+.m_s_5_title_1_span_2{
+    position: absolute;
+    left: 100%;
+    top: 9px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+}
+/* 메인 섹션 상품 리스트 */
+.m_s_5_list{
+    position: relative;
+    width: 1050px;
+    margin: 0px auto;
+}
+.m_s_5_list_0{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    box-sizing: content-box;
+}
+.m_s_5_list_1{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    box-sizing: content-box;
+}
+.m_s_5_list_1_product{
+    width: 249px;
+    height: 100%;
+    margin-right: 18px;
+    position: relative;
+}
+.m_s_5_list_1_product_1{
+    color: rgb(51, 51, 51);
+    cursor: pointer;
+    width: 249px;
+}
+.m_s_5_list_1_product_1_img{
+    height: 320px;
+    overflow: hidden;
+    position: relative;
+    background-color: rgb(245, 245, 245);
+}
+.m_s_5_list_1_product_1_img > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.m_s_5_list_1_product_1_button{
+    right: 16px;
+    bottom: 16px;
+    z-index: 10;
+    position: absolute;
+}
+.m_s_5_list_1_product_1_content{
+    position: relative;
+    padding: 14px 10px 0px 0px;
+}
+.m_s_5_list_1_product_1_content_title{
+    font-size: 16px;
+    line-height: 1.45;
+    font-weight: 400;
+    margin-bottom: 8px;
+    overflow: hidden;
+}
+.m_s_5_list_1_product_1_content_price{
+    display: flex;
+    justify-content: space-between;
+
+}
+.m_s_5_list_1_product_1_content_price_1{
+    display: flex;
+}
+.m_s_5_list_1_product_1_content_price_1_1{
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 1.5;
 }
