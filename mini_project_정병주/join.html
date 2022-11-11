@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./css/join.css">
     <link rel="stylesheet" href="./css/radio_check_action.css">
     <link rel="stylesheet" href="./css/checkbox_check_action.css">
-
+    <script src="./js/join.js"></script>
     <script src="./js/top_navbar_scroll_action.js"></script>
     <title>Document</title>
     <!-- 전체공통 -->
@@ -144,30 +144,30 @@
                             <table id="login_tbl">
                                 <tr>
                                     <td><label>아이디<span>*</span></label></td>
-                                    <td><input type="text" id="input_id" name="id" placeholder="아이디를 입력해주세요"></td>
-                                    <td><button type="button" class="info_check_button"><spoan>중복확인</spoan></button></td>
+                                    <td><input type="text" id="input_id" name="id" placeholder="아이디를 입력해주세요" oninput="id_script(this, 6, 17)" maxlength="16"><p id="input_id_p"></p></td>
+                                    <td><button type="button" class="info_check_button"><span>중복확인</span></button></td>
                                 </tr>
                                 <tr>
                                     <td><label>비밀번호<span>*</span></label></td>
-                                    <td><input type="text" id="input_pw" name="pw" placeholder="비밀번호를 입력해주세요"></td>
+                                    <td><input type="password" id="input_pw" name="pw" placeholder="비밀번호를 입력해주세요" oninput="input_pw_script(this, 10)" maxlength="16"><p id="input_pw_p"></p></td>
                                 </tr>
                                 <tr>
                                     <td><label>비밀번호확인<span>*</span></label></td>
-                                    <td><input type="text" id="input_pw_check" name="pw_check" placeholder="비밀번호를 한번 더 입력해주세요"></td>
+                                    <td><input type="password" id="input_pw_check" name="pw_check" placeholder="비밀번호를 한번 더 입력해주세요" maxlength="16" oninput="input_pw_check_script(this)"  maxlength="16"><p id="input_pw_check_p"></p></td>
                                 </tr>
                                 <tr>
                                     <td><label>이름<span>*</span></label></td>
-                                    <td><input type="text" id="input_user_name" name="user_name" placeholder="이름을 입력해 주세요"></td>
+                                    <td><input type="text" id="input_user_name" name="user_name" placeholder="이름을 입력해 주세요" oninput="input_user_name_script(this)"><p id="input_user_name_p"></p></td>
                                 </tr>
                                 <tr>
                                     <td><label>이메일<span>*</span></label></td>
-                                    <td><input type="text" id="input_mail" name="mail" placeholder="예: marketkurly@kurly.com"></td>
-                                    <td><button type="button" class="info_check_button"><spoan>중복확인</spoan></button></td>
+                                    <td><input type="text" id="input_mail" name="mail" placeholder="예: marketkurly@kurly.com" oninput="input_mail_script(this)"><p id="input_mail_p"></p></td>
+                                    <td><button type="button" class="info_check_button"><span>중복확인</span></button></td>
                                 </tr>
                                 <tr>
                                     <td><label>휴대폰<span>*</span></label></td>
-                                    <td><input type="text" id="input_phone" name="phone" placeholder="숫자만 입력해주세요"></td>
-                                    <td><button type="button" class="info_check_button"><spoan>인증번호 받기</spoan></button></td>
+                                    <td><input type="text" id="input_phone" name="phone" placeholder="숫자만 입력해주세요" oninput="input_phone_script(this)"><p id="input_phone_p"></p></td>
+                                    <td><button type="button" class="info_check_button" disabled><span>인증번호 받기</span></button></td>
                                 </tr>
                                 <tr>
                                     <td><label>주소<span>*</span></label></td>
@@ -176,10 +176,10 @@
                                 <tr>
                                     <td><label>성별</label></td>
                                     <td>
-                                        <div id="gender_radio_parent">
-                                            <label class="gender_radio"><input type="radio" name="gender"><span>남자</span></label>
-                                            <label class="gender_radio"><input type="radio" name="gender"><span>여자</span></label>
-                                            <label class="gender_radio"><input type="radio" name="gender" checked><span>선택 안함</span></label>
+                                        <div id="radio_button_parent">
+                                            <label class="radio_button"><input type="radio" name="gender"><span>남자</span></label>
+                                            <label class="radio_button"><input type="radio" name="gender"><span>여자</span></label>
+                                            <label class="radio_button"><input type="radio" name="gender" checked><span>선택 안함</span></label>
                                         </div>
                                     </td>
                                 </tr>
@@ -187,10 +187,11 @@
                                     <td><label>생년월일</label></td>
                                     <td>
                                         <div id="input_birthday_area">
-                                            <input type="text" id="input_birth_year" name="birth_year" placeholder="YYYY"><span>/</span>
-                                            <input type="text" id="input_birth_month" name="birth_month" placeholder="MM"><span>/</span>
-                                            <input type="text" id="input_birth_day" name="birth_day" placeholder="DD">
+                                            <input type="text" id="input_birth_year" name="birth_year" placeholder="YYYY" oninput="input_birth_script()" maxlength="4"><span>/</span>
+                                            <input type="text" id="input_birth_month" name="birth_month" placeholder="MM" oninput="input_birth_script()" maxlength="2"><span>/</span>
+                                            <input type="text" id="input_birth_date" name="birth_date" placeholder="DD" oninput="input_birth_script()" maxlength="2">
                                         </div>
+                                        <p id="input_birth_p"></p>
                                     </td>
                                 </tr>
                                 <tr>
@@ -210,8 +211,8 @@
                                 <div>
                                     <div>
                                         <label><input type="checkbox" name=""><span>전체 동의합니다.</span></label>
+                                        <p id="agreement_warn">선택항목에 동의하지 않은 경우도 회원가입 및 일반적인 서비스를 이용할 수 있습니다.</p>
                                     </div>
-                                    <p id="agreement_warn">선택항목에 동의하지 않은 경우도 회원가입 및 일반적인 서비스를 이용할 수 있습니다.</p>
                                 </div>
                                 <div>
                                     <div>
@@ -231,9 +232,16 @@
                                     </div>
                                     <a href="" class="agreement_detail">약관보기</a>
                                 </div>
-                                <div>
+                                <div id="sms_agreement">
                                     <div>
                                         <label><input type="checkbox" name=""><span>무료배송, 할인쿠폰 등 혜택/정보 수신 동의</span></label><span class="user_select">(선택)</span>
+                                    </div>
+                                    <div>
+                                        <label><input type="checkbox" name=""><span>SMS</span></label>
+                                        <label><input type="checkbox" name=""><span>이메일</span></label>
+                                    </div>
+                                    <div id="sms_merit_text_parent">
+                                        <p id="sms_merit_text">동의 시 한 달간 [5%적립] + [2만원 이상 무료배송] 첫 주문 후 안내</p>
                                     </div>
                                 </div>
                                 <div>
@@ -244,7 +252,7 @@
                             </div>
 
                         </div>
-                        <div>
+                        <div id="submit_area">
                             <button type="submit">
                                 <span>가입하기</span>
                             </button>
