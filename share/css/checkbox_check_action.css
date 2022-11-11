@@ -1,0 +1,10 @@
+input[type="checkbox"]{
+    margin-right: 12px;
+    width: 24px;
+    height: 24px;
+    background: url("../images/check-off.svg") no-repeat center center;
+    appearance: none;
+}
+input[type="checkbox"]:checked{
+    background: url("../images/check-on.svg") no-repeat center center;
+}
