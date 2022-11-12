@@ -1,17 +1,14 @@
-var regExp1 = /[~!\@\#$%^&*\()\-=+_'\;<>0-9\/.\`:\"\\,\[\]?|{}]/gi;
+var regExp1 = /[~!\@\#$%^&*\()\-=+_'\;<>\/.\`:\"\\,\[\]?|{}]/gi;
 
 function id_script(el, minlength, maxlength) {
-    // if(regExp1.test(el.value)) {
-    //     el.value = el.value.substring( 0 , el.value.length - 1 );
-    // } else {
-        if(el.value.length > maxlength || el.value.length < minlength) {
-            document.getElementById('input_id_p').innerHTML = "6자 이상 16자 이하의 영문 혹은 영문과 숫자를 조합";
-            document.getElementById('input_id_p').style.display = "flex";
-        } else {
-            document.getElementById('input_id_p').innerHTML = "";
-            document.getElementById('input_id_p').style.display = "none";
-        }
-    //}
+    el.value = el.value.replace(regExp1, '').replace(regExp1, '$1');
+    if(el.value.length > maxlength || el.value.length < minlength) {
+        document.getElementById('input_id_p').innerHTML = "6자 이상 16자 이하의 영문 혹은 영문과 숫자를 조합";
+        document.getElementById('input_id_p').style.display = "flex";
+    } else {
+        document.getElementById('input_id_p').innerHTML = "";
+        document.getElementById('input_id_p').style.display = "none";
+    }
     
 }
 
@@ -73,9 +70,13 @@ function input_phone_script(el) {
     if(el.value == "") {
         document.getElementById('input_phone_p').innerHTML = "휴대폰 번호를 입력해 주세요.";
         document.getElementById('input_phone_p').style.display = "flex";
+        document.getElementById('phone_check_btn').disabled = true;
+        document.getElementById('phone_check_btn').style.cursor = "default";
     } else {
         document.getElementById('input_phone_p').innerHTML = "";
         document.getElementById('input_phone_p').style.display = "none";
+        document.getElementById('phone_check_btn').disabled = false;
+        document.getElementById('phone_check_btn').style.cursor = "pointer";
     }
 }
 
@@ -127,4 +128,46 @@ function event_pop_up_2() {
     document.getElementById('input_event_area_1').style.display = "none";
     document.getElementById('input_event_area_2').style.display = "flex";
     document.getElementById('input_event_area_2').style.flexDirection = "column";
+}
+
+
+function open_pop_up_1() {
+    document.getElementById('pop_up_1').style.display = "flex";
+    document.body.style.overflow = "hidden";
+}
+function close_pop_up_1() {
+    document.getElementById('pop_up_1').style.display = "none";
+    document.body.style.overflow = "visible";
+}
+function open_pop_up_2() {
+    document.getElementById('pop_up_2').style.display = "flex";
+    document.body.style.overflow = "hidden";
+}
+function close_pop_up_2() {
+    document.getElementById('pop_up_2').style.display = "none";
+    document.body.style.overflow = "visible";
+}
+function open_pop_up_3() {
+    document.getElementById('pop_up_3').style.display = "flex";
+    document.body.style.overflow = "hidden";
+}
+function close_pop_up_3() {
+    document.getElementById('pop_up_3').style.display = "none";
+    document.body.style.overflow = "visible";
+}
+function open_pop_up_4() {
+    document.getElementById('pop_up_4').style.display = "flex";
+    document.body.style.overflow = "hidden";
+}
+function close_pop_up_4() {
+    document.getElementById('pop_up_4').style.display = "none";
+    document.body.style.overflow = "visible";
+}
+function open_pop_up_5() {
+    document.getElementById('pop_up_5').style.display = "flex";
+    document.body.style.overflow = "hidden";
+}
+function close_pop_up_5() {
+    document.getElementById('pop_up_5').style.display = "none";
+    document.body.style.overflow = "visible";
 }
