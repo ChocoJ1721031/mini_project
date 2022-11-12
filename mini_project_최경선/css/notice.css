@@ -1,0 +1,241 @@
+/* 왼쪽메뉴부분 */
+.customer_center {
+    position: relative;
+    min-width: 1050px;
+}
+.customer_center_wrapper {
+    display: flex;
+    width: 1050px;
+    padding: 50px 0px 80px;
+    margin: 0px auto;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+.menu {
+    width: 200px;
+}
+.menu_title {
+    height: 75px;
+    padding: 5px 0px 35px 1px;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 35px;
+    color: rgb(51, 51, 51);
+    letter-spacing: -1px;
+}
+.menu_list {
+    border: 1px solid rgb(242, 242, 242);
+}
+.list_wrapper {
+    cursor: pointer;
+    border-bottom: 1px solid rgb(242, 242, 242);
+    padding: 14px 20px 16px;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    line-height: 19px;
+    letter-spacing: -0.3px;
+    font-size: 14px;
+    color: rgb(102, 102, 102);
+}
+.list_wrapper.active, .list_wrapper:hover {
+    background-color: rgb(250, 250, 250);
+    color: rgb(95, 0, 128);
+    font-weight: 500;
+}
+.arrow {
+    display: inline-block;
+    width: 6px;
+    height: 11px;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2IiBoZWlnaHQ9IjExIiB2aWV3Qm94PSIwIDAgNiAxMSI+CiAgICA8cGF0aCBmaWxsPSIjOTk5IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xIDExTDYgNS41IDEgMCAwIDEuMSA0IDUuNSAwIDkuOXoiLz4KPC9zdmc+Cg==");
+    background-size: cover;
+    background-position: center center;
+}
+.list_wrapper.active > span, .list_wrapper:hover > span {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2IiBoZWlnaHQ9IjExIiB2aWV3Qm94PSIwIDAgNiAxMSI+CiAgICA8cGF0aCBmaWxsPSIjNUYwMDgwIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xIDExTDYgNS41IDEgMCAwIDEuMSA0IDUuNSAwIDkuOXoiLz4KPC9zdmc+Cg==");
+}
+.inquiry_wrapper {
+    width: 100%;
+    height: 60px;
+    padding: 0px 20px;
+    margin-top: 20px;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    border-radius: 0px 100px 100px 0px;
+    background-color: rgb(250, 250, 250);
+    line-height: 20px;
+}
+.inquiry_text_wrapper {
+    display: flex;
+    flex-direction: column;
+    color: rgb(51, 51, 51);
+}
+.inquiry_text_1 {
+    font-size: 14px;
+    font-weight: 500;
+}
+.inquiry_text_2 {
+    font-size: 12px;
+}
+.arrow_2 {
+    display: inline-block;
+    width: 6px;
+    height: 11px;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2IiBoZWlnaHQ9IjExIiB2aWV3Qm94PSIwIDAgNiAxMSI+CiAgICA8cGF0aCBmaWxsPSIjNUYwMDgwIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xIDExTDYgNS41IDEgMCAwIDEuMSA0IDUuNSAwIDkuOXoiLz4KPC9zdmc+Cg==");
+    background-size: cover;
+    background-position: center center;
+}
+
+
+/* 가운데내용부분 */
+.notice {
+    width: 820px;
+}
+.notice_header_wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding-bottom: 27px;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+.notice_header_text_wrapper {
+    display: flex;
+    flex-direction: row;
+    -webkit-box-align: center;
+    align-items: center;
+}
+.notice_header_text_1 {
+    font-weight: 500;
+    font-size: 24px;
+    color: rgb(51, 51, 51);
+    letter-spacing: -0.5px;
+    line-height: 48px;
+}
+.notice_header_text_2 {
+    padding-left: 11px;
+    font-size: 14px;
+    letter-spacing: -0.3px;
+    color: rgb(153, 153, 153);
+    line-height: 20px;
+}
+.notice_category_wrapper {
+    display: flex;
+    width: 100%;
+    padding: 20px 0px;
+    border-bottom: 1px solid rgb(51, 51, 51);
+    border-top: 2px solid rgb(51, 51, 51);
+    font-size: 14px;
+}
+.number {
+    flex-basis: 50px;
+    text-align: center;
+    line-height: 20px;
+    font-weight: 400;
+    color: rgb(51, 51, 51);
+}
+.title {
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    text-align: center;
+    line-height: 20px;
+    font-weight: 400;
+    color: rgb(51, 51, 51);
+}
+.writer, .date {
+    flex-basis: 100px;
+    text-align: center;
+    line-height: 20px;
+    font-weight: 400;
+    color: rgb(51, 51, 51);
+}
+.notice_post_wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    font-size: 14px;
+}
+.post_wrapper {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid rgb(244, 244, 244);
+}
+
+.post_number {
+    text-align: center;
+    padding: 20px 0px;
+    color: rgb(76, 76, 76);
+    flex-basis: 50px;
+}
+.post_title {
+    padding: 20px 0px 20px 20px;
+    color: rgb(76, 76, 76);
+    flex: 1 1 0%;
+    text-align: left;
+}
+.post_writer {
+    text-align: center;
+    padding: 20px 0px;
+    color: rgb(76, 76, 76);
+    flex-basis: 100px;
+}
+.post_date {
+    text-align: center;
+    padding: 20px 0px;
+    flex-basis: 100px;
+    color: rgb(153, 153, 153);
+}
+.button_wrapper {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    padding: 60px 0px 30px;
+}
+.button_previous:disabled {
+    background-image: url("https://res.kurly.com/kurly/ico/2021/paging-prev-disabled.svg");
+    cursor: default;
+}
+.button_previous {
+    width: 44px;
+    height: 44px;
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    cursor: pointer;
+    background-color: transparent;
+    background-image: url("https://res.kurly.com/kurly/ico/2021/paging-prev-activated.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.button_text {
+    overflow: hidden;
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+}
+.button button + button {
+    margin-left: 12px;
+}
+.button_next {
+    width: 44px;
+    height: 44px;
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    cursor: pointer;
+    background-color: transparent;
+    background-image: url("https://res.kurly.com/kurly/ico/2021/paging-next-activated.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
