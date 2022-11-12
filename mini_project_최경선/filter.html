@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>filter</title>
+
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/filter.css" rel="stylesheet">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+        html, button, input, select, textarea, p, span {
+            font-family: "Noto Sans KR";
+        }
+    </style>
+
+</head>
+<body>
+
+    <!-- 필터&상품부분 전체 -->
+    <div class="cat_contents_wrap">
+
+        <!-- 필터 전체 -->
+        <div class="filter_wrap">
+        
+            <!-- 필터 제목 & 초기화 버튼 -->
+            <div class="filter_title"><span>필터</span>
+                <button>
+                    <svg width="12" height="12" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.78 3.96303C12.504 2.16973 10.4086 1 8.04 1C4.15192 1 1 4.15192 1 8.04C1 11.9281 4.15192 15.08 8.04 15.08C11.9281 15.08 15.08 11.9281 15.08 8.04" stroke="#ddd" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="round"></path>
+                        <path d="M14.4933 1L14.4933 4.52H10.9733" stroke="#ddd" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="round"></path>
+                    </svg><span>초기화</span>
+                </button>
+            </div>
+            
+            <div>
+                <!-- 브랜드 -->
+                <div class="filter_brand">
+
+                    <!-- 브랜드 제목 -->
+                    <button>
+                        <div>브랜드</div>
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="#999" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(0deg);">
+                            <path d="M5 11L9 7L13 11" stroke="#999" stroke-width="1.2"></path>
+                        </svg>
+                    </button>
+
+                    <!-- 브랜드 리스트 -->
+                    <ul class="filter_brand_list" style="max-height: 100vh; opacity: 1;">
+            
+                        <!-- 가나다순, 상품많은순 버튼 -->
+                        <menu>
+                            <li>
+                                <button class="selected">가나다 순</button>
+                            </li>
+                            <li>
+                                <button>상품많은 순</button>
+                            </li>
+                        </menu>
+            
+                        <!-- li -->
+                        <li class="list">
+                            <a href="/categories/913?page=1&amp;filters=brand%3Aslbueb">
+                                <button class="btn_check">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M23.5 12C23.5 18.3513 18.3513 23.5 12 23.5C5.64873 23.5 0.5 18.3513 0.5 12C0.5 5.64873 5.64873 0.5 12 0.5C18.3513 0.5 23.5 5.64873 23.5 12Z" stroke="#ddd"></path>
+                                        <path d="M7 12.6667L10.3846 16L18 8.5" stroke="#ddd" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </button><span class="word">가브로</span><span class="number">1</span>
+                            </a>
+                        </li>
+            
+                        <li class="list">
+                            <a href="/categories/913?page=1&amp;filters=brand%3A8kcdij">
+                                <button class="btn_check">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M23.5 12C23.5 18.3513 18.3513 23.5 12 23.5C5.64873 23.5 0.5 18.3513 0.5 12C0.5 5.64873 5.64873 0.5 12 0.5C18.3513 0.5 23.5 5.64873 23.5 12Z" stroke="#ddd"></path>
+                                        <path d="M7 12.6667L10.3846 16L18 8.5" stroke="#ddd" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </button><span class="word">갤러리아 고메이494</span><span class="number">1</span>
+                            </a>
+                        </li>
+
+                        <li class="list">
+                            <a href="/categories/913?page=1&amp;filters=brand%3Axvr5z2">
+                                <button class="btn_check">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M23.5 12C23.5 18.3513 18.3513 23.5 12 23.5C5.64873 23.5 0.5 18.3513 0.5 12C0.5 5.64873 5.64873 0.5 12 0.5C18.3513 0.5 23.5 5.64873 23.5 12Z" stroke="#ddd"></path>
+                                        <path d="M7 12.6667L10.3846 16L18 8.5" stroke="#ddd" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </button><span class="word">게랑드</span><span class="number">1</span>
+                            </a>
+                        </li>
+
+                        <li class="list">
+                            <a href="/categories/913?page=1&amp;filters=brand%3Aa1wkmz">
+                                <button class="btn_check">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M23.5 12C23.5 18.3513 18.3513 23.5 12 23.5C5.64873 23.5 0.5 18.3513 0.5 12C0.5 5.64873 5.64873 0.5 12 0.5C18.3513 0.5 23.5 5.64873 23.5 12Z" stroke="#ddd"></path>
+                                        <path d="M7 12.6667L10.3846 16L18 8.5" stroke="#ddd" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </button><span class="word">고베식당</span><span class="number">1</span>
+                            </a>
+                        </li>
+
+                        <li class="list">
+                            <a href="/categories/913?page=1&amp;filters=brand%3Ama1qiw">
+                                <button class="btn_check">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M23.5 12C23.5 18.3513 18.3513 23.5 12 23.5C5.64873 23.5 0.5 18.3513 0.5 12C0.5 5.64873 5.64873 0.5 12 0.5C18.3513 0.5 23.5 5.64873 23.5 12Z" stroke="#ddd"></path>
+                                        <path d="M7 12.6667L10.3846 16L18 8.5" stroke="#ddd" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </button><span class="word">고야</span><span class="number">5</span>
+                            </a>
+                        </li>
+
+                        <li class="list">
+                            <a href="/categories/913?page=1&amp;filters=brand%3A3rtbrt">
+                                <button class="btn_check">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M23.5 12C23.5 18.3513 18.3513 23.5 12 23.5C5.64873 23.5 0.5 18.3513 0.5 12C0.5 5.64873 5.64873 0.5 12 0.5C18.3513 0.5 23.5 5.64873 23.5 12Z" stroke="#ddd"></path>
+                                        <path d="M7 12.6667L10.3846 16L18 8.5" stroke="#ddd" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </button><span class="word">구스티</span><span class="number">3</span>
+                            </a>
+                        </li>
+
+                        <li class="list">
+                            <a href="/categories/913?page=1&amp;filters=brand%3Aychvah">
+                                <button class="btn_check">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M23.5 12C23.5 18.3513 18.3513 23.5 12 23.5C5.64873 23.5 0.5 18.3513 0.5 12C0.5 5.64873 5.64873 0.5 12 0.5C18.3513 0.5 23.5 5.64873 23.5 12Z" stroke="#ddd"></path>
+                                        <path d="M7 12.6667L10.3846 16L18 8.5" stroke="#ddd" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </button><span class="word">굴리엘미</span><span class="number">5</span>
+                            </a>
+                        </li>
+
+                        <li class="list">
+                            <a href="/categories/913?page=1&amp;filters=brand%3Af8ohqx">
+                                <button class="btn_check">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M23.5 12C23.5 18.3513 18.3513 23.5 12 23.5C5.64873 23.5 0.5 18.3513 0.5 12C0.5 5.64873 5.64873 0.5 12 0.5C18.3513 0.5 23.5 5.64873 23.5 12Z" stroke="#ddd"></path>
+                                        <path d="M7 12.6667L10.3846 16L18 8.5" stroke="#ddd" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </button><span class="word">권영원 소담정찬</span><span class="number">2</span>
+                            </a>
+                        </li>
+
+                        <li class="list">
+                            <a href="/categories/913?page=1&amp;filters=brand%3Auut1rp">
+                                <button class="btn_check">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M23.5 12C23.5 18.3513 18.3513 23.5 12 23.5C5.64873 23.5 0.5 18.3513 0.5 12C0.5 5.64873 5.64873 0.5 12 0.5C18.3513 0.5 23.5 5.64873 23.5 12Z" stroke="#ddd"></path>
+                                        <path d="M7 12.6667L10.3846 16L18 8.5" stroke="#ddd" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </button><span class="word">그대로말린</span><span class="number">1</span>
+                            </a>
+                        </li>
+
+                        <li class="list">
+                            <a href="/categories/913?page=1&amp;filters=brand%3A2heinl">
+                                <button class="btn_check">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M23.5 12C23.5 18.3513 18.3513 23.5 12 23.5C5.64873 23.5 0.5 18.3513 0.5 12C0.5 5.64873 5.64873 0.5 12 0.5C18.3513 0.5 23.5 5.64873 23.5 12Z" stroke="#ddd"></path>
+                                        <path d="M7 12.6667L10.3846 16L18 8.5" stroke="#ddd" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </button><span class="word">그로브</span><span class="number">1</span>
+                            </a>
+                        </li>
+
+                        <!-- 브랜드 더보기 버튼 -->
+                        <button class="btn_brand_more">브랜드 더보기
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="#999" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 11L9 7L13 11" stroke="#999" stroke-width="1.2"></path>
+                            </svg>
+                        </button>
+
+                    </ul>
+                </div>
+
+                <!-- 가격 -->
+                <div class="filter_price">
+
+                    <!-- 가격 제목 -->
+                    <button>
+                        <div>가격</div>
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="#999" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(0deg);">
+                            <path d="M5 11L9 7L13 11" stroke="#999" stroke-width="1.2"></path>
+                        </svg>
+                    </button>
+
+                    <!-- 가격 리스트 -->
+                    <ul class="filter_price_list" style="max-height: 100vh; opacity: 1;">
+
+                        <li class="list">
+                            <a href="/categories/913?page=1&amp;filters=price%3A-4100">
+                                <button class="btn_check">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 23.5C18.3513 23.5 23.5 18.3513 23.5 12C23.5 5.64873 18.3513 0.5 12 0.5C5.64873 0.5 0.5 5.64873 0.5 12C0.5 18.3513 5.64873 23.5 12 23.5Z" fill="#fff" stroke="#ddd"></path>
+                                    </svg>
+                                </button><span class="word">4,100원 미만</span><span class="number">282</span>
+                            </a>
+                        </li>
+
+                        <li class="list">
+                            <a href="/categories/913?page=1&amp;filters=price%3A4100-6480">
+                                <button class="btn_check">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 23.5C18.3513 23.5 23.5 18.3513 23.5 12C23.5 5.64873 18.3513 0.5 12 0.5C5.64873 0.5 0.5 5.64873 0.5 12C0.5 18.3513 5.64873 23.5 12 23.5Z" fill="#fff" stroke="#ddd"></path>
+                                    </svg>
+                                </button><span class="word">4,100원 ~ 6,480원</span><span class="number">277</span>
+                            </a>
+                        </li>
+
+                        <li class="list">
+                            <a href="/categories/913?page=1&amp;filters=price%3A6480-11500">
+                                <button class="btn_check">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 23.5C18.3513 23.5 23.5 18.3513 23.5 12C23.5 5.64873 18.3513 0.5 12 0.5C5.64873 0.5 0.5 5.64873 0.5 12C0.5 18.3513 5.64873 23.5 12 23.5Z" fill="#fff" stroke="#ddd"></path>
+                                    </svg>
+                                </button><span class="word">6,480원 ~ 11,500원</span><span class="number">290</span>
+                            </a>
+                        </li>
+                        
+                        <li class="list">
+                            <a href="/categories/913?page=1&amp;filters=price%3A11500-">
+                                <button class="btn_check">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 23.5C18.3513 23.5 23.5 18.3513 23.5 12C23.5 5.64873 18.3513 0.5 12 0.5C5.64873 0.5 0.5 5.64873 0.5 12C0.5 18.3513 5.64873 23.5 12 23.5Z" fill="#fff" stroke="#ddd"></path>
+                                    </svg>
+                                </button><span class="word">11,500원 이상</span><span class="number">287</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <!-- 혜택 -->
+                <div class="filter_event">
+
+                    <!-- 혜택 제목 -->
+                    <button>
+                        <div>혜택</div>
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"stroke="#999" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(0deg);">
+                            <path d="M5 11L9 7L13 11" stroke="#999" stroke-width="1.2"></path>
+                        </svg>
+                    </button>
+
+                    <!-- 혜택 리스트 -->
+                    <ul class="filter_event_list" style="max-height: 100vh; opacity: 1;">
+
+                        <li class="list">
+                            <a href="/categories/913?page=1&amp;filters=benefit%3Adiscount">
+                                <button class="btn_check">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M23.5 12C23.5 18.3513 18.3513 23.5 12 23.5C5.64873 23.5 0.5 18.3513 0.5 12C0.5 5.64873 5.64873 0.5 12 0.5C18.3513 0.5 23.5 5.64873 23.5 12Z" stroke="#ddd"></path>
+                                        <path d="M7 12.6667L10.3846 16L18 8.5" stroke="#ddd" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </button><span class="word">할인상품</span><span class="number">177</span>
+                            </a>
+                        </li>
+
+                        <li class="list">
+                            <a href="/categories/913?page=1&amp;filters=benefit%3Alimited">
+                                <button class="btn_check">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M23.5 12C23.5 18.3513 18.3513 23.5 12 23.5C5.64873 23.5 0.5 18.3513 0.5 12C0.5 5.64873 5.64873 0.5 12 0.5C18.3513 0.5 23.5 5.64873 23.5 12Z" stroke="#ddd"></path>
+                                        <path d="M7 12.6667L10.3846 16L18 8.5" stroke="#ddd" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </button><span class="word">한정수량</span><span class="number">19</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 유형 -->
+                <div class="filter_type">
+
+                    <!-- 유형 제목 -->
+                    <button>
+                        <div>유형</div>
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="#999" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(0deg);">
+                            <path d="M5 11L9 7L13 11" stroke="#999" stroke-width="1.2"></path>
+                        </svg>
+                    </button>
+
+                    <!-- 유형 리스트 -->
+                    <ul class="filter_type_list" style="max-height: 100vh; opacity: 1;">
+
+                        <li class="list">
+                            <a href="/categories/913?page=1&amp;filters=type%3Akurly_only">
+                                <button class="btn_check">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M23.5 12C23.5 18.3513 18.3513 23.5 12 23.5C5.64873 23.5 0.5 18.3513 0.5 12C0.5 5.64873 5.64873 0.5 12 0.5C18.3513 0.5 23.5 5.64873 23.5 12Z" stroke="#ddd"></path>
+                                        <path d="M7 12.6667L10.3846 16L18 8.5" stroke="#ddd" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </button><span class="word">Kurly Only</span><span class="number">144</span>
+                            </a>
+                        </li>
+
+                        <li class="list">
+                            <a href="/categories/913?page=1&amp;filters=type%3Agift">
+                                <button class="btn_check">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M23.5 12C23.5 18.3513 18.3513 23.5 12 23.5C5.64873 23.5 0.5 18.3513 0.5 12C0.5 5.64873 5.64873 0.5 12 0.5C18.3513 0.5 23.5 5.64873 23.5 12Z" stroke="#ddd"></path>
+                                        <path d="M7 12.6667L10.3846 16L18 8.5" stroke="#ddd" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </button><span class="word">선물하기</span><span class="number">64</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- 최지민님 부분 -->
+    </div>
+</body>
+
+</html>
