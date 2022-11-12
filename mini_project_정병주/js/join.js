@@ -88,7 +88,10 @@ function input_birth_script() {
     = document.getElementById('input_birth_month').value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');
     document.getElementById('input_birth_date').value
     = document.getElementById('input_birth_date').value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');
-    if(document.getElementById('input_birth_year').value == "" || fullYear - document.getElementById('input_birth_year').value > 100 || document.getElementById('input_birth_year').value.length < 4) {
+    if(document.getElementById('input_birth_year').value.length < 4) {
+        document.getElementById('input_birth_p').innerHTML = "생년월일을 다시 확인해 주세요.";
+        document.getElementById('input_birth_p').style.display = "flex";
+    } else if(document.getElementById('input_birth_year').value == "" || fullYear - document.getElementById('input_birth_year').value > 100) {
         document.getElementById('input_birth_p').innerHTML = "태어난 년도 4자리를 정확하게 입력해주세요.";
         document.getElementById('input_birth_p').style.display = "flex";
     } else if(document.getElementById('input_birth_month').value == "" || document.getElementById('input_birth_month').value > 12 || document.getElementById('input_birth_month').value == 0) {
@@ -101,4 +104,27 @@ function input_birth_script() {
         document.getElementById('input_birth_p').innerHTML = "";
         document.getElementById('input_birth_p').style.display = "none";
     }
+}
+
+function agree_all() {
+    if(document.getElementById('agree_all').checked == true) {
+        for(var i=0; i<document.getElementsByClassName('agree_check').length; i++) {
+            document.getElementsByClassName('agree_check')[i].checked= true;
+        }
+    } else if(document.getElementById('agree_all').checked == false) {
+        for(var i=0; i<document.getElementsByClassName('agree_check').length; i++) {
+            document.getElementsByClassName('agree_check')[i].checked= false;
+        }
+    }
+}
+
+function event_pop_up_1() {
+    document.getElementById('input_event_area_1').style.display = "flex";
+    document.getElementById('input_event_area_1').style.flexDirection = "column";
+    document.getElementById('input_event_area_2').style.display = "none";
+}
+function event_pop_up_2() {
+    document.getElementById('input_event_area_1').style.display = "none";
+    document.getElementById('input_event_area_2').style.display = "flex";
+    document.getElementById('input_event_area_2').style.flexDirection = "column";
 }
