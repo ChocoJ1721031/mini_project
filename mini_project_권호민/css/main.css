@@ -40,7 +40,7 @@
 #h_second {
     width: 100%;
     height: 56px;
-    position: relative;
+    /* position: relative; */
     top:0;
     background-color: rgb(255, 255, 255);
     box-shadow: rgb(0 0 0 / 7%) 0px 3px 4px 0px;
@@ -284,6 +284,51 @@
     color: rgb(95, 0, 108);
     box-shadow: rgb(95 0 128) 0px -1px 0px 0px inset;
     font-weight: 500px;
+}
+/* section, section-nav */
+#right_nav {
+    position: absolute;
+    width: 80px;
+    right: 20px;
+    top: 714px;
+    font-size: 12px;
+    line-height: 16px;
+    color: rgb(51, 51, 51);
+    letter-spacing: -0.3px;
+    transition: top 0.2s ease 0s;
+    z-index: 1;
+}
+@media (min-width:1251px) {
+    #right_nav {
+        display: block;
+    }
+}
+@media (max-width:1250px) {
+    #right_nav {
+        display: none;
+    }
+}
+.right_nav_iLink > img {
+    width: 80px;
+    height: 120px;
+    margin-bottom: 5px;
+}
+.right_nav_list {
+    width: 80px;
+    border-width: 1px 1px 0px;
+    border-style: solid solid none;
+    border-top-color: rgb(221, 221, 221);
+    border-right-color: rgb(221, 221, 221);
+    border-left-color: rgb(221, 221, 221);
+    border-image: initial;
+    border-bottom-color: initial;
+    background-color: rgb(255, 255, 255);
+}
+.right_nav_list > li {
+    height: 29px;
+    padding-top: 5px;
+    border-bottom: 1px solid rgb(221, 221, 221);
+    text-align: center;
 }
 
 /* <!-- footer --> */
