@@ -147,7 +147,7 @@
     text-align: center;
     line-height: 40px;
 }
-#extra_event_parent {
+#extra_event_parent > div:first-child {
     display: flex;
     justify-content: space-between;
 }
@@ -157,6 +157,18 @@
 .extra_event > span {
     font-size: 14px;
     margin-left: 14px;
+}
+#input_extra_event_parent {
+    margin-top: 20px;
+}
+#input_event_area_1, #input_event_area_2 {
+    display: none;
+}
+#input_event_area_1 > div, #input_event_area_2 > div {
+    margin-top: 10px;
+    font-size: 12px;
+    color: rgb(102, 102, 102);
+    line-height: 18px;
 }
 
 
