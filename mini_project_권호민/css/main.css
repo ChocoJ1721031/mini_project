@@ -90,7 +90,7 @@
     padding: 3px 9px;
     border: 1px solid rgb(221, 221, 221);
     background-color: rgb(255, 255, 255);
-    z-index: 1;
+    z-index: 3;
 }
 .h_f_1_a3_hover > div {
     display: block;
