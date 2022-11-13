@@ -204,7 +204,7 @@
     cursor: pointer;
 }
 
-.h_s_1 #s_category {
+#s_category {
     display: flex;
     height: 100%;
     align-items: center;
@@ -212,23 +212,22 @@
     font-weight: 500;
 }
 
-.h_s_1 #s_category span:first-of-type {
+#s_category span:first-of-type {
     margin-right: 14px;
 }
 
-.h_s_1 #s_list {
+#s_list {
     display: flex;
     margin-left: 30px;
     /* margin-block-start: 1em;
-            margin-block-end: 1em; */
+    margin-block-end: 1em; */
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     padding-inline-start: 40px;
-    font-size: 16px;
-    font-weight: 500;
+    
 }
 
-.h_s_1 #s_list li {
+#s_list > li {
     display: flex;
     justify-content: center;
     width: 150px;
@@ -237,14 +236,23 @@
     line-height: 20px;
     text-align: center;
 }
+#s_list > li > span {
+    font-size: 16px;
+    font-weight: 500;
+    height: fit-content;
+}
+#s_list > li > span:hover {
+    color: rgb(95, 0, 128);
+    border-bottom: 1px solid rgb(95, 0, 128);
+}
 
-.h_s_1 #s_link {
+#s_link {
     display: flex;
     align-items: center;
     font-size: 13px;
 }
 
-.h_s_1 #s_link>a {
+#s_link > a {
     border-radius: 18px;
     border: 1px solid rgb(238, 238, 238);
     color: rgb(102, 102, 102);
@@ -252,7 +260,7 @@
     line-height: 16px;
     padding: 6px 16px;
 }
-.h_s_1 #s_link > a > span {
+#s_link > a > span {
     color: rgb(95, 0, 128);
 }
 
@@ -344,51 +352,6 @@
     color: rgb(95, 0, 108);
     box-shadow: rgb(95 0 128) 0px -1px 0px 0px inset;
     font-weight: 500px;
-}
-/* section, section-nav */
-#right_nav {
-    position: absolute;
-    width: 80px;
-    right: 20px;
-    top: 714px;
-    font-size: 12px;
-    line-height: 16px;
-    color: rgb(51, 51, 51);
-    letter-spacing: -0.3px;
-    transition: top 0.2s ease 0s;
-    z-index: 1;
-}
-@media (min-width:1251px) {
-    #right_nav {
-        display: block;
-    }
-}
-@media (max-width:1250px) {
-    #right_nav {
-        display: none;
-    }
-}
-.right_nav_iLink > img {
-    width: 80px;
-    height: 120px;
-    margin-bottom: 5px;
-}
-.right_nav_list {
-    width: 80px;
-    border-width: 1px 1px 0px;
-    border-style: solid solid none;
-    border-top-color: rgb(221, 221, 221);
-    border-right-color: rgb(221, 221, 221);
-    border-left-color: rgb(221, 221, 221);
-    border-image: initial;
-    border-bottom-color: initial;
-    background-color: rgb(255, 255, 255);
-}
-.right_nav_list > li {
-    height: 29px;
-    padding-top: 5px;
-    border-bottom: 1px solid rgb(221, 221, 221);
-    text-align: center;
 }
 
 /* <!-- footer --> */
