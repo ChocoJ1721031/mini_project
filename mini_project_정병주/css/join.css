@@ -2,11 +2,17 @@
     width: 100%;
     min-width: 1050px;
     padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 60px;
 }
-#section > div:first-child {
+#section > div {
+    width: 1050px;
+}
+#section > div > div:first-child {
     text-align: center;
 }
-#section > div:nth-child(2) {
+#section > div > div:nth-child(2) {
     display: flex;
     justify-content: center;
 }
@@ -191,7 +197,9 @@
     line-height: 18px;
 }
 
-
+input[type="checkbox"] {
+    top: 5px;
+}
 #info_agreement {
     margin-top: 20px;
     border-top: 1px solid rgb(51, 51, 51);
