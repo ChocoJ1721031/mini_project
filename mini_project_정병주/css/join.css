@@ -44,6 +44,8 @@
 #login_tbl {
     border-collapse: separate;
     border-spacing: 0 20px;
+    position: relative;
+    top: -10px;
 }
 #login_tbl tr > td:nth-child(2) > p {
     padding: 10px 0;
@@ -458,9 +460,6 @@ div[id*="pop_up_"] > div{
     color: #999;
     line-height: 20px;
 }
-
-
-
 #pop_up_3_content > div > div:last-child > button, #pop_up_4_content > div > div:last-child > button, #pop_up_5_content > div > div:last-child > button{
     padding: 0px 10px;
     width: 100%;
