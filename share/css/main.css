@@ -184,6 +184,97 @@
 #buttons > button:last-of-type:hover  {
     background: url(../images/장바구니로고_hover.svg) 50% 50% no-repeat;
 }
+
+#buttons > button:first-of-type:hover ~ .buttons_first_hover  {
+    display: block;
+}
+.buttons_first_hover:hover {
+    display: block;
+}
+.buttons_first_hover {
+    position: absolute;
+    right: 0;
+    top: 30px;
+    width: 266px;
+    height: 154px;
+    background-color: transparent;
+    display: none;
+}
+.buttons_first_hover > img:first-of-type {
+    position: absolute;
+    right: 121px;
+    top: 9.8px;
+    z-index: 3;
+}
+.buttons_first_hover > img:last-of-type {
+    position: absolute;
+    right: 122.6px;
+    top: 20.4px;
+    width: 14.9px;
+    height: 2px;
+    z-index: 4;
+}
+.buttons_first_hover > div {
+    position: absolute;
+    right: 0;
+    top: 20px;
+    width: 266px;
+    padding: 18px 17px 17px;
+    border: 1px solid rgb(221, 221, 221);
+    background-color: rgb(255, 255, 255);
+    z-index: 3;
+}
+.buttons_first_hover > div > p {
+    font-weight: 400;
+    font-size: 16.5px;
+    color: rgb(51, 51, 51);
+    line-height: 24px;
+    letter-spacing: 0.32px;
+}
+.buttons_first_hover > div > p > strong {
+    font-weight: 400;
+    color: rgb(95, 0, 128);
+}
+.buttons_first_hover > div > div {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 11px;
+}
+.buttons_first_hover > div > div > button:first-of-type {
+    display: block;
+    padding: 0px 10px;
+    text-align: center;
+    width: 80px;
+    height: 36px;
+    border-radius: 3px;
+    color: rgb(95, 0, 128);
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(95, 0, 128);
+}
+.buttons_first_hover > div > div > button:last-of-type {
+    display: flex;
+    justify-content: center;
+    padding: 0px 10px;
+    width: 145px;
+    height: 36px;
+    border-radius: 3px;
+    color: rgb(95, 0, 128);
+    background-color: rgb(95, 0, 128);
+    border: 0px none;
+}
+.buttons_first_hover > div > div > button:last-of-type > img{
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin: auto 0;
+}
+.buttons_first_hover > div > div > button:last-of-type > span{
+    display: block;
+    color: white;
+    height: 100%;
+    line-height: 36px;
+}
     
 
 /* <!-- header h_second --> */
