@@ -264,9 +264,12 @@
     color: rgb(95, 0, 128);
 }
 
-#s_category:hover > div {
+#s_category:hover #s_c_list {
     display: block;
 } 
+#s_c_list:hover {
+    display: block;
+}
 #s_category > span:first-of-type {
     width: 16px;
     height: 14px;
@@ -280,63 +283,70 @@
     color: rgb(95, 0, 128);
 } 
 #s_category > div {
+    max-height: calc(95vh - 55px);
     min-height: 200px;
     position: absolute;
     display: flex;
     top: 46px;
     padding-top: 10px;
-    display: none;
 }
 #s_category > div > div {
     position: relative;
-    z-index: 21;
     width: 100%;
-    background-color: rgb(255, 255, 255);
+    /* background-color: rgb(255, 255, 255);
+    animation: 0.2s linear 0s 1 normal none running animation-tb0mmg; */
 }
-.s_c_list {
+#s_c_list {
     overflow-y: scroll;
-    width: 247px;
+    width: 255px;
     height: 100%;
     background-color: rgb(255, 255, 255);
     border: 1px solid rgb(221, 221, 221);
     cursor: pointer;
+    z-index: 21;
+    display: none;
 }
-.s_c_list > li {
+#s_c_list > li {
     padding: 7px 0px 9px 14px;
 }
-.s_c_list > li img {
+#s_c_list > li img {
     width: 24px;
     height: 24px;
 }
-.s_c_list > li > div {
+#s_c_list > li > div {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
 }
-.s_c_list > li > div:hover ~ ul {
-    display: block;
-}
-.s_c_list > li > div > span {
+#s_c_list > li > div > span {
     padding: 1px 20px 0px 10px;
     color: rgb(51, 51, 51);
     font-size: 14px;
     font-weight: 400;
     line-height: 22px;
 }
-.s_c_list ul {
-    background-color: rgb(247, 247, 247);
+.s_c_list_li > ul {
+    background: linear-gradient(90deg,transparent 0px,transparent 16px,#f7f7f7 16px, #f7f7f7 252px);
     border: 1px solid rgb(221, 221, 221);
-    width: 255px;
-    height: 100%;
+    width: 271px;
+    height: 242px;
     position: absolute;
     overflow-y: scroll;
     top: 0px;
-    left: 247px;
+    left: 0px;
     z-index: 20;
+    animation: 0.5s linear 0s 1 normal none running animation-plwpox;
     display: none;
 }
-.s_c_list > li > ul div {
-    padding: 11px 20px 11px 18px;
+.s_c_list_li:hover > ul {
+    left: 238px;
+    display: block;
+}
+.s_c_list_li:hover  {
+    background-color: rgb(247, 247, 247);
+}
+#s_c_list > li > ul div {
+    padding: 11px 20px 11px 34px;
     display: flex;
     width: 100%;
     align-items: center;
@@ -345,10 +355,10 @@
     color: rgb(51, 51, 51);
     line-height: 22px;
 }
-.s_c_list > li > ul div span {
+#s_c_list > li > ul div span {
     line-height: 18px;
 }
-.s_c_list > li > ul div:hover span {
+#s_c_list > li > ul div:hover span {
     color: rgb(95, 0, 108);
     box-shadow: rgb(95 0 128) 0px -1px 0px 0px inset;
     font-weight: 500px;
