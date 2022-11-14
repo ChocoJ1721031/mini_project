@@ -7,12 +7,353 @@
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans:wght@100&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="./css/recipe_list.css">
+    <link rel="stylesheet" href="./css/main_s.css">
     <title>Document</title>
     <style>
-        #section {
-            width: 100%;
+ #section {
+           
+          width: 100%;
         }
+.page_aticle {
+    width: 1050px;
+    margin: 0 auto;
+}
+#lnbMenu {
+    padding-top: 26px;
+}
+#lnbMenu .inner_lnb {
+    position: relative;
+}
+
+#lnbMenu .tit {
+    padding: 23px 0 20px;
+    font-weight: 700;
+    font-size: 28px;
+    color: #333;
+    line-height: 35px;
+    letter-spacing: -1px;
+    text-align: center;
+}
+
+#lnbMenu .list {
+    display: none;
+    overflow: hidden;
+    margin-top: 3px;
+    padding: 12px 0 29px;
+    border: 1px solid #e2e2e2;
+}
+#lnbMenu li {
+    float: left;
+    width: 263px;
+    padding: 16px 44px 0 39px;
+}
+#lnbMenu li .on {
+    border-bottom: 1px solid #5F0080;
+    font-weight: 700;
+    color: #5f0080;
+}
+#lnbMenu li a {
+    overflow: hidden;
+    float: left;
+    max-width: 180px;
+    line-height: 20px;
+    font-size: 14px;
+    color: #333;
+    letter-spacing: -1px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    cursor: pointer;
+}
+#lnbMenu li:nth-of-type(4n) {
+    width: 219px;
+    padding-right: 0;
+}
+#lnbMenu .inner_lnb {
+    position: relative;
+}
+.layout-wrapper {
+    position: relative;
+    width: 1050px;
+    height: 100%;
+    margin: 0 auto;
+}
+#recipe.wrap {
+    padding: 30px 29px;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+textarea, button {
+    font-family: noto sans,malgun gothic,AppleGothic,dotum;
+    line-height: 1;
+    letter-spacing: -.05em;
+    color: #4c4c4c;
+    font-size: 12px;
+    max-width: 100%;
+}
+#recipe_table .recipe_tr td {
+    margin-left: 30px;
+}
+#recipe .recipe_item {
+    width: 480px;
+    height: 550px;
+    margin-bottom: 30px;
+    border: 1px solid #f4f4f4;
+}
+a {
+    background-color: transparent;
+    text-decoration: none;
+    color: inherit;
+}
+#recipe .recipe_item img {
+    border-bottom: 1px solid #f4f4f4;
+}
+#recipe .recipe_item .tit_recipe {
+    width: 480px;
+    height: 70px;
+    padding: 25px 0 25px 30px;
+    text-align: left;
+    font-size: 22px;
+    line-height: .6;
+}
+#recipe .recipe_item {
+    width: 480px;
+    height: 550px;
+    margin-bottom: 30px;
+    border: 1px solid #f4f4f4;
+}
+#recipe .recipe_item img {
+    border-bottom: 1px solid #f4f4f4;
+}
+
+
+*, *:after, *:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+#recipe_table .recipe_tr td {
+    margin-left: 30px;
+}
+.layout-pagination {
+    margin: 60px 0 0;
+    text-align: center;
+}
+.layout-pagination-button:first-child {
+    border-left: 1px solid #ddd;
+}
+.layout-pagination-prev-page {
+    background-image: url(https://res.kurly.com/pc/etc/old/images/common/icon-pagination-prev.png);
+}
+.layout-pagination-number:hover, .layout-pagination-number.__active {
+    background-color: #f7f7f7;
+    color: #5f0080;
+}
+.layout-pagination-number {
+    font-weight: 700;
+    color: #333;
+    line-height: 34px;
+}
+.layout-pagination-next-page {
+    background-image: url(https://res.kurly.com/pc/etc/old/images/common/icon-pagination-next.png);
+}
+
+.xans-board-search2 {
+    height: 80px;
+    padding: 0;
+}
+.xans-board-search {
+    margin-top: 30px;
+    padding: 20px 0 20px 10px;
+    color: #2e2e2e;
+    font-size: 12px;
+    clear: both;
+    border-top: 1px solid #5e3d5a;
+    width: 100%;
+}
+.xans-board-search .input_txt img {
+    position: relative;
+    right: 5px;
+    top: -2px;
+}
+
+.xans-board-search .stxt input {
+    margin-left: 10px;
+    margin-right: 3px;
+    position: relative;
+    top: 3px;
+    
+}
+.search_bt img {
+    float: right;
+}
+img {
+    border: 0;
+}
+.xans-board-search input[type=text] {
+    height: 34px;
+    line-height: 34px;
+    width: 220px;
+    border: 1px solid #bfbfbf;
+    color: #000;
+    float: right;
+    padding: 4px;
+}
+
+div {
+    display: block;
+}
+.layout-pagination {
+    margin: 60px 0 0;
+    text-align: center;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+table {
+    border-collapse: separate;
+    text-indent: initial;
+    border-spacing: 2px;
+}
+
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+.layout-pagination-next-page, .layout-pagination-last-page {
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    text-indent: -9999px;
+}
+.layout-pagination-button {
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    border: 1px solid #ddd;
+    border-left: 0;
+    vertical-align: top;
+}
+number.__active {
+    background-color: #f7f7f7;
+    color: #5f0080;
+}
+.layout-pagination-last-page {
+    background-image: url(https://res.kurly.com/pc/etc/old/images/common/icon-pagination-last.png);
+}
+td {
+    display: table-cell;
+    vertical-align: inherit;
+}
+td, th {
+    padding: 0;
+}
+.layout-pagination-button {
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    border: 1px solid #ddd;
+    border-left: 0;
+    vertical-align: top;
+}
+pagination-last-page {
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    text-indent: -9999px;
+}
+.layout-pagination-first-page {
+    background-image: url(https://res.kurly.com/pc/etc/old/images/common/icon-pagination-first.png);
+}
+.layout-pagination-first-page, .layout-pagination-prev-page, .layout-pagination-next-page, .layout-pagination-last-page {
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    text-indent: -9999px;
+}
+.layout-pagination-button {
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    border: 1px solid #ddd;
+    border-left: 0;
+    vertical-align: top;
+}
+.xans-board-search {
+    margin-top: 30px;
+    padding: 20px 0 20px 10px;
+    color: #2e2e2e;
+    font-size: 12px;
+    clear: both;
+    border-top: 1px solid #5e3d5a;
+    width: 100%;
+}
+
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+.xans-board-search .stxt {
+    font-size: 14px;
+}
+.xans-board-search .stxt input {
+    margin-left: 10px;
+    margin-right: 3px;
+    position: relative;
+    top: 3px;
+}
+body, input, select, textarea, button {
+    font-family: noto sans,malgun gothic,AppleGothic,dotum;
+    line-height: 1;
+    letter-spacing: -.05em;
+    color: #4c4c4c;
+    font-size: 12px;
+    max-width: 100%;
+}
+input[type="checkbox" i] {
+    background-color: initial;
+    cursor: default;
+    appearance: auto;
+    box-sizing: border-box;
+    margin: 3px 3px 3px 4px;
+    padding: initial;
+    border: initial;
+}
+input {
+    writing-mode: horizontal-tb !important;
+    font-style: ;
+    font-variant-ligatures: ;
+    font-variant-caps: ;
+    font-variant-numeric: ;
+    font-variant-east-asian: ;
+    font-weight: ;
+    font-stretch: ;
+    font-size: ;
+    font-family: ;
+    text-rendering: auto;
+    color: fieldtext;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: auto;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    background-color: field;
+    margin: 0em;
+    padding: 1px 2px;
+    border-width: 2px;
+    border-style: inset;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: initial;
+}
     </style>
     <!-- 전체공통 -->
     <style>
@@ -127,6 +468,8 @@
                 </div>
             </div>
         </div>
+        <div id="main">
+            <div id="content"></div>
         <div id="section">
             <div>
                 <div class="page_aticle">
@@ -154,7 +497,7 @@
                 </div>
                 <div class="layout-wrapper">
                 <div id="recipe" class="wrap">
-                    <table width="100%" align="center">
+                    <table width="100%">
                         <tbody>
                             <tr>
                                 <td>
@@ -163,7 +506,7 @@
                                         <table width="100%" id="recipe_table">
                                         <tbody>
                                             <tr class="recipe_tr">
-                                                <td align="left" valign="top">
+                                                <td valign="top">
                                                     <div>
                                                         <ul>
                                                             <li class="recipe_item" onclick="viewContentRecipe('479','1','치킨 야채 수프')">
@@ -175,7 +518,7 @@
                                                         </ul>
                                                     </div>
                                                 </td>
-                                                <td align="left" valign="top">
+                                                <td valign="top">
                                                     <div>
                                                         <ul>
                                                             <li class="recipe_item" onclick="#">
@@ -189,7 +532,7 @@
                                                 </td>
                                             </tr>
                                             <tr class="recipe_tr">
-                                                <td align="left" valign="top">
+                                                <td valign="top">
                                                     <div>
                                                         <ul>
                                                             <li class="recipe_item" onclick="#">
@@ -201,7 +544,7 @@
                                                         </ul>
                                                     </div>
                                                 </td>
-                                                <td align="left" valign="top">
+                                                <td valign="top">
                                                     <div>
                                                         <ul>
                                                             <li class="recipe_item" onclick="#">
@@ -215,7 +558,7 @@
                                                 </td>              
                                             </tr>
                                             <tr class="recipe_tr">
-                                                <td align="left" valign="top">
+                                                <td valign="top">
                                                     <div>
                                                         <ul>
                                                             <li class="recipe_item" onclick="#">
@@ -227,7 +570,7 @@
                                                         </ul>
                                                     </div>
                                                 </td>
-                                                <td align="left" valign="top">
+                                                <td valign="top">
                                                     <div>
                                                         <ul>
                                                             <li class="recipe_item" onclick="#">
@@ -241,7 +584,7 @@
                                                 </td>
                                             </tr>
                                             <tr class="recipe_tr">
-                                                <td align="left" valign="top">
+                                                <td valign="top">
                                                     <div>
                                                         <ul>
                                                             <li class="recipe_item" onclick="#">
@@ -253,7 +596,7 @@
                                                         </ul>
                                                     </div>
                                                 </td>
-                                                <td align="left" valign="top">
+                                                <td valign="top">
                                                     <div>
                                                         <ul>
                                                             <li class="recipe_item" onclick="#">
@@ -267,7 +610,8 @@
                                                 </td>
                                             </tr>
                                             <tr class="recipe_tr">
-                                                <td align="left" valign="top">
+                                                <td 
+                                                valign="top">
                                                     <div>
                                                         <ul>
                                                             <li class="recipe_item" onclick="#">
@@ -279,7 +623,7 @@
                                                         </ul>
                                                     </div>
                                                 </td> 
-                                                <td align="left" valign="top">
+                                                <td valign="top">
                                                     <div>
                                                         <ul>
                                                             <li class="recipe_item" onclick="#">
@@ -293,7 +637,7 @@
                                                 </td> 
                                             </tr>
                                                 <tr class="recipe_tr">
-                                                    <td align="left" valign="top">
+                                                    <td valign="top">
                                                         <div>
                                                             <ul>
                                                                 <li class="recipe_item" onclick="#">
@@ -305,7 +649,7 @@
                                                             </ul>
                                                         </div>
                                                     </td> 
-                                                    <td align="left" valign="top">
+                                                    <td valign="top">
                                                         <div>
                                                             <ul>
                                                                 <li class="recipe_item" onclick="#">
@@ -323,46 +667,46 @@
                                         </table>
                                             <div class="layout-pagination">
                                                     <div class="pagediv">
-                                                        <a href="#" class="#">맨 처음 페이지로 가기</a>
-                                                        <a href="#" class="#">이전 페이지로 가기</a>
-                                                        <strong class="#">1</strong>
-                                                        <a href="#" class="#">2</a>
-                                                        <a href="#" class="#">3</a>
-                                                        <a href="#" class="#">4</a>
-                                                        <a href="#" class="#">5</a>
-                                                        <a href="#" class="#">6</a>
-                                                        <a href="#" class="#">7</a>
-                                                        <a href="#" class="#">8</a>
-                                                        <a href="#" class="#">9</a>
-                                                        <a href="#" class="#">10</a>
-                                                        <a href="#" class="#">다음 페이지로 가기</a>
-                                                        <a href="#" class="#">맨 끝 페이지로 가기</a>
+                                                        <a href="#" class="layout-pagination-button layout-pagination-first-page">맨 처음 페이지로 가기</a>
+                                                        <a href="#" class="layout-pagination-prev-page"></a>
+                                                        <strong class="layout-pagination-button layout-pagination-number __active">1</strong>
+                                                        <a href="#" class="layout-pagination-button layout-pagination-number">2</a>
+                                                        <a href="#" class="layout-pagination-button layout-pagination-number">3</a>
+                                                        <a href="#" class="layout-pagination-button layout-pagination-number">4</a>
+                                                        <a href="#" class="layout-pagination-button layout-pagination-number">5</a>
+                                                        <a href="#" class="layout-pagination-button layout-pagination-number">6</a>
+                                                        <a href="#" class="layout-pagination-button layout-pagination-number">7</a>
+                                                        <a href="#" class="layout-pagination-button layout-pagination-number">8</a>
+                                                        <a href="#" class="layout-pagination-button layout-pagination-number">9</a>
+                                                        <a href="#" class="layout-pagination-button layout-pagination-next-page">10</a>
+                                                        <a href="#" class="layout-pagination-button layout-pagination-last-page">다음 페이지로 가기</a>
+                                                        <a href="#" class="#"></a>
                                                     </div>
                                             </div>
                                             <table width="100%">
                                                     <tbody>
                                                         <tr>
                                                             <td align="right">
-                                                                <table calss="xans-board-search xans-board-search2">
+                                                                <table class="xans-board-search xans-board-search2">
                                                                     <tobdy>
                                                                         <tr>
                                                                             <td class="input_txt">
                                                                                 <img src="https://www.kurly.com/shop/data/skin/designgj/images/board/ico_function.gif">검색어
                                                                             </td>
-                                                                            <td class="stxt" style="text-align:left">
+                                                                            <td class="stxt">
                                                                                 <input type="checkbox" name="search[name]"> 
-                                                                                "이름"
-                                                                                <input type="checkbox " name="search[subject]">
-                                                                                "제목"
+                                                                                이름
+                                                                                <input type="checkbox" name="search[subject]">
+                                                                                제목
                                                                                 <input type="checkbox" name="search[contents]">
-                                                                                "내용"
+                                                                                내용
                                                                                 <input type="checkbox" name="search[tag]">
-                                                                                "태그 &nbsp; "
+                                                                                태그 &nbsp; 
                                                                             </td>
                                                                             <td class="input_txt">&nbsp;</td>
                                                                             <td>
-                                                                                <div class="search_bt" onclick="#">
-                                                                                <img src="./images/s14.png" allign="absmiddle">
+                                                                                <div class="search_bt" onclick="searchRecipe();">
+                                                                                <img src="https://www.kurly.com/shop/data/skin/designgj/images/board/search.png" allign="absmiddle">
                                                                                 <input type="text" name="search[word]" value required>
                                                                                 </div>
                                                                             </td>
@@ -370,6 +714,7 @@
                                                                     </tobdy>
                                                                 </table>
                                                             </td>
+                                    
                                                         </tr>
                                                     </tbody>
                                             </table>
