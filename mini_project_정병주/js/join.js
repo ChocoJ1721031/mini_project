@@ -119,6 +119,37 @@ function agree_all() {
     }
 }
 
+function sms_all() {
+    if(document.getElementById('sms_all').checked == true) {
+        for(var i=0; i<document.getElementsByClassName('sms_each').length; i++) {
+            document.getElementsByClassName('sms_each')[i].checked= true;
+        }
+    } else if(document.getElementById('sms_all').checked == false) {
+        for(var i=0; i<document.getElementsByClassName('sms_each').length; i++) {
+            document.getElementsByClassName('sms_each')[i].checked= false;
+        }
+    }
+}
+
+$(document).ready(function() {
+    $('input[type="checkbox"][class="agree_check"]').change(function() {
+        if($('input[type="checkbox"][class="agree_check"]:checked').length < $('input[type="checkbox"][class="agree_check"]').length) {
+            document.getElementById('agree_all').checked = false;
+        } else {
+            document.getElementById('agree_all').checked = true;
+        }
+    });
+});
+
+$(document).ready(function() {
+    $('input[type="checkbox"][class*="sms_each"]').change(function() {
+        if($('input[type="checkbox"][class*="sms_each"]:checked').length < $('input[type="checkbox"][class*="sms_each"]').length) {
+            document.getElementById('sms_all').checked = false;
+        } else {
+            document.getElementById('sms_all').checked = true;
+        }
+    });
+});
 function event_pop_up_1() {
     document.getElementById('input_event_area_1').style.display = "flex";
     document.getElementById('input_event_area_1').style.flexDirection = "column";
