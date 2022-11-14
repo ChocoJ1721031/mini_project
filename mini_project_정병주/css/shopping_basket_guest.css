@@ -191,6 +191,7 @@ input[type="checkbox"] {
     background-color: rgb(221, 221, 221);
     border: 0px none;
     font-weight: 600;
+    cursor: default;
 }
 #moving_content > div:last-child > button > span {
     color: rgb(255, 255, 255);

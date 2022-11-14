@@ -75,6 +75,11 @@ input[type="checkbox"] {
     align-items: center;
     font-weight: 500;
 }
+#product_area > div > span {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
 #product_area > div > span > span {
     margin-right: 8px;
 }
@@ -82,7 +87,7 @@ input[type="checkbox"] {
     width: 30px;
     height: 30px;
     position: relative;
-    top: 8px;
+    top: 4px;
 }
 #product_area > div > button {
     border: 0px;
