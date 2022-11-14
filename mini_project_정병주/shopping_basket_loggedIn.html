@@ -129,16 +129,16 @@
                 <div>
                     <div id="left_content">
                         <div>
-                            <label><input type="checkbox" class="select_all" onclick="select_all_1()"><span>전체선택(1/1)</span></label>
+                            <label><input type="checkbox" class="select_all" onclick="select_all_1()"><span class="select_all_text">전체선택(0/2)</span></label>
                             <span></span>
                             <button type="button">선택삭제</button>
                         </div>
                         <div id="product_area">
-                            <div>
+                            <div id="product_1_info_1">
                                 <span><span><img src="./images/상온보관_로고.svg"></span>상온 상품</span>
-                                <button type="button"><img src="./images/up_btn.svg"></button>
+                                <button type="button" id="product_1_show_hide" onclick="show_hide_1()"><img src="./images/up_btn.svg"></button>
                             </div>
-                            <ul>
+                            <ul  id="product_1_info_2">
                                 <li>
                                     <label><input type="checkbox" name="" class="select_product" onclick="select_product()"></label>
                                     <a><span></span></a>
@@ -147,18 +147,41 @@
                                             <p>[선물세트] 원데이노블너츠세트 950g</p>
                                         </a>
                                     </div>
-                                    <div>
-                                        <button type="button"></button>
-                                        <div>1</div>
-                                        <button type="button"></button>
+                                    <div id="product_count_1">
+                                        <button type="button" id="click_1" onclick="click_1()"></button>
+                                        <span id="count_1">1</span>
+                                        <button type="button" id="click_2" onclick="click_2()"></button>
                                     </div>
-                                    <div><span>58,000원</span></div>
+                                    <div><span id="product_1_cost">58,000원</span></div>
+                                    <button type="button"><span> </span></button>
+                                </li>
+                            </ul>
+
+                            <div id="product_2_info_1">
+                                <span><span><img src="./images/상온보관_로고.svg"></span>상온 상품</span>
+                                <button type="button" id="product_2_show_hide" onclick="show_hide_2()"><img src="./images/up_btn.svg"></button>
+                            </div>
+                            <ul  id="product_2_info_2">
+                                <li>
+                                    <label><input type="checkbox" name="" class="select_product" onclick="select_product()"></label>
+                                    <a><span></span></a>
+                                    <div>
+                                        <a>
+                                            <p>[선물세트] 원데이노블너츠세트 950g</p>
+                                        </a>
+                                    </div>
+                                    <div id="product_count_2">
+                                        <button type="button" id="click_3" onclick="click_3()"></button>
+                                        <div id="count_2">1</div>
+                                        <button type="button" id="click_4" onclick="click_4()"></button>
+                                    </div>
+                                    <div><span id="product_1_cost">58,000원</span></div>
                                     <button type="button"><span> </span></button>
                                 </li>
                             </ul>
                         </div>
                         <div>
-                            <label><input type="checkbox" class="select_all" onclick="select_all_2()"><span>전체선택(1/1)</span></label>
+                            <label><input type="checkbox" class="select_all" onclick="select_all_2()"><span class="select_all_text">전체선택(0/2)</span></label>
                             <span></span>
                             <button type="button">선택삭제</button>
                         </div>
@@ -176,19 +199,19 @@
                             <div>
                                 <div>
                                     <span>상품금액</span>
-                                    <span>58,000<span>원</span></span>
+                                    <span id="total_cost">0<span>원</span></span>
                                 </div>
                                 <div>
                                     <span>상품할인금액</span>
-                                    <span>12,500<span>원</span></span>
+                                    <span id="discount_cost">0<span>원</span></span>
                                 </div>
                                 <div>
                                     <span>배송비</span>
-                                    <span>2,500<span>원</span></span>
+                                    <span id="deliver_cost">2500<span></span></span>
                                 </div>
                                 <div>
                                     <span>결제예정금액</span>
-                                    <span><strong>43,000</strong><span>원</span></span>
+                                    <span><strong id="final_cost">0</strong><span></span></span>
                                 </div>
                             </div>
                             <div>
