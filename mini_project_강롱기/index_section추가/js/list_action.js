@@ -85,17 +85,17 @@ window.onload = function() {
     }
     var e = 0;
     document.getElementById("m_s_2_list_button_right").onclick = function () {
-        e += -1068;
+        e += -1098;
         var t_value = "translate3d(" + e +"px, 0px, 0px)";
         document.getElementsByClassName("m_s_2_list_swiper_wrap")[0].style.transform = t_value;
 
         document.getElementById("m_s_2_list_button_left").style.display = "inline-block";
-        if(e == -1068) {
+        if(e == -1098) {
             document.getElementById("m_s_2_list_button_right").style.display = "none";
         }
     }
     document.getElementById("m_s_2_list_button_left").onclick = function () {
-        e += +1068;
+        e += +1098;
         var t_value = "translate3d(" + e +"px, 0px, 0px)";
         document.getElementsByClassName("m_s_2_list_swiper_wrap")[0].style.transform = t_value;
 
