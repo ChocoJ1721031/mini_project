@@ -243,7 +243,8 @@
     font-weight: 300;
     line-height: 27px;
 }
-.btn_close {
+#btn_close_1,
+#btn_close_2 {
     position: absolute;
     right: 25px;
     top: 50%;
@@ -253,15 +254,27 @@
     font-size: 16px;
     color: rgb(95, 0, 128);
 }
-.btn_close::before {
+#btn_close_1.show::before,
+#btn_close_2.show::before {
     content: "";
     position: absolute;
     right: 0px;
-    top: 8px;
+    top: 9px;
     width: 14px;
     height: 8px;
     background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAQCAYAAAFyyC95AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAHKADAAQAAAABAAAAEAAAAAChTRmjAAABQklEQVQ4EaVTAVLCQAzMweuUR1jRZ+hQRp6BwCfU12np9rppclwhameYXJLdzSUXpJMuyfjp+UHaTh1mnQViCOjBaJQxQcAFG3m7d3qjM8Qbad/xswCw9UYW4BJkAFAmErQ7+f7o2z2cpH0iuGZRqpHtD3I6Hqj2Ta9rApZwks0iSZrmygpW4CibZ1YggbhZW+vLgXOPl5UdyDjEJ75O5CpTG8vVAgQIohd9IFOBx4mE6b9+DlOtTY0EWE/KT6bPMUeukSCmRDgl+VG2+7m3dcSSDL8H3Nwo4IYPlTFtXJOx0uquIgF1bAtWqgT+xccF2G7WX656ZR/Mif8Vvq45Xv06KNZxRKP6iHYMkY4jhca+/LoxCBsRiWCsJs4XHZaAOVHgsPvERxfuZkEK1gojFy1EnXBBEnLh3R38o7x8/fYvdAbtFvI3sJI0yAAAAABJRU5ErkJggg==") 100% 50% / 14px 8px no-repeat;
     transform: rotate(180deg);
+}
+#btn_close_1.hide::before,
+#btn_close_2.hide::before {
+    content: "";
+    position: absolute;
+    right: 0px;
+    top: 9px;
+    width: 14px;
+    height: 8px;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAQCAYAAAFyyC95AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAHKADAAQAAAABAAAAEAAAAAChTRmjAAABQklEQVQ4EaVTAVLCQAzMweuUR1jRZ+hQRp6BwCfU12np9rppclwhameYXJLdzSUXpJMuyfjp+UHaTh1mnQViCOjBaJQxQcAFG3m7d3qjM8Qbad/xswCw9UYW4BJkAFAmErQ7+f7o2z2cpH0iuGZRqpHtD3I6Hqj2Ta9rApZwks0iSZrmygpW4CibZ1YggbhZW+vLgXOPl5UdyDjEJ75O5CpTG8vVAgQIohd9IFOBx4mE6b9+DlOtTY0EWE/KT6bPMUeukSCmRDgl+VG2+7m3dcSSDL8H3Nwo4IYPlTFtXJOx0uquIgF1bAtWqgT+xccF2G7WX656ZR/Mif8Vvq45Xv06KNZxRKP6iHYMkY4jhca+/LoxCBsRiWCsJs4XHZaAOVHgsPvERxfuZkEK1gojFy1EnXBBEnLh3R38o7x8/fYvdAbtFvI3sJI0yAAAAABJRU5ErkJggg==") 100% 50% / 14px 8px no-repeat;
+    transform: rotate(0deg);
 }
 /* 본문 */
 .exch_refund_wrap,

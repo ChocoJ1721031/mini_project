@@ -56,7 +56,7 @@ time, mark, audio, video {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-	/* --kurly_font: "Noto Sans", "malgun gothic", AppleGothic, dotum, sans-serif; */
+	--kurly_font: "Noto Sans", "malgun gothic", AppleGothic, dotum, sans-serif;
 }
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
