@@ -105,3 +105,18 @@ window.onload = function() {
         }
     }
 }
+
+// 메인 섹션 맨 상단의 이벤트 목록 케러셀
+$(function() {
+    var cnt = 1;
+    var timer = setInterval(function(){
+                    var v = "translate3d("+(cnt*(20-window.innerWidth))+"px, 0px, 0px)";
+                    $(".m_s_top_swiper").css("transform",v);
+                    if(cnt == 3) {
+                        cnt = 0;
+                        // setTimeout(timer);
+                    } else {
+                        cnt++;
+                    }
+                }, 4000);
+});
