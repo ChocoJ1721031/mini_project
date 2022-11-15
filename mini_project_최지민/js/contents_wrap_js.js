@@ -1,6 +1,5 @@
 $(document).ready(function(){
     $(".contents_pictures2").hide();
-    $(".contents_pictures3").hide();
 });
 
 $(document).ready(function(){
