@@ -121,17 +121,14 @@ $(function() {
         } else {
             cnt++;
         }
-    }, 5000);
+    }, 4000);
 });
 window.onresize = function(event) {
-    var r_timer = setInterval(function(){
-                        var r_cnt = 0;
-                        var w = window.innerWidth
-                        var w_val = w + "px"; 
-                        var v = "translate3d("+(cnt*(-w))+"px, 0px, 0px)";
-                        $(".m_s_top_swiper").css("width",w_val);
-                        $(".m_s_top_swiper").css("transition-duration","0ms");
-                        $(".m_s_top_swiper").css("transform",v);
-                        clearInterval(r_timer);
-                    }, 300);
+    var r_cnt = 0;
+    var w = window.innerWidth
+    var w_val = w + "px"; 
+    var v = "translate3d("+(cnt*(-w))+"px, 0px, 0px)";
+    $(".m_s_top_swiper").css("width",w_val);
+    $(".m_s_top_swiper").css("transition-duration","0ms");
+    $(".m_s_top_swiper").css("transform",v);                        
 };
