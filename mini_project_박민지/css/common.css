@@ -1,0 +1,31 @@
+/* 공통 */
+    * {margin: 0; padding: 0;}
+    a {
+        background-color: transparent;
+        text-decoration: none;
+        color: inherit;
+    }
+    ol, ul {list-style: none;}
+    html, button, input, select, textarea {
+        font-family: "Noto Sans", "malgun gothic", AppleGothic, dotum, sans-serif;
+    }
+    body, button, input, select, textarea {
+        font-size: 14px;
+        color: #333;
+    }
+    :root {
+        --swiper-theme-color: #007aff;
+    }
+    html {
+        line-height: 1.15;
+        touch-action: manipulation;
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+    }
+    *, :after, :before {
+        box-sizing: border-box;
+        margin: 0;
+    }
+    *, :after, :before, legend, td, th {
+        padding: 0;
+    }
