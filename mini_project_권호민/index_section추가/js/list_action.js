@@ -107,16 +107,31 @@ window.onload = function() {
 }
 
 // 메인 섹션 맨 상단의 이벤트 목록 케러셀
+var cnt = 1;
 $(function() {
-    var cnt = 1;
-    var timer = setInterval(function(){
-                    var v = "translate3d("+(cnt*(20-window.innerWidth))+"px, 0px, 0px)";
-                    $(".m_s_top_swiper").css("transform",v);
-                    if(cnt == 3) {
-                        cnt = 0;
-                        // setTimeout(timer);
-                    } else {
-                        cnt++;
-                    }
-                }, 4000);
+    setInterval(function(){
+        var w = window.innerWidth
+        var w_val = w + "px"; 
+        var v = "translate3d("+(cnt*(-w))+"px, 0px, 0px)";
+        $(".m_s_top_swiper").css("width",w_val);
+        $(".m_s_top_swiper").css("transition-duration","300ms");
+        $(".m_s_top_swiper").css("transform",v);
+        if(cnt == 3) {
+            cnt = 0;
+        } else {
+            cnt++;
+        }
+    }, 5000);
 });
+window.onresize = function(event) {
+    var r_timer = setInterval(function(){
+                        var r_cnt = 0;
+                        var w = window.innerWidth
+                        var w_val = w + "px"; 
+                        var v = "translate3d("+(cnt*(-w))+"px, 0px, 0px)";
+                        $(".m_s_top_swiper").css("width",w_val);
+                        $(".m_s_top_swiper").css("transition-duration","0ms");
+                        $(".m_s_top_swiper").css("transform",v);
+                        clearInterval(r_timer);
+                    }, 300);
+};
