@@ -617,6 +617,10 @@
     color: rgb(51, 51, 51);
     cursor: pointer;
 }
+.m_s_4_ul_button:hover {
+    background-color: rgb(247, 243, 248);
+    color: rgb(95, 0, 128);
+}
 /* 메인 섹션 a */
 .m_s_4_a{
     margin: 0px auto;
