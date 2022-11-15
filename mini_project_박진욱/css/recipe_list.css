@@ -8,11 +8,7 @@
 #lnbMenu .inner_lnb {
     position: relative;
 }
-.page_aticle * {
-    font-family: noto sans;
-    font-weight: 400;
-    letter-spacing: 0;
-}
+
 #lnbMenu .tit {
     padding: 23px 0 20px;
     font-weight: 700;
@@ -22,11 +18,7 @@
     letter-spacing: -1px;
     text-align: center;
 }
-.page_aticle * {
-    font-family: noto sans;
-    font-weight: 400;
-    letter-spacing: 0;
-}
+
 #lnbMenu .list {
     display: none;
     overflow: hidden;
@@ -93,6 +85,11 @@ textarea, button {
     margin-bottom: 30px;
     border: 1px solid #f4f4f4;
 }
+a {
+    background-color: transparent;
+    text-decoration: none;
+    color: inherit;
+}
 #recipe .recipe_item img {
     border-bottom: 1px solid #f4f4f4;
 }
@@ -114,8 +111,13 @@ textarea, button {
     border-bottom: 1px solid #f4f4f4;
 }
 
-element.style {
-    text-align: left;
+
+*, *:after, *:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 #recipe_table .recipe_tr td {
     margin-left: 30px;
@@ -124,6 +126,25 @@ element.style {
     margin: 60px 0 0;
     text-align: center;
 }
+.layout-pagination-button:first-child {
+    border-left: 1px solid #ddd;
+}
+.layout-pagination-prev-page {
+    background-image: url(https://res.kurly.com/pc/etc/old/images/common/icon-pagination-prev.png);
+}
+.layout-pagination-number:hover {
+    background-color: #f7f7f7;
+    color: #5f0080;
+}
+.layout-pagination-number {
+    font-weight: 700;
+    color: #333;
+    line-height: 34px;
+}
+.layout-pagination-next-page {
+    background-image: url(https://res.kurly.com/pc/etc/old/images/common/icon-pagination-next.png);
+}
+
 .xans-board-search2 {
     height: 80px;
     padding: 0;
@@ -142,16 +163,20 @@ element.style {
     right: 5px;
     top: -2px;
 }
+
 .xans-board-search .stxt input {
     margin-left: 10px;
     margin-right: 3px;
     position: relative;
     top: 3px;
+    
 }
 .search_bt img {
     float: right;
 }
-
+img {
+    border: 0;
+}
 .xans-board-search input[type=text] {
     height: 34px;
     line-height: 34px;
@@ -162,13 +187,14 @@ element.style {
     padding: 4px;
 }
 
-div, th, td, li, dt, dd, p {
-    word-break: break-all;
+.pagediv {
+    display: flex;
 }
-
 .layout-pagination {
     margin: 60px 0 0;
     text-align: center;
+    display: flex;
+    justify-content: center;
 }
 table {
     border-collapse: collapse;
@@ -179,14 +205,7 @@ table {
     text-indent: initial;
     border-spacing: 2px;
 }
-body, input, select, textarea, button {
-    font-family: noto sans,malgun gothic,AppleGothic,dotum;
-    line-height: 1;
-    letter-spacing: -.05em;
-    color: #4c4c4c;
-    font-size: 12px;
-    max-width: 100%;
-}
+
 html {
     font-family: sans-serif;
     -ms-text-size-adjust: 100%;
@@ -205,10 +224,59 @@ html {
     border-left: 0;
     vertical-align: top;
 }
+.__active {
+    background-color: #f7f7f7;
+    color: #5f0080;
+}
+.layout-pagination-last-page {
+    background-image: url(https://res.kurly.com/pc/etc/old/images/common/icon-pagination-last.png);
+}
 td {
     display: table-cell;
     vertical-align: inherit;
 }
-td, th {
-    padding: 0;
+.layout-pagination-first-page {
+    background-image: url(https://res.kurly.com/pc/etc/old/images/common/icon-pagination-first.png);
+}
+.layout-pagination-first-page, .layout-pagination-prev-page, .layout-pagination-next-page, .layout-pagination-last-page {
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    text-indent: -9999px;
+}
+.layout-pagination-button {
+    display: block;
+    width: 34px;
+    height: 34px;
+    border: 1px solid #ddd;
+    border-left: 0;
+}
+.xans-board-search {
+    margin-top: 30px;
+    padding: 20px 0 20px 10px;
+    color: #2e2e2e;
+    font-size: 12px;
+    clear: both;
+    border-top: 1px solid #5e3d5a;
+    width: 100%;
+}
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+.xans-board-search .stxt {
+    font-size: 14px;
+}
+.xans-board-search .stxt input {
+    margin-left: 10px;
+    margin-right: 3px;
+    position: relative;
+    top: 3px;
+}
+body, input, select, textarea, button {
+    line-height: 1;
+    letter-spacing: -.05em;
+    color: #4c4c4c;
+    font-size: 12px;
+    max-width: 100%;
 }
