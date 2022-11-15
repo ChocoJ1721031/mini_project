@@ -80,14 +80,12 @@
 .goods_wrap {
     width: 1010px;
     margin: 0 auto;
-    font-family: var(--kurly_font);
     font-weight: 200;
     letter-spacing: 0;
 }
 
 .goods_wrap .goods_recipe h3 {
     display: block;
-    font-family: var(--kurly_font);
     font-weight: 700;
     padding-bottom: 70px;
     text-align: center;
@@ -97,7 +95,6 @@
 .goods_wrap .goods_recipe .recipe_tit {
     display: block;
     padding-bottom: 30px;
-    font-family: var(--kurly_font);
     font-weight: 700;
     font-size: 50px;
     line-height: 46px;
@@ -134,7 +131,6 @@
 
 .context {
     margin-bottom: 130px;
-    font-family: var(--kurly_font);
 }
 
 .goods_wrap .context .words {
@@ -148,7 +144,6 @@
     display: block;
     padding-bottom: 20px;
     font-size: 24px;
-    font-family: var(--kurly_font);
     font-weight: 700;
     color: #666;
     text-shadow: 1px 0
