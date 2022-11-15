@@ -417,7 +417,7 @@
     line-height: 22px;
 }
 .s_c_list_li > ul {
-    background: linear-gradient(90deg,transparent 0px,transparent 16px,#f7f7f7 16px, #f7f7f7 252px);
+    background: linear-gradient(90deg,transparent 0px,transparent 17px,#f7f7f7 17px, #f7f7f7 252px);
     border: 1px solid rgb(221, 221, 221);
     width: 271px;
     height: 242px;
@@ -430,7 +430,7 @@
     display: none;
 }
 .s_c_list_li:hover > ul {
-    left: 238px;
+    left: 237px;
     display: block;
 }
 .s_c_list_li:hover  {
