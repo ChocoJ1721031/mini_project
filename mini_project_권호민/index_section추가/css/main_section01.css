@@ -31,7 +31,7 @@
     display: flex;
     transition-property: transform;
     box-sizing: content-box;
-    transition-duration: 300ms;
+    transition-duration: 0ms;
     transform: translate3d(0px, 0px, 0px);
 }
 .m_s_top_swiper > div {
@@ -49,7 +49,7 @@
     height: 370px;
     object-fit: cover;
 }
-.m_s_top_swiper_wrap > button:first-of-type {
+#m_s_top_bLeft {
     position: absolute;
     top: 0px;
     bottom: 0px;
@@ -59,11 +59,11 @@
     width: 52px;
     height: 52px;
     transition: all 0.5s ease 0s;
-    opacity: 1;
+    opacity: 0;
     background: url(../images/메인섹션\ 맨상단\ 이동버튼.svg) 50% 50% no-repeat;
     transform: rotate(180deg);
 }
-.m_s_top_swiper_wrap > button:last-of-type {
+#m_s_top_bRight {
     position: absolute;
     top: 0px;
     bottom: 0px;
@@ -73,11 +73,11 @@
     width: 52px;
     height: 52px;
     transition: all 0.5s ease 0s;
-    opacity: 1;
+    opacity: 0;
     background: url(../images/메인섹션\ 맨상단\ 이동버튼.svg) 50% 50% no-repeat;
     transform: rotate(0deg);
 }
-.m_s_top_swiper_wrap > div:last-of-type {
+.m_s_top_text {
     position: absolute;
     color: rgb(255, 255, 255);
     background: rgba(0, 0, 0, 0.15);

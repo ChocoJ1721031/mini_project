@@ -47,11 +47,9 @@
     font-size: 15px;
     color: rgb(51, 51, 51);
 }
-.filter_title button {
+#filter_reset {
     display: flex;
     align-items: center;
-    pointer-events: none;
-    /* 선택되면 pointer-events: none; 삭제 */
 }
 .filter_title button span {
     margin-left: 5px;

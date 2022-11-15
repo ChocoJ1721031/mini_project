@@ -107,28 +107,118 @@ window.onload = function() {
 }
 
 // 메인 섹션 맨 상단의 이벤트 목록 케러셀
-var cnt = 1;
+var cnt = 0;
 $(function() {
+    // 시간마다 자동 넘김.
     setInterval(function(){
-        var w = window.innerWidth
+        if(cnt != 3) {
+            cnt++;
+        }
+        var w = window.innerWidth;
         var w_val = w + "px"; 
         var v = "translate3d("+(cnt*(-w))+"px, 0px, 0px)";
         $(".m_s_top_swiper").css("width",w_val);
         if(cnt == 0) {
             $(".m_s_top_swiper").css("transition-duration","0ms");
             $(".m_s_top_swiper").css("transform",v);
-            cnt++;
         } else {
             $(".m_s_top_swiper").css("transition-duration","300ms");
             $(".m_s_top_swiper").css("transform",v);
             if(cnt == 3) {
-                cnt = 0;
+                var t = 1 + " / 3";
+                cnt = -1;
             } else {
-                cnt++;
+                var t = (cnt+1) + " / 3";
             }
         }
+        $(".m_s_top_text").html(t);
     }, 4000);
+    // 왼쪽 버튼 클릭 시 넘김
+    $("#m_s_top_bLeft").click(function() {
+        if(cnt == -1) {
+            cnt = 0;
+        }
+        var w = window.innerWidth
+        var w_val = w + "px"; 
+        $(".m_s_top_swiper").css("width",w_val);
+        if(cnt == 0) {
+            cnt = 3;
+            var v = "translate3d("+(cnt*(-w))+"px, 0px, 0px)";
+            $(".m_s_top_swiper").css("transition-duration","0ms");
+            $(".m_s_top_swiper").css("transform", v);
+            cnt = 2;
+        } else {
+            cnt--;
+        }
+        setTimeout(function() {
+        var v = "translate3d("+(cnt*(-w))+"px, 0px, 0px)";
+            $(".m_s_top_swiper").css("transition-duration","300ms");
+            $(".m_s_top_swiper").css("transform",v);
+            if(cnt == 0) {
+                var t = 1 + " / 3";
+                cnt = 3;
+                var v = "translate3d("+(cnt*(-w))+"px, 0px, 0px)";
+                setTimeout(function() {
+                    $(".m_s_top_swiper").css("transition-duration","0ms");
+                    $(".m_s_top_swiper").css("transform", v);
+                }, 300);
+            } else {
+                var t = (cnt+1) + " / 3";
+            }
+        $(".m_s_top_text").html(t);
+        }, 100);
+    });
+    // 오른쪽 버튼 클릭 시 넘김
+    $("#m_s_top_bRight").click(function() {
+        if(cnt == -1) {
+            cnt = 3;
+        }
+        var w = window.innerWidth
+        var w_val = w + "px"; 
+        $(".m_s_top_swiper").css("width",w_val);
+        if(cnt == 3) {
+            cnt = 1;
+                $(".m_s_top_swiper").css("transition-duration","0ms");
+                $(".m_s_top_swiper").css("transform", "translate3d(0px, 0px, 0px)");
+        } else {
+            cnt++;
+        }
+        setTimeout(function() {
+        var v = "translate3d("+(cnt*(-w))+"px, 0px, 0px)";
+            if(cnt == 3) {
+                $(".m_s_top_swiper").css("transition-duration","300ms");
+                $(".m_s_top_swiper").css("transform",v);
+                var t = 1 + " / 3";
+                cnt = 0;
+                setTimeout(function() {
+                    $(".m_s_top_swiper").css("transition-duration","0ms");
+                    $(".m_s_top_swiper").css("transform", "translate3d(0px, 0px, 0px)");
+                }, 300);
+            } else {
+                $(".m_s_top_swiper").css("transition-duration","300ms");
+                $(".m_s_top_swiper").css("transform",v);
+                var t = (cnt+1) + " / 3";
+            }
+        $(".m_s_top_text").html(t);
+        }, 100);
+    });
+    // 버튼이 안보이다 호버 시 보이기
+    $(".m_s_top_swiper > div > a > img").hover(function(){
+        $("#m_s_top_bLeft").css("opacity","1");
+        $("#m_s_top_bRight").css("opacity","1");
+    }, function(){
+        $("#m_s_top_bLeft").css("opacity","0");
+        $("#m_s_top_bRight").css("opacity","0");
+    });
+    $(".m_s_top_swiper ~ button").hover(function(){
+        $("#m_s_top_bLeft").css("opacity","1");
+        $("#m_s_top_bRight").css("opacity","1");
+    }, function(){
+        $("#m_s_top_bLeft").css("opacity","0");
+        $("#m_s_top_bRight").css("opacity","0");
+    });
 });
+// 화면 크기 바뀔때 인식
 window.onresize = function(event) {
     var r_cnt = 0;
     var w = window.innerWidth
