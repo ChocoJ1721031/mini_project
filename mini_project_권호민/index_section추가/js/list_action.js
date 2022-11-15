@@ -114,12 +114,18 @@ $(function() {
         var w_val = w + "px"; 
         var v = "translate3d("+(cnt*(-w))+"px, 0px, 0px)";
         $(".m_s_top_swiper").css("width",w_val);
-        $(".m_s_top_swiper").css("transition-duration","300ms");
-        $(".m_s_top_swiper").css("transform",v);
-        if(cnt == 3) {
-            cnt = 0;
-        } else {
+        if(cnt == 0) {
+            $(".m_s_top_swiper").css("transition-duration","0ms");
+            $(".m_s_top_swiper").css("transform",v);
             cnt++;
+        } else {
+            $(".m_s_top_swiper").css("transition-duration","300ms");
+            $(".m_s_top_swiper").css("transform",v);
+            if(cnt == 3) {
+                cnt = 0;
+            } else {
+                cnt++;
+            }
         }
     }, 4000);
 });
