@@ -30,7 +30,7 @@
         
             <!-- 필터 제목 & 초기화 버튼 -->
             <div class="filter_title"><span>필터</span>
-                <button>
+                <button id="filter_reset">
                     <svg width="12" height="12" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M13.78 3.96303C12.504 2.16973 10.4086 1 8.04 1C4.15192 1 1 4.15192 1 8.04C1 11.9281 4.15192 15.08 8.04 15.08C11.9281 15.08 15.08 11.9281 15.08 8.04" stroke="#ddd" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="round"></path>
                         <path d="M14.4933 1L14.4933 4.52H10.9733" stroke="#ddd" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="round"></path>
@@ -43,7 +43,7 @@
                 <div class="filter_brand">
 
                     <!-- 브랜드 제목 -->
-                    <button>
+                    <button id="btn_showHide1">
                         <div>브랜드</div>
                         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="#999" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(0deg);">
                             <path d="M5 11L9 7L13 11" stroke="#999" stroke-width="1.2"></path>
@@ -56,123 +56,240 @@
                         <!-- 가나다순, 상품많은순 버튼 -->
                         <menu>
                             <li>
-                                <button class="selected">가나다 순</button>
+                                <button id="order1" class="selected">가나다 순</button>
                             </li>
                             <li>
-                                <button>상품많은 순</button>
+                                <button id="order2">상품많은 순</button>
                             </li>
                         </menu>
             
                         <!-- li -->
-                        <li class="list">
-                            <a class="check" href='javascript:void(0);'>
-                                <button class="btn_check">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path class="path1" d="M23.5 12C23.5 18.3513 18.3513 23.5 12 23.5C5.64873 23.5 0.5 18.3513 0.5 12C0.5 5.64873 5.64873 0.5 12 0.5C18.3513 0.5 23.5 5.64873 23.5 12Z" stroke="#ddd"></path>
-                                        <path class="path2" d="M7 12.6667L10.3846 16L18 8.5" stroke="#ddd" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </svg>
-                                </button><span class="word">가브로</span><span class="number">1</span>
-                            </a>
-                        </li>
+                        <!-- 가나다순 -->
+                        <div id="order1_list">
+                            <li class="list">
+                                <a class="check" href='javascript:void(0);'>
+                                    <button class="btn_check">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path class="path1" d="M23.5 12C23.5 18.3513 18.3513 23.5 12 23.5C5.64873 23.5 0.5 18.3513 0.5 12C0.5 5.64873 5.64873 0.5 12 0.5C18.3513 0.5 23.5 5.64873 23.5 12Z" stroke="#ddd"></path>
+                                            <path class="path2" d="M7 12.6667L10.3846 16L18 8.5" stroke="#ddd" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </button><span class="word">가브로</span><span class="number">1</span>
+                                </a>
+                            </li>
 
-                        <li class="list">
-                            <a class="check" href='javascript:void(0);'>
-                                <button class="btn_check">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path class="path1" d="M23.5 12C23.5 18.3513 18.3513 23.5 12 23.5C5.64873 23.5 0.5 18.3513 0.5 12C0.5 5.64873 5.64873 0.5 12 0.5C18.3513 0.5 23.5 5.64873 23.5 12Z" stroke="#ddd"></path>
-                                        <path class="path2" d="M7 12.6667L10.3846 16L18 8.5" stroke="#ddd" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </svg>
-                                </button><span class="word">갤러리아 고메이494</span><span class="number">1</span>
-                            </a>
-                        </li>
+                            <li class="list">
+                                <a class="check" href='javascript:void(0);'>
+                                    <button class="btn_check">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path class="path1" d="M23.5 12C23.5 18.3513 18.3513 23.5 12 23.5C5.64873 23.5 0.5 18.3513 0.5 12C0.5 5.64873 5.64873 0.5 12 0.5C18.3513 0.5 23.5 5.64873 23.5 12Z" stroke="#ddd"></path>
+                                            <path class="path2" d="M7 12.6667L10.3846 16L18 8.5" stroke="#ddd" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </button><span class="word">갤러리아 고메이494</span><span class="number">1</span>
+                                </a>
+                            </li>
 
-                        <li class="list">
-                            <a class="check" href='javascript:void(0);'>
-                                <button class="btn_check">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path class="path1" d="M23.5 12C23.5 18.3513 18.3513 23.5 12 23.5C5.64873 23.5 0.5 18.3513 0.5 12C0.5 5.64873 5.64873 0.5 12 0.5C18.3513 0.5 23.5 5.64873 23.5 12Z" stroke="#ddd"></path>
-                                        <path class="path2" d="M7 12.6667L10.3846 16L18 8.5" stroke="#ddd" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </svg>
-                                </button><span class="word">게랑드</span><span class="number">1</span>
-                            </a>
-                        </li>
+                            <li class="list">
+                                <a class="check" href='javascript:void(0);'>
+                                    <button class="btn_check">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path class="path1" d="M23.5 12C23.5 18.3513 18.3513 23.5 12 23.5C5.64873 23.5 0.5 18.3513 0.5 12C0.5 5.64873 5.64873 0.5 12 0.5C18.3513 0.5 23.5 5.64873 23.5 12Z" stroke="#ddd"></path>
+                                            <path class="path2" d="M7 12.6667L10.3846 16L18 8.5" stroke="#ddd" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </button><span class="word">게랑드</span><span class="number">1</span>
+                                </a>
+                            </li>
 
-                        <li class="list">
-                            <a class="check" href='javascript:void(0);'>
-                                <button class="btn_check">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path class="path1" d="M23.5 12C23.5 18.3513 18.3513 23.5 12 23.5C5.64873 23.5 0.5 18.3513 0.5 12C0.5 5.64873 5.64873 0.5 12 0.5C18.3513 0.5 23.5 5.64873 23.5 12Z" stroke="#ddd"></path>
-                                        <path class="path2" d="M7 12.6667L10.3846 16L18 8.5" stroke="#ddd" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </svg>
-                                </button><span class="word">고베식당</span><span class="number">1</span>
-                            </a>
-                        </li>
+                            <li class="list">
+                                <a class="check" href='javascript:void(0);'>
+                                    <button class="btn_check">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path class="path1" d="M23.5 12C23.5 18.3513 18.3513 23.5 12 23.5C5.64873 23.5 0.5 18.3513 0.5 12C0.5 5.64873 5.64873 0.5 12 0.5C18.3513 0.5 23.5 5.64873 23.5 12Z" stroke="#ddd"></path>
+                                            <path class="path2" d="M7 12.6667L10.3846 16L18 8.5" stroke="#ddd" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </button><span class="word">고베식당</span><span class="number">1</span>
+                                </a>
+                            </li>
 
-                        <li class="list">
-                            <a class="check" href='javascript:void(0);'>
-                                <button class="btn_check">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path class="path1" d="M23.5 12C23.5 18.3513 18.3513 23.5 12 23.5C5.64873 23.5 0.5 18.3513 0.5 12C0.5 5.64873 5.64873 0.5 12 0.5C18.3513 0.5 23.5 5.64873 23.5 12Z" stroke="#ddd"></path>
-                                        <path class="path2" d="M7 12.6667L10.3846 16L18 8.5" stroke="#ddd" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </svg>
-                                </button><span class="word">고야</span><span class="number">5</span>
-                            </a>
-                        </li>
+                            <li class="list">
+                                <a class="check" href='javascript:void(0);'>
+                                    <button class="btn_check">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path class="path1" d="M23.5 12C23.5 18.3513 18.3513 23.5 12 23.5C5.64873 23.5 0.5 18.3513 0.5 12C0.5 5.64873 5.64873 0.5 12 0.5C18.3513 0.5 23.5 5.64873 23.5 12Z" stroke="#ddd"></path>
+                                            <path class="path2" d="M7 12.6667L10.3846 16L18 8.5" stroke="#ddd" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </button><span class="word">고야</span><span class="number">5</span>
+                                </a>
+                            </li>
 
-                        <li class="list">
-                            <a class="check" href='javascript:void(0);'>
-                                <button class="btn_check">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path class="path1" d="M23.5 12C23.5 18.3513 18.3513 23.5 12 23.5C5.64873 23.5 0.5 18.3513 0.5 12C0.5 5.64873 5.64873 0.5 12 0.5C18.3513 0.5 23.5 5.64873 23.5 12Z" stroke="#ddd"></path>
-                                        <path class="path2" d="M7 12.6667L10.3846 16L18 8.5" stroke="#ddd" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </svg>
-                                </button><span class="word">구스티</span><span class="number">3</span>
-                            </a>
-                        </li>
+                            <li class="list">
+                                <a class="check" href='javascript:void(0);'>
+                                    <button class="btn_check">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path class="path1" d="M23.5 12C23.5 18.3513 18.3513 23.5 12 23.5C5.64873 23.5 0.5 18.3513 0.5 12C0.5 5.64873 5.64873 0.5 12 0.5C18.3513 0.5 23.5 5.64873 23.5 12Z" stroke="#ddd"></path>
+                                            <path class="path2" d="M7 12.6667L10.3846 16L18 8.5" stroke="#ddd" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </button><span class="word">구스티</span><span class="number">3</span>
+                                </a>
+                            </li>
 
-                        <li class="list">
-                            <a class="check" href='javascript:void(0);'>
-                                <button class="btn_check">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path class="path1" d="M23.5 12C23.5 18.3513 18.3513 23.5 12 23.5C5.64873 23.5 0.5 18.3513 0.5 12C0.5 5.64873 5.64873 0.5 12 0.5C18.3513 0.5 23.5 5.64873 23.5 12Z" stroke="#ddd"></path>
-                                        <path class="path2" d="M7 12.6667L10.3846 16L18 8.5" stroke="#ddd" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </svg>
-                                </button><span class="word">굴리엘미</span><span class="number">5</span>
-                            </a>
-                        </li>
+                            <li class="list">
+                                <a class="check" href='javascript:void(0);'>
+                                    <button class="btn_check">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path class="path1" d="M23.5 12C23.5 18.3513 18.3513 23.5 12 23.5C5.64873 23.5 0.5 18.3513 0.5 12C0.5 5.64873 5.64873 0.5 12 0.5C18.3513 0.5 23.5 5.64873 23.5 12Z" stroke="#ddd"></path>
+                                            <path class="path2" d="M7 12.6667L10.3846 16L18 8.5" stroke="#ddd" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </button><span class="word">굴리엘미</span><span class="number">5</span>
+                                </a>
+                            </li>
 
-                        <li class="list">
-                            <a class="check" href='javascript:void(0);'>
-                                <button class="btn_check">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path class="path1" d="M23.5 12C23.5 18.3513 18.3513 23.5 12 23.5C5.64873 23.5 0.5 18.3513 0.5 12C0.5 5.64873 5.64873 0.5 12 0.5C18.3513 0.5 23.5 5.64873 23.5 12Z" stroke="#ddd"></path>
-                                        <path class="path2" d="M7 12.6667L10.3846 16L18 8.5" stroke="#ddd" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </svg>
-                                </button><span class="word">권영원 소담정찬</span><span class="number">2</span>
-                            </a>
-                        </li>
+                            <li class="list">
+                                <a class="check" href='javascript:void(0);'>
+                                    <button class="btn_check">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path class="path1" d="M23.5 12C23.5 18.3513 18.3513 23.5 12 23.5C5.64873 23.5 0.5 18.3513 0.5 12C0.5 5.64873 5.64873 0.5 12 0.5C18.3513 0.5 23.5 5.64873 23.5 12Z" stroke="#ddd"></path>
+                                            <path class="path2" d="M7 12.6667L10.3846 16L18 8.5" stroke="#ddd" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </button><span class="word">권영원 소담정찬</span><span class="number">2</span>
+                                </a>
+                            </li>
 
-                        <li class="list">
-                            <a class="check" href='javascript:void(0);'>
-                                <button class="btn_check">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path class="path1" d="M23.5 12C23.5 18.3513 18.3513 23.5 12 23.5C5.64873 23.5 0.5 18.3513 0.5 12C0.5 5.64873 5.64873 0.5 12 0.5C18.3513 0.5 23.5 5.64873 23.5 12Z" stroke="#ddd"></path>
-                                        <path class="path2" d="M7 12.6667L10.3846 16L18 8.5" stroke="#ddd" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </svg>
-                                </button><span class="word">그대로말린</span><span class="number">1</span>
-                            </a>
-                        </li>
+                            <li class="list">
+                                <a class="check" href='javascript:void(0);'>
+                                    <button class="btn_check">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path class="path1" d="M23.5 12C23.5 18.3513 18.3513 23.5 12 23.5C5.64873 23.5 0.5 18.3513 0.5 12C0.5 5.64873 5.64873 0.5 12 0.5C18.3513 0.5 23.5 5.64873 23.5 12Z" stroke="#ddd"></path>
+                                            <path class="path2" d="M7 12.6667L10.3846 16L18 8.5" stroke="#ddd" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </button><span class="word">그대로말린</span><span class="number">1</span>
+                                </a>
+                            </li>
 
-                        <li class="list">
-                            <a class="check" href='javascript:void(0);'>
-                                <button class="btn_check">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path class="path1" d="M23.5 12C23.5 18.3513 18.3513 23.5 12 23.5C5.64873 23.5 0.5 18.3513 0.5 12C0.5 5.64873 5.64873 0.5 12 0.5C18.3513 0.5 23.5 5.64873 23.5 12Z" stroke="#ddd"></path>
-                                        <path class="path2" d="M7 12.6667L10.3846 16L18 8.5" stroke="#ddd" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </svg>
-                                </button><span class="word">그로브</span><span class="number">1</span>
-                            </a>
-                        </li>
+                            <li class="list">
+                                <a class="check" href='javascript:void(0);'>
+                                    <button class="btn_check">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path class="path1" d="M23.5 12C23.5 18.3513 18.3513 23.5 12 23.5C5.64873 23.5 0.5 18.3513 0.5 12C0.5 5.64873 5.64873 0.5 12 0.5C18.3513 0.5 23.5 5.64873 23.5 12Z" stroke="#ddd"></path>
+                                            <path class="path2" d="M7 12.6667L10.3846 16L18 8.5" stroke="#ddd" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </button><span class="word">그로브</span><span class="number">1</span>
+                                </a>
+                            </li>
+                        </div>
+
+                        <!-- 상품많은순 -->
+                        <div id="order2_list" display="none">
+                            <li class="list">
+                                <a class="check" href='javascript:void(0);'>
+                                    <button class="btn_check">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path class="path1" d="M23.5 12C23.5 18.3513 18.3513 23.5 12 23.5C5.64873 23.5 0.5 18.3513 0.5 12C0.5 5.64873 5.64873 0.5 12 0.5C18.3513 0.5 23.5 5.64873 23.5 12Z" stroke="#ddd"></path>
+                                            <path class="path2" d="M7 12.6667L10.3846 16L18 8.5" stroke="#ddd" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </button><span class="word">백설</span><span class="number">34</span>
+                                </a>
+                            </li>
+
+                            <li class="list">
+                                <a class="check" href='javascript:void(0);'>
+                                    <button class="btn_check">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path class="path1" d="M23.5 12C23.5 18.3513 18.3513 23.5 12 23.5C5.64873 23.5 0.5 18.3513 0.5 12C0.5 5.64873 5.64873 0.5 12 0.5C18.3513 0.5 23.5 5.64873 23.5 12Z" stroke="#ddd"></path>
+                                            <path class="path2" d="M7 12.6667L10.3846 16L18 8.5" stroke="#ddd" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </button><span class="word">오뚜기</span><span class="number">34</span>
+                                </a>
+                            </li>
+
+                            <li class="list">
+                                <a class="check" href='javascript:void(0);'>
+                                    <button class="btn_check">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path class="path1" d="M23.5 12C23.5 18.3513 18.3513 23.5 12 23.5C5.64873 23.5 0.5 18.3513 0.5 12C0.5 5.64873 5.64873 0.5 12 0.5C18.3513 0.5 23.5 5.64873 23.5 12Z" stroke="#ddd"></path>
+                                            <path class="path2" d="M7 12.6667L10.3846 16L18 8.5" stroke="#ddd" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </button><span class="word">청정원</span><span class="number">27</span>
+                                </a>
+                            </li>
+
+                            <li class="list">
+                                <a class="check" href='javascript:void(0);'>
+                                    <button class="btn_check">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path class="path1" d="M23.5 12C23.5 18.3513 18.3513 23.5 12 23.5C5.64873 23.5 0.5 18.3513 0.5 12C0.5 5.64873 5.64873 0.5 12 0.5C18.3513 0.5 23.5 5.64873 23.5 12Z" stroke="#ddd"></path>
+                                            <path class="path2" d="M7 12.6667L10.3846 16L18 8.5" stroke="#ddd" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </button><span class="word">풀무원</span><span class="number">25</span>
+                                </a>
+                            </li>
+
+                            <li class="list">
+                                <a class="check" href='javascript:void(0);'>
+                                    <button class="btn_check">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path class="path1" d="M23.5 12C23.5 18.3513 18.3513 23.5 12 23.5C5.64873 23.5 0.5 18.3513 0.5 12C0.5 5.64873 5.64873 0.5 12 0.5C18.3513 0.5 23.5 5.64873 23.5 12Z" stroke="#ddd"></path>
+                                            <path class="path2" d="M7 12.6667L10.3846 16L18 8.5" stroke="#ddd" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </button><span class="word">하인즈</span><span class="number">21</span>
+                                </a>
+                            </li>
+
+                            <li class="list">
+                                <a class="check" href='javascript:void(0);'>
+                                    <button class="btn_check">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path class="path1" d="M23.5 12C23.5 18.3513 18.3513 23.5 12 23.5C5.64873 23.5 0.5 18.3513 0.5 12C0.5 5.64873 5.64873 0.5 12 0.5C18.3513 0.5 23.5 5.64873 23.5 12Z" stroke="#ddd"></path>
+                                            <path class="path2" d="M7 12.6667L10.3846 16L18 8.5" stroke="#ddd" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </button><span class="word">허브&스파이스마켓</span><span class="number">17</span>
+                                </a>
+                            </li>
+
+                            <li class="list">
+                                <a class="check" href='javascript:void(0);'>
+                                    <button class="btn_check">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path class="path1" d="M23.5 12C23.5 18.3513 18.3513 23.5 12 23.5C5.64873 23.5 0.5 18.3513 0.5 12C0.5 5.64873 5.64873 0.5 12 0.5C18.3513 0.5 23.5 5.64873 23.5 12Z" stroke="#ddd"></path>
+                                            <path class="path2" d="M7 12.6667L10.3846 16L18 8.5" stroke="#ddd" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </button><span class="word">해찬들</span><span class="number">16</span>
+                                </a>
+                            </li>
+
+                            <li class="list">
+                                <a class="check" href='javascript:void(0);'>
+                                    <button class="btn_check">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path class="path1" d="M23.5 12C23.5 18.3513 18.3513 23.5 12 23.5C5.64873 23.5 0.5 18.3513 0.5 12C0.5 5.64873 5.64873 0.5 12 0.5C18.3513 0.5 23.5 5.64873 23.5 12Z" stroke="#ddd"></path>
+                                            <path class="path2" d="M7 12.6667L10.3846 16L18 8.5" stroke="#ddd" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </button><span class="word">퀴네</span><span class="number">15</span>
+                                </a>
+                            </li>
+
+                            <li class="list">
+                                <a class="check" href='javascript:void(0);'>
+                                    <button class="btn_check">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path class="path1" d="M23.5 12C23.5 18.3513 18.3513 23.5 12 23.5C5.64873 23.5 0.5 18.3513 0.5 12C0.5 5.64873 5.64873 0.5 12 0.5C18.3513 0.5 23.5 5.64873 23.5 12Z" stroke="#ddd"></path>
+                                            <path class="path2" d="M7 12.6667L10.3846 16L18 8.5" stroke="#ddd" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </button><span class="word">델링</span><span class="number">14</span>
+                                </a>
+                            </li>
+
+                            <li class="list">
+                                <a class="check" href='javascript:void(0);'>
+                                    <button class="btn_check">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path class="path1" d="M23.5 12C23.5 18.3513 18.3513 23.5 12 23.5C5.64873 23.5 0.5 18.3513 0.5 12C0.5 5.64873 5.64873 0.5 12 0.5C18.3513 0.5 23.5 5.64873 23.5 12Z" stroke="#ddd"></path>
+                                            <path class="path2" d="M7 12.6667L10.3846 16L18 8.5" stroke="#ddd" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </button><span class="word">샘표</span><span class="number">14</span>
+                                </a>
+                            </li>
+                        </div>
+
 
                         <!-- 브랜드 더보기 버튼 -->
                         <button class="btn_brand_more">브랜드 더보기
@@ -188,7 +305,7 @@
                 <div class="filter_price">
 
                     <!-- 가격 제목 -->
-                    <button>
+                    <button id="btn_showHide2">
                         <div>가격</div>
                         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="#999" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(0deg);">
                             <path d="M5 11L9 7L13 11" stroke="#999" stroke-width="1.2"></path>
@@ -201,8 +318,8 @@
                         <li class="list">
                             <a class="radio" href='javascript:void(0);'>
                                 <button class="btn_check">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12 23.5C18.3513 23.5 23.5 18.3513 23.5 12C23.5 5.64873 18.3513 0.5 12 0.5C5.64873 0.5 0.5 5.64873 0.5 12C0.5 18.3513 5.64873 23.5 12 23.5Z" fill="#fff" stroke="#ddd"></path>
+                                    <svg class="btn_check_svg" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path class="path3" d="M12 23.5C18.3513 23.5 23.5 18.3513 23.5 12C23.5 5.64873 18.3513 0.5 12 0.5C5.64873 0.5 0.5 5.64873 0.5 12C0.5 18.3513 5.64873 23.5 12 23.5Z" fill="#fff" stroke="#ddd"></path>
                                     </svg>
                                 </button><span class="word">4,100원 미만</span><span class="number">282</span>
                             </a>
@@ -211,8 +328,8 @@
                         <li class="list">
                             <a class="radio" href='javascript:void(0);'>
                                 <button class="btn_check">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12 23.5C18.3513 23.5 23.5 18.3513 23.5 12C23.5 5.64873 18.3513 0.5 12 0.5C5.64873 0.5 0.5 5.64873 0.5 12C0.5 18.3513 5.64873 23.5 12 23.5Z" fill="#fff" stroke="#ddd"></path>
+                                    <svg class="btn_check_svg" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path class="path3" d="M12 23.5C18.3513 23.5 23.5 18.3513 23.5 12C23.5 5.64873 18.3513 0.5 12 0.5C5.64873 0.5 0.5 5.64873 0.5 12C0.5 18.3513 5.64873 23.5 12 23.5Z" fill="#fff" stroke="#ddd"></path>
                                     </svg>
                                 </button><span class="word">4,100원 ~ 6,480원</span><span class="number">277</span>
                             </a>
@@ -221,8 +338,8 @@
                         <li class="list">
                             <a class="radio" href='javascript:void(0);'>
                                 <button class="btn_check">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12 23.5C18.3513 23.5 23.5 18.3513 23.5 12C23.5 5.64873 18.3513 0.5 12 0.5C5.64873 0.5 0.5 5.64873 0.5 12C0.5 18.3513 5.64873 23.5 12 23.5Z" fill="#fff" stroke="#ddd"></path>
+                                    <svg class="btn_check_svg" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path class="path3" d="M12 23.5C18.3513 23.5 23.5 18.3513 23.5 12C23.5 5.64873 18.3513 0.5 12 0.5C5.64873 0.5 0.5 5.64873 0.5 12C0.5 18.3513 5.64873 23.5 12 23.5Z" fill="#fff" stroke="#ddd"></path>
                                     </svg>
                                 </button><span class="word">6,480원 ~ 11,500원</span><span class="number">290</span>
                             </a>
@@ -231,8 +348,8 @@
                         <li class="list">
                             <a class="radio" href='javascript:void(0);'>
                                 <button class="btn_check">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12 23.5C18.3513 23.5 23.5 18.3513 23.5 12C23.5 5.64873 18.3513 0.5 12 0.5C5.64873 0.5 0.5 5.64873 0.5 12C0.5 18.3513 5.64873 23.5 12 23.5Z" fill="#fff" stroke="#ddd"></path>
+                                    <svg class="btn_check_svg" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path class="path3" d="M12 23.5C18.3513 23.5 23.5 18.3513 23.5 12C23.5 5.64873 18.3513 0.5 12 0.5C5.64873 0.5 0.5 5.64873 0.5 12C0.5 18.3513 5.64873 23.5 12 23.5Z" fill="#fff" stroke="#ddd"></path>
                                     </svg>
                                 </button><span class="word">11,500원 이상</span><span class="number">287</span>
                             </a>
@@ -245,7 +362,7 @@
                 <div class="filter_event">
 
                     <!-- 혜택 제목 -->
-                    <button>
+                    <button id="btn_showHide3">
                         <div>혜택</div>
                         <svg width="18" height="18" viewBox="0 0 18 18" fill="none"stroke="#999" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(0deg);">
                             <path d="M5 11L9 7L13 11" stroke="#999" stroke-width="1.2"></path>
@@ -283,7 +400,7 @@
                 <div class="filter_type">
 
                     <!-- 유형 제목 -->
-                    <button>
+                    <button id="btn_showHide4">
                         <div>유형</div>
                         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="#999" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(0deg);">
                             <path d="M5 11L9 7L13 11" stroke="#999" stroke-width="1.2"></path>
