@@ -217,6 +217,16 @@ $(function() {
         $("#m_s_top_bLeft").css("opacity","0");
         $("#m_s_top_bRight").css("opacity","0");
     });
+
+    //메인 섹션 ul select 시
+    $('.m_s_4_ul_button').click(function() {
+        $('.m_s_4_ul_button').css("color", "rgb(51, 51, 51)");
+        $('.m_s_4_ul_button').css("backgroundColor", "rgb(247, 247, 247)");
+        $(this).css("color", "rgb(255, 255, 255)");
+        $(this).css("backgroundColor", "rgb(95, 0, 128)");
+        var ul_text = $(this).text() + " 전체보기";
+        $(".m_s_4_a_span").text(ul_text);
+    });
 });
 // 화면 크기 바뀔때 인식
 window.onresize = function(event) {

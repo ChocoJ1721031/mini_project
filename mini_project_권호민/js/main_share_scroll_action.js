@@ -11,25 +11,27 @@ function nav_fix() {
     }
 
     // section_right_nav 부분 코드
-    // for(var b = 1; b < 20; b++) {
-    //     if(document.documentElement.scrollTop > 198+(b*50)) {
-    //         var c = document.documentElement.scrollTop - 198 + 714;
-    //         var d = c+"px";
-    //         document.getElementById('right_nav').style.top = d;
-    //     }
-    // }
-    // if(document.documentElement.scrollTop <= 198) {
-    //     document.getElementById('right_nav').style.top = "714px";
-    // }
-    for(var b = 80; b < window.innerHeight; b+=80) {
+    for(var b = 100; b < window.innerHeight; b+=100) {
         if(document.documentElement.scrollTop > 198+b) {
-            var c = document.documentElement.scrollTop - 198 + 714;
+            var c = document.documentElement.scrollTop - 198 + 514;
             var d = c+"px";
             document.getElementById('right_nav').style.top = d;
         }
     }
     if(document.documentElement.scrollTop <= 198) {
         document.getElementById('right_nav').style.top = "714px";
+    }
+    // section_scrollup 부분 코드
+    if(document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+        document.getElementById('scrollup').style.opacity = "1";
+        if(window.innerHeight >= 1050) {
+            document.getElementById('scrollup').style.bottom = "15px";
+        } else {
+            document.getElementById('scrollup').style.bottom = "65px";
+        }
+    } else {
+        document.getElementById('scrollup').style.opacity = "0";
+        document.getElementById('scrollup').style.bottom = "-46px";
     }
     
 }

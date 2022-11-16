@@ -7,9 +7,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans:wght@100&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="./css/main_nav.css">
+    <link rel="stylesheet" href="./css/main_share_section.css">
     <script src="./js/jquery-3.6.1.js"></script>
-    <script src="./js/top_navbar_scroll_action.js"></script>
+    <script src="./js/main_share_scroll_action.js"></script>
     <script src="./js/main_header.js"></script>
     <title>Document</title>
     <style>
@@ -32,7 +32,7 @@
         <div id="event">
             <div class="e_link">
                 <a href="#"><p>지금 가입하고 인기상품 <strong>100원</strong>에 받아가세요!</p></a>
-                <button type="button"><img src="https://res.kurly.com/pc/ico/1908/ico_close_fff_84x84.png" alt="e_close"></button>
+                <button id="event_btn" type="button"><img src="https://res.kurly.com/pc/ico/1908/ico_close_fff_84x84.png" alt="e_close"></button>
             </div>
         </div>
         <div id="header">
@@ -198,6 +198,11 @@
             </div>
         </div>
         <div id="section">
+            <div id="scrollup">
+                <a href="#">
+                    <span></span>
+                </a>
+            </div>
             <nav id="right_nav">
                 <a class="right_nav_iLink" href="#"><img src="https://res.kurly.com/_next/static/images/deliveryInfo_20220701-a7b19dac069402e4b2aea7edbed0f6e0.png"></a>
                 <ul class="right_nav_list">

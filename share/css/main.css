@@ -2,8 +2,14 @@
 
 #event {
     background-color: rgb(95, 0, 128);
+    position: relative;
+    text-align: center;
+    transition: margin 0.4s linear 0s;
+    min-width: 1050px;
+    border-bottom: 0px;
+    background: rgb(95, 0, 128);
+    margin-top: 0px;
 }
-
 .e_link {
     background-color: rgb(95, 0, 128);
     width: 1050px;
@@ -18,7 +24,6 @@
     height: 42px;
     line-height: 42px;
 }
-
 .e_link button {
     position: absolute;
     right: 0;
@@ -44,6 +49,11 @@
     top:0;
     background-color: rgb(255, 255, 255);
     box-shadow: rgb(0 0 0 / 7%) 0px 3px 4px 0px;
+}
+@media(max-width:1050px) {
+    #h_second {
+        width: 1050px;
+    }
 }
 
 /* <!-- header-h_first--> */
