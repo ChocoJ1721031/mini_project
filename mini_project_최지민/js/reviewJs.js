@@ -68,3 +68,13 @@ $(document).ready(function(){
         $(".notice_content.second").hide();
     })
 })
+
+$(document).ready(function(){
+    $("#review_more_user").hide();
+    $(".review_more_link").click(function(){
+        $("#review_more_user").show();
+    });
+    $("#review_more_user_off").click(function(){
+        $("#review_more_user").hide();
+    });
+});

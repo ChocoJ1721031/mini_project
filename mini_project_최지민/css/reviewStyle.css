@@ -601,3 +601,138 @@ a {
     flex-shrink: 0;
     background: url(https://img-cf.kurly.com/shop/data/review/20221115/67090105-8f07-4518-a151-1b64f6bc58c4.jpg) 0% 0% / cover no-repeat;
 }
+
+/* 더보기 */
+
+.view_more_wrap{
+    height: 100%;
+    outline: 0px;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.css-1va4qvu {
+    position: fixed;
+    z-index: 1300;
+    inset: 0px;
+}
+
+.css-919eu4 {
+    position: fixed;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    inset: 0px;
+    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-tap-highlight-color: transparent;
+    z-index: -1;
+}
+
+.css-ekeie0 {
+    height: 100%;
+    outline: 0px;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.css-1va4qvu .MuiPaper-elevation24 {
+    box-shadow: none;
+}
+
+.css-d9soyh {
+    width: 800px;
+    margin: 0px auto;
+    background-color: rgb(255, 255, 255);
+    border-radius: 12px;
+}
+
+.css-1w1wd48 {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    padding-bottom: 8px;
+    margin: 29px 30px 20px;
+    border-bottom: 1px solid rgb(244, 244, 244);
+    letter-spacing: -1px;
+    vertical-align: middle;
+}
+
+.css-1nm5twe {
+    flex: 1 1 auto;
+    padding: 0px 30px 30px;
+    overflow: hidden;
+}
+
+.css-aotl4 {
+    display: inline;
+    padding: 0px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: -0.5px;
+    color: rgb(51, 51, 51);
+    vertical-align: baseline;
+}
+
+.css-rdo7zc {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    margin-top: 1px;
+}
+
+.css-1nm5twe {
+    flex: 1 1 auto;
+    padding: 0px 30px 30px;
+    overflow: hidden;
+}
+
+.css-bjn8wh {
+    position: relative;
+}
+
+.css-1shfp1h {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(6, 121px);
+    gap: 3px;
+    max-height: 616px;
+    margin-right: -10px;
+    overflow: hidden auto;
+}
+
+.css-lm88k8 {
+    position: relative;
+    cursor: pointer;
+    width: 120px;
+    height: 120px;
+}
+
+element.style {
+    box-sizing: border-box;
+    display: inline-block;
+    overflow: hidden;
+    width: initial;
+    height: initial;
+    background: none;
+    opacity: 1;
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    max-width: 100%;
+}
+
+.css-aotl4.e1hhf9lx17{
+    font-size: 16px;
+}
