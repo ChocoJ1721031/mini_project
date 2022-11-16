@@ -224,6 +224,8 @@ $(function() {
         $('.m_s_4_ul_button').css("backgroundColor", "rgb(247, 247, 247)");
         $(this).css("color", "rgb(255, 255, 255)");
         $(this).css("backgroundColor", "rgb(95, 0, 128)");
+        var ul_text = $(this).text() + " 전체보기";
+        $(".m_s_4_a_span").text(ul_text);
     });
 });
 // 화면 크기 바뀔때 인식
