@@ -296,38 +296,13 @@
     display: block;
     padding: 0px 10px;
     text-align: center;
-    width: 80px;
+    width: 225px;
     height: 36px;
     border-radius: 3px;
     color: rgb(95, 0, 128);
     background-color: rgb(255, 255, 255);
     border: 1px solid rgb(95, 0, 128);
 }
-.buttons_first_hover > div > div > button:last-of-type {
-    display: flex;
-    justify-content: center;
-    padding: 0px 10px;
-    width: 145px;
-    height: 36px;
-    border-radius: 3px;
-    color: rgb(95, 0, 128);
-    background-color: rgb(95, 0, 128);
-    border: 0px none;
-}
-.buttons_first_hover > div > div > button:last-of-type > img{
-    display: block;
-    width: 20px;
-    height: 20px;
-    margin: auto 0;
-}
-.buttons_first_hover > div > div > button:last-of-type > span{
-    display: block;
-    color: white;
-    height: 100%;
-    line-height: 36px;
-}
-    
-
 /* <!-- header h_second --> */
 /* .h_second {
     position: sticky;
