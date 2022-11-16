@@ -1,0 +1,54 @@
+/* 전체 구도 */
+.category_wrapper {
+    position: relative;
+    padding-bottom: 80px;
+}
+#container {
+    width: 1050px;
+    margin: 0px auto;
+}
+.cat_header_img {
+    text-align: center;
+}
+/* 배너 이미지 */
+.banner_img {
+    width: 100%;
+    vertical-align: top;
+    cursor: pointer;
+}
+/* 카테고리 분류 면·양념·오일 */
+.cat_header_title {
+    margin-top: 50px;
+    font-weight: 500;
+    font-size: 28px;
+    color: rgb(51, 51, 51);
+    line-height: 35px;
+    letter-spacing: -1px;
+    text-align: center;
+}
+.cat_header_list {
+    display: grid;
+    grid-template-columns: repeat(4, 180px);
+    gap: 16px 83px;
+    overflow: hidden;
+    margin-top: 28px;
+    padding: 30px 40px;
+    border: 1px solid rgb(226, 226, 226);
+    line-height: 20px;
+}
+.cat_header_item {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.cat_header_link {
+    letter-spacing: -1px;
+    cursor: pointer;
+
+}
+.cat_header_item > a:hover {
+    letter-spacing: -1px;
+    cursor: pointer;
+    font-weight: 700;
+    color: rgb(95, 0, 128);
+}
