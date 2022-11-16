@@ -1,4 +1,29 @@
 
+
+
+window.onresize = function() {
+    var h_f_2 = document.getElementsByClassName('h_f_2')[0];
+    
+    if(document.body.scrollTop > 142 || document.documentElement.scrollTop > 142) {
+        if(matchMedia("screen and (min-width: 1050px)").matches) {
+            // .h_f_2 #search
+            h_f_2.children[1].style.marginLeft = "120px";
+            h_f_2.children[1].style.left = "50%";
+
+            // h_f_2 #buttons
+            h_f_2.children[2].style.marginLeft = "383px";
+            h_f_2.children[2].style.left = "50%";
+        } else {
+            // .h_f_2 #search
+            h_f_2.children[1].style.marginLeft = "-405px";
+            h_f_2.children[1].style.left = "1050px";
+
+            // h_f_2 #buttons
+            h_f_2.children[2].style.marginLeft = "-142px";
+            h_f_2.children[2].style.left = "1050px";
+        }
+    }
+}
 window.onscroll = function() {nav_fix()};
 function nav_fix() {
     var h_s_1 = document.getElementsByClassName('h_s_1')[0];
@@ -11,6 +36,7 @@ function nav_fix() {
         document.getElementById('h_second').style.position = "fixed";
         // document.getElementById('h_second').style.width = "100%";
         document.getElementById('section').style.margin = "56px 0 0 0";
+        document.getElementById('h_second').style.zIndex = "9998";
 
 
         // .h_s_1
@@ -32,18 +58,28 @@ function nav_fix() {
             s_list.children[i].style.width = "120px";
         }
 
-        // .h_f_2 #search
-        if(matchMedia("screen and (min-width: 1050px)").matches) {
-            h_f_2.children[1].style.marginLeft = "120px";
-            h_f_2.children[1].style.left = "50%";
-            console.log("1");
-        } else {
-            console.log("2");
-            h_f_2.children[1].style.marginLeft = "-405px";
-            h_f_2.children[1].style.left = "1050px";
+        if(document.body.scrollTop > 142 || document.documentElement.scrollTop > 142) {
+            if(matchMedia("screen and (min-width: 1050px)").matches) {
+                // .h_f_2 #search
+                h_f_2.children[1].style.marginLeft = "120px";
+                h_f_2.children[1].style.left = "50%";
+    
+                // h_f_2 #buttons
+                h_f_2.children[2].style.marginLeft = "383px";
+                h_f_2.children[2].style.left = "50%";
+            } else {
+                // .h_f_2 #search
+                h_f_2.children[1].style.marginLeft = "-405px";
+                h_f_2.children[1].style.left = "1050px";
+    
+                // h_f_2 #buttons
+                h_f_2.children[2].style.marginLeft = "-142px";
+                h_f_2.children[2].style.left = "1050px";
+            }
         }
+        // .h_f_2 #search
         // 추가 속성
-        h_f_2.children[1].style.zIndex = "1";
+        h_f_2.children[1].style.zIndex = "9999";
         h_f_2.children[1].style.backgroundColor = "rgb(247, 247, 247)";
         h_f_2.children[1].style.alignItems = "center";
         
@@ -85,17 +121,19 @@ function nav_fix() {
 
         // h_f_2 #buttons
         // 추가 속성
-        h_f_2.children[2].style.zIndex = "1";
-        h_f_2.children[2].style.marginLeft = "383px";
-        h_f_2.children[2].style.left = "50%";
+        h_f_2.children[2].style.zIndex = "9999";
+        // h_f_2.children[2].style.marginLeft = "383px";
+        // h_f_2.children[2].style.left = "50%";
         h_f_2.children[2].style.removeProperty("right");
 
         // 변경 속성
         h_f_2.children[2].style.position = "fixed";
         h_f_2.children[2].style.top = "10px";
+        h_f_2.children[2].style.right = "auto";
     } else {
         document.getElementById('h_second').style.position = "relative";
         document.getElementById('section').style.margin = "0";
+        document.getElementById('h_second').style.zIndex = "";
 
 
         // .h_s_1
@@ -169,6 +207,7 @@ function nav_fix() {
         // 변경 속성
         h_f_2.children[2].style.position = "absolute";
         h_f_2.children[2].style.top = "14px";
+        h_f_2.children[2].style.right = "0";
     }
 
     // section_right_nav 부분 코드
