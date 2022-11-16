@@ -2,6 +2,13 @@
 
 #event {
     background-color: rgb(95, 0, 128);
+    position: relative;
+    text-align: center;
+    transition: margin 0.4s linear 0s;
+    min-width: 1050px;
+    border-bottom: 0px;
+    background: rgb(95, 0, 128);
+    margin-top: 0px;
 }
 
 .e_link {
