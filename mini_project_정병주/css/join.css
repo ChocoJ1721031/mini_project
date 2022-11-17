@@ -42,7 +42,7 @@
 }
 
 #login_tbl_frame {
-    padding: 0 20px 10px 20px;;
+    padding: 0 20px 0 20px;;
 }
 #login_tbl_frame input:focus {
     outline: 1px solid black;
@@ -79,6 +79,9 @@
 }
 #login_tbl tr > td:nth-child(3) {
     vertical-align: top;
+}
+#login_tbl tr:last-child > td {
+    height: 45px;
 }
 #login_tbl_frame input[type="text"]:not(input[id*="birth"]), #login_tbl_frame input[type="password"]:not(input[id*="birth"]) {
     height : 43px;
@@ -185,9 +188,10 @@
     margin-left: 14px;
 }
 #input_extra_event_parent {
-    margin-top: 20px;
+    
 }
 #input_event_area_1, #input_event_area_2 {
+    margin-top: 20px;
     display: none;
 }
 #input_event_area_1 > div, #input_event_area_2 > div {
@@ -201,7 +205,6 @@ input[type="checkbox"] {
     top: 5px;
 }
 #info_agreement {
-    margin-top: 20px;
     border-top: 1px solid rgb(51, 51, 51);
     display: flex;
     padding: 10px 0 10px 20px;
