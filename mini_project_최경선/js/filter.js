@@ -17,9 +17,39 @@ $("#filter_reset").click(function() {
     $(".contents_pricture1_div").eq(1).show();
     $(".contents_pricture1_div").eq(2).show();
 
+    // 상품목록 위에 선택한 옵션 표시 삭제
+    $(".opt_selected_wrap").hide();
+
 });
 
 // });
+
+
+
+// opt_selected_wrap 처음에 안보이게
+$(document).ready(function(){
+    $(".opt_selected_wrap").hide();
+})
+// opt_cancel X버튼 누르면 
+// 필터의 체크상태 해제, opt_selected_wrap 숨김, 밑의 상품목록 원상복구
+$(".opt_cancel").click(function(){
+
+    $(".check").removeClass("checked");
+    $(".check").find(".path1").attr("d","M23.5 12C23.5 18.3513 18.3513 23.5 12 23.5C5.64873 23.5 0.5 18.3513 0.5 12C0.5 5.64873 5.64873 0.5 12 0.5C18.3513 0.5 23.5 5.64873 23.5 12Z");
+    $(".check").find(".path1").attr("stroke","#ddd");
+    $(".check").find(".path1").removeAttr("fill");
+    $(".check").find(".path2").attr("stroke","#ddd");
+
+    $(".radio").removeClass("checked");
+    $(".radio").find(".path3").attr("d","M12 23.5C18.3513 23.5 23.5 18.3513 23.5 12C23.5 5.64873 18.3513 0.5 12 0.5C5.64873 0.5 0.5 5.64873 0.5 12C0.5 18.3513 5.64873 23.5 12 23.5Z");
+    $(".radio").find(".path3").attr("fill","#fff");
+    $(".radio").find(".path3").attr("stroke","#ddd");
+
+    $(".opt_selected_wrap").hide();
+    $(".contents_pricture1_div").eq(0).show();
+    $(".contents_pricture1_div").eq(1).show();
+    $(".contents_pricture1_div").eq(2).show();
+});
 
 
 
@@ -42,6 +72,9 @@ $(".check").click(function() {
         $(".contents_pricture1_div").eq(2).show();
         // $(".contents_pictures2").hide();
 
+        // 상품목록 위에 선택한 옵션 표시 삭제
+        $(".opt_selected_wrap").hide();
+
         
     } else { // 체크안되어있을때 클릭 -> 체크 
         
@@ -55,27 +88,47 @@ $(".check").click(function() {
         $(".contents_pricture1_div").eq(1).hide();
         $(".contents_pricture1_div").eq(2).hide();
         // $(".contents_pictures2").hide();
+
+        // 상품목록 위에 선택한 옵션 표시 보이게
+        $(".opt_selected_wrap").show();
     }
 });
 
 // 가격
+// 체크 해제
+// 체크 
 $(".radio").click(function() {
 
     if($(this).hasClass("checked")) { // 체크되어있을때 클릭 -> 체크 해제
 
         $(this).removeClass("checked");
-        $(this).find(".path3").attr("d","M12 23.5C18.3513 23.5 23.5 18.3513 23.5 12C23.5 5.64873 18.3513 0.5 12 0.5C5.64873 0.5 0.5 5.64873 0.5 12C0.5 18.3513 5.64873 23.5 12 23.5Z");
-        $(this).find(".path3").attr("fill","#fff");
-        $(this).find(".path3").attr("stroke","#ddd");
+        $(this).find(".filter_radio_unchecked").show();
+        $(this).find(".filter_radio_checked").hide();
+
+        $(".contents_pricture1_div").eq(0).show();
+        $(".contents_pricture1_div").eq(1).show();
+        $(".contents_pricture1_div").eq(2).show();
+
+        // 상품목록 위에 선택한 옵션 표시 삭제
+        $(".opt_selected_wrap").hide();
 
     } else { // 체크안되어있을때 클릭 -> 체크 
         
         $(this).addClass("checked");
-        $(this).find(".path3").attr("d","M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z");
-        $(this).find(".path3").attr("fill","#5f0080");
+        $(this).find(".filter_radio_checked").show();
+        $(this).find(".filter_radio_unchecked").hide();
+
+        $(".contents_pricture1_div").eq(1).hide();
+        $(".contents_pricture1_div").eq(2).hide();
+
+        // 상품목록 위에 선택한 옵션 표시 보이게
+        $(".opt_selected_wrap").show();
     }
 });
-
+// filter_radio_checked 처음에 안보이게
+$(document).ready(function(){
+    $(".filter_radio_checked").hide();
+});
 
 
 

@@ -191,3 +191,30 @@
 .btn_brand_more svg {
     transform: rotate(90deg);
 }
+
+/* 상품목록 위에 선택한 옵션 표시 */
+.opt_selected_wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 16px 20px 18px;
+    border: 1px solid rgb(238, 238, 238);
+    margin-bottom: 31px;
+}
+.opt_selected {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+.opt_selected > span {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: rgb(141, 76, 196);
+}
+.opt_cancel {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    cursor: pointer;
+}
