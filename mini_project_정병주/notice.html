@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>notice</title>
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/notice.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+        html, button, input, select, textarea, p, span {
+            font-family: "Noto Sans KR";
+        }
+    </style>
+</head>
+<body>  
+    <div class="customer_center">
+        <div class="customer_center_wrapper"> <!-- flex -->
+
+            <!-- 왼쪽메뉴부분 -->
+            <div class="menu">
+                <div class="menu_title">고객센터</div>
+                <ul class="menu_list">
+                    <li class="list">
+                        <a href="#" class="active list_wrapper">공지사항<span class="arrow"></span></a> <!-- flex -->
+                    </li>
+                    <li class="list">
+                        <a href="#" class="list_wrapper">자주하는 질문<span class="arrow"></span></a> <!-- flex -->
+                    </li>
+                    <li class="list">
+                        <a href="#" class="list_wrapper">1:1 문의<span class="arrow"></span></a> <!-- flex -->
+                    </li>
+                    <li class="list">
+                        <a href="#" class="list_wrapper">대량주문 문의<span class="arrow"></span></a> <!-- flex -->
+                    </li>
+                </ul>
+
+                <a href="#" class="inquiry_wrapper"> <!-- flex -->
+                    <div class="inquiry_text_wrapper"> <!-- flex -->
+                        <span class="inquiry_text_1">도움이 필요하신가요 ?</span>
+                        <span class="inquiry_text_2">1:1 문의하기</span>
+                    </div>
+                    <span class="arrow_2"></span>
+                </a>
+            </div>
+
+            <!-- 가운데내용부분 -->
+            <div class="notice">
+                <div class="notice_header_wrapper"> <!-- flex -->
+                    <div class="notice_header_text_wrapper"> <!-- flex -->
+                        <h2 class="notice_header_text_1">공지사항</h2>
+                        <span class="notice_header_text_2">컬리의 새로운 소식들과 유용한 정보들을 한곳에서 확인하세요.</span>
+                    </div>
+                </div>
+
+                <div class="notice_category_wrapper"> <!-- flex -->
+                    <div width="50" class="number">번호</div>
+                    <div class="title">제목</div>
+                    <div width="100" class="writer">작성자</div>
+                    <div width="100" class="date">작성일</div>
+                </div>
+
+                <ul class="notice_post_wrapper"> <!-- flex -->
+                    <li><a href="#">
+                            <div class="post_wrapper"> <!-- flex -->
+                                <div class="post_number">공지</div>
+                                <div class="post_title">[안내] 컬리 소비자 분쟁해결 기준 안내</div>
+                                <div class="post_writer">MarketKurly</div>
+                                <div class="post_date">2022.07.27</div>
+                            </div>
+                        </a></li>
+                    <li><a href="#">
+                            <div class="post_wrapper"> <!-- flex -->
+                                <div class="post_number">1672</div>
+                                <div class="post_title">[안내] 개인정보처리방침 개정 내용 사전안내</div>
+                                <div class="post_writer">MarketKurly</div>
+                                <div class="post_date">2022.11.04</div>
+                            </div>
+                        </a></li>
+                    <li><a href="#">
+                            <div class="post_wrapper"> <!-- flex -->
+                                <div class="post_number">1671</div>
+                                <div class="post_title">[안내] 서비스명 변경 안내</div>
+                                <div class="post_writer">MarketKurly</div>
+                                <div class="post_date">2022.10.28</div>
+                            </div>
+                        </a></li>
+                    <li><a href="#">
+                            <div class="post_wrapper"> <!-- flex -->
+                                <div class="post_number">1670</div>
+                                <div class="post_title">[안내] SKT 휴대폰 본인인증 시스템 점검 안내 (10/28~10/29)</div>
+                                <div class="post_writer">MarketKurly</div>
+                                <div class="post_date">2022.10.27</div>
+                            </div>
+                        </a></li>
+                    <li><a href="#">
+                            <div class="post_wrapper"> <!-- flex -->
+                                <div class="post_number">1669</div>
+                                <div class="post_title">[안내] LGU+ 휴대폰결제 시스템 점검 안내 (10/18)</div>
+                                <div class="post_writer">MarketKurly</div>
+                                <div class="post_date">2022.10.18</div>
+                            </div>
+                        </a></li>
+                    <li><a href="#">
+                            <div class="post_wrapper"> <!-- flex -->
+                                <div class="post_number">1668</div>
+                                <div class="post_title">[안내] 카카오 장애로 인한 일부 서비스 불가 안내 (2022.10.15 ~ )</div>
+                                <div class="post_writer">MarketKurly</div>
+                                <div class="post_date">2022.10.15</div>
+                            </div>
+                        </a></li>
+
+                <div class="button_wrapper">  <!-- flex -->
+                    <div class="button">
+                        <button disabled type="button" class="button_previous">
+                            <div class="button_text">이전</div>
+                        </button>
+                        <button type="button" class="button_next">
+                            <div class="button_text">다음</div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

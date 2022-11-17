@@ -14,7 +14,7 @@ function id_script(el, minlength, maxlength) {
 
 var regExp2 = /[\s]/gi;
 function input_pw_script(el, minlength) {
-    if(el.value.length < 10) {
+    if(el.value.length < 10 && el.value.length > 0) {
         document.getElementById('input_pw_p').innerHTML = "최소 10자 이상 입력";
         document.getElementById('input_pw_p').style.display = "flex";
     } else if(el.value.length >= 10 && (!regExp2.test(el.value) || (/[a-zA-Z]/gi.test(el.value) && /[0-9]/gi.test(el.value)) || (/[a-zA-Z]/gi.test(el.value) && regExp1.test(el.value))|| (regExp1.test(el.value) && /[0-9]/gi.test(el.value)))) {

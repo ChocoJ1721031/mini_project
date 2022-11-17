@@ -13,6 +13,10 @@ $("#filter_reset").click(function() {
     $(".radio").find(".path3").attr("fill","#fff");
     $(".radio").find(".path3").attr("stroke","#ddd");
 
+    $(".contents_pricture1_div").eq(0).show();
+    $(".contents_pricture1_div").eq(1).show();
+    $(".contents_pricture1_div").eq(2).show();
+
 });
 
 // });
@@ -33,6 +37,10 @@ $(".check").click(function() {
         $(this).find(".path2").attr("stroke","#ddd");
 
         // $(전체상품).show()
+        $(".contents_pricture1_div").eq(0).show();
+        $(".contents_pricture1_div").eq(1).show();
+        $(".contents_pricture1_div").eq(2).show();
+        // $(".contents_pictures2").hide();
 
         
     } else { // 체크안되어있을때 클릭 -> 체크 
@@ -44,7 +52,9 @@ $(".check").click(function() {
         $(this).find(".path2").attr("stroke","#fff");
 
         // $(전체상품).not(가브로).hide()
-
+        $(".contents_pricture1_div").eq(1).hide();
+        $(".contents_pricture1_div").eq(2).hide();
+        // $(".contents_pictures2").hide();
     }
 });
 
