@@ -1,0 +1,309 @@
+/* 상세정보 전체 */
+.detail_wrap {
+    position: relative;
+    width: 1010px;
+    padding-bottom: 100px;
+}
+
+
+/* 상세정보 이미지 */
+.detail_image_wrap {
+    width: 100%;
+    margin: 0px auto;
+}
+.detail_image {
+    width: 100%;
+}
+
+
+/* 상품고시정보, 판매자정보 */
+.prod_info_wrap {
+    padding: 72px 0px;
+    border-top: 1px solid rgb(238, 238, 238);
+}
+.prod_info_wrap h3 {
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 41px;
+    text-align: center;
+    color: rgb(102, 102, 102);
+}
+
+.prod_info_list_wrap {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-top: 36px;
+    font-size: 13px;
+    color: rgb(51, 51, 51);
+    letter-spacing: -0.5px;
+}
+.prod_info_list_wrap li:nth-child(2n+1) {
+    width: 180px;
+    padding: 0px 18px 18px;
+    background-color: rgb(247, 247, 247);
+}
+.prod_info_list_wrap li:nth-child(1) {
+    padding-top: 18px;
+}
+.prod_info_list_wrap li:nth-child(3) {
+    padding-top: 18px;
+}
+.prod_info_list_wrap li:nth-child(2n) {
+    display: flex;
+    width: 325px;
+    padding: 0px 18px 18px;
+    color: rgb(102, 102, 102);
+}
+.prod_info_list_wrap li:nth-child(2) {
+    padding-top: 18px;
+}
+.prod_info_list_wrap li:nth-child(4) {
+    padding-top: 18px;
+}
+
+
+/* WHY KURLY */
+.why_kurly_wrap {
+    padding: 100px 0px 88px;
+    border-top: 1px solid rgb(238, 238, 238);
+}
+.why_kurly_title_wrap {
+    text-align: center;
+}
+.why_kurly_title_wrap span {
+    font-size: 33px;
+    color: rgb(102, 102, 102);
+}
+
+.why_kurly_list_wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 20px;
+}
+.why_kurly_list_wrap dl {
+    width: 320px;
+    padding-top: 60px;
+}
+.why_kurly_list_wrap dt {
+    font-weight: 500;
+    font-size: 18px;
+    color: rgb(95, 0, 128);
+    text-align: center;
+}
+.why_kurly_list_1::before {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 0px auto 10px;
+    background: url("https://res.kurly.com/pc/ico/1910/01_check.svg") 50% 50% no-repeat;
+}
+.why_kurly_list_2::before {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 0px auto 10px;
+    background: url("https://res.kurly.com/pc/ico/1910/02_only.svg") 50% 50% no-repeat;
+}
+.why_kurly_list_3::before {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 0px auto 10px;
+    background: url("https://res.kurly.com/pc/ico/1910/03_cold.svg") 50% 50% no-repeat;
+}
+.why_kurly_list_4::before {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 0px auto 10px;
+    background: url("https://res.kurly.com/pc/ico/1910/04_price.svg") 50% 50% no-repeat;
+}
+.why_kurly_list_5::before {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 0px auto 10px;
+    background: url("https://res.kurly.com/pc/ico/1910/05_eco.svg") 50% 50% no-repeat;
+}
+.why_kurly_list_wrap dd {
+    padding-top: 22px;
+    font-weight: 300;
+    color: rgb(51, 51, 51);
+    line-height: 25px;
+    text-align: center;
+}
+.why_kurly_list_wrap dd span {
+    display: block;
+    padding-top: 7px;
+    font-size: 11px;
+    color: rgb(102, 102, 102);
+}
+
+
+/* 고객행복센터 */
+.customer_center_wrap {
+    padding: 60px 5px 0px;
+    border-top: 1px solid rgb(221, 221, 221);
+}
+.customer_center_title h5 {
+    font-weight: 500;
+    font-size: 28px;
+    color: rgb(102, 102, 102);
+}
+.customer_center_title p {
+    padding-top: 30px;
+    font-weight: 500;
+    font-size: 18px;
+    color: rgb(102, 102, 102);
+}
+.customer_center_title span {
+    display: block;
+    padding-top: 6px;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.customer_center_list_wrap {
+    display: flex;
+    padding: 60px 0px 70px;
+}
+.customer_center_list_wrap li {
+    flex-shrink: 0;
+    width: 340px;
+}
+.customer_center_list_wrap strong {
+    display: block;
+    font-weight: 500;
+    font-size: 18px;
+    color: rgb(95, 0, 128);
+}
+.customer_center_list_wrap strong::before {
+    content: "";
+    display: inline-block;
+    width: 3px;
+    height: 20px;
+    margin: 5px 10px 0px 0px;
+    background-color: rgb(95, 0, 128);
+    vertical-align: top;
+}
+.customer_center_list_wrap span {
+    display: block;
+    padding-top: 9px;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 25px;
+}
+.customer_center_list_wrap .add {
+    display: block;
+    padding-top: 13px;
+    font-weight: 300;
+    font-size: 15px;
+    color: rgb(102, 102, 102);
+    line-height: 22px;
+}
+
+/* 교환 및 환불 안내, 주문 취소 안내, 배송관련 안내 */
+/* 제목 + 버튼 */
+.exch_refund_title_wrap,
+.cancel_title_wrap {
+    display: flex;
+    position: relative;
+    padding: 14px 0px 17px;
+    border-top: 1px solid rgb(221, 221, 221);
+    border-right: 1px solid rgb(221, 221, 221);
+    border-left: 1px solid rgb(221, 221, 221);
+    font-weight: 300;
+    line-height: 27px;
+}
+.exch_refund_title_wrap strong,
+.cancel_title_wrap strong,
+.delivery_title_wrap strong {
+    width: 179px;
+    padding-left: 29px;
+    font-weight: 500;
+    font-size: 18px;
+    color: rgb(95, 0, 128);
+}
+.cancel_title_wrap bold {
+    font-weight: 500;
+    color: rgb(102, 102, 102);
+}
+.delivery_title_wrap {
+    display: flex;
+    position: relative;
+    padding: 14px 0px 17px;
+    border: 1px solid rgb(221, 221, 221);
+    font-weight: 300;
+    line-height: 27px;
+}
+#btn_close_1,
+#btn_close_2 {
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    margin-top: -14px;
+    padding-right: 20px;
+    border: none;
+    font-size: 16px;
+    color: rgb(95, 0, 128);
+}
+#btn_close_1.show::before,
+#btn_close_2.show::before {
+    content: "";
+    position: absolute;
+    right: 0px;
+    top: 9px;
+    width: 14px;
+    height: 8px;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAQCAYAAAFyyC95AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAHKADAAQAAAABAAAAEAAAAAChTRmjAAABQklEQVQ4EaVTAVLCQAzMweuUR1jRZ+hQRp6BwCfU12np9rppclwhameYXJLdzSUXpJMuyfjp+UHaTh1mnQViCOjBaJQxQcAFG3m7d3qjM8Qbad/xswCw9UYW4BJkAFAmErQ7+f7o2z2cpH0iuGZRqpHtD3I6Hqj2Ta9rApZwks0iSZrmygpW4CibZ1YggbhZW+vLgXOPl5UdyDjEJ75O5CpTG8vVAgQIohd9IFOBx4mE6b9+DlOtTY0EWE/KT6bPMUeukSCmRDgl+VG2+7m3dcSSDL8H3Nwo4IYPlTFtXJOx0uquIgF1bAtWqgT+xccF2G7WX656ZR/Mif8Vvq45Xv06KNZxRKP6iHYMkY4jhca+/LoxCBsRiWCsJs4XHZaAOVHgsPvERxfuZkEK1gojFy1EnXBBEnLh3R38o7x8/fYvdAbtFvI3sJI0yAAAAABJRU5ErkJggg==") 100% 50% / 14px 8px no-repeat;
+    transform: rotate(180deg);
+}
+#btn_close_1.hide::before,
+#btn_close_2.hide::before {
+    content: "";
+    position: absolute;
+    right: 0px;
+    top: 9px;
+    width: 14px;
+    height: 8px;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAQCAYAAAFyyC95AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAHKADAAQAAAABAAAAEAAAAAChTRmjAAABQklEQVQ4EaVTAVLCQAzMweuUR1jRZ+hQRp6BwCfU12np9rppclwhameYXJLdzSUXpJMuyfjp+UHaTh1mnQViCOjBaJQxQcAFG3m7d3qjM8Qbad/xswCw9UYW4BJkAFAmErQ7+f7o2z2cpH0iuGZRqpHtD3I6Hqj2Ta9rApZwks0iSZrmygpW4CibZ1YggbhZW+vLgXOPl5UdyDjEJ75O5CpTG8vVAgQIohd9IFOBx4mE6b9+DlOtTY0EWE/KT6bPMUeukSCmRDgl+VG2+7m3dcSSDL8H3Nwo4IYPlTFtXJOx0uquIgF1bAtWqgT+xccF2G7WX656ZR/Mif8Vvq45Xv06KNZxRKP6iHYMkY4jhca+/LoxCBsRiWCsJs4XHZaAOVHgsPvERxfuZkEK1gojFy1EnXBBEnLh3R38o7x8/fYvdAbtFvI3sJI0yAAAAABJRU5ErkJggg==") 100% 50% / 14px 8px no-repeat;
+    transform: rotate(0deg);
+}
+/* 본문 */
+.exch_refund_wrap,
+.cancel_wrap {
+    display: flex;
+    padding: 40px 0px 40px;
+    border-top: 1px solid rgb(221, 221, 221);
+}
+.exch_refund_wrap strong,
+.cancel_wrap strong {
+    width: 340px;
+    padding-left: 30px;
+    font-weight: 500;
+    font-size: 17px;
+    color: rgb(51, 51, 51);
+}
+.exch_refund_wrap p,
+.cancel_wrap p {
+    padding: 2px 20px 0px 0px;
+    font-weight: 300;
+    font-size: 15px;
+    white-space: pre-line;
+}
+.exch_refund_wrap .bold {
+    display: block;
+    padding: 30px 0px 6px;
+    font-weight: 500;
+    color: rgb(95, 0, 128);
+}
+.exch_refund_wrap .bold:first-of-type {
+    padding-top: 0px;
+}

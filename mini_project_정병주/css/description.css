@@ -1,0 +1,228 @@
+/* 상품설명/상세정보/후기/문의 탭 */
+.prod_nav_wrap {
+    z-index: 20;
+    position: sticky;
+    top: 56px;
+    width: 1010px;
+    background-color: rgb(255, 255, 255);
+    margin-top: 50px;
+}
+.prod_nav_wrap > nav {
+    display: flex;
+    height: 60px;
+}
+.prod_nav_wrap .selected {
+    display: flex;
+    flex: 1 1 0%;
+    border-width: 1px 0px 0px 1px;
+    border-color: rgb(238, 238, 238);
+    border-style: solid;
+    background-color: rgb(255, 255, 255);
+}
+.prod_nav_wrap a {
+    display: flex;
+    flex: 1 1 0%;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.prod_nav_wrap .selected span {
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(95, 0, 128);
+}
+.prod_nav_wrap div {
+    display: flex;
+    flex: 1 1 0%;
+    border-width: 1px 0px 1px 1px;
+    border-color: rgb(238, 238, 238);
+    border-style: solid;
+    background-color: rgb(250, 250, 250);
+}
+.prod_nav_wrap span {
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(102, 102, 102);
+}
+.prod_nav_wrap .number {
+    margin-left: 4px;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(153, 153, 153);
+    line-height: 16px;
+}
+.prod_nav_wrap div:last-of-type {
+    border-right-width: 1px;
+}
+
+/* 위로가기 버튼 */
+.btn_pagetop_wrap {
+    position: fixed;
+    z-index: 10;
+    right: 31px;
+    width: 58px;
+    height: 58px;
+    transition: opacity 0.5s ease 0s;
+    bottom: 25px;
+    opacity: 1;
+}
+
+
+/* 상품설명 전체 */
+.description_wrap {
+    position: relative;
+    width: 1010px;
+    padding-bottom: 100px;
+    padding-top: 40px;
+}
+.goods_wrap {
+    margin: 0px auto;
+    font-weight: 300;
+    width: 100%;
+}
+/* .context 관련 */
+.goods_wrap .context {
+    margin-bottom: 130px;
+}
+.goods_wrap .context .last {
+    margin-bottom: 170px;
+}
+.goods_wrap .context h3, 
+.goods_wrap .context strong, 
+.goods_wrap .context b {
+    font-weight: 500;
+}
+.goods_wrap .context .words {
+    margin-top: 55px;
+    font-size: 18px;
+    line-height: 32px;
+    color: rgb(55, 55, 55);
+}
+
+/* goods_intro */
+.goods_wrap .goods_intro .context h3 {
+    display: block;
+    margin: 75px 0px 0px;
+    padding-bottom: 35px;
+    font-size: 38px;
+    line-height: 46px;
+    text-align: center;
+    border-bottom: 1px solid rgb(193, 193, 193);
+    color: rgb(102, 102, 102);
+}
+.goods_wrap .goods_intro .context h3 small {
+    display: block;
+    font-size: 24px;
+    margin-bottom: 14px;
+    line-height: 15px;
+}
+.goods_wrap .goods_intro .context .words {
+    margin-top: 28px;
+}
+
+/* goods_point, goods_pick, about_brand 제목부분 */
+.goods_wrap .goods_point h3,
+.goods_wrap .goods_pick h3,
+.goods_wrap .about_brand h3 {
+    display: inline-block;
+    position: relative;
+    font-size: 50px;
+    width: 100%;
+    margin-bottom: 70px;
+    font-weight: 400;
+    color: rgb(102, 102, 102);
+}
+.goods_wrap .goods_point h3::before,
+.goods_wrap .goods_pick h3::before,
+.goods_wrap .about_brand h3::before {
+    content: " ";
+    position: absolute;
+    z-index: 1;
+    top: 28px;
+    width: 100%;
+    height: 1px;
+    background: rgb(185, 185, 185);
+}
+.goods_wrap .goods_point h3 span {
+    position: relative;
+    z-index: 10;
+    display: inline-block;
+    margin-left: 260px;
+    padding: 0px 15px;
+    background: rgb(255, 255, 255);
+    text-shadow: 2px 0px;
+}
+.goods_wrap .goods_pick h3 span {
+    position: relative;
+    z-index: 10;
+    display: inline-block;
+    margin-left: 354px;
+    padding: 0px 15px;
+    background: rgb(255, 255, 255);
+    text-shadow: 2px 0px;
+}
+.goods_wrap .about_brand h3 span {
+    position: relative;
+    z-index: 10;
+    display: inline-block;
+    margin-left: 341px;
+    padding: 0px 15px;
+    background: rgb(255, 255, 255);
+    text-shadow: 2px 0px;
+}
+
+/* goods_pick */
+.goods_wrap .goods_pick .context {
+    margin-bottom: 130px;
+}
+.goods_wrap .sub_title {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+/* goods_tip */
+.goods_wrap .goods_tip {
+    margin-bottom: 170px;
+}
+.goods_wrap .goods_tip h3 {
+    display: inline-block;
+    position: relative;
+    font-size: 30px;
+    padding-left: 48px;
+    font-weight: 500;
+    color: rgb(102, 102, 102);
+    letter-spacing: 1px;
+}
+.goods_wrap .goods_tip h3 span {
+    position: relative;
+    z-index: 10;
+    display: inline-block;
+    padding: 0px 10px;
+    font-size: 36px;
+    background: rgb(255, 255, 255);
+    text-shadow: 2px 0px;
+}
+.goods_wrap .goods_tip .tip_box {
+    margin-top: -15px;
+    border: 1px solid rgb(185, 185, 185);
+}
+.goods_wrap .goods_tip .tip_box .context {
+    margin: 60px 62px;
+}
+.goods_wrap .goods_tip .tip_box strong {
+    display: block;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+.goods_wrap .goods_tip .tip_box .context .words {
+    margin: 0px;
+}
+
+/* about_brand */
+.goods_wrap .about_brand .context .pic {
+    margin-bottom: 60px;
+}
+.goods_wrap .about_brand .context .words {
+    margin: 0px 0px 100px;
+}
