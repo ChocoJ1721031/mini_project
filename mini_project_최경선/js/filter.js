@@ -13,6 +13,10 @@ $("#filter_reset").click(function() {
     $(".radio").find(".path3").attr("fill","#fff");
     $(".radio").find(".path3").attr("stroke","#ddd");
 
+    $(".contents_pricture1_div").eq(0).show();
+    $(".contents_pricture1_div").eq(1).show();
+    $(".contents_pricture1_div").eq(2).show();
+
 });
 
 // });
