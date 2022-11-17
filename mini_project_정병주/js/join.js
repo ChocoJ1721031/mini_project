@@ -163,7 +163,15 @@ function event_pop_up_2() {
 
 
 function open_pop_up_1() {
+    if(document.getElementById('input_id').value.length >= 6) {
+        document.getElementById('pop_up_1_content_text').innerText = "사용 할 수 있는 아이디입니다.";
+        document.getElementsByClassName('info_check_button')[0].style.borderColor = "rgb(221, 221, 221)";
+        document.getElementsByClassName('info_check_button')[0].style.color = "rgb(221, 221, 221)";
+        document.getElementsByClassName('info_check_button')[0].style.cursor = "default";
+    };
     document.getElementById('pop_up_1').style.display = "flex";
+    document.getElementById('pop_up_1_content').children[1].style.display = "flex";
+    document.getElementById('pop_up_1_content').children[1].style.justifyContent = "center";
     document.body.style.overflow = "hidden";
 }
 function close_pop_up_1() {
