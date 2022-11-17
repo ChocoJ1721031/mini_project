@@ -284,6 +284,8 @@ input[type="checkbox"] {
     color: rgb(95, 0, 128);
     letter-spacing: 0px;
     cursor: default;
+    position: relative;
+    top: 10px;
 }
 .agreement_detail::after {
     content: "";
