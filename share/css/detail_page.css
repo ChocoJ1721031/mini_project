@@ -1,12 +1,12 @@
 /* 전체 구도*/
-.prod_detail_warp {
+.prod_detail_wrap {
     position: relative;
     width: 1050px;
     margin: 0px auto;
     padding-top: 30px;
 }
 
-.container_wrapper {
+#container_wrapper {
     position: relative;
     width: 1050px;
     margin: 0px auto;
