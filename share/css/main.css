@@ -393,6 +393,7 @@
     display: flex;
     top: 46px;
     padding-top: 10px;
+    z-index: 21;
 }
 #s_category > div > div {
     position: relative;

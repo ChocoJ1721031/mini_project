@@ -409,6 +409,7 @@
     display: flex;
     top: 46px;
     padding-top: 10px;
+    z-index: 21;
 }
 #s_category > div > div {
     position: relative;
@@ -454,7 +455,7 @@
     overflow-y: scroll;
     top: 0px;
     left: 0px;
-    z-index: 20;
+    z-index: 21;
     animation: 0.5s linear 0s 1 normal none running animation-plwpox;
     display: none;
 }
