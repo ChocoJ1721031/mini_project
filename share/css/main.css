@@ -126,6 +126,9 @@
     height: 63px;
     display: flex;
 }
+#main_logo > img {
+    cursor: pointer;
+}
 
 .h_f_2 #main_logo > button {
     margin-left: 20px;
