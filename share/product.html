@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>product</title>
-
     <link href="./css/reset.css" rel="stylesheet">
     <link href="./css/main.css" rel="stylesheet">
     <link href="./css/main_share_section.css" rel="stylesheet">
@@ -13,14 +12,7 @@
     <link href="./css/description.css" rel="stylesheet">
     <link href="./css/detail.css" rel="stylesheet">
     <link href="./css/reviewstyle.css" rel="stylesheet">
-    <link href="./css/inquiry.css" rel="stylesheet">    
-
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
-        html, button, input, select, textarea, p, span {
-            font-family: "Noto Sans KR";
-        }
-    </style>
+    <link href="./css/inquiry.css" rel="stylesheet">
 
     <script defer src="./js/jquery-3.6.1.js"></script>
     <script defer src="./js/main_header.js"></script>
@@ -29,6 +21,17 @@
     <script defer src="./js/detail.js"></script>
     <script defer src="./js/reviewJs.js"></script>
     <script defer src="./js/inquiry.js"></script>
+
+    <style>
+        html, body {
+            scroll-behavior: smooth; -webkit-scroll-behavior: smooth;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+        html, button, input, select, textarea, p, span {
+            font-family: "Noto Sans KR";
+        }
+        
+    </style>
 
 </head>
 <body>
@@ -344,26 +347,28 @@
                                         type="button" radius="3"><span class="text">장바구니 담기</span></button>
                                 </div>                        
                             </div>
+                            <div id="product_info"></div>
                         </div>
                     </div>
                 </article>
 
                 <!-- 상품설명/상세정보/후기/문의 탭 -->
+                
                 <nav class="prod_nav_wrap">
 
                     <nav>
 
                         <div class="selected">
-                            <a class="active"><span>상품설명</span></a>
+                            <a href="#product_info" class="active"><span>상품설명</span></a>
                         </div>
                         <div>
-                            <a><span>상세정보</span></a>
+                            <a href="#detail"><span>상세정보</span></a>
                         </div>
                         <div>
-                            <a><span>후기</span><span class="number">(9,999+)</span></a>
+                            <a href="#review"><span>후기</span><span class="number">(9,999+)</span></a>
                         </div>
                         <div>
-                            <a><span>문의</span></a>
+                            <a href="#inquiry"><span>문의</span></a>
                         </div>
 
                     </nav>
@@ -371,6 +376,7 @@
                 </nav>
 
                 <!-- 상품설명/상세정보/후기/문의 전체 -->
+                
                 <div class="prod_contents_wrap">
 
                     <!-- 상품설명 (최경선) -->
@@ -450,7 +456,7 @@
                                         <p class="words"> 청담동에 자리한 쵸이닷은 스타 셰프인 최현석 셰프가 이끄는 이탈리안 파인 다이닝 레스토랑입니다. 그의
                                             이름을 딴 점에서도 알 수 있듯, 쵸이닷은 최현석 셰프의 내공과 상상력을 고스란히 담아낸 요리를 선보여왔어요. 기본에 충실하면서도
                                             창의적인 레시피와 아름다운 플레이팅, 무엇보다도 뛰어난 맛으로 감동을 선사하죠. 쵸이닷은 오감을 만족시킬 수 있는 레스토랑으로
-                                            미식가들의 사랑을 받고 있습니다. 
+                                            미식가들의 사랑을 받고 있습니다.
                                         </p>
                                     </div>
                                 </div>
@@ -459,7 +465,8 @@
                     </div>
 
                     <!-- 상세정보 (최경선) -->
-                    <div id="detail" class="detail_wrap">
+                    <div id="detail" style="position: relative; top: -200px;"></div>
+                    <div class="detail_wrap">
 
                         <!-- 상세정보 이미지  -->
                         <div class="detail_image_wrap">
@@ -659,6 +666,7 @@
                                 <div class="delivery_title_wrap">
                                     <strong>배송관련 안내</strong>
                                     <p>배송 과정 중 기상 악화 및 도로교통 상황에 따라 부득이하게 지연 배송이 발생될 수 있습니다.</p>
+                                    <div id="review"></div>
                                 </div>
                 
                         </div>
@@ -1721,7 +1729,6 @@
                                                                 decoding="async" data-nimg="intrinsic"
                                                                 style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"><noscript></noscript></span>
                                                     </div>
-                
                                                 </div>
                                             </div>
                                         </div>
@@ -1730,13 +1737,13 @@
                             </div>
                             <div tabindex="0" data-test="sentinelEnd"></div>
                         </div>
-                
-                
                     </div>
                     </div>
 
                     <!-- 문의 (최경선) -->
-                    <div id="inquiry" class="inquiry_wrap">
+                    
+                    <div id="inquiry" style="position: relative; top: -150px;"></div>
+                    <div class="inquiry_wrap">
             
                         <div class="inquiry_content">
                             
@@ -1854,7 +1861,7 @@
                             </div>
                 
                             <!-- 제목 부분 -->
-                            <div class="inquiry_title_wrap">
+                            <div id="inquiry" class="inquiry_title_wrap">
                                 <strong>상품 문의</strong>
                                 <ul>
                                     <li>
