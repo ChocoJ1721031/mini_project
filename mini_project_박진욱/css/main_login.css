@@ -10,6 +10,7 @@
     background: rgb(95, 0, 128);
     margin-top: 0px;
 }
+
 .e_link {
     background-color: rgb(95, 0, 128);
     width: 1050px;
@@ -24,6 +25,7 @@
     height: 42px;
     line-height: 42px;
 }
+
 .e_link button {
     position: absolute;
     right: 0;
@@ -71,25 +73,61 @@
     align-items: center;
     font-size: 12px;
 }
-.h_f_1 > div > div:not(:last-of-type) {
+.h_f_1 > div > div:nth-of-type(2) {
     font-size: 14px;
     margin: 0px 9px;
     color: rgb(217, 217, 217);
 }
-.h_f_1 >div > a:first-of-type {
-    color: #5f0080;
-}
-.h_f_1 > div > div:last-of-type {
+.h_f_1 > div > div:not(:nth-of-type(2)) {
     position: relative;
 }
-.h_f_1 > div > div:last-of-type > a {
+.h_f_1 > div > div:not(:nth-of-type(2)) > a {
     line-height: 35px;
 }
-.h_f_1 > div > div:last-of-type > a > img {
+.h_f_1 > div > div:not(:nth-of-type(2)) > a > span {
+    display: inline-block;
+    min-width: 38px;
+    height: 16px;
+    margin-right: 4px;
+    padding: 0px 4px;
+    border-radius: 30px;
+    font-size: 10px;
+    line-height: 14px;
+    text-align: center;
+    letter-spacing: -0.3px;
+    vertical-align: 0px;
+    color: rgb(95, 0, 128);
+    border: 1px solid rgb(95, 0, 128);
+    background-color: white;
+}
+.header_new_logo {
+    width: 10px;
+    margin-left: 2px;
+    line-height: 10px;
+    vertical-align: -1px;
+}
+.h_f_1 > div > div:not(:nth-of-type(2)) > a > img:last-of-type {
     width: 8px;
     height: 5px;
     margin-left: 5px;
     margin-bottom: 1px;
+}
+.h_f_1_a1_hover {
+    display: none;
+    position: absolute;
+    right: 0px;
+    top: 34px;
+    width: 120px;
+    padding: 3px 9px;
+    border: 1px solid rgb(221, 221, 221);
+    background-color: rgb(255, 255, 255);
+    z-index: 3;
+}
+.h_f_1_a1_hover > div {
+    display: block;
+    height: 24px;
+    line-height: 24px;
+    cursor: pointer;
 }
 .h_f_1_a3_hover {
     display: none;
@@ -109,6 +147,9 @@
     cursor: pointer;
 }
 .h_f_1 > div > div:last-of-type:hover > .h_f_1_a3_hover {
+    display: block;
+}
+.h_f_1 > div > div:first-of-type:hover > .h_f_1_a1_hover {
     display: block;
 }
 
@@ -258,38 +299,13 @@
     display: block;
     padding: 0px 10px;
     text-align: center;
-    width: 80px;
+    width: 225px;
     height: 36px;
     border-radius: 3px;
     color: rgb(95, 0, 128);
     background-color: rgb(255, 255, 255);
     border: 1px solid rgb(95, 0, 128);
 }
-.buttons_first_hover > div > div > button:last-of-type {
-    display: flex;
-    justify-content: center;
-    padding: 0px 10px;
-    width: 145px;
-    height: 36px;
-    border-radius: 3px;
-    color: rgb(95, 0, 128);
-    background-color: rgb(95, 0, 128);
-    border: 0px none;
-}
-.buttons_first_hover > div > div > button:last-of-type > img{
-    display: block;
-    width: 20px;
-    height: 20px;
-    margin: auto 0;
-}
-.buttons_first_hover > div > div > button:last-of-type > span{
-    display: block;
-    color: white;
-    height: 100%;
-    line-height: 36px;
-}
-    
-
 /* <!-- header h_second --> */
 /* .h_second {
     position: sticky;
