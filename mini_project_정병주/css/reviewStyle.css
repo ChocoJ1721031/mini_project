@@ -601,3 +601,135 @@ a {
     flex-shrink: 0;
     background: url(https://img-cf.kurly.com/shop/data/review/20221115/67090105-8f07-4518-a151-1b64f6bc58c4.jpg) 0% 0% / cover no-repeat;
 }
+
+.view_more_wrap{
+    height: 100%;
+    outline: 0px;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.view_more_user_wrap{
+    position: fixed;
+    z-index: 1300;
+    inset: 0px;
+}
+
+.view_more_user_div1{
+    position: fixed;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    inset: 0px;
+    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-tap-highlight-color: transparent;
+    z-index: -1;
+}
+
+.view_more_user_div2{
+    height: 100%;
+    outline: 0px;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+
+.view_more_user_div_wrap{
+    box-shadow: none;
+}
+
+
+.view_more_size{
+    width: 800px;
+    margin: 0px auto;
+    background-color: rgb(255, 255, 255);
+    border-radius: 12px;
+    padding: 3px;
+}
+
+.view_more_header{
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    padding-bottom: 8px;
+    margin: 29px 30px 20px;
+    border-bottom: 1px solid rgb(244, 244, 244);
+    letter-spacing: -1px;
+    vertical-align: middle;
+}
+
+.view_more_box_wrap{
+    flex: 1 1 auto;
+    padding: 0px 30px 30px;
+    overflow: hidden;
+}
+
+.view_more_picture_review {
+    display: inline;
+    padding: 0px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: -0.5px;
+    color: rgb(51, 51, 51);
+    vertical-align: baseline;
+}
+
+.view_more_all_look{
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    margin-top: 1px;
+}
+
+.css-1nm5twe {
+    flex: 1 1 auto;
+    padding: 0px 30px 30px;
+    overflow: hidden;
+}
+
+.view_more_div_picture {
+    position: relative;
+}
+
+.view_more_div_picture_wrap {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(6, 121px);
+    gap: 3px;
+    max-height: 616px;
+    margin-right: -10px;
+    overflow: hidden auto;
+}
+
+.view_more_div_picture_div{
+    position: relative;
+    cursor: pointer;
+    width: 120px;
+    height: 120px;
+}
+
+element.style {
+    box-sizing: border-box;
+    display: inline-block;
+    overflow: hidden;
+    width: initial;
+    height: initial;
+    background: none;
+    opacity: 1;
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    max-width: 100%;
+}
