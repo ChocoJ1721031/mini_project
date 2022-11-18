@@ -52,13 +52,18 @@ function input_user_name_script(el) {
 
 var regExp3 = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]/gi;
 function input_mail_script(el) {
+    document.getElementsByClassName('info_check_button')[1].style.borderColor = "rgb(95, 0, 128)";
+    document.getElementsByClassName('info_check_button')[1].style.color = "rgb(95, 0, 128)";
+    document.getElementsByClassName('info_check_button')[1].style.cursor = "pointer";
+
     if(el.value == "") {
         document.getElementById('input_mail_p').innerHTML = "이메일을 입력해 주세요.";
         document.getElementById('input_mail_p').style.display = "flex";
-    } else if(regExp3.test(el.value)) {
+    } else if(!(regExp3.test(el.value))) {
         document.getElementById('input_mail_p').innerHTML = "이메일 형식으로 입력해 주세요.";
-        document.getElementById('input_mail_p').style.display = "none";
+        document.getElementById('input_mail_p').style.display = "flex";
     } else {
+        console.log(!(regExp3.test(el.value)));
         document.getElementById('input_mail_p').innerHTML = "";
         document.getElementById('input_mail_p').style.display = "none";
     }
@@ -168,10 +173,13 @@ function open_pop_up_1() {
         document.getElementsByClassName('info_check_button')[0].style.borderColor = "rgb(221, 221, 221)";
         document.getElementsByClassName('info_check_button')[0].style.color = "rgb(221, 221, 221)";
         document.getElementsByClassName('info_check_button')[0].style.cursor = "default";
+    } else {
+        document.getElementById('pop_up_1_content_text').innerText = "사용 할 수 있는 아이디입니다.";
+        document.getElementsByClassName('info_check_button')[0].style.borderColor = "rgb(95, 0, 128)";
+        document.getElementsByClassName('info_check_button')[0].style.color = "rgb(95, 0, 128)";
+        document.getElementsByClassName('info_check_button')[0].style.cursor = "pointer";
     };
     document.getElementById('pop_up_1').style.display = "flex";
-    document.getElementById('pop_up_1_content').children[1].style.display = "flex";
-    document.getElementById('pop_up_1_content').children[1].style.justifyContent = "center";
     document.body.style.overflow = "hidden";
 }
 function close_pop_up_1() {
@@ -179,6 +187,17 @@ function close_pop_up_1() {
     document.body.style.overflow = "visible";
 }
 function open_pop_up_2() {
+    if(regExp3.test(document.getElementById('input_mail').value)) {
+        document.getElementById('pop_up_2_content_text').innerText = "사용 가능한 이메일 입니다.";
+        document.getElementsByClassName('info_check_button')[1].style.borderColor = "rgb(221, 221, 221)";
+        document.getElementsByClassName('info_check_button')[1].style.color = "rgb(221, 221, 221)";
+        document.getElementsByClassName('info_check_button')[1].style.cursor = "default";
+    } else {
+        document.getElementById('pop_up_1_content_text').innerText = "이메일을 입력해 주세요.";
+        document.getElementsByClassName('info_check_button')[1].style.borderColor = "rgb(95, 0, 128)";
+        document.getElementsByClassName('info_check_button')[1].style.color = "rgb(95, 0, 128)";
+        document.getElementsByClassName('info_check_button')[1].style.cursor = "pointer";
+    };
     document.getElementById('pop_up_2').style.display = "flex";
     document.body.style.overflow = "hidden";
 }
