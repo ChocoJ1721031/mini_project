@@ -443,6 +443,7 @@
     width: 64px;
     height: 64px;
     background: url(../images/레시피전체보기.svg) 50% center / contain no-repeat;
+    cursor: pointer;
 }
 
 /* 메인 section_3 - instagram */
