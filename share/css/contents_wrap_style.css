@@ -20,6 +20,7 @@
     justify-content: space-between;
     padding-bottom: 20px;
     line-height: 20px;
+    margin-bottom: 10px;
 }
 
 .content_recommend{
@@ -222,6 +223,6 @@ img{
     font-size: 12px;
     color: rgb(95, 0, 128);
     line-height: 16px;
-    width: 57px;
+    width: 80px;
     text-align: center;
 }
