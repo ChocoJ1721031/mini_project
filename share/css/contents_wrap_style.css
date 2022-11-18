@@ -12,6 +12,11 @@
 .contents_wrap{
     width: 100%;
 }
+
+#contents_list{
+    margin-bottom: 8px;
+}
+
 .contents_list{
     display: flex;
     -webkit-box-align: center;
