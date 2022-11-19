@@ -1,0 +1,352 @@
+body{
+    font-size: 12px;
+}
+.r_tit_page {
+    overflow: hidden;
+    width: 1050px;
+    margin: 0 auto;
+    padding: 50px 0 51px;
+}
+
+.r_tit {
+    font-weight: 700;
+    font-size: 28px;
+    color: #333;
+    line-height: 35px;
+    text-align: center;
+    letter-spacing: -1px;
+}
+
+.content {
+    width: 1050px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 60px;
+}
+
+/* 레시피 상단 표 */
+.boardView {
+    table-layout: fixed;
+    border-top: 2px solid #333;
+    border-bottom: 1px solid #f4f4f4;
+    color: #333;
+    line-height: 180%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+.boardView th {
+    width: 130px;
+    padding: 13px 0 13px 20px;
+    background-color: #f7f5f8;
+    text-align: left;
+}
+
+.boardView td {
+    width: auto;
+    padding: 13px 0 13px 23px;
+    border-top: 1px solid #f4f4f4;
+}
+
+.boardView tr.etcArea td {
+    padding: 0;
+    border: 0;
+}
+
+.boardView tr.etcArea ul {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    width: 100%;
+    border-top: 1px solid #f4f4f4;
+}
+
+.boardView tr.etcArea ul li {
+    float: left;
+}
+
+.boardView tr.etcArea ul li strong {
+    float: left;
+    padding: 13px 0 13px 20px;
+    width: 130px;
+    background-color: #f7f5f8;
+}
+
+.boardView tr.etcArea ul li span {
+    float: left;
+    padding: 13px 0 13px 20px;
+    width: 180px;
+}
+
+.goods_wrap {
+    width: 1010px;
+    margin: 0 auto;
+    font-weight: 200;
+    letter-spacing: 0;
+}
+
+.goods_wrap .goods_recipe h3 {
+    display: block;
+    font-weight: 700;
+    padding-bottom: 70px;
+    text-align: center;
+    color: #666;
+}
+
+.goods_wrap .goods_recipe .recipe_tit {
+    display: block;
+    padding-bottom: 30px;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 46px;
+    color: #666;
+    text-shadow: 2px 0;
+}
+
+.goods_wrap .goods_recipe .recipe_product {
+    display: inline-block;
+    border-top: 1px solid #b1b1b1;
+    padding-top: 30px;
+    min-width: 342px;
+    font-size: 34px;
+    line-height: 38px;
+    font-weight: 400;
+    text-shadow: 1px 0;
+}
+
+/* 레시피 이미지, 재료, 내용 */
+.goods_wrap .context b {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 32px;
+}
+
+.goods_wrap .context u {
+    font-size: 18px;
+    line-height: 32px;
+}
+
+.view_recipe {
+    padding: 150px 10px 10px;
+}
+
+.context {
+    margin-bottom: 130px;
+}
+
+.goods_wrap .context .words {
+    margin-top: 55px;
+    font-size: 18px;
+    line-height: 32px;
+    color: #373737;
+}
+
+.goods_wrap .context strong {
+    display: block;
+    padding-bottom: 20px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #666;
+    text-shadow: 1px 0
+}
+
+
+
+/* 레시피 아이템 */
+.goods-add-product {
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.goods-add-product-title {
+    text-align: left;
+    font-size: 13px;
+    font-weight: 900;
+    line-height: 1.8;
+}
+
+.goods-add-product-title:before {
+    width: 20px;
+    height: 5px;
+    background-color: #000;
+    display: block;
+    content: '';
+}
+
+.goods-add-product-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+}
+.goods-add-product-list-wrapper {
+    position: relative;
+    width: 940px;
+    margin: 0 auto;
+    height: 350px;
+    overflow: hidden;
+    box-sizing: content-box; 
+}
+.goods-add-product-list-slide-mover {
+    position: absolute;
+    left: 0;
+    width: 1000%;
+    height: 100%;
+    top: 0;
+}
+#goods-add-product-move-left {
+    position: absolute;
+    text-indent: -9999px;
+    background-color: transparent;
+    border: 0;
+    height: 35px !important;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background-repeat: no-repeat;
+    z-index: 3;
+    width: 30px;
+    left: 0;
+    background-image: url(https://res.kurly.com/pc/etc/old/images/common/slide-sub-left-button-black.png);
+    background-position: left;
+}
+
+#goods-add-product-move-right {
+    position: absolute;
+    text-indent: -9999px;
+    background-color: transparent;
+    border: 0;
+    height: 35px !important;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background-repeat: no-repeat;
+    z-index: 3;
+    width: 30px;
+    right: 0;
+    background-image: url(https://res.kurly.com/pc/etc/old/images/common/slide-sub-right-button-black.png);
+    background-position: right;
+}
+.goods-add-product-item-slide-item {
+    float: left;
+    width: 180px;
+    height: 100%;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+}
+
+.goods-add-product-item-figure {
+    position: relative;
+    height: 230px;
+    overflow: hidden;
+}
+
+.goods-add-product-item-image {
+    width: 100%;
+    height: 100%;
+}
+
+.bnt_cart {
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    width: 45px;
+    height: 45px;
+    margin-top: 15px;
+    border: 0 none;
+    background: url(https://res.kurly.com/pc/service/common/1908/ico_list_add_cart.png) no-repeat 50% 50%;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9999px;
+}
+
+/* 레시피 아이템 이름 가격 */
+.goods-add-product-item-content {
+    height: 120px;
+}
+
+.goods-add-product-item-content-wrapper {
+    padding: 10px;
+    position: relative;
+    min-height: 75px;
+}
+
+.goods-add-product-item-name {
+    overflow: hidden;
+    width: 100%;
+    height: 35px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+    color: #4c4c4c;
+    line-height: 18px;
+}
+
+.goods-add-product-item-price {
+    left: 35%;
+    font-size: 14px;
+    position: absolute;
+    bottom: 10px;
+}
+
+/* 목록버튼 */
+.bhs_button_yb {
+    width: 150px;
+    display: inline-block;
+    line-height: 40px;
+    text-align: center;
+    background-color: #795b9f;
+    color: #fff;
+    border: 1px solid #5f0080;
+    margin-left: 2px;
+    font-size: 13px;
+}
+
+/* 이전글 다음글 */
+.r_f_page {
+    box-sizing: border-box;
+    border-top: 2px solid #333;
+    border-bottom: 2px solid #333;
+    margin: 20px 0;
+}
+
+.r_f_page li strong {
+    border-right: 1px solid #f4f4f4;
+    font-weight: 400;
+    background: url(https://res.kurly.com/pc/etc/old/images/board/ico_move_prev.gif) no-repeat 0 15px;
+}
+
+.r_f_page li.next strong {
+    background: url(https://res.kurly.com/pc/etc/old/images/board/ico_move_next.gif) no-repeat 0 15px;
+}
+
+.r_f_page li a,
+.r_f_page li strong {
+    float: left;
+    padding: 10px;
+}
+
+.prev {
+    overflow: hidden;
+    padding: 0 20px;
+    border-bottom: 1px solid #f4f4f4;
+    line-height: 140%;
+    color: #333;
+}
+
+.next {
+    overflow: hidden;
+    padding: 0 20px;
+    line-height: 140%;
+    color: #333;
+}
