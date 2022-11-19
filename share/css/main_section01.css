@@ -10,27 +10,15 @@
 /* 맨위 상단 섹션 */
 .m_s_top {
     position: relative;
-    height: fit-content;
     max-width: 1900px;
     margin: 0px auto 40px;
 }
-.m_s_top_swiper_wrap {
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    overflow: hidden;
-    list-style: none;
-    padding: 0;
-    z-index: 1;
-}
 .m_s_top_swiper {
-    position: relative;
     width: 100%;
     height: 100%;
     z-index: 1;
     display: flex;
     transition-property: transform;
-    box-sizing: content-box;
     transition-duration: 0ms;
     transform: translate3d(0px, 0px, 0px);
 }
