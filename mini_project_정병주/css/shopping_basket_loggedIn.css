@@ -115,13 +115,21 @@ input[type="checkbox"] {
     margin-right: 20px;
     background: url("../images/컬리_워터마크.svg") center center no-repeat rgb(245, 245, 245);
 }
-#product_area > ul > li > a > span {
+/* #product_area > ul > li > a > span {
     display: block;
     height: 100%;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     background: url("../images/견과류_상품.png");
+    box-sizing: border-box;
+} */
+#product_area > ul > li > a > img {
+    display: block;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
     box-sizing: border-box;
 }
 #product_area > ul > li > div:nth-child(3) {

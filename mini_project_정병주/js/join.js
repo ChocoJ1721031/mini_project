@@ -174,7 +174,7 @@ function open_pop_up_1() {
         document.getElementsByClassName('info_check_button')[0].style.color = "rgb(221, 221, 221)";
         document.getElementsByClassName('info_check_button')[0].style.cursor = "default";
     } else {
-        document.getElementById('pop_up_1_content_text').innerText = "사용 할 수 있는 아이디입니다.";
+        document.getElementById('pop_up_1_content_text').innerText = "6자 이상 16자 이하의 영문 혹은 영문과 숫자를 조합";
         document.getElementsByClassName('info_check_button')[0].style.borderColor = "rgb(95, 0, 128)";
         document.getElementsByClassName('info_check_button')[0].style.color = "rgb(95, 0, 128)";
         document.getElementsByClassName('info_check_button')[0].style.cursor = "pointer";
