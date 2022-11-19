@@ -24,12 +24,9 @@
 }
 .m_s_top_swiper > div {
     cursor: pointer;
-    width: 1455px;
     flex-shrink: 0;
     width: 100%;
     height: 100%;
-    position: relative;
-    transition-property: transform;
 }
 .m_s_top_swiper > div > a > img {
     width: 100%;
