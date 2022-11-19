@@ -393,12 +393,11 @@
     display: flex;
     top: 46px;
     padding-top: 10px;
+    z-index: 21;
 }
 #s_category > div > div {
     position: relative;
     width: 100%;
-    /* background-color: rgb(255, 255, 255);
-    animation: 0.2s linear 0s 1 normal none running animation-tb0mmg; */
 }
 #s_c_list {
     overflow-y: scroll;
@@ -407,7 +406,7 @@
     background-color: rgb(255, 255, 255);
     border: 1px solid rgb(221, 221, 221);
     cursor: pointer;
-    z-index: 21;
+    z-index: 20;
     display: none;
 }
 #s_c_list > li {
@@ -437,13 +436,11 @@
     position: absolute;
     overflow-y: scroll;
     top: 0px;
-    left: 0px;
+    left: 237px;
     z-index: 20;
-    animation: 0.5s linear 0s 1 normal none running animation-plwpox;
     display: none;
 }
 .s_c_list_li:hover > ul {
-    left: 237px;
     display: block;
 }
 .s_c_list_li:hover  {
