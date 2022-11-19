@@ -83,3 +83,9 @@ $(document).ready(function(){
         $(".contents_pictures2").show();
     })
 })
+
+
+$('.content_list a').click(function(e)
+{
+	e.preventDefault();   
+});
