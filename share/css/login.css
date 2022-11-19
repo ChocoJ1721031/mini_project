@@ -1,0 +1,73 @@
+#section {
+    width: 100%;
+    min-width: 1050px;
+    margin-top: 50px;
+}
+#section_child_1 {
+    margin: 90px 0 60px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*로그인 - 텍스트 영역*/
+#login_txt {
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 20px;
+    text-align: center;
+}
+/*로그인 - 사용자 입력 구간*/
+#login_user_area {width: 340px;}
+.input_area {display: flex; flex-direction: column;}
+#input_ID, #input_PW {
+    width: 92%;
+    height: 50px;
+    padding: 0px 11px 1px 15px;
+    margin-bottom: 13px;
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 4px;
+
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(51, 51, 51);
+    /*outline: none;*/
+}
+
+/*ID, PW 찾기*/
+#search_user_account {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 13px;
+    letter-spacing: -0.6px;
+}
+#search_user_account > a {
+    color: rgb(51, 51, 51);
+}
+#search_user_account > span {
+    margin: 5px 6px 0;
+    width: 1px;
+    height: 10px;
+    background-color: black;
+}
+/*로그인 - 페이지 이동 버튼 영역*/
+#submit_area {display: flex; flex-direction: column; margin-top: 28px;}
+#login_btn, #join_btn {
+    cursor: pointer;
+    width: 100%;
+    height: 54px;
+    border-radius: 3px;
+}
+#login_btn {
+    background-color: rgb(95, 0, 128);
+    border: none;
+    color: rgb(255, 255, 255);
+}
+#join_btn {
+    margin-top: 10px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(95, 0, 128);
+    color: rgb(95, 0, 128);
+}
+#submit_area > button > span {font-size: 16px; font-weight: 500;}
+

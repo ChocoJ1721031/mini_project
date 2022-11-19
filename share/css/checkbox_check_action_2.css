@@ -1,0 +1,16 @@
+input[type="checkbox"]{
+    margin: 0 12px 0 0;
+    width: 24px;
+    height: 24px;
+    background: url("../images/check-off_2.svg") no-repeat center center;
+    appearance: none;
+    position: relative;
+}
+/* input[type="checkbox"]:checked{
+    background: url("../images/check-on.svg") no-repeat center center;
+} */
+/*
+input[type="checkbox"] {
+    top: px; -> 필요에 따라 각 페이지에 해당 css 작성.
+}
+*/

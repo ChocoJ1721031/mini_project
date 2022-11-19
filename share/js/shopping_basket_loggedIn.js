@@ -96,6 +96,11 @@ function show_hide_2() {
 var i = 1;
 var j = 1;
 
+function total_cost() {
+    document.getElementById('total_cost').textContent = (i*58000+j*9900) + "원";
+    document.getElementById('final_cost').textContent = (i*58000+j*9900) - 2500 + "원";
+}
+
 function click_1() {
     if(document.getElementById('count_1').textContent == 1) {
         document.getElementById('click_1').style.backgroundImage = "url('./images/minus_gray.svg')";
@@ -104,14 +109,12 @@ function click_1() {
         document.getElementById('count_1').innerHTML = document.getElementById('count_1').textContent = i;
         document.getElementById('click_1').style.backgroundImage = "url('./images/minus_gray.svg')";
 
-        document.getElementById('total_cost').textContent = (i+j)*58000 + "원";
-        document.getElementById('final_cost').textContent = (i+j)*58000 - 2500 + "원";
+        total_cost();
     } else {
         i--
         document.getElementById('count_1').textContent = i;
 
-        document.getElementById('total_cost').textContent = (i+j)*58000 + "원";
-        document.getElementById('final_cost').textContent = (i+j)*58000 - 2500 + "원";
+        total_cost();
     }
 }
 function click_2() {
@@ -119,8 +122,7 @@ function click_2() {
     document.getElementById('click_1').style.backgroundImage = "url('./images/minus_black.svg')";
     document.getElementById('count_1').textContent = i;
     
-    document.getElementById('total_cost').textContent = (i+j)*58000 + "원";
-    document.getElementById('final_cost').textContent = (i+j)*58000 - 2500 + "원";
+    total_cost();
 }
 function click_3() {
     if(document.getElementById('count_2').textContent == 1) {
@@ -130,14 +132,12 @@ function click_3() {
         document.getElementById('count_2').textContent = j;
         document.getElementById('click_3').style.backgroundImage = "url('./images/minus_gray.svg')";
 
-        document.getElementById('total_cost').textContent = (i+j)*58000 + "원";
-        document.getElementById('final_cost').textContent = (i+j)*58000 - 2500 + "원";
+        total_cost();
     } else {
         j--
         document.getElementById('count_2').textContent = j;
 
-        document.getElementById('total_cost').textContent = (i+j)*58000 + "원";
-        document.getElementById('final_cost').textContent = (i+j)*58000 - 2500 + "원";
+        total_cost();
     }
 }
 function click_4() {
@@ -145,13 +145,11 @@ function click_4() {
     document.getElementById('click_3').style.backgroundImage = "url('./images/minus_black.svg')";
     document.getElementById('count_2').textContent = j;
 
-    document.getElementById('total_cost').textContent = (i+j)*58000 + "원";
-    document.getElementById('final_cost').textContent = (i+j)*58000 - 2500 + "원";
+    total_cost();
 }
 
 window.onload = function() {
-    document.getElementById('total_cost').textContent = (i+j)*58000 + "원";
-    document.getElementById('final_cost').textContent = (i+j)*58000 - 2500 + "원";
+    total_cost();
 }
 
 
