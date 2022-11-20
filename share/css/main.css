@@ -23,6 +23,7 @@
     color: white;
     height: 42px;
     line-height: 42px;
+    font-size: 14px;
 }
 .e_link button {
     position: absolute;
