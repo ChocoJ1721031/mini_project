@@ -9,6 +9,9 @@ function id_script(el, minlength, maxlength) {
         document.getElementById('input_id_p').innerHTML = "";
         document.getElementById('input_id_p').style.display = "none";
     }
+    document.getElementsByClassName('info_check_button')[0].style.borderColor = "rgb(95, 0, 128)";
+    document.getElementsByClassName('info_check_button')[0].style.color = "rgb(95, 0, 128)";
+    document.getElementsByClassName('info_check_button')[0].style.cursor = "pointer";
     
 }
 
