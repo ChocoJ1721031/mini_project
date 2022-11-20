@@ -106,9 +106,9 @@ window.onload = function() {
     }
 }
 
-// 메인 섹션 맨 상단의 이벤트 목록 케러셀
 var cnt = 0;
 $(function() {
+    // 메인 섹션 맨 상단의 이벤트 목록 케러셀
     // 시간마다 자동 넘김.
     setInterval(function(){
         if(cnt != 3) {
@@ -227,6 +227,20 @@ $(function() {
         var ul_text = $(this).text() + " 전체보기";
         $(".m_s_4_a_span").text(ul_text);
     });
+    // 링크 추가 코드
+    $(".m_s_1_list_1").attr("onclick","location.href='./product.html';");
+
+    $(".m_s_4_list_1_product_1_content").attr("onclick","location.href='./product.html';");
+    $(".m_s_4_list_1_product_1_img > img").attr("onclick","location.href='./product.html';");
+    $(".m_s_4_list_1_product_1_button").attr("onclick","location.href='./shopping_basket_loggedIn.html';");
+
+    $(".m_s_5_title_1").attr("onclick","location.href='./category.html';");
+    $(".m_s_5_list_1_product_1_content").attr("onclick","location.href='./product.html';");
+    $(".m_s_5_list_1_product_1_img > img").attr("onclick","location.href='./product.html';");
+    $(".m_s_5_list_1_product_1_img").attr("onclick","location.href='./shopping_basket_loggedIn.html';");
+
+    $(".m_s_2_title_1").attr("onclick","location.href='./recipe_page.html';");
+    $(".m_s_2_list_1_product_icon_1 > span:first-of-type").attr("onclick","location.href='./recipe_page.html';");
 });
 // 화면 크기 바뀔때 인식
 window.onresize = function(event) {
