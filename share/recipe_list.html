@@ -8,360 +8,11 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/main_share_section.css">
+    <link rel="stylesheet" href="./css/recipe_list.css">
     <script src="./js/jquery-3.6.1.js"></script>
     <script src="./js/main_share_scroll_action.js"></script>
     <script src="./js/main_header.js"></script>
     <title>Document</title>
-    <style>
-        #section1 {
-           
-            width: 100%;
-           
-        }
-        #section {
-           
-           width: 100%;
-         }
- .page_aticle {
-     width: 1050px;
-     margin: 0 auto;
- }
- #lnbMenu {
-     padding-top: 26px;
- }
- #lnbMenu .inner_lnb {
-     position: relative;
- }
- 
- #lnbMenu .tit {
-     padding: 23px 0 20px;
-     font-weight: 700;
-     font-size: 28px;
-     color: #333;
-     line-height: 35px;
-     letter-spacing: -1px;
-     text-align: center;
- }
- 
- #lnbMenu .list {
-     display: none;
-     overflow: hidden;
-     margin-top: 3px;
-     padding: 12px 0 29px;
-     border: 1px solid #e2e2e2;
- }
- #lnbMenu li {
-     float: left;
-     width: 263px;
-     padding: 16px 44px 0 39px;
- }
- #lnbMenu li .on {
-     border-bottom: 1px solid #5F0080;
-     font-weight: 700;
-     color: #5f0080;
- }
- #lnbMenu li a {
-     overflow: hidden;
-     float: left;
-     max-width: 180px;
-     line-height: 20px;
-     font-size: 14px;
-     color: #333;
-     letter-spacing: -1px;
-     white-space: nowrap;
-     text-overflow: ellipsis;
-     cursor: pointer;
- }
- #lnbMenu li:nth-of-type(4n) {
-     width: 219px;
-     padding-right: 0;
- }
- #lnbMenu .inner_lnb {
-     position: relative;
- }
- .layout-wrapper {
-     position: relative;
-     width: 1050px;
-     height: 100%;
-     margin: 0 auto;
- }
- #recipe.wrap {
-     padding: 30px 29px;
- }
- table {
-     border-collapse: collapse;
-     border-spacing: 0;
- }
- textarea, button {
-     font-family: noto sans,malgun gothic,AppleGothic,dotum;
-     line-height: 1;
-     letter-spacing: -.05em;
-     color: #4c4c4c;
-     font-size: 12px;
-     max-width: 100%;
- }
- #recipe_table .recipe_tr td {
-     margin-left: 30px;
- }
- #recipe .recipe_item {
-     width: 480px;
-     height: 550px;
-     margin-bottom: 30px;
-     border: 1px solid #f4f4f4;
- }
- a {
-     background-color: transparent;
-     text-decoration: none;
-     color: inherit;
- }
- #recipe .recipe_item img {
-     border-bottom: 1px solid #f4f4f4;
- }
- #recipe .recipe_item .tit_recipe {
-     width: 480px;
-     height: 70px;
-     padding: 25px 0 25px 30px;
-     text-align: left;
-     font-size: 22px;
-     line-height: .6;
- }
- #recipe .recipe_item {
-     width: 480px;
-     height: 550px;
-     margin-bottom: 30px;
-     border: 1px solid #f4f4f4;
- }
- #recipe .recipe_item img {
-     border-bottom: 1px solid #f4f4f4;
- }
- 
- 
- *, *:after, *:before {
-     -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-     box-sizing: border-box;
-     margin: 0;
-     padding: 0;
- }
- #recipe_table .recipe_tr td {
-     margin-left: 30px;
- }
- .layout-pagination {
-     margin: 60px 0 0;
-     text-align: center;
- }
- .layout-pagination-button:first-child {
-     border-left: 1px solid #ddd;
- }
- .layout-pagination-prev-page {
-     background-image: url(https://res.kurly.com/pc/etc/old/images/common/icon-pagination-prev.png);
- }
- .layout-pagination-number:hover, .layout-pagination-number.__active {
-     background-color: #f7f7f7;
-     color: #5f0080;
- }
- .layout-pagination-number {
-     font-weight: 700;
-     color: #333;
-     line-height: 34px;
- }
- .layout-pagination-next-page {
-     background-image: url(https://res.kurly.com/pc/etc/old/images/common/icon-pagination-next.png);
- }
- 
- .xans-board-search2 {
-     height: 80px;
-     padding: 0;
- }
- .xans-board-search {
-     margin-top: 30px;
-     padding: 20px 0 20px 10px;
-     color: #2e2e2e;
-     font-size: 12px;
-     clear: both;
-     border-top: 1px solid #5e3d5a;
-     width: 100%;
- }
- .xans-board-search .input_txt img {
-     position: relative;
-     right: 5px;
-     top: -2px;
- }
- 
- .xans-board-search .stxt input {
-     margin-left: 10px;
-     margin-right: 3px;
-     position: relative;
-     top: 3px;
-     
- }
- .search_bt img {
-     float: right;
- }
- img {
-     border: 0;
- }
- .xans-board-search input[type=text] {
-     height: 34px;
-     line-height: 34px;
-     width: 220px;
-     border: 1px solid #bfbfbf;
-     color: #000;
-     float: right;
-     padding: 4px;
- }
- 
- div {
-     display: block;
- }
- .layout-pagination {
-     margin: 60px 0 0;
-     text-align: center;
- }
- table {
-     border-collapse: collapse;
-     border-spacing: 0;
- }
- table {
-     border-collapse: separate;
-     text-indent: initial;
-     border-spacing: 2px;
- }
- 
- html {
-     font-family: sans-serif;
-     -ms-text-size-adjust: 100%;
-     -webkit-text-size-adjust: 100%;
- }
- .layout-pagination-next-page, .layout-pagination-last-page {
-     background-repeat: no-repeat;
-     background-position: 50% 50%;
-     text-indent: -9999px;
- }
- .layout-pagination-button {
-     display: inline-block;
-     width: 34px;
-     height: 34px;
-     border: 1px solid #ddd;
-     border-left: 0;
-     vertical-align: top;
- }
- number.__active {
-     background-color: #f7f7f7;
-     color: #5f0080;
- }
- .layout-pagination-last-page {
-     background-image: url(https://res.kurly.com/pc/etc/old/images/common/icon-pagination-last.png);
- }
- td {
-     display: table-cell;
-     vertical-align: inherit;
- }
- td, th {
-     padding: 0;
- }
- .layout-pagination-button {
-     display: inline-block;
-     width: 34px;
-     height: 34px;
-     border: 1px solid #ddd;
-     border-left: 0;
-     vertical-align: top;
- }
- pagination-last-page {
-     background-repeat: no-repeat;
-     background-position: 50% 50%;
-     text-indent: -9999px;
- }
- .layout-pagination-first-page {
-     background-image: url(https://res.kurly.com/pc/etc/old/images/common/icon-pagination-first.png);
- }
- .layout-pagination-first-page, .layout-pagination-prev-page, .layout-pagination-next-page, .layout-pagination-last-page {
-     background-repeat: no-repeat;
-     background-position: 50% 50%;
-     text-indent: -9999px;
- }
- .layout-pagination-button {
-     display: inline-block;
-     width: 34px;
-     height: 34px;
-     border: 1px solid #ddd;
-     border-left: 0;
-     vertical-align: top;
- }
- .xans-board-search {
-     margin-top: 30px;
-     padding: 20px 0 20px 10px;
-     color: #2e2e2e;
-     font-size: 12px;
-     clear: both;
-     border-top: 1px solid #5e3d5a;
-     width: 100%;
- }
- 
- tbody {
-     display: table-row-group;
-     vertical-align: middle;
-     border-color: inherit;
- }
- .xans-board-search .stxt {
-     font-size: 14px;
- }
- .xans-board-search .stxt input {
-     margin-left: 10px;
-     margin-right: 3px;
-     position: relative;
-     top: 3px;
- }
- body, input, select, textarea, button {
-     font-family: noto sans,malgun gothic,AppleGothic,dotum;
-     line-height: 1;
-     letter-spacing: -.05em;
-     color: #4c4c4c;
-     font-size: 12px;
-     max-width: 100%;
- }
- input[type="checkbox" i] {
-     background-color: initial;
-     cursor: default;
-     appearance: auto;
-     box-sizing: border-box;
-     margin: 3px 3px 3px 4px;
-     padding: initial;
-     border: initial;
- }
- input {
-     writing-mode: horizontal-tb !important;
-     font-style: ;
-     font-variant-ligatures: ;
-     font-variant-caps: ;
-     font-variant-numeric: ;
-     font-variant-east-asian: ;
-     font-weight: ;
-     font-stretch: ;
-     font-size: ;
-     font-family: ;
-     text-rendering: auto;
-     color: fieldtext;
-     letter-spacing: normal;
-     word-spacing: normal;
-     line-height: normal;
-     text-transform: none;
-     text-indent: 0px;
-     text-shadow: none;
-     display: inline-block;
-     text-align: start;
-     appearance: auto;
-     -webkit-rtl-ordering: logical;
-     cursor: text;
-     background-color: field;
-     margin: 0em;
-     padding: 1px 2px;
-     border-width: 2px;
-     border-style: inset;
-     border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
-     border-image: initial;
- }
     </style>
     <!-- 전체공통 -->
     <style>
@@ -383,15 +34,15 @@
             <div class="h_first">
                 <div class="h_f_1">
                     <div>
-                        <a href="#">회원가입</a>
+                        <a href="./join.html">회원가입</a>
                         <div>|</div>
-                        <a href="#">로그인</a>
+                        <a href="./login.html">로그인</a>
                         <div>|</div>
                         <div>
-                            <a href="#">고객센터
+                            <a href="./notice.html">고객센터
                                 <img src="https://res.kurly.com/pc/ico/1908/ico_down_16x10.png">
                             </a>
-                            <div class="h_f_1_a3_hover">
+                            <div class="h_f_1_a3_hover" onclick="location.href='./notice.html';">
                                 <div>공지사항</div>
                                 <div>자주하는 질문</div>
                                 <div>1:1 문의</div>
@@ -401,7 +52,7 @@
                     </div>
                 </div>
                 <div class="h_f_2">
-                    <div id="main_logo">
+                    <div id="main_logo" onclick="location.href='./index.html';">
                         <img src="./images/마켓컬리로고.svg" alt="main_logo">
                         <button type="button">마켓컬리</button>
                     </div>
@@ -412,14 +63,14 @@
                     <div id="buttons">
                         <button type="button"></button>
                         <button type="button"></button>
-                        <button type="button"></button>
+                        <button type="button" onclick="location.href='./shopping_basket_guest.html';"></button>
                         <div class="buttons_first_hover">
                             <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMThweCIgaGVpZ2h0PSIxMXB4IiB2aWV3Qm94PSIwIDAgMTggMTEiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8dGl0bGU+ZHJvcGRvd25fdGFpbDwvdGl0bGU+CiAgICA8ZyBpZD0i67ew7Yuw7Lus66asLVBoYXNlLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSJQQ19Ib21lX01hcmtldF/sp4TsnoXsi5wiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMTExLjAwMDAwMCwgLTEzMi4wMDAwMDApIj4KICAgICAgICAgICAgPGcgaWQ9ImRyb3Bkb3duX2JveCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoOTc4LjAwMDAwMCwgMTMyLjAwMDAwMCkiPgogICAgICAgICAgICAgICAgPGcgaWQ9ImRyb3Bkb3duX3RhaWwiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEzMy4wMDAwMDAsIDAuMDAwMDAwKSI+CiAgICAgICAgICAgICAgICAgICAgPHJlY3QgaWQ9IlJlY3RhbmdsZSIgZmlsbD0iI0ZGRkZGRiIgeD0iMCIgeT0iMCIgd2lkdGg9IjE4IiBoZWlnaHQ9IjExIj48L3JlY3Q+CiAgICAgICAgICAgICAgICAgICAgPHJlY3QgaWQ9IlJlY3RhbmdsZSIgZmlsbD0iI0RERERERCIgeD0iMCIgeT0iMTAiIHdpZHRoPSIxOCIgaGVpZ2h0PSIxIj48L3JlY3Q+CiAgICAgICAgICAgICAgICAgICAgPHBhdGggZD0iTTksMCBMMTcuMjUsMTEgTDAuNzUsMTEgTDksMCBaIiBpZD0iQ29tYmluZWQtU2hhcGUiIGZpbGw9IiNEREREREQiPjwvcGF0aD4KICAgICAgICAgICAgICAgICAgICA8cGF0aCBkPSJNOSwxLjY1IEwxNi4wMTYsMTAuOTk5IEwyLjAwOCwxMC45OTkgTDksMS42NSBaIiBpZD0iQ29tYmluZWQtU2hhcGUiIGZpbGw9IiNGRkZGRkYiPjwvcGF0aD4KICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+">
                             <img src="./images/흰색 칸.png">
                             <div>
                                 <p><strong>배송지를 등록</strong>하고<br>구매 가능한 상품을 확인하세요!</p>
                                 <div>
-                                    <button><span>로그인</span></button>
+                                    <button onclick="location.href='./login.html';"><span>로그인</span></button>
                                     <button><img src="./images/배송지search_logo.png"><span>주소검색</span></button>
                                 </div>
                             </div>
@@ -435,7 +86,7 @@
                         <div>
                             <div>
                                 <ul id="s_c_list">
-                                    <li class="s_c_list_li">
+                                    <li class="s_c_list_li" onclick = "location.href='./category.html';">
                                         <div>
                                             <img src="https://collection-image.kurly.com/site-category-groups/55/jZZJOSgsf4R9TAvXrdQ999WW2gTFr0cv0Wd21bla.png" alt="">
                                             <span>선물하기</span>
@@ -450,7 +101,7 @@
                                             <li><div><span>리빙·생활·유아동</span></div></li>
                                         </ul>
                                     </li>
-                                    <li class="s_c_list_li">
+                                    <li class="s_c_list_li" onclick = "location.href='./category.html';">
                                         <div>
                                             <img src="https://collection-image.kurly.com/site-category-groups/6/kwat5Szmq0ONTpMd4hlbcGmCOBd3FsMPyTzWxKBb.png" alt="">
                                             <span>샐러드·간편식</span>
@@ -466,7 +117,7 @@
                                             <li><div><span>선식·시리얼</span></div></li>
                                         </ul>
                                     </li>
-                                    <li class="s_c_list_li">
+                                    <li class="s_c_list_li" onclick = "location.href='./category.html';">
                                         <div>
                                             <img src="https://collection-image.kurly.com/site-category-groups/5/CkyoRnUe2q9ngIOLW3bJPRYBw9xq9BHZ3fNQIq1c.png" alt="">
                                             <span>국·반찬·메인요리</span>
@@ -480,7 +131,7 @@
                                             <li><div><span>베이컨·햄·통조림</span></div></li>
                                         </ul>
                                     </li>
-                                    <li class="s_c_list_li">
+                                    <li class="s_c_list_li" onclick = "location.href='./category.html';">
                                         <div>
                                             <img src="https://collection-image.kurly.com/site-category-groups/7/CL0LpJynh8Nh2Vqmnm62RVTPePWVU84VkWwQPjdO.png" alt="">
                                             <span>면·양념·오일</span>
@@ -494,7 +145,7 @@
                                             <li><div><span>밀가루·가루·믹스</span></div></li>
                                         </ul>
                                     </li>
-                                    <li class="s_c_list_li">
+                                    <li class="s_c_list_li" onclick = "location.href='./category.html';">
                                         <div>
                                             <img src="https://collection-image.kurly.com/site-category-groups/4/jj6zZg2sY94aytlc2k1udIAmWWvmUignR9VYaMcm.png" alt="">
                                             <span>정육·계란</span>
@@ -509,7 +160,7 @@
                                             <li><div><span>양고기</span></div></li>
                                         </ul>
                                     </li>
-                                    <li class="s_c_list_li">
+                                    <li class="s_c_list_li" onclick = "location.href='./category.html';">
                                         <div>
                                             <img src="https://collection-image.kurly.com/site-category-groups/1/4IYbd0CEWkokpqiN00CAL9cDC2Q7nT101TDEn0tF.png" alt="">
                                             <span>채소</span>
@@ -530,30 +181,16 @@
                         </div>
                     </div>
                     <ul id="s_list">
-                        <li><span class="s_click">신상품</span></li>
-                        <li><span class="s_click">베스트</span></li>
-                        <li><span class="s_click">알뜰쇼핑</span></li>
-                        <li><span class="s_click">특가/혜택</span></li>
+                        <li onclick = "location.href='./category.html';"><span class="s_click">신상품</span></li>
+                        <li onclick = "location.href='./category.html';"><span class="s_click">베스트</span></li>
+                        <li onclick = "location.href='./category.html';"><span class="s_click">알뜰쇼핑</span></li>
+                        <li onclick = "location.href='./category.html';"><span class="s_click">특가/혜택</span></li>
                     </ul>
                     <div id="s_link">
-                        <a href="#"><span>샛별 · 낮</span> 배송안내</a>
+                        <a><span>샛별 · 낮</span> 배송안내</a>
                     </div>
                 </div>
             </div>
-        </div>
-        <div id="section1">
-            <div id="scrollup">
-                <a href="#">
-                    <span></span>
-                </a>
-            </div>
-            <nav id="right_nav">
-                <a class="right_nav_iLink" href="#"><img src="https://res.kurly.com/_next/static/images/deliveryInfo_20220701-a7b19dac069402e4b2aea7edbed0f6e0.png"></a>
-                <ul class="right_nav_list">
-                    <li><a href="">등급별 혜택</a></li>
-                    <li><a href="">레시피</a></li>
-                </ul>
-            </nav>
         </div>
         <div id="section">
             <div>
@@ -811,6 +448,18 @@
                 </div>
                 </div>
             </div>
+            <div id="scrollup">
+                <a href="#">
+                    <span></span>
+                </a>
+            </div>
+            <nav id="right_nav">
+                <a class="right_nav_iLink" href="#"><img src="https://res.kurly.com/_next/static/images/deliveryInfo_20220701-a7b19dac069402e4b2aea7edbed0f6e0.png"></a>
+                <ul class="right_nav_list">
+                    <li><a href="">등급별 혜택</a></li>
+                    <li><a href="">레시피</a></li>
+                </ul>
+            </nav>
         </div>
     </div>
         <div id="footer">
