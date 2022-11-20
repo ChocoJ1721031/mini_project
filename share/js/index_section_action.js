@@ -237,7 +237,7 @@ $(function() {
     $(".m_s_5_title_1").attr("onclick","location.href='./category.html';");
     $(".m_s_5_list_1_product_1_content").attr("onclick","location.href='./product.html';");
     $(".m_s_5_list_1_product_1_img > img").attr("onclick","location.href='./product.html';");
-    $(".m_s_5_list_1_product_1_img").attr("onclick","location.href='./shopping_basket_loggedIn.html';");
+    $(".m_s_5_list_1_product_1_button").attr("onclick","location.href='./shopping_basket_loggedIn.html';");
 
     $(".m_s_2_title_1").attr("onclick","location.href='./recipe_list.html';");
     $(".m_s_2_list_1_product_icon_1 > span:first-of-type").attr("onclick","location.href='./recipe_list.html';");
