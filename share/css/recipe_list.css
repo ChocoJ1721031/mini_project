@@ -73,14 +73,6 @@ table {
 border-collapse: collapse;
 border-spacing: 0;
 }
-textarea, button {
-font-family: noto sans,malgun gothic,AppleGothic,dotum;
-line-height: 1;
-letter-spacing: -.05em;
-color: #4c4c4c;
-font-size: 12px;
-max-width: 100%;
-}
 #recipe_table .recipe_tr td {
 margin-left: 30px;
 }
@@ -212,12 +204,6 @@ border-collapse: separate;
 text-indent: initial;
 border-spacing: 2px;
 }
-
-html {
-font-family: sans-serif;
--ms-text-size-adjust: 100%;
--webkit-text-size-adjust: 100%;
-}
 .layout-pagination-next-page, .layout-pagination-last-page {
 background-repeat: no-repeat;
 background-position: 50% 50%;
@@ -297,12 +283,4 @@ margin-left: 10px;
 margin-right: 3px;
 position: relative;
 top: 3px;
-}
-body, input, select, textarea, button {
-font-family: noto sans,malgun gothic,AppleGothic,dotum;
-line-height: 1;
-letter-spacing: -.05em;
-color: #4c4c4c;
-font-size: 12px;
-max-width: 100%;
 }
