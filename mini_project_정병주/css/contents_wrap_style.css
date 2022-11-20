@@ -12,6 +12,11 @@
 .contents_wrap{
     width: 100%;
 }
+
+#contents_list{
+    margin-bottom: 8px;
+}
+
 .contents_list{
     display: flex;
     -webkit-box-align: center;
@@ -20,6 +25,7 @@
     justify-content: space-between;
     padding-bottom: 20px;
     line-height: 20px;
+    margin-bottom: 10px;
 }
 
 .content_recommend{
@@ -184,7 +190,7 @@ a{
     -webkit-box-orient: vertical;
 }
 
-img{
+.contents_pricture1_div2 img{
     border: 0;
     vertical-align: top;
 }
@@ -222,6 +228,11 @@ img{
     font-size: 12px;
     color: rgb(95, 0, 128);
     line-height: 16px;
-    width: 57px;
+    width: 80px;
     text-align: center;
+}
+
+
+.content_list a{
+    
 }

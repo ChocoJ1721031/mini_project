@@ -8,16 +8,11 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/main_share_section.css">
+    <link rel="stylesheet" href="./css/recipe_list.css">
     <script src="./js/jquery-3.6.1.js"></script>
     <script src="./js/main_share_scroll_action.js"></script>
     <script src="./js/main_header.js"></script>
     <title>Document</title>
-    <style>
-        #section {
-            background-color: bisque;
-            width: 100%;
-            height: 1000px;
-        }
     </style>
     <!-- 전체공통 -->
     <style>
@@ -198,19 +193,275 @@
             </div>
         </div>
         <div id="section">
+            <div>
+                <div class="page_aticle">
+                <div id="lnbMenu" class="lnb_menu">
+                <div class="inner_lnb">
+                    <div class="ico_cate">
+                        <span class="tit">레시피</span>
+                    </div>
+                    <ul class="list">
+                        <li>
+                            <a class="on" id="no_anchor" href="#">전체보기</a>
+                        </li>
+                        <li>
+                            <a class href="#">매일밥상</a>
+                        </li>
+                        <li>
+                            <a class href="#">특별한날</a>
+                        </li>
+                        <li>
+                            <a class href="#">간단요리</a>
+                        </li>
+                    </ul>
+                </div>
+                </div>
+                </div>
+                <div class="layout-wrapper">
+                <div id="recipe" class="wrap">
+                    <table width="100%">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <form name="frmList" action="#" onsubmit="return chkFormList(this)">
+                                        <input type="hidden" name="id" value="recipe">
+                                        <table width="100%" id="recipe_table">
+                                        <tbody>
+                                            <tr class="recipe_tr">
+                                                <td valign="top">
+                                                    <div>
+                                                        <ul>
+                                                            <li class="recipe_item" onclick="viewContentRecipe('479','1','치킨 야채 수프')">
+                                                            <a href="#">
+                                                                <img src="./images/s1.png" width="480" height="480">
+                                                                <p class="tit_recipe">치킨 야채 수프</p>
+                                                            </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                                <td valign="top">
+                                                    <div>
+                                                        <ul>
+                                                            <li class="recipe_item" onclick="#">
+                                                           <a href="#">
+                                                            <img src="./images/s2.png" width="480" height="480">
+                                                            <p class="tit_recipe">로스티드 닭 다리&날개</p>
+                                                           </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="recipe_tr">
+                                                <td valign="top">
+                                                    <div>
+                                                        <ul>
+                                                            <li class="recipe_item" onclick="#">
+                                                            <a href="#">
+                                                                <img src="./images/s3.png" width="480" height="480">
+                                                                <p class="tit_recipe">닭 껍질 튀김</p>
+                                                            </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                                <td valign="top">
+                                                    <div>
+                                                        <ul>
+                                                            <li class="recipe_item" onclick="#">
+                                                            <a href="#">
+                                                                <img src="./images/s4.png" width="480" height="480">
+                                                                <p class="tit_recipe">토마토 빙수</p>
+                                                            </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </td>              
+                                            </tr>
+                                            <tr class="recipe_tr">
+                                                <td valign="top">
+                                                    <div>
+                                                        <ul>
+                                                            <li class="recipe_item" onclick="#">
+                                                            <a href="#">
+                                                                <img src="./images/s5.png" width="480" height="480">
+                                                                <p class="tit_recipe">토마토 스테이크</p>
+                                                            </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                                <td valign="top">
+                                                    <div>
+                                                        <ul>
+                                                            <li class="recipe_item" onclick="#">
+                                                            <a href="#">
+                                                                <img src="./images/s6.png" width="480" height="480">
+                                                                <p class="tit_recipe">카바텔리 알라 노르마</p>
+                                                            </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="recipe_tr">
+                                                <td valign="top">
+                                                    <div>
+                                                        <ul>
+                                                            <li class="recipe_item" onclick="#">
+                                                            <a href="#">
+                                                                <img src="./images/s7.png" width="480" height="480">
+                                                                <p class="tit_recipe">카바텔리</p>
+                                                            </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                                <td valign="top">
+                                                    <div>
+                                                        <ul>
+                                                            <li class="recipe_item" onclick="#">
+                                                            <a href="#">
+                                                                <img src="./images/s8.png" width="480" height="480">
+                                                                <p class="tit_recipe">돼지 안심 스테이크</p>
+                                                            </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="recipe_tr">
+                                                <td 
+                                                valign="top">
+                                                    <div>
+                                                        <ul>
+                                                            <li class="recipe_item" onclick="#">
+                                                            <a href="#">
+                                                                <img src="./images/s9.png" width="480" height="480">
+                                                                <p class="tit_recipe">버크셔K 묵은지말이찜</p>
+                                                            </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </td> 
+                                                <td valign="top">
+                                                    <div>
+                                                        <ul>
+                                                            <li class="recipe_item" onclick="#">
+                                                            <a href="#">
+                                                                <img src="./images/s10.png" width="480" height="480">
+                                                                <p class="tit_recipe">세 가지 허브전과 애플민트 양념간장</p>
+                                                            </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </td> 
+                                            </tr>
+                                                <tr class="recipe_tr">
+                                                    <td valign="top">
+                                                        <div>
+                                                            <ul>
+                                                                <li class="recipe_item" onclick="#">
+                                                                <a href="#">
+                                                                    <img src="./images/s11.png" width="480" height="480">
+                                                                    <p class="tit_recipe">골뱅이 딜 무침</p>
+                                                                </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </td> 
+                                                    <td valign="top">
+                                                        <div>
+                                                            <ul>
+                                                                <li class="recipe_item" onclick="#">
+                                                                <a href="#">
+                                                                    <img src="./images/s12.png" width="480" height="480">
+                                                                    <p class="tit_recipe">밀도 허니 러스크</p>
+                                                                </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </td> 
+                                                </tr>
+                                                <tr class="recpie_tr"> </tr>
+                                        </tbody>
+                                        </table>
+                                            <div class="layout-pagination">
+                                                    <div id="pagediv">
+                                                        <a href="#" class="layout-pagination-button layout-pagination-first-page">맨 처음 페이지로 가기</a>
+                                                        <a href="#" class="layout-pagination-prev-page"></a>
+                                                        <strong class="layout-pagination-button layout-pagination-number __active">1</strong>
+                                                        <a href="#" class="layout-pagination-button layout-pagination-number">2</a>
+                                                        <a href="#" class="layout-pagination-button layout-pagination-number">3</a>
+                                                        <a href="#" class="layout-pagination-button layout-pagination-number">4</a>
+                                                        <a href="#" class="layout-pagination-button layout-pagination-number">5</a>
+                                                        <a href="#" class="layout-pagination-button layout-pagination-number">6</a>
+                                                        <a href="#" class="layout-pagination-button layout-pagination-number">7</a>
+                                                        <a href="#" class="layout-pagination-button layout-pagination-number">8</a>
+                                                        <a href="#" class="layout-pagination-button layout-pagination-number">9</a>
+                                                        <a href="#" class="layout-pagination-button layout-pagination-next-page">10</a>
+                                                        <a href="#" class="layout-pagination-button layout-pagination-last-page">다음 페이지로 가기</a>
+                                                        <a href="#" class="#"></a>
+                                                    </div>
+                                            </div>
+                                            <table width="100%">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <table class="xans-board-search xans-board-search2">
+                                                                    <tobdy>
+                                                                        <tr>
+                                                                            <td class="input_txt">
+                                                                                <img src="https://www.kurly.com/shop/data/skin/designgj/images/board/ico_function.gif">검색어
+                                                                            </td>
+                                                                            <td class="stxt">
+                                                                                <input type="checkbox" name="search[name]"> 
+                                                                                이름
+                                                                                <input type="checkbox" name="search[subject]">
+                                                                                제목
+                                                                                <input type="checkbox" name="search[contents]">
+                                                                                내용
+                                                                                <input type="checkbox" name="search[tag]">
+                                                                                태그 &nbsp; 
+                                                                            </td>
+                                                                            <td class="input_txt">&nbsp;</td>
+                                                                            <td>
+                                                                                <div class="search_bt" onclick="searchRecipe();">
+                                                                                <img src="https://www.kurly.com/shop/data/skin/designgj/images/board/search.png" allign="absmiddle">
+                                                                                <input type="text" name="search[word]" value required>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tobdy>
+                                                                </table>
+                                                            </td>
+                                    
+                                                        </tr>
+                                                    </tbody>
+                                            </table>
+                                    </form>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                </div>
+            </div>
             <div id="scrollup">
                 <a href="#">
                     <span></span>
                 </a>
             </div>
             <nav id="right_nav">
-                <a class="right_nav_iLink"><img src="https://res.kurly.com/_next/static/images/deliveryInfo_20220701-a7b19dac069402e4b2aea7edbed0f6e0.png"></a>
+                <a class="right_nav_iLink" href="#"><img src="https://res.kurly.com/_next/static/images/deliveryInfo_20220701-a7b19dac069402e4b2aea7edbed0f6e0.png"></a>
                 <ul class="right_nav_list">
-                    <li><a>등급별 혜택</a></li>
-                    <li><a href="./recipe_list.html">레시피</a></li>
+                    <li><a href="">등급별 혜택</a></li>
+                    <li><a href="">레시피</a></li>
                 </ul>
             </nav>
         </div>
+    </div>
         <div id="footer">
             <div class="f_f">
                 <div class="f_f_1">

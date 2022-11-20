@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans:wght@100&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/main_login.css">
     <link rel="stylesheet" href="./css/main_share_section.css">
     <link rel="stylesheet" href="./css/main_section01.css">
     <script src="./js/jquery-3.6.1.js"></script>
     <script src="./js/main_share_scroll_action.js"></script>
     <script src="./js/main_header.js"></script>
     <script src="./js/index_section_action.js"></script>
-    <title>메인페이지</title>
+    <title>메인페이지-로그인</title>
     <!-- 전체공통 -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
@@ -34,9 +34,27 @@
             <div class="h_first">
                 <div class="h_f_1">
                     <div>
-                        <a href="./join.html">회원가입</a>
-                        <div>|</div>
-                        <a href="./login.html">로그인</a>
+                        <div>
+                            <a href="./mypage.html">
+                                <span>일반</span>
+                                KH 님
+                                <img class="header_new_logo" src="./images/header_new_logo.svg">
+                                <img src="https://res.kurly.com/pc/ico/1908/ico_down_16x10.png">
+                            </a>
+                            <div class="h_f_1_a1_hover">
+                                <div>주문 내역</div>
+                                <div>선물 내역</div>
+                                <div>찜한 상품</div>
+                                <div>배송지 관리</div>
+                                <div>상품 후기</div>
+                                <div>상품 문의</div>
+                                <div>적립금</div>
+                                <div>쿠폰<img class="header_new_logo" src="./images/header_new_logo.svg"></div>
+                                <div>개인 정보 수정</div>
+                                <div>나의 컬리 스타일</div>
+                                <div>로그아웃</div>
+                            </div>
+                        </div>
                         <div>|</div>
                         <div>
                             <a href="./notice.html">고객센터
@@ -63,15 +81,14 @@
                     <div id="buttons">
                         <button type="button"></button>
                         <button type="button"></button>
-                        <button type="button" onclick="location.href='./shopping_basket_guest.html';"></button>
+                        <button type="button" onclick="location.href='./shopping_basket_loggedIn.html';"></button>
                         <div class="buttons_first_hover">
                             <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMThweCIgaGVpZ2h0PSIxMXB4IiB2aWV3Qm94PSIwIDAgMTggMTEiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8dGl0bGU+ZHJvcGRvd25fdGFpbDwvdGl0bGU+CiAgICA8ZyBpZD0i67ew7Yuw7Lus66asLVBoYXNlLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSJQQ19Ib21lX01hcmtldF/sp4TsnoXsi5wiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMTExLjAwMDAwMCwgLTEzMi4wMDAwMDApIj4KICAgICAgICAgICAgPGcgaWQ9ImRyb3Bkb3duX2JveCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoOTc4LjAwMDAwMCwgMTMyLjAwMDAwMCkiPgogICAgICAgICAgICAgICAgPGcgaWQ9ImRyb3Bkb3duX3RhaWwiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEzMy4wMDAwMDAsIDAuMDAwMDAwKSI+CiAgICAgICAgICAgICAgICAgICAgPHJlY3QgaWQ9IlJlY3RhbmdsZSIgZmlsbD0iI0ZGRkZGRiIgeD0iMCIgeT0iMCIgd2lkdGg9IjE4IiBoZWlnaHQ9IjExIj48L3JlY3Q+CiAgICAgICAgICAgICAgICAgICAgPHJlY3QgaWQ9IlJlY3RhbmdsZSIgZmlsbD0iI0RERERERCIgeD0iMCIgeT0iMTAiIHdpZHRoPSIxOCIgaGVpZ2h0PSIxIj48L3JlY3Q+CiAgICAgICAgICAgICAgICAgICAgPHBhdGggZD0iTTksMCBMMTcuMjUsMTEgTDAuNzUsMTEgTDksMCBaIiBpZD0iQ29tYmluZWQtU2hhcGUiIGZpbGw9IiNEREREREQiPjwvcGF0aD4KICAgICAgICAgICAgICAgICAgICA8cGF0aCBkPSJNOSwxLjY1IEwxNi4wMTYsMTAuOTk5IEwyLjAwOCwxMC45OTkgTDksMS42NSBaIiBpZD0iQ29tYmluZWQtU2hhcGUiIGZpbGw9IiNGRkZGRkYiPjwvcGF0aD4KICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+">
                             <img src="./images/흰색 칸.png">
                             <div>
-                                <p><strong>배송지를 등록</strong>하고<br>구매 가능한 상품을 확인하세요!</p>
+                                <p>제주 서귀포시 서귀동 340<br><strong>샛별배송</strong> </p>
                                 <div>
-                                    <button onclick="location.href='./login.html';"><span>로그인</span></button>
-                                    <button><img src="./images/배송지search_logo.png"><span>주소검색</span></button>
+                                    <button><span>배송지 변경</span></button>
                                 </div>
                             </div>
                         </div>
@@ -181,13 +198,13 @@
                         </div>
                     </div>
                     <ul id="s_list">
-                        <li onclick = "location.href='./category.html';"><span class="s_click">신상품</span></li>
-                        <li onclick = "location.href='./category.html';"><span class="s_click">베스트</span></li>
-                        <li onclick = "location.href='./category.html';"><span class="s_click">알뜰쇼핑</span></li>
-                        <li onclick = "location.href='./category.html';"><span class="s_click">특가/혜택</span></li>
+                        <li><span class="s_click">신상품</span></li>
+                        <li><span class="s_click">베스트</span></li>
+                        <li><span class="s_click">알뜰쇼핑</span></li>
+                        <li><span class="s_click">특가/혜택</span></li>
                     </ul>
                     <div id="s_link">
-                        <a><span>샛별 · 낮</span> 배송안내</a>
+                        <a href="#"><span>샛별 · 낮</span> 배송안내</a>
                     </div>
                 </div>
             </div>
@@ -199,10 +216,10 @@
                     <div class="m_s_top">
                         <div class="m_s_top_swiper_wrap">
                             <div class="m_s_top_swiper">
-                                <div><a><img src="./images/메인섹션 맨상단1.avif"></a></div>
-                                <div><a><img src="./images/메인섹션 맨상단2.avif"></a></div>
-                                <div><a><img src="./images/메인섹션 맨상단3.avif"></a></div>
-                                <div><a><img src="./images/메인섹션 맨상단1.avif"></a></div>
+                                <div><a href="#"><img src="./images/메인섹션 맨상단1.avif"></a></div>
+                                <div><a href="#"><img src="./images/메인섹션 맨상단2.avif"></a></div>
+                                <div><a href="#"><img src="./images/메인섹션 맨상단3.avif"></a></div>
+                                <div><a href="#"><img src="./images/메인섹션 맨상단1.avif"></a></div>
                             </div>
                             <button id="m_s_top_bLeft"></button>
                             <button id="m_s_top_bRight"></button>
@@ -577,8 +594,8 @@
                                             <div class="m_s_4_list_1_product_1">
                                                 <div class="m_s_4_list_1_product_1_img">
                                                     <img src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1514440709588l0.jpg" alt="상품 이미지">
-                                                    <button type="button" class="m_s_4_list_1_product_1_button" onclick = "location.href='./shopping_basket_loggedIn.html';">
-                                                        <img src="./images/상품_장바구니.svg" alt="장바구니 아이콘" >
+                                                    <button type="button" class="m_s_4_list_1_product_1_button">
+                                                        <img src="./images/상품_장바구니.svg" alt="장바구니 아이콘">
                                                     </button>
                                                 </div>
                                                 <div class="m_s_4_list_1_product_1_content">
@@ -602,7 +619,7 @@
                                                 <div class="m_s_4_list_1_product_1_img">
                                                     <img src="https://img-cf.kurly.com/cdn-cgi/image/width=400,format=auto/shop/data/goods/1514440709588l0.jpg" alt="상품 이미지">
                                                     <button type="button" class="m_s_4_list_1_product_1_button">
-                                                        <img src="./images/상품_장바구니.svg" alt="장바구니 아이콘" onclick= "location.href='./shopping_basket_loggedIn.html';">
+                                                        <img src="./images/상품_장바구니.svg" alt="장바구니 아이콘">
                                                     </button>
                                                 </div>
                                                 <div class="m_s_4_list_1_product_1_content">
@@ -1265,7 +1282,7 @@
                 <div>
                     <div class="m_s_a">
                         <div class="m_s_a_1">
-                            <a class="m_s_a_1_1">
+                            <a href="#" class="m_s_a_1_1">
                                 <img src="./images/광고.webp" alt>
                             </a>
                         </div>

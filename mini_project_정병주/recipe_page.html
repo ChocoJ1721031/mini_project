@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/main_share_section.css">
+    <link rel="stylesheet" href="./css/recipe_page.css">
+    <script src="./js/jquery-3.6.1.js"></script>
+    <script src="./js/main_share_scroll_action.js"></script>
+    <script src="./js/main_header.js"></script>
+    <script src="./js/recipe_page_action.js"></script>
+    <title>Document</title>
+    <!-- 전체공통 -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+        html, button, input, select, textarea, span, a, p {
+            font-family: "Noto Sans KR", "malgun gothic", /*AppleGothic*/dotum, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div id="event">
+            <div class="e_link">
+                <a href="#"><p>지금 가입하고 인기상품 <strong>100원</strong>에 받아가세요!</p></a>
+                <button id="event_btn" type="button"><img src="https://res.kurly.com/pc/ico/1908/ico_close_fff_84x84.png" alt="e_close"></button>
+            </div>
+        </div>
+        <div id="header">
+            <div class="h_first">
+                <div class="h_f_1">
+                    <div>
+                        <a href="#">회원가입</a>
+                        <div>|</div>
+                        <a href="#">로그인</a>
+                        <div>|</div>
+                        <div>
+                            <a href="#">고객센터
+                                <img src="https://res.kurly.com/pc/ico/1908/ico_down_16x10.png">
+                            </a>
+                            <div class="h_f_1_a3_hover">
+                                <div>공지사항</div>
+                                <div>자주하는 질문</div>
+                                <div>1:1 문의</div>
+                                <div>대량주문 문의</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="h_f_2">
+                    <div id="main_logo">
+                        <img src="./images/마켓컬리로고.svg" alt="main_logo">
+                        <button type="button">마켓컬리</button>
+                    </div>
+                    <div id="search">
+                        <input type="text" placeholder="검색어를 입력해주세요.">
+                        <button type="button"><img src="./images/search_logo.svg"></button>
+                    </div>
+                    <div id="buttons">
+                        <button type="button"></button>
+                        <button type="button"></button>
+                        <button type="button"></button>
+                        <div class="buttons_first_hover">
+                            <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMThweCIgaGVpZ2h0PSIxMXB4IiB2aWV3Qm94PSIwIDAgMTggMTEiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8dGl0bGU+ZHJvcGRvd25fdGFpbDwvdGl0bGU+CiAgICA8ZyBpZD0i67ew7Yuw7Lus66asLVBoYXNlLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSJQQ19Ib21lX01hcmtldF/sp4TsnoXsi5wiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMTExLjAwMDAwMCwgLTEzMi4wMDAwMDApIj4KICAgICAgICAgICAgPGcgaWQ9ImRyb3Bkb3duX2JveCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoOTc4LjAwMDAwMCwgMTMyLjAwMDAwMCkiPgogICAgICAgICAgICAgICAgPGcgaWQ9ImRyb3Bkb3duX3RhaWwiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEzMy4wMDAwMDAsIDAuMDAwMDAwKSI+CiAgICAgICAgICAgICAgICAgICAgPHJlY3QgaWQ9IlJlY3RhbmdsZSIgZmlsbD0iI0ZGRkZGRiIgeD0iMCIgeT0iMCIgd2lkdGg9IjE4IiBoZWlnaHQ9IjExIj48L3JlY3Q+CiAgICAgICAgICAgICAgICAgICAgPHJlY3QgaWQ9IlJlY3RhbmdsZSIgZmlsbD0iI0RERERERCIgeD0iMCIgeT0iMTAiIHdpZHRoPSIxOCIgaGVpZ2h0PSIxIj48L3JlY3Q+CiAgICAgICAgICAgICAgICAgICAgPHBhdGggZD0iTTksMCBMMTcuMjUsMTEgTDAuNzUsMTEgTDksMCBaIiBpZD0iQ29tYmluZWQtU2hhcGUiIGZpbGw9IiNEREREREQiPjwvcGF0aD4KICAgICAgICAgICAgICAgICAgICA8cGF0aCBkPSJNOSwxLjY1IEwxNi4wMTYsMTAuOTk5IEwyLjAwOCwxMC45OTkgTDksMS42NSBaIiBpZD0iQ29tYmluZWQtU2hhcGUiIGZpbGw9IiNGRkZGRkYiPjwvcGF0aD4KICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+">
+                            <img src="./images/흰색 칸.png">
+                            <div>
+                                <p><strong>배송지를 등록</strong>하고<br>구매 가능한 상품을 확인하세요!</p>
+                                <div>
+                                    <button><span>로그인</span></button>
+                                    <button><img src="./images/배송지search_logo.png"><span>주소검색</span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="h_second">
+                <div class="h_s_1">
+                    <div id="s_category">
+                        <span></span>
+                        <span>카테고리</span>
+                        <div>
+                            <div>
+                                <ul id="s_c_list">
+                                    <li class="s_c_list_li">
+                                        <div>
+                                            <img src="https://collection-image.kurly.com/site-category-groups/55/jZZJOSgsf4R9TAvXrdQ999WW2gTFr0cv0Wd21bla.png" alt="">
+                                            <span>선물하기</span>
+                                        </div>
+                                        <ul>
+                                            <li><div><span>홍삼·즙</span></div></li>
+                                            <li><div><span>건강식품</span></div></li>
+                                            <li><div><span>과일·수산·정육</span></div></li>
+                                            <li><div><span>베이커리·커피·차</span></div></li>
+                                            <li><div><span>간편식·오일·캔류</span></div></li>
+                                            <li><div><span>뷰티·향수·꽃</span></div></li>
+                                            <li><div><span>리빙·생활·유아동</span></div></li>
+                                        </ul>
+                                    </li>
+                                    <li class="s_c_list_li">
+                                        <div>
+                                            <img src="https://collection-image.kurly.com/site-category-groups/6/kwat5Szmq0ONTpMd4hlbcGmCOBd3FsMPyTzWxKBb.png" alt="">
+                                            <span>샐러드·간편식</span>
+                                        </div>
+                                        <ul>
+                                            <li><div><span>샐러드·닭가슴살</span></div></li>
+                                            <li><div><span>도시락·밥류</span></div></li>
+                                            <li><div><span>파스타·면류</span></div></li>
+                                            <li><div><span>떡볶이·튀김·순대</span></div></li>
+                                            <li><div><span>피자·핫도그·만두</span></div></li>
+                                            <li><div><span>폭립·떡갈비·안주</span></div></li>
+                                            <li><div><span>죽·스프·카레</span></div></li>
+                                            <li><div><span>선식·시리얼</span></div></li>
+                                        </ul>
+                                    </li>
+                                    <li class="s_c_list_li">
+                                        <div>
+                                            <img src="https://collection-image.kurly.com/site-category-groups/5/CkyoRnUe2q9ngIOLW3bJPRYBw9xq9BHZ3fNQIq1c.png" alt="">
+                                            <span>국·반찬·메인요리</span>
+                                        </div>
+                                        <ul>
+                                            <li><div><span>국·탕·찌개</span></div></li>
+                                            <li><div><span>밀키트·메인요리</span></div></li>
+                                            <li><div><span>밑반찬</span></div></li>
+                                            <li><div><span>김치·젓갈·장류</span></div></li>
+                                            <li><div><span>두부·어묵·부침개</span></div></li>
+                                            <li><div><span>베이컨·햄·통조림</span></div></li>
+                                        </ul>
+                                    </li>
+                                    <li class="s_c_list_li">
+                                        <div>
+                                            <img src="https://collection-image.kurly.com/site-category-groups/7/CL0LpJynh8Nh2Vqmnm62RVTPePWVU84VkWwQPjdO.png" alt="">
+                                            <span>면·양념·오일</span>
+                                        </div>
+                                        <ul>
+                                            <li><div><span>파스타·면류</span></div></li>
+                                            <li><div><span>식초·소스·드레싱</span></div></li>
+                                            <li><div><span>양념·액젓·장류</span></div></li>
+                                            <li><div><span>식용유·참기름·오일</span></div></li>
+                                            <li><div><span>소금·설탕·향신료</span></div></li>
+                                            <li><div><span>밀가루·가루·믹스</span></div></li>
+                                        </ul>
+                                    </li>
+                                    <li class="s_c_list_li">
+                                        <div>
+                                            <img src="https://collection-image.kurly.com/site-category-groups/4/jj6zZg2sY94aytlc2k1udIAmWWvmUignR9VYaMcm.png" alt="">
+                                            <span>정육·계란</span>
+                                        </div>
+                                        <ul>
+                                            <li><div><span>국내산 소고기</span></div></li>
+                                            <li><div><span>수입산 소고기</span></div></li>
+                                            <li><div><span>돼지고기</span></div></li>
+                                            <li><div><span>계란류</span></div></li>
+                                            <li><div><span>닭·오리고기</span></div></li>
+                                            <li><div><span>양념육·돈까스</span></div></li>
+                                            <li><div><span>양고기</span></div></li>
+                                        </ul>
+                                    </li>
+                                    <li class="s_c_list_li">
+                                        <div>
+                                            <img src="https://collection-image.kurly.com/site-category-groups/1/4IYbd0CEWkokpqiN00CAL9cDC2Q7nT101TDEn0tF.png" alt="">
+                                            <span>채소</span>
+                                        </div>
+                                        <ul>
+                                            <li><div><span>친환경</span></div></li>
+                                            <li><div><span>고구마·감자·당근</span></div></li>
+                                            <li><div><span>시금치·쌈채소·나물</span></div></li>
+                                            <li><div><span>브로콜리·파프리카·양배추</span></div></li>
+                                            <li><div><span>양파·대파·마늘·배추</span></div></li>
+                                            <li><div><span>오이·호박·고추</span></div></li>
+                                            <li><div><span>냉동·이색·간편채소</span></div></li>
+                                            <li><div><span>콩나물·버섯</span></div></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <ul id="s_list">
+                        <li><span class="s_click">신상품</span></li>
+                        <li><span class="s_click">베스트</span></li>
+                        <li><span class="s_click">알뜰쇼핑</span></li>
+                        <li><span class="s_click">특가/혜택</span></li>
+                    </ul>
+                    <div id="s_link">
+                        <a href="#"><span>샛별 · 낮</span> 배송안내</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="section">
+            <!-- 레시피 상세페이지 -->
+            <div class="r_tit_page">
+                <h2 class="r_tit">레시피</h2>
+            </div>
+            <div id="section">
+                <div class="content">
+                    <div class="r_detail_page">
+                        <table width="100%" align="center">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <table width="100%">
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <table class="boardView" width="100%">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th scope="row" style="border: none;">제목</th>
+                                                                    <td>로스티드 닭 다리&날개</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th scope="row">작성자</th>
+                                                                    <td> MarketKurly</td>
+                                                                </tr>
+                                                                <tr class="etcArea">
+                                                                    <td colspan="2">
+                                                                        <ul>
+                                                                            <li>
+                                                                                <strong>작성일</strong>
+                                                                                <span>2022-08-05</span>
+                                                                            </li>
+                                                                            <li>
+                                                                                <strong>조회수</strong>
+                                                                                <span>20191</span>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td height="200" valign="top" class="view_recipe">
+                                                        <table width="100%" style="table-layout: fixed;" class="goods_wrap">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td valign="top">
+                                                                        <div class="goods_recipe">
+                                                                            <h3>
+                                                                                <span class="recipe_tit">Kurly's Recipe</span>
+                                                                                <small class="recipe_product">로스티드 닭 다리&날개</small>
+                                                                            </h3>
+                                                                            <div class="context">
+                                                                                <div class="pic">
+                                                                                    <img src="https://img-cf.kurly.com/shop/data/board/recipe/r/f60066d09649c902">
+                                                                                </div>
+                                                                                <p class="words">
+                                                                                    <strong>재료</strong>
+                                                                                    닭 다리 2개, 닭 봉 2개, 닭 윙 2개, 올리브오일 2큰술, 소금 1/2작은술, 후춧가루 약간, 타바스코 소스 적당량
+                                                                                    <br>
+                                                                                    <br>
+                                                                                    <font color="5f0080" class="r_f_i">
+                                                                                        <b>레시피 참고사항</b>
+                                                                                    </font>
+                                                                                    <br>
+                                                                                    미식가를 위한 큐레이션 뉴스레터
+                                                                                    <br>
+                                                                                    <b>&lt;The Epicure &gt;</b>
+                                                                                    에 소개된 레시피입니다.
+                                                                                    <br>
+                                                                                    더 많은 이야기가 궁금하다면 &lt;The Epicure &gt;를 구독하새요.
+                                                                                    <br>
+                                                                                    <br>
+                                                                                    <a href="https://www.kurly.com/shop/event/kurlyEvent.php?htmid=event/letter/letter_220801" target="_blank">
+                                                                                        <u>지금 구독하러 가기</u>
+                                                                                    </a>
+                                                                                </p>
+                                                                                <p class="words">
+                                                                                    <strong>RECIPE</strong>
+                                                                                    <br>
+                                                                                    1. 닭 다리에 1cm 간격으로 칼집을 두차례 냅니다
+                                                                                    <br>
+                                                                                    2. 1과 닭 봉, 닭 윙에 소금, 후춧가루를 뿌린 후 올리브오일에 골고루 버무립니다.
+                                                                                    <br>
+                                                                                    3. 200도로 예열된 오븐에 2를 넣고 25분 동안 구운 후 닭봉과 닭윙을 먼저 꺼내고, 닭다리는 5분 더 굽습니다.
+                                                                                    <br>
+                                                                                    4. 3을 접시에 담은 후, 타바스코 소스를 곁들여 먹습니다.
+                                                                                    <br>
+                                                                                    <b>Tip.</b>
+                                                                                    취향에 따라 유즈코쇼, 커민 등 다양한 시즈닝과 함께 즐겨도 좋아요.
+                                                                                    <br>
+                                                                                    <b>Tip.</b>
+                                                                                    토종닭의 육향에 집중하고 싶다면 소금, 후추만 살짝 곁들여 드시는 것을 추천드려요.
+                                                                                </p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr> 
+                                <tr>
+                                    <td id="recipe_view" align="center">
+                                        <div class="goods-add-product">
+                                            <h3 class="goods-add-product-title">
+                                                RECIPE ITEMS
+                                            </h3>
+                                            <div class="goods-add-product-wrapper" data-slide-item="5">
+                                                <button id="goods-add-product-move-left">왼쪽으로 슬라이드 이동</button>
+                                                <button id="goods-add-product-move-right">오른쪽으로 슬라이드 이동</button>
+                                                <div class="goods-add-product-list-wrapper" style="height: 310px;">
+                                                    <ul class="goods-add-product-list-slide-mover">
+                                                        <li class="goods-add-product-item-slide-item">
+                                                            <div class="goods-add-product-item-figure">
+                                                                <a href="./product.html">
+                                                                    <img class="goods-add-product-item-image" src="https://img-cf.kurly.com/shop/data/goods/1648204734365l0.jpg">
+                                                                </a>
+                                                                <button class="bnt_cart" onclick="location.href = './shopping_basket_loggedIn.html'">이 상품을 장바구니에 담기</button>
+                                                            </div>
+                                                            <div class="goods-add-product-item-content">
+                                                                <div class="goods-add-product-item-content-wrapper">
+                                                                    <a href="./product.html">
+                                                                        <p class="goods-add-product-item-name">[카르멘시타] 커민</p>
+                                                                        <p class="goods-add-product-item-price"> 3,900원</p>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="goods-add-product-item-slide-item">
+                                                            <div class="goods-add-product-item-figure">
+                                                                <a href="./product.html">
+                                                                    <img class="goods-add-product-item-image" src="https://img-cf.kurly.com/shop/data/goods/1629185618282l0.jpg">
+                                                                </a>
+                                                                <button class="bnt_cart" onclick="location.href = './shopping_basket_loggedIn.html'">이 상품을 장바구니에 담기</button>
+                                                            </div>
+                                                            <div class="goods-add-product-item-content">
+                                                                <div class="goods-add-product-item-content-wrapper">
+                                                                    <a href="./product.html">
+                                                                        <p class="goods-add-product-item-name">[허브&스파이스마켓] 4색혼합 후추 50g(그라인더)</p>
+                                                                        <p class="goods-add-product-item-price"> 5,200원</p>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="goods-add-product-item-slide-item">
+                                                            <div class="goods-add-product-item-figure">
+                                                                <a href="./product.html">
+                                                                    <img class="goods-add-product-item-image" src="https://img-cf.kurly.com/shop/data/goods/1529483730654l0.jpg">
+                                                                </a>
+                                                                <button class="bnt_cart" onclick="location.href = './shopping_basket_loggedIn.html'">이 상품을 장바구니에 담기</button>
+                                                            </div>
+                                                            <div class="goods-add-product-item-content">
+                                                                <div class="goods-add-product-item-content-wrapper">
+                                                                    <a href="./product.html">
+                                                                        <p class="goods-add-product-item-name">[카구라노사토] 유즈코쇼</p>
+                                                                        <p class="goods-add-product-item-price"> 8,800원</p>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="goods-add-product-item-slide-item">
+                                                            <div class="goods-add-product-item-figure">
+                                                                <a href="./product.html">
+                                                                    <img class="goods-add-product-item-image" src="https://img-cf.kurly.com/shop/data/goods/1615179801562l0.jpg">
+                                                                </a>
+                                                                <button class="bnt_cart" onclick="location.href = './shopping_basket_loggedIn.html'">이 상품을 장바구니에 담기</button>
+                                                            </div>
+                                                            <div class="goods-add-product-item-content">
+                                                                <div class="goods-add-product-item-content-wrapper">
+                                                                    <a href="./product.html">
+                                                                        <p class="goods-add-product-item-name">[청정원] 순후추 50g</p>
+                                                                        <p class="goods-add-product-item-price"> 3,340원</p>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="goods-add-product-item-slide-item">
+                                                            <div class="goods-add-product-item-figure">
+                                                                <a href="./product.html">
+                                                                    <img class="goods-add-product-item-image" src="https://product-image.kurly.com/product/image/727a0cc1-5be6-427a-8597-1cab35bced42.jpg">
+                                                                </a>
+                                                                <button class="bnt_cart" onclick="location.href = './shopping_basket_loggedIn.html'">이 상품을 장바구니에 담기</button>
+                                                            </div>
+                                                            <div class="goods-add-product-item-content">
+                                                                <div class="goods-add-product-item-content-wrapper">
+                                                                    <a href="./product.html">
+                                                                        <p class="goods-add-product-item-name">[니콜라스 알지아리] 엑스트라버진 올리브오일 250g</p>
+                                                                        <p class="goods-add-product-item-price"> 20,000원</p>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="goods-add-product-item-slide-item">
+                                                            <div class="goods-add-product-item-figure">
+                                                                <a href="./product.html">
+                                                                    <img class="goods-add-product-item-image" src="https://img-cf.kurly.com/shop/data/goods/1588129002254l0.jpg">
+                                                                </a>
+                                                                <button class="bnt_cart" onclick="location.href = './shopping_basket_loggedIn.html'">이 상품을 장바구니에 담기</button>
+                                                            </div>
+                                                            <div class="goods-add-product-item-content">
+                                                                <div class="goods-add-product-item-content-wrapper">
+                                                                    <a href="./product.html">
+                                                                        <p class="goods-add-product-item-name">[코타니] 히말라야 소금</p>
+                                                                        <p class="goods-add-product-item-price"> 5,900원</p>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="goods-add-product-item-slide-item">
+                                                            <div class="goods-add-product-item-figure">
+                                                                <a href="./product.html">
+                                                                    <img class="goods-add-product-item-image" src="https://img-cf.kurly.com/shop/data/goods/1648204784157l0.jpg">
+                                                                </a>
+                                                                <button class="bnt_cart" onclick="location.href = './shopping_basket_loggedIn.html'">이 상품을 장바구니에 담기</button>
+                                                            </div>
+                                                            <div class="goods-add-product-item-content">
+                                                                <div class="goods-add-product-item-content-wrapper">
+                                                                    <a href="./product.html">
+                                                                        <p class="goods-add-product-item-name">[카르멘시타] 후추 글라인더 3종</p>
+                                                                        <p class="goods-add-product-item-price"> 6,400원</p>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="goods-add-product-item-slide-item">
+                                                            <div class="goods-add-product-item-figure">
+                                                                <a href="./product.html">
+                                                                    <img class="goods-add-product-item-image" src="https://img-cf.kurly.com/shop/data/goods/164877816548l0.jpg">
+                                                                </a>
+                                                                <button class="bnt_cart" onclick="location.href = './shopping_basket_loggedIn.html'">이 상품을 장바구니에 담기</button>
+                                                            </div>
+                                                            <div class="goods-add-product-item-content">
+                                                                <div class="goods-add-product-item-content-wrapper">
+                                                                    <a href="./product.html">
+                                                                        <p class="goods-add-product-item-name">[말돈] 플레이크 소금 2종</p>
+                                                                        <p class="goods-add-product-item-price"> 5,900원</p>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="goods-add-product-item-slide-item">
+                                                            <div class="goods-add-product-item-figure">
+                                                                <a href="./product.html">
+                                                                    <img class="goods-add-product-item-image" src="https://img-cf.kurly.com/shop/data/goods/1652019065545l0.jpg">
+                                                                </a>
+                                                                <button class="bnt_cart" onclick="location.href = './shopping_basket_loggedIn.html'">이 상품을 장바구니에 담기</button>
+                                                            </div>
+                                                            <div class="goods-add-product-item-content">
+                                                                <div class="goods-add-product-item-content-wrapper">
+                                                                    <a href="./product.html">
+                                                                        <p class="goods-add-product-item-name">[칸나멜라] 소금 믹스드 그라인더 2종</p>
+                                                                        <p class="goods-add-product-item-price"> 6,500원</p>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="goods-add-product-item-slide-item">
+                                                            <div class="goods-add-product-item-figure">
+                                                                <a href="./product.html">
+                                                                    <img class="goods-add-product-item-image" src="https://img-cf.kurly.com/shop/data/goods/1585127875243l0.jpg">
+                                                                </a>
+                                                                <button class="bnt_cart" onclick="location.href = './shopping_basket_loggedIn.html'">이 상품을 장바구니에 담기</button>
+                                                            </div>
+                                                            <div class="goods-add-product-item-content">
+                                                                <div class="goods-add-product-item-content-wrapper">
+                                                                    <a href="./product.html">
+                                                                        <p class="goods-add-product-item-name">[타바스코] 핫소스 150mg</p>
+                                                                        <p class="goods-add-product-item-price"> 8,980원</p>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="goods-add-product-item-slide-item">
+                                                            <div class="goods-add-product-item-figure">
+                                                                <a href="./product.html">
+                                                                    <img class="goods-add-product-item-image" src="	https://img-cf.kurly.com/shop/data/goods/1607937484355l0.jpg">
+                                                                </a>
+                                                                <button class="bnt_cart" onclick="location.href = './shopping_basket_loggedIn.html'">이 상품을 장바구니에 담기</button>
+                                                            </div>
+                                                            <div class="goods-add-product-item-content">
+                                                                <div class="goods-add-product-item-content-wrapper">
+                                                                    <a href="./product.html">
+                                                                        <p class="goods-add-product-item-name">[하림] 참진 토종닭 볶음탕용 1kg (냉장)</p>
+                                                                        <p class="goods-add-product-item-price"> 8,980원</p>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="goods-add-product-item-slide-item">
+                                                            <div class="goods-add-product-item-figure">
+                                                                <a href="./product.html">
+                                                                    <img class="goods-add-product-item-image" src="https://img-cf.kurly.com/shop/data/goods/1653036071561l0.jpg">
+                                                                </a>
+                                                                <button class="bnt_cart" onclick="location.href = './shopping_basket_loggedIn.html'">이 상품을 장바구니에 담기</button>
+                                                            </div>
+                                                            <div class="goods-add-product-item-content">
+                                                                <div class="goods-add-product-item-content-wrapper">
+                                                                    <a href="./product.html">
+                                                                        <p class="goods-add-product-item-name">[칼라마타] 유니농 엑스트라 버진 올리브 오일</p>
+                                                                        <p class="goods-add-product-item-price"> 23,000원</p>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="goods-add-product-item-slide-item">
+                                                            <div class="goods-add-product-item-figure">
+                                                                <a href="./product.html">
+                                                                    <img class="goods-add-product-item-image" src="https://img-cf.kurly.com/shop/data/goods/1621311441957l0.jpg">
+                                                                </a>
+                                                                <button class="bnt_cart" onclick="location.href = './shopping_basket_loggedIn.html'">이 상품을 장바구니에 담기</button>
+                                                            </div>
+                                                            <div class="goods-add-product-item-content">
+                                                                <div class="goods-add-product-item-content-wrapper">
+                                                                    <a href="./product.html">
+                                                                        <p class="goods-add-product-item-name">[시타] 엑스트라버진 올리브 오일 (1L)</p>
+                                                                        <p class="goods-add-product-item-price"> 12,980원</p>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table width="100%" style="table-layout: fixed;border-top: 1px solid #795c90; height:80px">
+                            <tbody>
+                                <tr>
+                                    <td align="center" style="padding-top: 10px;">
+                                        <table width="100%">
+                                            <tbody>
+                                                <tr>
+                                                    <td> </td>
+                                                    <td align="right">
+                                                        <a href="./recipe_list.html">
+                                                            <span class="bhs_button_yb" style="float: none;">목록</span>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="r_f_page">
+                            <ul>
+                                <li class="prev">
+                                    <strong>이전글</strong>
+                                    <a href="#">닭 껍질 튀김</a>
+                                </li>
+                                <li class="next">
+                                    <strong>다음글</strong>
+                                    <a href="#">치킨 야채 수프</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 여기까지 recipe -->
+
+
+
+
+            <div id="scrollup">
+                <a href="#">
+                    <span></span>
+                </a>
+            </div>
+            <nav id="right_nav">
+                <a class="right_nav_iLink" href="#"><img src="https://res.kurly.com/_next/static/images/deliveryInfo_20220701-a7b19dac069402e4b2aea7edbed0f6e0.png"></a>
+                <ul class="right_nav_list">
+                    <li><a href="">등급별 혜택</a></li>
+                    <li><a href="">레시피</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="footer">
+            <div class="f_f">
+                <div class="f_f_1">
+                    <div class="f_f_1_1">
+                        <h2>고객행복센터</h2>
+                        <p>1644-1107<span>월~토요일 오전 7시 - 오후 6시</span></p>
+                        <div>
+                            <div>
+                                <button>카카오톡 문의</button>
+                                <div>월~토요일 | 오전7시-오후6시<br>일/공휴일 | 오전7시-오후1시</div>
+                            </div>
+                            <div>
+                                <button>1:1 문의</button>
+                                <div>365일<br>고객센터 운영시간에 순차적으로 답변드리겠습니다.</div>
+                            </div>
+                            <div>
+                                <button>대량주문 문의</button>
+                                <div>월~금요일 | 오전9시-오후6시<br>점심시간 | 낮12시-오후1시</div>
+                            </div>
+                        </div>
+                        <div>비회원 문의 : <a href="#">help@kurlycorp.com</a>
+                            <br>비회원 대량주문 문의 : <a href="#">kurlygift@kurlycorp.com</a>
+                        </div>
+                    </div>
+                    <div class="f_f_1_2">
+                        <ul>
+                            <li><a>컬리소개</a></li>
+                            <li><a>컬리소개영상</a></li>
+                            <li><a>인재채용</a></li>
+                            <li><a>이용약관</a></li>
+                            <li><a>개인정보처리방침</a></li>
+                            <li><a>이용안내</a></li>
+                        </ul>
+                        <div>
+                            법인명 (상호) : 주식회사 컬리 | 사업자등록번호 : 261-81-23567 <a>사용자정보 확인</a>
+                            <br>통신판매업 : 제 2018-서울강남-01646 호 | 개인정보보호책임자 : 이원준
+                            <br>주소 : 서울특별시 강남구 테헤란로 133, 18층(역삼동) | 대표이사 : 김슬아
+                            <br>입점문의 : <a>입점문의하기</a> | 제휴문의 : <a>business@kurlycorp.com</a>
+                            <br>채용문의 : <a>recruit@kurlycorp.com</a>
+                            <br>팩스 : 070 - 7500 - 6098
+                        </div>
+                        <ul>
+                            <li><a target="_blank" href="https://www.instagram.com/marketkurly/"><img src="./images/instagram_logo.png" width="30" height="30"></a></li>
+                            <li><a target="_blank" href="https://www.facebook.com/marketkurly"><img src="./images/facebook_logo.png" width="30" height="30"></a></li>
+                            <li><a target="_blank" href="https://blog.naver.com/marketkurly"><img src="./images/naverblog_logo.png" width="30" height="30"></a></li>
+                            <li><a target="_blank" href="https://m.post.naver.com/marketkurly"><img src="./images/naverpost_logo.png" width="30" height="30"></a></li>
+                            <li><a target="_blank" href="https://www.youtube.com/channel/UCfpdjL5pl-1qKT7Xp4UQzQg" ><img src="./images/youtube_logo.png" width="30" height="30"></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="f_f_2">
+                    <button>
+                        <img src="https://res.kurly.com/pc/ico/2208/logo_isms.svg">
+                        <p>[인증범위] 마켓컬리 쇼핑몰 서비스 개발 · 운영<br>(심사받지 않은 물리적 인프라 제외)<br>[유효기간] 2022.01.19 ~ 2025.01.18</p>
+                    </button>
+                    <button>
+                        <img src="https://res.kurly.com/pc/ico/2208/logo_privacy.svg">
+                        <p>개인정보보호 우수 웹사이트 ·<br>개인정보처리시스템 인증 (ePRIVACY PLUS)</p>
+                    </button>
+                    <button>
+                        <img src="https://res.kurly.com/pc/ico/2208/logo_tosspayments.svg">
+                        <p>토스페이먼츠 구매안전(에스크로)<br>서비스를 이용하실 수 있습니다.</p>
+                    </button>
+                    <button>
+                        <img src="https://res.kurly.com/pc/ico/2208/logo_wooriBank.svg">
+                        <p>고객님이 현금으로 결제한 금액에 대해 우리은행과<br>채무지급보증 계약을 체결하여 안전거래를 보장하고<br>있습니다.</p>
+                    </button>
+                </div>
+            </div>
+            <div class="f_s">
+                <p>마켓컬리에서 판매되는 상품 중에는 마켓컬리에 입점한 개별 판매자가 판매하는 마켓플레이스(오픈마켓) 상품이 포함되어 있습니다.
+                    <br>마켓플레이스(오픈마켓) 상품의 경우 컬리는 통신판매중개자로서 통신판매의 당사자가 아닙니다. 컬리는 해당 상품의 주문, 품질, 교환/환불 등 의무와 책임을 부담하지 않습니다.
+                </p>
+                <p>&#169; KURLY CORP. ALL RIGHTS RESERVED</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

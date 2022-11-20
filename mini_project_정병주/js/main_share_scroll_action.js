@@ -1,6 +1,3 @@
-
-
-
 window.onresize = function() {
     var h_f_2 = document.getElementsByClassName('h_f_2')[0];
     
@@ -31,27 +28,20 @@ function nav_fix() {
 
     var s_category = document.getElementById('s_category');
     var s_list = document.getElementById('s_list');
-    
+
     if(document.body.scrollTop > 142 || document.documentElement.scrollTop > 142) {
         document.getElementById('h_second').style.position = "fixed";
-        // document.getElementById('h_second').style.width = "100%";
         document.getElementById('section').style.margin = "56px 0 0 0";
-        document.getElementById('h_second').style.zIndex = "9998";
-
-
+        document.getElementById('h_second').style.zIndex = "9994";
         // .h_s_1
         // 변경 속성
         h_s_1.style.justifyContent = "flex-start";
-        
-
         // #s_category
         //추가 속성
         s_category.style.width = "150px";
-
         // #s_list
         // 변경 속성
         s_list.style.paddingLeft = "0";
-
         // #s_list > li
         // 변경 속성
         for(var i=0; i<s_list.children.length; i++) {
@@ -79,10 +69,9 @@ function nav_fix() {
         }
         // .h_f_2 #search
         // 추가 속성
-        h_f_2.children[1].style.zIndex = "9999";
+        h_f_2.children[1].style.zIndex = "9995";
         h_f_2.children[1].style.backgroundColor = "rgb(247, 247, 247)";
         h_f_2.children[1].style.alignItems = "center";
-        
 
         // 변경 속성
         h_f_2.children[1].style.position = "fixed";
@@ -117,11 +106,9 @@ function nav_fix() {
 
         document.getElementById('s_link').style.display = "none";
 
-
-
         // h_f_2 #buttons
         // 추가 속성
-        h_f_2.children[2].style.zIndex = "9999";
+        h_f_2.children[2].style.zIndex = "9995";
         // h_f_2.children[2].style.marginLeft = "383px";
         // h_f_2.children[2].style.left = "50%";
         h_f_2.children[2].style.removeProperty("right");
@@ -135,15 +122,13 @@ function nav_fix() {
         document.getElementById('section').style.margin = "0";
         document.getElementById('h_second').style.zIndex = "";
 
-
         // .h_s_1
         // 변경 속성
         h_s_1.style.justifyContent = "space-between";
-        
 
         // #s_category
         //추가 속성
-        s_category.style.removeProperty = "width";
+        s_category.style.width = "";
 
         // #s_list
         // 변경 속성
@@ -161,7 +146,6 @@ function nav_fix() {
         h_f_2.children[1].style.backgroundColor = "";
         h_f_2.children[1].style.alignItems = "";
         h_f_2.children[1].style.marginLeft = "";
-        
 
         // 변경 속성
         h_f_2.children[1].style.position = "absolute";
@@ -202,8 +186,7 @@ function nav_fix() {
         h_f_2.children[2].style.marginLeft = "";
         h_f_2.children[2].style.left = "";
         h_f_2.children[2].style.right = "0";
-        
-        
+
         // 변경 속성
         h_f_2.children[2].style.position = "absolute";
         h_f_2.children[2].style.top = "14px";

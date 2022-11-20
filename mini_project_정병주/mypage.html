@@ -8,17 +8,12 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/main_login.css">
     <link rel="stylesheet" href="./css/main_share_section.css">
+    <link rel="stylesheet" href="./css/mypage.css">
     <script src="./js/jquery-3.6.1.js"></script>
     <script src="./js/main_share_scroll_action.js"></script>
     <script src="./js/main_header.js"></script>
+    <script src="./js/mypage.js"></script>
     <title>Document</title>
-    <style>
-        #section {
-            background-color: bisque;
-            width: 100%;
-            height: 1000px;
-        }
-    </style>
     <!-- 전체공통 -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
@@ -40,7 +35,7 @@
                 <div class="h_f_1">
                     <div>
                         <div>
-                            <a href="./mypage.html">
+                            <a href="#">
                                 <span>일반</span>
                                 KH 님
                                 <img class="header_new_logo" src="./images/header_new_logo.svg">
@@ -62,10 +57,10 @@
                         </div>
                         <div>|</div>
                         <div>
-                            <a href="./notice.html">고객센터
+                            <a href="#">고객센터
                                 <img src="https://res.kurly.com/pc/ico/1908/ico_down_16x10.png">
                             </a>
-                            <div class="h_f_1_a3_hover" onclick="location.href='./notice.html';">
+                            <div class="h_f_1_a3_hover">
                                 <div>공지사항</div>
                                 <div>자주하는 질문</div>
                                 <div>1:1 문의</div>
@@ -75,7 +70,7 @@
                     </div>
                 </div>
                 <div class="h_f_2">
-                    <div id="main_logo" onclick="location.href='./index.html';">
+                    <div id="main_logo">
                         <img src="./images/마켓컬리로고.svg" alt="main_logo">
                         <button type="button">마켓컬리</button>
                     </div>
@@ -86,7 +81,7 @@
                     <div id="buttons">
                         <button type="button"></button>
                         <button type="button"></button>
-                        <button type="button" onclick="location.href='./shopping_basket_loggedIn.html';"></button>
+                        <button type="button"></button>
                         <div class="buttons_first_hover">
                             <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMThweCIgaGVpZ2h0PSIxMXB4IiB2aWV3Qm94PSIwIDAgMTggMTEiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8dGl0bGU+ZHJvcGRvd25fdGFpbDwvdGl0bGU+CiAgICA8ZyBpZD0i67ew7Yuw7Lus66asLVBoYXNlLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSJQQ19Ib21lX01hcmtldF/sp4TsnoXsi5wiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMTExLjAwMDAwMCwgLTEzMi4wMDAwMDApIj4KICAgICAgICAgICAgPGcgaWQ9ImRyb3Bkb3duX2JveCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoOTc4LjAwMDAwMCwgMTMyLjAwMDAwMCkiPgogICAgICAgICAgICAgICAgPGcgaWQ9ImRyb3Bkb3duX3RhaWwiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEzMy4wMDAwMDAsIDAuMDAwMDAwKSI+CiAgICAgICAgICAgICAgICAgICAgPHJlY3QgaWQ9IlJlY3RhbmdsZSIgZmlsbD0iI0ZGRkZGRiIgeD0iMCIgeT0iMCIgd2lkdGg9IjE4IiBoZWlnaHQ9IjExIj48L3JlY3Q+CiAgICAgICAgICAgICAgICAgICAgPHJlY3QgaWQ9IlJlY3RhbmdsZSIgZmlsbD0iI0RERERERCIgeD0iMCIgeT0iMTAiIHdpZHRoPSIxOCIgaGVpZ2h0PSIxIj48L3JlY3Q+CiAgICAgICAgICAgICAgICAgICAgPHBhdGggZD0iTTksMCBMMTcuMjUsMTEgTDAuNzUsMTEgTDksMCBaIiBpZD0iQ29tYmluZWQtU2hhcGUiIGZpbGw9IiNEREREREQiPjwvcGF0aD4KICAgICAgICAgICAgICAgICAgICA8cGF0aCBkPSJNOSwxLjY1IEwxNi4wMTYsMTAuOTk5IEwyLjAwOCwxMC45OTkgTDksMS42NSBaIiBpZD0iQ29tYmluZWQtU2hhcGUiIGZpbGw9IiNGRkZGRkYiPjwvcGF0aD4KICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+">
                             <img src="./images/흰색 칸.png">
@@ -108,7 +103,7 @@
                         <div>
                             <div>
                                 <ul id="s_c_list">
-                                    <li class="s_c_list_li" onclick = "location.href='./category.html';">
+                                    <li class="s_c_list_li">
                                         <div>
                                             <img src="https://collection-image.kurly.com/site-category-groups/55/jZZJOSgsf4R9TAvXrdQ999WW2gTFr0cv0Wd21bla.png" alt="">
                                             <span>선물하기</span>
@@ -123,7 +118,7 @@
                                             <li><div><span>리빙·생활·유아동</span></div></li>
                                         </ul>
                                     </li>
-                                    <li class="s_c_list_li" onclick = "location.href='./category.html';">
+                                    <li class="s_c_list_li">
                                         <div>
                                             <img src="https://collection-image.kurly.com/site-category-groups/6/kwat5Szmq0ONTpMd4hlbcGmCOBd3FsMPyTzWxKBb.png" alt="">
                                             <span>샐러드·간편식</span>
@@ -139,7 +134,7 @@
                                             <li><div><span>선식·시리얼</span></div></li>
                                         </ul>
                                     </li>
-                                    <li class="s_c_list_li" onclick = "location.href='./category.html';">
+                                    <li class="s_c_list_li">
                                         <div>
                                             <img src="https://collection-image.kurly.com/site-category-groups/5/CkyoRnUe2q9ngIOLW3bJPRYBw9xq9BHZ3fNQIq1c.png" alt="">
                                             <span>국·반찬·메인요리</span>
@@ -153,7 +148,7 @@
                                             <li><div><span>베이컨·햄·통조림</span></div></li>
                                         </ul>
                                     </li>
-                                    <li class="s_c_list_li" onclick = "location.href='./category.html';">
+                                    <li class="s_c_list_li">
                                         <div>
                                             <img src="https://collection-image.kurly.com/site-category-groups/7/CL0LpJynh8Nh2Vqmnm62RVTPePWVU84VkWwQPjdO.png" alt="">
                                             <span>면·양념·오일</span>
@@ -167,7 +162,7 @@
                                             <li><div><span>밀가루·가루·믹스</span></div></li>
                                         </ul>
                                     </li>
-                                    <li class="s_c_list_li" onclick = "location.href='./category.html';">
+                                    <li class="s_c_list_li">
                                         <div>
                                             <img src="https://collection-image.kurly.com/site-category-groups/4/jj6zZg2sY94aytlc2k1udIAmWWvmUignR9VYaMcm.png" alt="">
                                             <span>정육·계란</span>
@@ -182,7 +177,7 @@
                                             <li><div><span>양고기</span></div></li>
                                         </ul>
                                     </li>
-                                    <li class="s_c_list_li" onclick = "location.href='./category.html';">
+                                    <li class="s_c_list_li">
                                         <div>
                                             <img src="https://collection-image.kurly.com/site-category-groups/1/4IYbd0CEWkokpqiN00CAL9cDC2Q7nT101TDEn0tF.png" alt="">
                                             <span>채소</span>
@@ -215,16 +210,133 @@
             </div>
         </div>
         <div id="section">
+            <div class="mypage_top">
+                <div class="mypage_top_info">
+                    <div class="mypage_top_info_name">
+                        <div class="mypage_top_info_name_1">
+                            <div class="mypage_top_info_name_1_1">웰컴</div>
+                            <div class="mypage_top_info_name_1_2"><strong>KH 님</strong></div>
+                        </div>
+                        <div class="mypage_top_info_name_2">
+                            <p>적립 5%</p>
+                            <p>최초 1회 무료배송</p>
+                        </div>
+                        <div class="mypage_top_info_name_3">
+                            <button onclick="location.href='https://www.kurly.com/shop/main/html.php?htmid=event/kurly.htm&name=lovers'">전체등급 보기</button>
+                            <button onclick="location.href=''">다음 달 예상 등급 보기</button>
+                        </div>
+                    </div>
+                    <div class="mypage_top_info_2">
+                        <div class="mypage_top_info_button">
+                            <button class="mypage_top_info_button_1">
+                                <div class="mypage_top_info_button_1_1">적립금<span></span></div>
+                                <div class="mypage_top_info_button_1_2">0<span>원</span></div>
+                                <div class="mypage_top_info_button_1_3">소멸 예정 0원</div>
+                            </button>
+                        </div>
+                        <div class="mypage_top_info_button">
+                            <button class="mypage_top_info_button_1">
+                                <div class="mypage_top_info_button_1_1">쿠폰<span></span></div>
+                                <div class="mypage_top_info_button_1_2">0<span>개</span></div>
+                            </button>
+                        </div>
+                        <div class="mypage_top_info_button">
+                            <button class="mypage_top_info_button_1">
+                                <div class="mypage_top_info_button_1_1">나의 컬리 스타일<span></span></div>
+                                <div class="mypage_top_info_button_1_2">등록하기</div>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="mypage_top_info_2">
+                        <div class="mypage_top_info_div">
+                            <button class="mypage_top_info_div_button" onclick="location.href='https://www.kurly.com/mypage/kurly-purple-box';">
+                                <div class="mypage_top_info_button_1_1">컬리 퍼플 박스<span></span></div>
+                                <div class="mypage_top_info_button_1_4">알아보기</div>
+                            </button>
+                        </div>
+                        <div class="mypage_top_info_div">
+                            <button class="mypage_top_info_div_button" onclick="location.href='https://www.kurly.com/shop/mypage/kurlypass.php';">
+                                <div class="mypage_top_info_button_1_1">커리패스<span></span></div>
+                                <div class="mypage_top_info_button_1_4">알아보기</div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="mypage_top_a">
+                    <img src="	https://product-image.kurly.com/banner/da-banner/0ad4b09b-7fc1-4bb2-be70-65a089d266d5.jpg" alt="2211_뷰티">
+                </a>
+            </div>
+            <div class="mypage_mid">
+                <div class="mypage_mid_l">
+                    <div class="mypage_mid_l_div">마이컬리</div>
+                    <ul class="mypage_mid_l_ul">
+                        <li class="mypage_mid_l_ul_li"><a class="active mypage_mid_l_ul_li_a">주문 내역<span></span></a></li>
+                        <li class="mypage_mid_l_ul_li"><a class="mypage_mid_l_ul_li_a">선물 내역<span></span></a></li>
+                        <li class="mypage_mid_l_ul_li"><a class="mypage_mid_l_ul_li_a">찜한 상품<span></span></a></li>
+                        <li class="mypage_mid_l_ul_li"><a class="mypage_mid_l_ul_li_a">배송지 관리<span></span></a></li>
+                        <li class="mypage_mid_l_ul_li"><a class="mypage_mid_l_ul_li_a">상품 후기<span></span></a></li>
+                        <li class="mypage_mid_l_ul_li"><a class="mypage_mid_l_ul_li_a">상품 문의<span></span></a></li>
+                        <li class="mypage_mid_l_ul_li"><a class="mypage_mid_l_ul_li_a">적립금<span></span></a></li>
+                        <li class="mypage_mid_l_ul_li"><a class="mypage_mid_l_ul_li_a">쿠폰<span></span></a></li>
+                        <li class="mypage_mid_l_ul_li"><a class="mypage_mid_l_ul_li_a">나의 컬리 스타일<span></span></a></li>
+                        <li class="mypage_mid_l_ul_li"><a class="mypage_mid_l_ul_li_a">개인 정보 수정<span></span></a></li>
+                    </ul>
+                    <a href="#" class="mypage_mid_l_3">
+                        <div class="mypage_mid_l_3_1" onclick="location.href='./notice.html'">
+                            <span class="mypage_mid_l_3_1_1">도움이 필요하신가요 ?</span>
+                            <span class="mypage_mid_l_3_1_2">1:1 문의하기</span>
+                        </div>
+                        <span class="mypage_mid_l_3_2"></span>
+                    </a>
+                </div>
+                <div class="mypage_mid_r">
+                    <div class="mypage_mid_r_t">
+                        <div class="mypage_mid_r_t_l">
+                            <h2>주문 내역</h2>
+                            <span>최대 지난 3년간의 주문 내역까지 확인할 수 있어요</span>
+                        </div>
+                        <div class="mypage_mid_r_t_r">
+                            <div class="mypage_mid_r_t_r_time">
+                                <div class="mypage_mid_r_t_r_time_text">3개월</div>
+                                <span></span>
+                            </div>
+                            <div>
+                                <ul class="mypage_mid_r_t_r_timechoice">
+                                    <li class="mypage_mid_r_t_r_li"><span>3개월</span></li>
+                                    <li class="mypage_mid_r_t_r_li"><span>6개월</span></li>
+                                    <li class="mypage_mid_r_t_r_li"><span>1년</span></li>
+                                    <li class="mypage_mid_r_t_r_li"><span>3년</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mypage_mid_r_m"></div>
+                    <div class="mypage_mid_r_b">
+                        <div class="mypage_mid_r_b_1">
+                            <div class="mypage_mid_r_b_1_1">
+                                <p class="mypage_mid_r_b_1_text">
+                                    3개월간의 주문내역이 없습니다.
+                                </p>
+                                <button type="button" onclick="location.href='./category.html'">
+                                    <span>베스트 상품 보기</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 여기까지 마이페이지 -->
+
             <div id="scrollup">
                 <a href="#">
                     <span></span>
                 </a>
             </div>
             <nav id="right_nav">
-                <a class="right_nav_iLink"><img src="https://res.kurly.com/_next/static/images/deliveryInfo_20220701-a7b19dac069402e4b2aea7edbed0f6e0.png"></a>
+                <a class="right_nav_iLink" href="#"><img src="https://res.kurly.com/_next/static/images/deliveryInfo_20220701-a7b19dac069402e4b2aea7edbed0f6e0.png"></a>
                 <ul class="right_nav_list">
-                    <li><a>등급별 혜택</a></li>
-                    <li><a href="./recipe_list.html">레시피</a></li>
+                    <li><a href="">등급별 혜택</a></li>
+                    <li><a href="">레시피</a></li>
                 </ul>
             </nav>
         </div>
