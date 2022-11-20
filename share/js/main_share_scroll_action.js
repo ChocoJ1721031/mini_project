@@ -128,7 +128,7 @@ function nav_fix() {
 
         // #s_category
         //추가 속성
-        s_category.style.removeProperty = "width";
+        s_category.style.width = "";
 
         // #s_list
         // 변경 속성
