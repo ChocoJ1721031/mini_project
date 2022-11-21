@@ -13,9 +13,7 @@ $("#filter_reset").click(function() {
     $(".radio").find(".path3").attr("fill","#fff");
     $(".radio").find(".path3").attr("stroke","#ddd");
 
-    $(".contents_pricture1_div").eq(0).show();
-    $(".contents_pricture1_div").eq(1).show();
-    $(".contents_pricture1_div").eq(2).show();
+    $(".contents_pricture1_div").show();
 
     // 상품목록 위에 선택한 옵션 표시 삭제
     $(".opt_selected_wrap").hide();
@@ -46,9 +44,7 @@ $(".opt_cancel").click(function(){
     $(".radio").find(".path3").attr("stroke","#ddd");
 
     $(".opt_selected_wrap").hide();
-    $(".contents_pricture1_div").eq(0).show();
-    $(".contents_pricture1_div").eq(1).show();
-    $(".contents_pricture1_div").eq(2).show();
+    $(".contents_pricture1_div").show();
 });
 
 
@@ -68,8 +64,6 @@ $(".check").click(function() {
 
         // $(전체상품).show()
         $(".contents_pricture1_div").eq(0).show();
-        $(".contents_pricture1_div").eq(1).show();
-        $(".contents_pricture1_div").eq(2).show();
         // $(".contents_pictures2").hide();
 
         // 상품목록 위에 선택한 옵션 표시 삭제
@@ -105,9 +99,7 @@ $(".radio").click(function() {
         $(this).find(".filter_radio_unchecked").show();
         $(this).find(".filter_radio_checked").hide();
 
-        $(".contents_pricture1_div").eq(0).show();
-        $(".contents_pricture1_div").eq(1).show();
-        $(".contents_pricture1_div").eq(2).show();
+        $(".contents_pricture1_div").show();
 
         // 상품목록 위에 선택한 옵션 표시 삭제
         $(".opt_selected_wrap").hide();
