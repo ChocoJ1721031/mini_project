@@ -1,0 +1,286 @@
+
+#section {
+   
+   width: 100%;
+ }
+.page_aticle {
+width: 1050px;
+margin: 0 auto;
+}
+#lnbMenu {
+padding-top: 26px;
+}
+#lnbMenu .inner_lnb {
+position: relative;
+}
+
+#lnbMenu .tit {
+padding: 23px 0 20px;
+font-weight: 700;
+font-size: 28px;
+color: #333;
+line-height: 35px;
+letter-spacing: -1px;
+text-align: center;
+}
+
+#lnbMenu .list {
+display: none;
+overflow: hidden;
+margin-top: 3px;
+padding: 12px 0 29px;
+border: 1px solid #e2e2e2;
+}
+#lnbMenu li {
+float: left;
+width: 263px;
+padding: 16px 44px 0 39px;
+}
+#lnbMenu li .on {
+border-bottom: 1px solid #5F0080;
+font-weight: 700;
+color: #5f0080;
+}
+#lnbMenu li a {
+overflow: hidden;
+float: left;
+max-width: 180px;
+line-height: 20px;
+font-size: 14px;
+color: #333;
+letter-spacing: -1px;
+white-space: nowrap;
+text-overflow: ellipsis;
+cursor: pointer;
+}
+#lnbMenu li:nth-of-type(4n) {
+width: 219px;
+padding-right: 0;
+}
+#lnbMenu .inner_lnb {
+position: relative;
+}
+.layout-wrapper {
+position: relative;
+width: 1050px;
+height: 100%;
+margin: 0 auto;
+}
+#recipe.wrap {
+padding: 30px 29px;
+}
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+#recipe_table .recipe_tr td {
+margin-left: 30px;
+}
+#recipe .recipe_item {
+width: 480px;
+height: 550px;
+margin-bottom: 30px;
+border: 1px solid #f4f4f4;
+}
+a {
+background-color: transparent;
+text-decoration: none;
+color: inherit;
+}
+#recipe .recipe_item img {
+border-bottom: 1px solid #f4f4f4;
+}
+#recipe .recipe_item .tit_recipe {
+width: 480px;
+height: 70px;
+padding: 25px 0 25px 30px;
+text-align: left;
+font-size: 22px;
+line-height: .6;
+}
+#recipe .recipe_item {
+width: 480px;
+height: 550px;
+margin-bottom: 30px;
+border: 1px solid #f4f4f4;
+}
+#recipe .recipe_item img {
+border-bottom: 1px solid #f4f4f4;
+}
+
+
+*, *:after, *:before {
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+#recipe_table .recipe_tr td {
+margin-left: 30px;
+}
+.layout-pagination {
+margin: 60px 0 0;
+text-align: center;
+}
+#pagediv {
+  display: flex;
+  justify-content: center;
+}
+.layout-pagination-button:first-child {
+border-left: 1px solid #ddd;
+}
+.layout-pagination-prev-page {
+background-image: url(https://res.kurly.com/pc/etc/old/images/common/icon-pagination-prev.png);
+}
+.layout-pagination-number:hover, .layout-pagination-number.__active {
+background-color: #f7f7f7;
+color: #5f0080;
+}
+.layout-pagination-number {
+font-weight: 700;
+color: #333;
+line-height: 34px;
+}
+.layout-pagination-next-page {
+background-image: url(https://res.kurly.com/pc/etc/old/images/common/icon-pagination-next.png);
+}
+
+.xans-board-search2 {
+height: 80px;
+padding: 0;
+}
+.xans-board-search {
+margin-top: 30px;
+padding: 20px 0 20px 10px;
+color: #2e2e2e;
+font-size: 12px;
+clear: both;
+border-top: 1px solid #5e3d5a;
+width: 100%;
+}
+.xans-board-search .input_txt img {
+position: relative;
+right: 5px;
+top: -2px;
+}
+
+.xans-board-search .stxt input {
+margin-left: 10px;
+margin-right: 3px;
+position: relative;
+top: 3px;
+
+}
+.search_bt img {
+float: right;
+}
+img {
+border: 0;
+}
+.xans-board-search input[type=text] {
+height: 34px;
+line-height: 34px;
+width: 220px;
+border: 1px solid #bfbfbf;
+color: #000;
+float: right;
+padding: 4px;
+}
+
+div {
+display: block;
+}
+.layout-pagination {
+margin: 60px 0 0;
+text-align: center;
+}
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+table {
+border-collapse: separate;
+text-indent: initial;
+border-spacing: 2px;
+}
+.layout-pagination-next-page, .layout-pagination-last-page {
+background-repeat: no-repeat;
+background-position: 50% 50%;
+text-indent: -9999px;
+}
+.layout-pagination-button {
+display: inline-block;
+width: 34px;
+height: 34px;
+border: 1px solid #ddd;
+border-left: 0;
+vertical-align: top;
+}
+number.__active {
+background-color: #f7f7f7;
+color: #5f0080;
+}
+.layout-pagination-last-page {
+background-image: url(https://res.kurly.com/pc/etc/old/images/common/icon-pagination-last.png);
+}
+td {
+display: table-cell;
+vertical-align: inherit;
+}
+td, th {
+padding: 0;
+}
+.layout-pagination-button {
+display: inline-block;
+width: 34px;
+height: 34px;
+border: 1px solid #ddd;
+border-left: 0;
+vertical-align: top;
+}
+pagination-last-page {
+background-repeat: no-repeat;
+background-position: 50% 50%;
+text-indent: -9999px;
+}
+.layout-pagination-first-page {
+background-image: url(https://res.kurly.com/pc/etc/old/images/common/icon-pagination-first.png);
+}
+.layout-pagination-first-page, .layout-pagination-prev-page, .layout-pagination-next-page, .layout-pagination-last-page {
+background-repeat: no-repeat;
+background-position: 50% 50%;
+text-indent: -9999px;
+}
+.layout-pagination-button {
+display: inline-block;
+width: 34px;
+height: 34px;
+border: 1px solid #ddd;
+border-left: 0;
+vertical-align: top;
+}
+.xans-board-search {
+margin-top: 30px;
+padding: 20px 0 20px 10px;
+color: #2e2e2e;
+font-size: 12px;
+clear: both;
+border-top: 1px solid #5e3d5a;
+width: 100%;
+}
+
+tbody {
+display: table-row-group;
+vertical-align: middle;
+border-color: inherit;
+}
+.xans-board-search .stxt {
+font-size: 14px;
+}
+.xans-board-search .stxt input {
+margin-left: 10px;
+margin-right: 3px;
+position: relative;
+top: 3px;
+}

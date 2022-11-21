@@ -1,0 +1,16 @@
+/* .radio_button {
+    padding: 10px 10px;
+} */
+input[type="radio"] {
+    vertical-align: middle;
+    appearance: none;
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 50%;
+    width: 23px;
+    height: 23px;
+    margin: 0;
+}
+
+input[type="radio"]:checked {
+    border: 6px solid rgb(95, 0, 128);
+}

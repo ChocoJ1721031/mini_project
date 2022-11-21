@@ -1,0 +1,472 @@
+/* 전체 구도*/
+.prod_detail_wrap {
+    position: relative;
+    width: 1050px;
+    margin: 0px auto;
+    padding-top: 30px;
+}
+
+#container_wrapper {
+    position: relative;
+    width: 1050px;
+    margin: 0px auto;
+    padding-top: 30px;
+}
+
+.prod_detail_header {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+
+/* 상품 이미지 */
+.prod_img_box {
+    width: 430px;
+    height: 552px;
+    background: url("https://img-cf.kurly.com/shop/data/goods/164820616351l0.jpeg") 0% 0% / cover, url("https://res.kurly.com/_next/static/images/noimg-150x195-2c819ff85dca3193dfce31add0852dbb.svg") 50% 50% / contain no-repeat rgb(245, 245, 245);
+}
+
+/* 우측 상품 정보 */
+.header_contents {
+    width: 560px;
+}
+
+/* 샛별배송 */
+.prod_info {
+    font-weight: 500;
+    line-height: 1.36;
+    letter-spacing: -0.5px;
+    color: rgb(153, 153, 153);
+    margin-bottom: 6px;
+    width: 500px;
+}
+.delivery_info {
+    display: block;
+    font-size: 12px;
+    color: rgb(102, 102, 102);
+    padding-top: 4px;
+    line-height: 16px;
+    white-space: pre-line;
+}
+.packaging_Styrofoam {
+    display: block;
+    font-size: 12px;
+    color: rgb(102, 102, 102);
+    padding-top: 4px;
+    line-height: 16px;
+    white-space: pre-line;
+}
+.prod_info_title_wrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.prod_info_title {
+    display: flex;
+    flex: 1 1 0%;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+
+.prod_info_name {
+    width: 500px;
+    font-weight: 500;
+    font-size: 24px;
+    color: rgb(51, 51, 51);
+    line-height: 34px;
+    letter-spacing: -0.5px;
+    word-break: keep-all;
+    margin-right: 20px;
+}
+
+.ico_share {
+    user-select: none;
+    padding: 0;
+    box-sizing: border-box;
+    font: inherit;
+    margin: 0;
+    -webkit-tap-highlight-color: transparent;
+    overflow: visible;
+    border: none;
+    text-transform: none;
+    -webkit-appearance: button;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+    border-radius: 0;
+    font-family: "Noto Sans", "malgun gothic", AppleGothic, dotum, sans-serif;
+    width: 40px;
+    height: 40px;
+    background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGNpcmNsZSBzdHJva2U9IiNEREQiIGN4PSIyMCIgY3k9IjIwIiByPSIxOS41Ii8+CiAgICAgICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTAuNSAxMSkiIHN0cm9rZT0iIzMzMyIgc3Ryb2tlLXdpZHRoPSIxLjgiPgogICAgICAgICAgICA8Y2lyY2xlIGN4PSIzIiBjeT0iOSIgcj0iMi4xIi8+CiAgICAgICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDUuMTM3KSI+CiAgICAgICAgICAgICAgICA8Y2lyY2xlIGN4PSI4Ljg2MyIgY3k9IjMiIHI9IjIuMSIvPgogICAgICAgICAgICAgICAgPHBhdGggc3Ryb2tlLWxpbmVjYXA9InNxdWFyZSIgZD0iTTAgOC4xMzYgNi4zNjMgNC41Ii8+CiAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgPGcgdHJhbnNmb3JtPSJtYXRyaXgoMSAwIDAgLTEgNS4xMzcgMTgpIj4KICAgICAgICAgICAgICAgIDxjaXJjbGUgY3g9IjguODYzIiBjeT0iMyIgcj0iMi4xIi8+CiAgICAgICAgICAgICAgICA8cGF0aCBzdHJva2UtbGluZWNhcD0ic3F1YXJlIiBkPSJNMCA4LjEzNiA2LjM2MyA0LjUiLz4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+Cg==") 50% 50% no-repeat;
+}
+
+.prod_name {
+    padding-top: 5px;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(181, 181, 181);
+    line-height: 19px;
+    letter-spacing: -0.5px;
+}
+
+.prod_info_title {
+    display: flex;
+    flex: 1 1 0%;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+
+.ico_chare {
+    width: 40px;
+    height: 40px;
+    background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGNpcmNsZSBzdHJva2U9IiNEREQiIGN4PSIyMCIgY3k9IjIwIiByPSIxOS41Ii8+CiAgICAgICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTAuNSAxMSkiIHN0cm9rZT0iIzMzMyIgc3Ryb2tlLXdpZHRoPSIxLjgiPgogICAgICAgICAgICA8Y2lyY2xlIGN4PSIzIiBjeT0iOSIgcj0iMi4xIi8+CiAgICAgICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDUuMTM3KSI+CiAgICAgICAgICAgICAgICA8Y2lyY2xlIGN4PSI4Ljg2MyIgY3k9IjMiIHI9IjIuMSIvPgogICAgICAgICAgICAgICAgPHBhdGggc3Ryb2tlLWxpbmVjYXA9InNxdWFyZSIgZD0iTTAgOC4xMzYgNi4zNjMgNC41Ii8+CiAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgPGcgdHJhbnNmb3JtPSJtYXRyaXgoMSAwIDAgLTEgNS4xMzcgMTgpIj4KICAgICAgICAgICAgICAgIDxjaXJjbGUgY3g9IjguODYzIiBjeT0iMyIgcj0iMi4xIi8+CiAgICAgICAgICAgICAgICA8cGF0aCBzdHJva2UtbGluZWNhcD0ic3F1YXJlIiBkPSJNMCA4LjEzNiA2LjM2MyA0LjUiLz4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+Cg==") 50% 50% no-repeat;
+}
+
+.percent {
+    padding-right: 9px;
+    font-size: 28px;
+    color: rgb(250, 98, 47);
+}
+
+.prod_price {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    padding-top: 19px;
+    font-weight: bold;
+    line-height: 30px;
+    letter-spacing: -0.5px;
+}
+
+.percent_val {
+    padding-right: 4px;
+    font-size: 28px;
+    color: rgb(51, 51, 51);
+}
+
+.val {
+    display: inline-block;
+    font-size: 16px;
+    color: rgb(181, 181, 181);
+    letter-spacing: -0.5px;
+    padding-top: 9px;
+    text-decoration: line-through;
+    margin-right: 0px;
+}
+
+.sale_price_info {
+    width: 21px;
+    height: 21px;
+    vertical-align: -4px;
+    padding-left: 1px;
+    cursor: pointer;
+}
+
+.after_login_info {
+    font-size: 14px;
+    color: rgb(95, 0, 128);
+    line-height: 19px;
+    height: 19px;
+    letter-spacing: -0.5px;
+    margin-top: 14px;
+}
+/* 상품 상세 정보 영역  */
+.prod_guide_wrap {
+    margin-top: 20px;
+}
+
+.prod_guide_box {
+    display: flex;
+    flex: 1 1 0%;
+    flex-direction: row;
+    align-items: flex-start;
+    overflow: hidden;
+    width: 100%;
+    padding: 17px 0px 18px;
+    border-top: 1px solid rgb(244, 244, 244);
+    font-size: 14px;
+    letter-spacing: -0.5px;
+}
+
+.prod_guide_title {
+    position: relative;
+    top: 1px;
+    width: 128px;
+    height: 100%;
+    color: rgb(102, 102, 102);
+    line-height: 19px;
+}
+
+.allergy_guide_text {
+    display: flex;
+    flex: 1 1 0%;
+    flex-direction: column;
+}
+
+/* 상품 선택 영역 */
+.prod_select_wrap {
+    padding-bottom: 40px;
+}
+
+.prod_select_row {
+    border-bottom: 1px solid rgb(244, 244, 244);
+}
+
+.prod_select_box {
+    display: flex;
+    flex: 1 1 0%;
+    flex-direction: row;
+    align-items: flex-start;
+    overflow: hidden;
+    width: 100%;
+    padding: 17px 0px 18px;
+    border-top: 1px solid rgb(244, 244, 244);
+    font-size: 14px;
+    letter-spacing: -0.5px;
+}
+
+.prod_select_area {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    padding: 11px 10px 11px 15px;
+    font-size: 12px;
+    border-left: 1px solid rgb(244, 244, 244);
+    border-top: 1px solid rgb(244, 244, 244);
+    border-right: 1px solid rgb(244, 244, 244);
+    width: 100%;
+    border-bottom: 1px solid rgb(244, 244, 244);
+}
+
+.select_info {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+/* 수량 체크 영역 */
+.select_count {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    padding-top: 12px;
+}
+
+.select_button_box {
+    display: inline-flex;
+    flex-direction: row;
+    -webkit-box-align: center;
+    align-items: center;
+    border: 1px solid rgb(221, 223, 225);
+    width: 88px;
+    border-radius: 3px;
+}
+
+.button_down {
+    display: inline-flex;
+    width: 28px;
+    height: 28px;
+    border: none;
+    font-size: 1px;
+    color: transparent;
+    background-size: cover;
+    background-color: transparent;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIHZpZXdCb3g9IjAgMCAzMCAzMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik0yMCAxNHYySDEwdi0yeiIgZmlsbD0iI0RERCIgZmlsbC1ydWxlPSJub256ZXJvIi8+Cjwvc3ZnPgo=");
+    vertical-align: top;
+    cursor: default;
+}
+
+.count_number {
+    display: inline-flex;
+    overflow: hidden;
+    white-space: nowrap;
+    -webkit-box-pack: center;
+    justify-content: center;
+    font-size: 14px;
+    color: rgb(51, 51, 51);
+    text-align: center;
+    width: 31px;
+    height: 28px;
+    line-height: 28px;
+    font-weight: 400;
+}
+
+.button_up {
+    user-select: none;
+    padding: 0;
+    box-sizing: border-box;
+    font: inherit;
+    margin: 0;
+    -webkit-tap-highlight-color: transparent;
+    overflow: visible;
+    text-transform: none;
+    -webkit-appearance: button;
+    cursor: pointer;
+    border-radius: 0;
+    font-family: "Noto Sans", "malgun gothic", AppleGothic, dotum, sans-serif;
+    display: inline-flex;
+    width: 28px;
+    height: 28px;
+    border: none;
+    font-size: 1px;
+    color: transparent;
+    background-size: cover;
+    background-color: transparent;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIHZpZXdCb3g9IjAgMCAzMCAzMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik0xNiAxMHY0aDR2MmgtNHY0aC0ydi00aC00di0yaDR2LTRoMnoiIGZpbGw9IiMzMzMiIGZpbGwtcnVsZT0ibm9uemVybyIvPgo8L3N2Zz4K");
+    vertical-align: top;
+}
+
+.total_val_num {
+    margin-right: 4px;
+    font-weight: normal;
+    font-size: 12px;
+    color: rgb(181, 181, 181);
+    text-decoration: line-through;
+
+}
+
+.sale_val {
+    font-weight: bold;
+    font-size: 12px;
+    color: rgb(51, 51, 51);
+    padding-right: 5px;
+}
+
+
+.prod_price_area {
+    padding-top: 30px;
+}
+
+.prod_price_box {
+    letter-spacing: -0.5px;
+}
+
+.prod_info_price {
+    display: flex;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.total_price {
+    padding-right: 12px;
+    font-size: 13px;
+    font-weight: 500;
+    color: rgb(51, 51, 51);
+    line-height: 20px;
+}
+
+.total_val {
+    font-weight: bold;
+    font-size: 32px;
+    color: rgb(51, 51, 51);
+    line-height: 36px;
+}
+
+.unit {
+    padding-left: 5px;
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(51, 51, 51);
+    line-height: 30px;
+}
+
+.prod_guide_row {
+    display: flex;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+    padding-top: 10px;
+
+}
+
+.prod_guide_point_title {
+    background-color: rgb(255, 191, 0);
+    margin: 1px 6px 0px 0px;
+    padding: 0px 7px;
+    border-radius: 10px;
+    font-size: 11px;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    line-height: 20px;
+}
+
+.buy_guide_text {
+    line-height: 1.45;
+    color: rgb(102, 102, 102);
+}
+
+/* 버튼 영역 */
+.prod_button_area {
+    display: flex;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.button_wish {
+    display: block;
+    padding: 0px 10px;
+    text-align: center;
+    overflow: hidden;
+    width: 56px;
+    height: 56px;
+    border-radius: 3px;
+    color: rgb(51, 51, 51);
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(221, 221, 221);
+}
+
+.ico_wish {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+.button_notice {
+    display: block;
+    padding: 0px 10px;
+    text-align: center;
+    overflow: hidden;
+    width: 56px;
+    height: 56px;
+    border-radius: 3px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(221, 221, 221);
+    cursor: default;
+    border-color: rgb(221, 221, 221);
+    color: rgb(221, 221, 221);
+}
+
+.ico_notice {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.prod_basket_area {
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+}
+
+.button_basket {
+    display: block;
+    padding: 0px 10px;
+    text-align: center;
+    overflow: hidden;
+    width: 100%;
+    height: 52px;
+    border-radius: 3px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(95, 0, 128);
+    border: 0px none;
+    font-weight: 500;
+}
+/* 장바구니 font */
+.text {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+}
