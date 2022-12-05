@@ -1,0 +1,736 @@
+.wrap.detail {
+    position: relative;
+    width: 1050px;
+    margin: 0px auto;
+    padding-top: 30px;
+}
+.wrap.detail > .wrap.review {
+    position: relative;
+    width: 1010px;
+    padding-bottom: 100px;
+}
+/* 버튼을 좀더 깔끔하게 보이도록 */
+button {
+    overflow: visible;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+}
+
+
+/* 링크 a */
+a {
+    background-color: transparent;
+    text-decoration: none;
+    color: inherit;
+}
+
+.product_review{
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 22px;
+    color: rgb(51, 51, 51);
+}
+.review_ul{
+    padding-left: 0px;
+    font-weight: 500;
+    color: rgb(102, 102, 102);
+    list-style-type: none;
+}
+
+.review_ul_li{
+    position: relative;
+    padding-left: 11px;
+    font-weight: 400;
+    color: rgb(153, 153, 153);
+}
+
+/* review_ul_li와 reivew_photo의 간격 설정*/
+.reivew_photo{
+    margin-top: 40px;
+}
+
+/* 상품후기 바로 밑 사진 */
+/* 1번째 사진 ~ 8번 사진까지 */
+.review_photo1{
+    width: 124px;
+    height: 124px;
+    background: url(https://img-cf.kurly.com/shop/data/review/20221109/2b6a134d-5a85-460e-86a4-ca8eb4af0a91.jpg) 0% 0% / cover no-repeat;
+    /* 사진 모서리 둥글게 */
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+.review_photo2{
+    width: 124px;
+    height: 124px;
+    background: url(https://img-cf.kurly.com/shop/data/review/20221109/58723ba6-927e-4a54-8db0-c97371f71408.jpg) 0% 0% / cover no-repeat;
+}
+
+.review_photo3{
+    width: 124px;
+    height: 124px;
+    background: url(https://img-cf.kurly.com/shop/data/review/20221109/2753277e-48a0-4f19-b718-1190dbcf87c4.jpg) 0% 0% / cover no-repeat;
+}
+
+.review_photo4{
+    width: 124px;
+    height: 124px;
+    background: url(https://img-cf.kurly.com/shop/data/review/20221109/4e4ced26-675d-469f-9842-059e915c180f.jpeg) 0% 0% / cover no-repeat;
+}    
+.review_photo5{
+    width: 124px;
+    height: 124px;
+    background: url(https://img-cf.kurly.com/shop/data/review/20221109/3cad13e5-2217-46a2-86ad-9059121ed19a.jpg) 0% 0% / cover no-repeat;
+}    
+.review_photo6{
+    width: 124px;
+    height: 124px;
+    background: url(https://img-cf.kurly.com/shop/data/review/20221109/ac795ce1-99e1-4ed7-9136-907da9c41e4a.jpeg) 0% 0% / cover no-repeat;
+}    
+ .review_photo7{  
+    width: 124px;
+    height: 124px;
+    background: url(https://img-cf.kurly.com/shop/data/review/20221108/d48f956a-795d-4a8d-806e-adf6bb4937f6.jpeg) 0% 0% / cover no-repeat;    
+}    
+
+.review_photo8{
+    width: 124px;
+    height: 124px;
+    background: url(https://img-cf.kurly.com/shop/data/review/20221030/32a5e348-4d21-4077-b6dd-f66aa91f6996.jpg) 0% 0% / cover no-repeat;
+}     
+
+.reivew_photo {
+    position: relative;
+    display: flex;
+    -webkit-box-pack: start;
+    justify-content: start;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 3px;
+    width: 100%;
+    border-radius: 6px;
+    padding-bottom: 30px;
+    overflow: hidden;
+}
+
+/* + 더보기 (8번 사진 링크를 통해서)*/
+.review_more_link{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 124px;
+    height: 124px;
+    margin-bottom: 32px;
+    border-radius: 0px 6px 6px 0px;
+    background-color: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.review_more_link span{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: rgb(255, 255, 255)
+}
+
+.recomm_regis{
+    display: flex;
+    gap: 17px;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+    font-weight: 400;
+}
+
+/* 총 게시물 수 */
+.total_post_span{
+    top: -36px;
+    width: 100%;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+/* 추천 수 */
+.number_of_recommendations{
+
+    font-weight: 500;
+    font-size: 12px;
+    color: rgb(51, 51, 51);
+}
+
+/* 최근 등록 순 */
+.last_registration{
+    position: relative;
+    font-weight: 400;
+    font-size: 12px;
+    color: rgb(153, 153, 153);
+}
+
+/* 공지 */
+.notice{
+    padding: 21px 20px 20px;
+    border-bottom: 1px solid rgb(238, 238, 238);
+}
+
+.notice_span{
+    display: inline-block;
+    height: 22px;
+    width: 42px;
+    border-radius: 4px;
+    background-color: rgb(244, 244, 244);
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 22px;
+    text-align: center;
+    color: rgb(102, 102, 102);
+    vertical-align: 2px;
+}
+
+.notice_button{
+    margin-left: 9px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: center;
+    color: rgb(51, 51, 51);
+}
+
+/* 공지 버튼 내용 */
+.notice_content{
+    width: 100%;
+    padding: 25px 20px 20px;
+    border-bottom: 1px solid rgb(238, 238, 238);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+    background-color: rgb(250, 250, 250);
+    color: rgb(51, 51, 51);
+    white-space: pre-line;
+}
+
+/* 사용자 게시글 */
+.user_post_div_first{
+    display: flex;
+    padding: 30px 0px 19px 20px;
+    border-bottom: 1px solid rgb(244, 244, 244);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+}
+
+.user_post_div_second{
+    flex: 0 0 225px
+}
+
+.user_best_purple{
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    margin: -1px 0px 7px;
+}
+
+.best{
+    display: inline-block;
+    height: 18px;
+    border: 1px solid rgb(168, 100, 216);
+    border-radius: 3px;
+    padding: 3px 4px 3px 5px;
+    margin-right: 4px;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 10px;
+    text-align: center;
+    word-break: keep-all;
+    background-color: rgb(168, 100, 216);
+    color: rgb(255, 255, 255);
+}
+
+.purple{
+    display: inline-block;
+    height: 18px;
+    border: 1px solid rgb(95, 0, 128);
+    border-radius: 3px;
+    padding: 3px 4px 3px 5px;
+    margin-right: 4px;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 10px;
+    text-align: center;
+    word-break: keep-all;
+    background-color: rgb(255, 255, 255);
+    color: rgb(95, 0, 128);
+}
+
+.user_name{
+    font-weight: 500;
+}
+
+/* 사용자가 작성한 글 제목, 내용, 사진, 요일 등등 */
+.user_content{
+    flex: 1 1 0%;
+    overflow: hidden;
+}
+/* 1. 글 제목 */
+.user_content_title_div{
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    gap: 5px;
+    height: 19px;
+    padding-right: 20px;
+}
+
+.user_content_title{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+    color: rgb(153, 153, 153);
+    display: -webkit-box;
+    overflow: hidden;
+    word-break: break-all;
+    white-space: normal;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+/* 2. 글 내용 */
+.content_writing{
+    padding-top: 12px;
+    word-break: break-word;
+    white-space: pre-line;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: rgb(51, 51, 51);
+    padding-right: 20px;
+}
+
+/* 3. 사진 */
+.user_photo{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 3px;
+    overflow: auto;
+    padding: 15px 0px 2px;
+}
+/* 3.(1~6) 사진 */
+.user_review_photo1:first-of-type{
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+.user_review_photo1_first{
+    width: 93px;
+    height: 93px;
+    flex-shrink: 0;
+    background: url(https://img-cf.kurly.com/shop/data/review/20220430/44a90604c49e8be972e439bc93efc370.jpg) 0% 0% / cover no-repeat;
+}
+
+.user_review_photo2_first{
+    width: 93px;
+    height: 93px;
+    flex-shrink: 0;
+    background: url(https://img-cf.kurly.com/shop/data/review/20220430/2c5d8cc4465d65d4c9404effc9679981.jpg) 0% 0% / cover no-repeat;
+}
+
+.user_review_photo3_first{
+    width: 93px;
+    height: 93px;
+    flex-shrink: 0;
+    background: url(	https://img-cf.kurly.com/shop/data/review/20220430/fdc85bd4a02f1068ee33933f54178d40.jpg) 0% 0% / cover no-repeat;
+}
+
+.user_review_photo4_first{
+    width: 93px;
+    height: 93px;
+    flex-shrink: 0;
+    background: url(https://img-cf.kurly.com/shop/data/review/20220430/fdc85bd4a02f1068ee33933f54178d40.jpg) 0% 0% / cover no-repeat;
+}
+
+.user_review_photo5_first{
+    width: 93px;
+    height: 93px;
+    flex-shrink: 0;
+    background: url(https://img-cf.kurly.com/shop/data/review/20220430/9d939ab569fee71834509773f2b84250.jpg) 0% 0% / cover no-repeat;
+}
+
+.user_review_photo6_first{
+    width: 93px;
+    height: 93px;
+    flex-shrink: 0;
+    background: url(https://img-cf.kurly.com/shop/data/review/20220430/a44f795876be9ac63fc7d59dbfd7ad8b.jpg) 0% 0% / cover no-repeat;
+}
+
+/* 4. user footer */
+.user_footer{
+	display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 19px;
+    padding-right: 20px;
+}
+
+/* 5. user date */
+.user_update{
+    color: rgb(153, 153, 153);
+}
+
+/* 6. 사용자 도움돼요 버튼 */
+.helpful{
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    min-width: 88px;
+    height: 32px;
+    padding: 0px 13px 0px 11px;
+    border: 1px solid rgb(226, 226, 226);
+    border-radius: 20px;
+    font-size: 12px;
+    line-height: 20px;
+    color: rgb(153, 153, 153);
+}
+
+.user_heplful{
+    width: 15px;
+    height: 15px;
+    margin-right: 4px;
+    background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNCAxNCIgZmlsbD0ibm9uZSIKICAgICB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogIDxwYXRoCiAgICBkPSJNNC4wNDgzNyAxMi45OTk4SDIuMjE5MzVDMS41NDU5MiAxMi45OTk4IDEgMTIuNDYyNiAxIDExLjc5OTlWNy41OTk5MkMxIDYuOTM3MTggMS41NDU5MiA2LjM5OTkzIDIuMjE5MzUgNi4zOTk5M0g0LjA0ODM3TTguMzE2MDggNS4xOTk5NVYyLjc5OTk4QzguMzE2MDggMS44MDU4OCA3LjQ5NzIgMSA2LjQ4NzA2IDFMNC4wNDgzNyA2LjM5OTkzVjEyLjk5OTlIMTAuOTI1NUMxMS41MzM1IDEzLjAwNjYgMTIuMDUzNyAxMi41NzE1IDEyLjE0NDggMTEuOTc5OUwxMi45ODYyIDYuNTc5OTNDMTMuMDM5OSA2LjIzMTg1IDEyLjkzNTUgNS44NzgxMiAxMi43MDA4IDUuNjEyNDVDMTIuNDY2IDUuMzQ2NzggMTIuMTI0NiA1LjE5NTk2IDExLjc2NjggNS4xOTk5NUg4LjMxNjA4WiIKICAgIHN0cm9rZT0iIzk5OTk5OSIgc3Ryb2tlLXdpZHRoPSIxLjEiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIKICAgIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+Cg==) center center no-repeat;
+}
+
+/*2번째 게시글 사진 */
+.user_review_photo1_second{
+	width: 93px;
+    height: 93px;
+    flex-shrink: 0;
+    background: url(https://img-cf.kurly.com/shop/data/review/20211113/8d014828efe740b91d786f9f8e5d729f.jpg) 0% 0% / cover no-repeat;
+}
+
+.user_review_photo2_second{
+	width: 93px;
+    height: 93px;
+    flex-shrink: 0;
+    background: url(https://img-cf.kurly.com/shop/data/review/20211113/fffba0ffd1d18a626552f15332317a14.jpg) 0% 0% / cover no-repeat;
+}
+
+.user_review_photo3_second{
+	    width: 93px;
+    height: 93px;
+    flex-shrink: 0;
+    background: url(https://img-cf.kurly.com/shop/data/review/20211113/a85e678821835cd972f09c350e451bbe.jpg) 0% 0% / cover no-repeat;
+}
+
+
+/*3번째 게시글 사진*/
+.user_review_photo1_third{
+	width: 93px;
+    height: 93px;
+    flex-shrink: 0;
+    background: url(https://img-cf.kurly.com/shop/data/review/20221110/78c36720-5126-4052-944d-9ee6ae9840d7.jpg) 0% 0% / cover no-repeat;
+}
+
+/*6번째 게시글 사진 */
+.user_review_photo1_sixth{
+	width: 93px;
+    height: 93px;
+    flex-shrink: 0;
+    background: url(https://img-cf.kurly.com/shop/data/review/20221110/adfc7a50-32e2-4057-9a94-4bf6588465ff.jpeg) 0% 0% / cover no-repeat;
+}
+
+/* 7번째 게시글 사진 */
+.user_review_photo1_seventh{
+	width: 93px;
+    height: 93px;
+    flex-shrink: 0;
+    background: url(https://img-cf.kurly.com/shop/data/review/20221110/c2720c66-db43-4a13-a79d-fe412f9c7d5e.jpg) 0% 0% / cover no-repeat;
+}
+
+.user_review_photo2_seventh{
+    width: 93px;
+    height: 93px;
+    flex-shrink: 0;
+    background: url(https://img-cf.kurly.com/shop/data/review/20221110/8fba56da-8aaf-4363-ac47-cc6b90f2a9b9.jpg) 0% 0% / cover no-repeat;
+}
+
+/* 8번째 게시글 사진 */
+.user_review_photo1_eighth{
+	width: 93px;
+    height: 93px;
+    flex-shrink: 0;
+    background: url(https://img-cf.kurly.com/shop/data/review/20221109/2b6a134d-5a85-460e-86a4-ca8eb4af0a91.jpg) 0% 0% / cover no-repeat;
+}
+/*friends*/
+.freinds{
+	display: inline-block;
+    height: 18px;
+    border: 1px solid rgb(95, 0, 128);
+    border-radius: 3px;
+    padding: 3px 4px 3px 5px;
+    margin-right: 4px;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 10px;
+    text-align: center;
+    word-break: keep-all;
+    background-color: rgb(255, 255, 255);
+    color: rgb(95, 0, 128);
+}
+
+/*white*/
+.white{
+	display: inline-block;
+    height: 18px;
+    border: 1px solid rgb(95, 0, 128);
+    border-radius: 3px;
+    padding: 3px 4px 3px 5px;
+    margin-right: 4px;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 10px;
+    text-align: center;
+    word-break: keep-all;
+    background-color: rgb(255, 255, 255);
+    color: rgb(95, 0, 128);
+}
+
+/*rabender*/
+.rabender{
+	display: inline-block;
+    height: 18px;
+    border: 1px solid rgb(95, 0, 128);
+    border-radius: 3px;
+    padding: 3px 4px 3px 5px;
+    margin-right: 4px;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 10px;
+    text-align: center;
+    word-break: keep-all;
+    background-color: rgb(255, 255, 255);
+    color: rgb(95, 0, 128);
+}
+/* 일반 */
+.normal{
+    display: inline-block;
+    height: 18px;
+    border: 1px solid rgb(95, 0, 128);
+    border-radius: 3px;
+    padding: 3px 4px 3px 5px;
+    margin-right: 4px;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 10px;
+    text-align: center;
+    word-break: keep-all;
+    background-color: rgb(255, 255, 255);
+    color: rgb(95, 0, 128);
+}
+/*
+하단 리뷰 넘기기 버튼
+.user_review_button_div{
+	
+}*/
+
+.user_footer{
+	position: relative;
+	width:750px;
+}
+
+.helpful{
+	position: absolute;
+	right: 0;
+}
+
+/* .helpful:hover{
+	color: rgb(95, 0, 128);
+}
+
+.user_heplful:hover{
+	width: 15px;
+    height: 15px;
+    margin-right: 4px;
+    background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNCAxNCIgZmlsbD0ibm9uZSIKICAgICB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogIDxwYXRoCiAgICBkPSJNNC4wNDgzNyAxMi45OTk4SDIuMjE5MzVDMS41NDU5MiAxMi45OTk4IDEgMTIuNDYyNiAxIDExLjc5OTlWNy41OTk5MkMxIDYuOTM3MTggMS41NDU5MiA2LjM5OTkzIDIuMjE5MzUgNi4zOTk5M0g0LjA0ODM3TTguMzE2MDggNS4xOTk5NVYyLjc5OTk4QzguMzE2MDggMS44MDU4OCA3LjQ5NzIgMSA2LjQ4NzA2IDFMNC4wNDgzNyA2LjM5OTkzVjEyLjk5OTlIMTAuOTI1NUMxMS41MzM1IDEzLjAwNjYgMTIuMDUzNyAxMi41NzE1IDEyLjE0NDggMTEuOTc5OUwxMi45ODYyIDYuNTc5OTNDMTMuMDM5OSA2LjIzMTg1IDEyLjkzNTUgNS44NzgxMiAxMi43MDA4IDUuNjEyNDVDMTIuNDY2IDUuMzQ2NzggMTIuMTI0NiA1LjE5NTk2IDExLjc2NjggNS4xOTk5NUg4LjMxNjA4WiIKICAgIHN0cm9rZT0iIzVmMDA4MCIgc3Ryb2tlLXdpZHRoPSIxLjEiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIKICAgIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+Cg==) center center no-repeat;
+} */
+
+/* 최근 등록순 사진 */
+/* 1번째 게시글 */
+.user_review_photo1_second.first{
+    width: 93px;
+    height: 93px;
+    flex-shrink: 0;
+    background: url(https://img-cf.kurly.com/shop/data/review/20221115/ff6f77ccc25618e0ee9bfd82056da29c.jpg) 0% 0% / cover no-repeat;
+}
+/* 2번째 게시글 */
+.user_review_photo1_second.second{
+    width: 93px;
+    height: 93px;
+    flex-shrink: 0;
+    background: url(https://img-cf.kurly.com/shop/data/review/20221115/aad74247-11a4-47ae-8e59-f0edc9ce308c.jpeg) 0% 0% / cover no-repeat;
+}
+
+/* 5번째 게시글 */
+.user_review_photo1_second.fifth{
+    width: 93px;
+    height: 93px;
+    flex-shrink: 0;
+    background: url(https://img-cf.kurly.com/shop/data/review/20221115/aa45569b-df9d-4fdc-9d05-06a68d7b6b4d.jpeg) 0% 0% / cover no-repeat;
+}
+
+/* 7번째 게시글 */
+.user_review_photo1_second.seventh{
+    width: 93px;
+    height: 93px;
+    flex-shrink: 0;
+    background: url(https://img-cf.kurly.com/shop/data/review/20221115/d4d725ec-7696-4d6b-b2d3-b9858dc7bbfc.jpeg) 0% 0% / cover no-repeat;
+}
+
+/* 8번째 게시글 */
+.user_review_photo1_second.eighth{
+    width: 93px;
+    height: 93px;
+    flex-shrink: 0;
+    background: url(https://img-cf.kurly.com/shop/data/review/20221115/67090105-8f07-4518-a151-1b64f6bc58c4.jpg) 0% 0% / cover no-repeat;
+}
+
+.view_more_wrap{
+    height: 100%;
+    outline: 0px;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.view_more_user_wrap{
+    position: fixed;
+    z-index: 1300;
+    inset: 0px;
+}
+
+.view_more_user_div1{
+    position: fixed;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    inset: 0px;
+    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-tap-highlight-color: transparent;
+    z-index: -1;
+}
+
+.view_more_user_div2{
+    height: 100%;
+    outline: 0px;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+
+.view_more_user_div_wrap{
+    box-shadow: none;
+    margin-top: 80px;
+}
+
+
+.view_more_size{
+    width: 800px;
+    margin: 0px auto;
+    background-color: rgb(255, 255, 255);
+    border-radius: 12px;
+    padding: 3px;
+}
+
+.view_more_header{
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    padding-bottom: 8px;
+    margin: 29px 30px 20px;
+    border-bottom: 1px solid rgb(244, 244, 244);
+    letter-spacing: -1px;
+    vertical-align: middle;
+}
+
+.view_more_box_wrap{
+    flex: 1 1 auto;
+    padding: 0px 30px 30px;
+    overflow: hidden;
+}
+
+.view_more_picture_review {
+    display: inline;
+    padding: 0px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: -0.5px;
+    color: rgb(51, 51, 51);
+    vertical-align: baseline;
+}
+
+.view_more_all_look{
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    margin-top: 1px;
+}
+
+.css-1nm5twe {
+    flex: 1 1 auto;
+    padding: 0px 30px 30px;
+    overflow: hidden;
+}
+
+.view_more_div_picture {
+    position: relative;
+}
+
+.view_more_div_picture_wrap {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(6, 121px);
+    gap: 3px;
+    max-height: 616px;
+    margin-right: -10px;
+    overflow: hidden auto;
+}
+
+.view_more_div_picture_div{
+    position: relative;
+    cursor: pointer;
+    width: 120px;
+    height: 120px;
+}
+
+element.style {
+    box-sizing: border-box;
+    display: inline-block;
+    overflow: hidden;
+    width: initial;
+    height: initial;
+    background: none;
+    opacity: 1;
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    max-width: 100%;
+}

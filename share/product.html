@@ -1,0 +1,2053 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product</title>
+    <link href="./css/reset.css" rel="stylesheet">
+    <link href="./css/main.css" rel="stylesheet">
+    <link href="./css/main_share_section.css" rel="stylesheet">
+    <link href="./css/detail_page.css" rel="stylesheet">
+    <link href="./css/description.css" rel="stylesheet">
+    <link href="./css/detail.css" rel="stylesheet">
+    <link href="./css/reviewstyle.css" rel="stylesheet">
+    <link href="./css/inquiry.css" rel="stylesheet">
+
+    <script defer src="./js/jquery-3.6.1.js"></script>
+    <script defer src="./js/main_header.js"></script>
+    <script defer src="./js/main_share_scroll_action.js"></script>
+    <script defer src="./js/detail_page.js"></script>
+    <script defer src="./js/description.js"></script>
+    <script defer src="./js/detail.js"></script>
+    <script defer src="./js/reviewJs.js"></script>
+    <script defer src="./js/inquiry.js"></script>
+
+    <style>
+        html, body {
+            scroll-behavior: smooth; -webkit-scroll-behavior: smooth;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+        html, button, input, select, textarea, p, span {
+            font-family: "Noto Sans KR";
+        }
+        
+    </style>
+
+</head>
+<body>
+    <div>
+        <!-- header -->
+        <div id="event">
+            <div class="e_link">
+                <a href="#"><p>지금 가입하고 인기상품 <strong>100원</strong>에 받아가세요!</p></a>
+                <button id="event_btn" type="button"><img src="https://res.kurly.com/pc/ico/1908/ico_close_fff_84x84.png" alt="e_close"></button>
+            </div>
+        </div>
+        <div id="header">
+            <div class="h_first">
+                <div class="h_f_1">
+                    <div>
+                        <a href="./join.html">회원가입</a>
+                        <div>|</div>
+                        <a href="./login.html">로그인</a>
+                        <div>|</div>
+                        <div>
+                            <a href="./notice.html">고객센터
+                                <img src="https://res.kurly.com/pc/ico/1908/ico_down_16x10.png">
+                            </a>
+                            <div class="h_f_1_a3_hover" onclick="location.href='./notice.html';">
+                                <div>공지사항</div>
+                                <div>자주하는 질문</div>
+                                <div>1:1 문의</div>
+                                <div>대량주문 문의</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="h_f_2">
+                    <div id="main_logo" onclick="location.href='./index.html';">
+                        <img src="./images/마켓컬리로고.svg" alt="main_logo">
+                        <button type="button">마켓컬리</button>
+                    </div>
+                    <div id="search">
+                        <input type="text" placeholder="검색어를 입력해주세요.">
+                        <button type="button"><img src="./images/search_logo.svg"></button>
+                    </div>
+                    <div id="buttons">
+                        <button type="button"></button>
+                        <button type="button"></button>
+                        <button type="button" onclick="location.href='./shopping_basket_guest.html';"></button>
+                        <div class="buttons_first_hover">
+                            <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMThweCIgaGVpZ2h0PSIxMXB4IiB2aWV3Qm94PSIwIDAgMTggMTEiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8dGl0bGU+ZHJvcGRvd25fdGFpbDwvdGl0bGU+CiAgICA8ZyBpZD0i67ew7Yuw7Lus66asLVBoYXNlLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSJQQ19Ib21lX01hcmtldF/sp4TsnoXsi5wiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMTExLjAwMDAwMCwgLTEzMi4wMDAwMDApIj4KICAgICAgICAgICAgPGcgaWQ9ImRyb3Bkb3duX2JveCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoOTc4LjAwMDAwMCwgMTMyLjAwMDAwMCkiPgogICAgICAgICAgICAgICAgPGcgaWQ9ImRyb3Bkb3duX3RhaWwiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEzMy4wMDAwMDAsIDAuMDAwMDAwKSI+CiAgICAgICAgICAgICAgICAgICAgPHJlY3QgaWQ9IlJlY3RhbmdsZSIgZmlsbD0iI0ZGRkZGRiIgeD0iMCIgeT0iMCIgd2lkdGg9IjE4IiBoZWlnaHQ9IjExIj48L3JlY3Q+CiAgICAgICAgICAgICAgICAgICAgPHJlY3QgaWQ9IlJlY3RhbmdsZSIgZmlsbD0iI0RERERERCIgeD0iMCIgeT0iMTAiIHdpZHRoPSIxOCIgaGVpZ2h0PSIxIj48L3JlY3Q+CiAgICAgICAgICAgICAgICAgICAgPHBhdGggZD0iTTksMCBMMTcuMjUsMTEgTDAuNzUsMTEgTDksMCBaIiBpZD0iQ29tYmluZWQtU2hhcGUiIGZpbGw9IiNEREREREQiPjwvcGF0aD4KICAgICAgICAgICAgICAgICAgICA8cGF0aCBkPSJNOSwxLjY1IEwxNi4wMTYsMTAuOTk5IEwyLjAwOCwxMC45OTkgTDksMS42NSBaIiBpZD0iQ29tYmluZWQtU2hhcGUiIGZpbGw9IiNGRkZGRkYiPjwvcGF0aD4KICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+">
+                            <img src="./images/흰색 칸.png">
+                            <div>
+                                <p><strong>배송지를 등록</strong>하고<br>구매 가능한 상품을 확인하세요!</p>
+                                <div>
+                                    <button onclick="location.href='./login.html';"><span>로그인</span></button>
+                                    <button><img src="./images/배송지search_logo.png"><span>주소검색</span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="h_second">
+                <div class="h_s_1">
+                    <div id="s_category">
+                        <span></span>
+                        <span>카테고리</span>
+                        <div>
+                            <div>
+                                <ul id="s_c_list">
+                                    <li class="s_c_list_li" onclick = "location.href='./category.html';">
+                                        <div>
+                                            <img src="https://collection-image.kurly.com/site-category-groups/55/jZZJOSgsf4R9TAvXrdQ999WW2gTFr0cv0Wd21bla.png" alt="">
+                                            <span>선물하기</span>
+                                        </div>
+                                        <ul>
+                                            <li><div><span>홍삼·즙</span></div></li>
+                                            <li><div><span>건강식품</span></div></li>
+                                            <li><div><span>과일·수산·정육</span></div></li>
+                                            <li><div><span>베이커리·커피·차</span></div></li>
+                                            <li><div><span>간편식·오일·캔류</span></div></li>
+                                            <li><div><span>뷰티·향수·꽃</span></div></li>
+                                            <li><div><span>리빙·생활·유아동</span></div></li>
+                                        </ul>
+                                    </li>
+                                    <li class="s_c_list_li" onclick = "location.href='./category.html';">
+                                        <div>
+                                            <img src="https://collection-image.kurly.com/site-category-groups/6/kwat5Szmq0ONTpMd4hlbcGmCOBd3FsMPyTzWxKBb.png" alt="">
+                                            <span>샐러드·간편식</span>
+                                        </div>
+                                        <ul>
+                                            <li><div><span>샐러드·닭가슴살</span></div></li>
+                                            <li><div><span>도시락·밥류</span></div></li>
+                                            <li><div><span>파스타·면류</span></div></li>
+                                            <li><div><span>떡볶이·튀김·순대</span></div></li>
+                                            <li><div><span>피자·핫도그·만두</span></div></li>
+                                            <li><div><span>폭립·떡갈비·안주</span></div></li>
+                                            <li><div><span>죽·스프·카레</span></div></li>
+                                            <li><div><span>선식·시리얼</span></div></li>
+                                        </ul>
+                                    </li>
+                                    <li class="s_c_list_li" onclick = "location.href='./category.html';">
+                                        <div>
+                                            <img src="https://collection-image.kurly.com/site-category-groups/5/CkyoRnUe2q9ngIOLW3bJPRYBw9xq9BHZ3fNQIq1c.png" alt="">
+                                            <span>국·반찬·메인요리</span>
+                                        </div>
+                                        <ul>
+                                            <li><div><span>국·탕·찌개</span></div></li>
+                                            <li><div><span>밀키트·메인요리</span></div></li>
+                                            <li><div><span>밑반찬</span></div></li>
+                                            <li><div><span>김치·젓갈·장류</span></div></li>
+                                            <li><div><span>두부·어묵·부침개</span></div></li>
+                                            <li><div><span>베이컨·햄·통조림</span></div></li>
+                                        </ul>
+                                    </li>
+                                    <li class="s_c_list_li" onclick = "location.href='./category.html';">
+                                        <div>
+                                            <img src="https://collection-image.kurly.com/site-category-groups/7/CL0LpJynh8Nh2Vqmnm62RVTPePWVU84VkWwQPjdO.png" alt="">
+                                            <span>면·양념·오일</span>
+                                        </div>
+                                        <ul>
+                                            <li><div><span>파스타·면류</span></div></li>
+                                            <li><div><span>식초·소스·드레싱</span></div></li>
+                                            <li><div><span>양념·액젓·장류</span></div></li>
+                                            <li><div><span>식용유·참기름·오일</span></div></li>
+                                            <li><div><span>소금·설탕·향신료</span></div></li>
+                                            <li><div><span>밀가루·가루·믹스</span></div></li>
+                                        </ul>
+                                    </li>
+                                    <li class="s_c_list_li" onclick = "location.href='./category.html';">
+                                        <div>
+                                            <img src="https://collection-image.kurly.com/site-category-groups/4/jj6zZg2sY94aytlc2k1udIAmWWvmUignR9VYaMcm.png" alt="">
+                                            <span>정육·계란</span>
+                                        </div>
+                                        <ul>
+                                            <li><div><span>국내산 소고기</span></div></li>
+                                            <li><div><span>수입산 소고기</span></div></li>
+                                            <li><div><span>돼지고기</span></div></li>
+                                            <li><div><span>계란류</span></div></li>
+                                            <li><div><span>닭·오리고기</span></div></li>
+                                            <li><div><span>양념육·돈까스</span></div></li>
+                                            <li><div><span>양고기</span></div></li>
+                                        </ul>
+                                    </li>
+                                    <li class="s_c_list_li" onclick = "location.href='./category.html';">
+                                        <div>
+                                            <img src="https://collection-image.kurly.com/site-category-groups/1/4IYbd0CEWkokpqiN00CAL9cDC2Q7nT101TDEn0tF.png" alt="">
+                                            <span>채소</span>
+                                        </div>
+                                        <ul>
+                                            <li><div><span>친환경</span></div></li>
+                                            <li><div><span>고구마·감자·당근</span></div></li>
+                                            <li><div><span>시금치·쌈채소·나물</span></div></li>
+                                            <li><div><span>브로콜리·파프리카·양배추</span></div></li>
+                                            <li><div><span>양파·대파·마늘·배추</span></div></li>
+                                            <li><div><span>오이·호박·고추</span></div></li>
+                                            <li><div><span>냉동·이색·간편채소</span></div></li>
+                                            <li><div><span>콩나물·버섯</span></div></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <ul id="s_list">
+                        <li onclick = "location.href='./category.html';"><span class="s_click">신상품</span></li>
+                        <li onclick = "location.href='./category.html';"><span class="s_click">베스트</span></li>
+                        <li onclick = "location.href='./category.html';"><span class="s_click">알뜰쇼핑</span></li>
+                        <li onclick = "location.href='./category.html';"><span class="s_click">특가/혜택</span></li>
+                    </ul>
+                    <div id="s_link">
+                        <a><span>샛별 · 낮</span> 배송안내</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- section -->
+        <div id="section">
+            <div class="prod_detail_wrap">
+                <!-- 내용 -->
+                <div id="container_wrapper">
+
+                    <!-- 상단 (박민지) -->
+                    <article id="product-atf" class="prod_detail_header"> <!--flex-->
+                        <div class="prod_img_box"></div>
+                        <div class="header_contents">
+                            <div class="prod_detail_view_area">
+                                <div class="prod_info">샛별배송</div> 
+                                <div class="prod_info_title_wrap"> <!--flex-->                           
+                                    <div class="prod_info_title"> <!--flex-->   
+                                        <h2 class="prod_info_name">[최현석의 쵸이닷] 새우 봉골레 파스타</h2><button
+                                            class="ico_share"></button>
+                                    </div>
+                                    <p class="prod_name">이탈리안 레스토랑의 봉골레</p>
+                                </div>
+                            </div>
+                            <!--flex-->
+                            <div class="prod_price"><span class="percent">15%</span><span 
+                                    class="percent_val">7,565</span>
+                                <span class="unit">원</span>
+                            </div>                    
+                            <div class="prod_price"><span class="val">8,900원<img
+                                        src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjEiIGhlaWdodD0iMjEiIHZpZXdCb3g9IjAgMCAyMSAyMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGNpcmNsZSBzdHJva2U9IiNDQ0MiIHN0cm9rZS13aWR0aD0iMS4yIiBjeD0iMTAuNSIgY3k9IjEwLjUiIHI9IjYuOSIvPgogICAgICAgIDxwYXRoIGQ9Ik03LjggOC43MzJoMS4zOTdjLjA0OC0uNzI2LjU0MS0xLjE5IDEuMzA4LTEuMTkuNzUgMCAxLjI1LjQ0NyAxLjI1IDEuMDY1IDAgLjU0LS4yMS44NS0uODE0IDEuMjRsLS4xNzQuMTFjLS44Mi40ODEtMS4xNjUgMS4wMTctMS4xMTIgMS45MDhsLjAwNi40MDVoMS4zOHYtLjM0YzAtLjU4OC4yMi0uODkxLjk5OC0xLjM0OS44MS0uNDgyIDEuMjYxLTEuMTE4IDEuMjYxLTIuMDI3IDAtMS4zMTUtMS4wODgtMi4yNTQtMi43MTctMi4yNTQtMS43NjYgMC0yLjczNSAxLjAyMy0yLjc4MyAyLjQzMnptMi42MTYgNi4zNzRjLS41OTQgMC0uOTg3LS4zNzUtLjk4Ny0uOTQ1IDAtLjU3Ny4zOTMtLjk1Mi45ODctLjk1Mi42MDcgMCAuOTg3LjM3NS45ODcuOTUyIDAgLjU3LS4zOC45NDUtLjk4Ny45NDV6IiBmaWxsPSIjQ0NDIiBmaWxsLXJ1bGU9Im5vbnplcm8iLz4KICAgIDwvZz4KPC9zdmc+Cg=="
+                                        alt="컬리판매가 자세히 보기" class="sale_price_info"></span></div>
+                            <div class="after_login_info">로그인 후, 할인 및 적립 혜택이 제공됩니다.</div>
+                            <!-- 상품 상세 정보 영역 -->
+                            <div class="prod_guide_wrap">
+                                <dl class="prod_guide_box"> <!--flex-->                            
+                                    <dt class="prod_guide_title">배송</dt>
+                                    <dd class="delivery_guide_text">                                
+                                        <p class="delivery_type">샛별배송</p>
+                                        <p class="delivery_info">23시 전 주문 시 내일 아침 7시 전 도착
+                                            (대구·부산·울산 샛별배송 운영시간 별도 확인)</p>
+                                    </dd>
+                                </dl>
+                                <dl class="prod_guide_box"> <!--flex-->                            
+                                    <dt class="prod_guide_title">판매자</dt>
+                                    <dd class="seller_guide_text">                                
+                                        <p class="seller_name">컬리</p>
+                                    </dd>
+                                </dl>
+                                <dl class="prod_guide_box"> <!--flex-->                           
+                                    <dt class="prod_guide_title">포장타입</dt>
+                                    <dd class="packaging_guide_text">                                
+                                        <p class="packaging_paper">냉동 (종이포장)</p>
+                                        <p class="packaging_Styrofoam">택배배송은 에코 포장이 스티로폼으로 대체됩니다.</p>
+                                    </dd>
+                                </dl>
+                                <dl class="prod_guide_box"> <!--flex-->                            
+                                    <dt class="prod_guide_title">판매단위</dt>
+                                    <dd class="sales_guide_text">                                
+                                        <p class="sales_val">1팩</p>
+                                    </dd>
+                                </dl>
+                                <dl class="prod_guide_box"> <!--flex-->                            
+                                    <dt class="prod_guide_title">중량/용량</dt>
+                                    <dd class="weight_guide_text">                                
+                                        <p class="weight_val">260g</p>
+                                    </dd>
+                                </dl>
+                                <dl class="prod_guide_box"> <!--flex-->                           
+                                    <dt class="prod_guide_title">원산지</dt>
+                                    <dd class="origin_guide_text">                                
+                                        <p class="origin_info">상세페이지 별도표기</p>
+                                    </dd>
+                                </dl>
+                                <dl class="prod_guide_box"> <!--flex-->                            
+                                    <dt class="prod_guide_title">알레르기정보</dt>
+                                    <dd class="allergy_guide_text">                                
+                                        <p class="allergy_info">
+                                            - 스파게티: 밀, 계란 함유<br>
+                                            - 봉골레올리오소스: 우유, 대두, 밀, 돼지고기, 조개류(홍합), 이산화황 함유<br>
+                                            - 흰다리새우살: 새우 함유<br>
+                                            - 이 제품은 닭고기, 땅콩, 메밀, 고등어, 게, 토마토, 쇠고기, 복숭아, 호두, 오징어, 조개류(굴, 전복 등), 잣을 사용한 제품과 같은
+                                            시설에서 제조하고
+                                            있습니다.</p><br>
+                                    </dd>
+                                </dl>
+                                <dl class="prod_guide_box"> <!--flex--> 
+                                    <dt class="prod_guide_title">유통기한(또는 소비기한)정보</dt>
+                                    <dd class="shelfLife_text">
+                                        <p class="shelfLife_info">수령일 포함 최소 115일 이상 남은 제품을 보내드립니다.</p>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <!--상품 선택 영역-->
+                            <div class="prod_select_wrap">
+                                <div class="prod_select_row">
+                                    <dl class="prod_select_box"> <!--flex-->                            
+                                        <dt class="prod_guide_title">상품선택</dt>
+                                        <div class="prod_select_area"> <!--flex-->
+                                            <div class="select_text"> <!--flex-->
+                                                <span class="select_info">[최현석의 쵸이닷] 새우
+                                                    봉골레
+                                                    파스타</span>
+                                            </div><span class="select_info">적립제외상품</span>
+                                            <!--수량 체크 영역-->
+                                            <div class="select_count"> <!--flex-->
+                                                <div class="select_button_box"> <!--flex-->
+                                                    <button type="button" aria-label="수량내리기" disabled=""
+                                                        class="button_down"></button> <!--flex-->
+                                                    <div class="count_number">1</div><button type="button"
+                                                        aria-label="수량올리기" class="button_up"></button> <!--flex-->
+                                                </div>
+                                                <div><span class="total_val_num">8,900원</span><span
+                                                        class="sale_val">7,565원</span></div>
+                                            </div>
+                                        </div>
+                                    </dl>
+                                </div>
+                                <div class="prod_price_area">
+                                    <div class="prod_price_box">
+                                        <div class="prod_info_price"> <!--flex-->
+                                            <span class="total_price">총 상품금액 :</span><span
+                                                class="total_val">7,565</span><span
+                                                class="unit">원</span>
+                                        </div>
+                                        <div class="prod_guide_row"> <!--flex-->
+                                            <span class="prod_guide_point_title">적립</span><span
+                                                class="buy_guide_text">구매 시 <strong class="point_guide_text">100원
+                                                    적립</strong></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--버튼 영역-->
+                                <div class="prod_button_area"><button class="button_wish" type="button" width="56"
+                                        height="56" radius="3"><span class="ico_wish">
+                                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik0yNS44MDcgNy44NjNhNS43NzcgNS43NzcgMCAwIDAtOC4xNzIgMEwxNiA5LjQ5N2wtMS42MzUtMS42MzRhNS43NzkgNS43NzkgMCAxIDAtOC4xNzMgOC4xNzJsMS42MzQgMS42MzQgNy40NjYgNy40NjdhMSAxIDAgMCAwIDEuNDE1IDBzMCAwIDAgMGw3LjQ2Ni03LjQ2N2gwbDEuNjM0LTEuNjM0YTUuNzc3IDUuNzc3IDAgMCAwIDAtOC4xNzJ6IiBzdHJva2U9IiM1RjAwODAiIHN0cm9rZS13aWR0aD0iMS42IiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8L3N2Zz4K"
+                                                alt="" class="css-0"></span></button><button class="button_notice"
+                                        type="button" disabled="" width="56" height="56" radius="3"><span
+                                            class="ico_notice"><img
+                                                src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIHN0cm9rZT0iI0NDQyIgc3Ryb2tlLXdpZHRoPSIxLjYiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTEyLjY2NiAyM2EzLjMzMyAzLjMzMyAwIDEgMCA2LjY2NiAwIi8+CiAgICAgICAgPHBhdGggZD0iTTI1Ljk5OCAyMi43MzhINmwuMDEzLS4wM2MuMDc2LS4xMzUuNDcxLS43MDQgMS4xODYtMS43MDlsLjc1LTEuMDV2LTYuNjM1YzAtNC40ODUgMy40MzgtOC4xNCA3Ljc0MS04LjMwOEwxNiA1YzQuNDQ2IDAgOC4wNSAzLjcyMiA4LjA1IDguMzE0djYuNjM0bDEuNzA3IDIuNDExYy4xNzMuMjUzLjI1NC4zOC4yNDIuMzh6IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KICAgIDwvZz4KPC9zdmc+Cg=="
+                                                alt="" class="css-0"></span></button>
+                                    <div class="prod_basket_area"><button class="button_basket"
+                                            type="button" radius="3"><span class="text">장바구니 담기</span></button>
+                                    </div>                        
+                                </div>
+                                <div id="product_info"></div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 상품설명/상세정보/후기/문의 탭 -->
+                    
+                    <nav class="prod_nav_wrap">
+
+                        <nav>
+
+                            <div class="prod_tab selected">
+                                <a href="#product_info" class="active"><span>상품설명</span></a>
+                            </div>
+                            <div class="prod_tab">
+                                <a href="#detail"><span>상세정보</span></a>
+                            </div>
+                            <div class="prod_tab">
+                                <a href="#review"><span>후기</span><span class="number">(9,999+)</span></a>
+                            </div>
+                            <div class="prod_tab">
+                                <a href="#inquiry"><span>문의</span></a>
+                            </div>
+
+                        </nav>
+
+                    </nav>
+
+                    <!-- 상품설명/상세정보/후기/문의 전체 -->
+                    
+                    <div class="prod_contents_wrap">
+
+                        <!-- 상품설명 (최경선) -->
+                        <div id="description" class="description_wrap">
+
+                            <div class="goods_wrap">
+                    
+                                <div class="goods_intro">
+                                    <div class="pic"> 
+                                        <img src="https://img-cf.kurly.com/shop/data/goodsview/20201224/gv00000146580_1.jpg">
+                                    </div>
+                                    <div class="context last">
+                                        <h3> 
+                                            <small>이탈리안 레스토랑의 봉골레</small>
+                                            [최현석의 쵸이닷]<br> 
+                                            새우 봉골레 파스타 밀키트 
+                                        </h3>
+                                        <p class="words">
+                                            청담동 파인 다이닝 레스토랑, 쵸이닷에서 처음으로 파스타 밀키트를 선보입니다. 쵸이닷의 오리지널 레시피가 반영된
+                                            새우 봉골레 파스타랍니다. 개별급속냉동(IQF)한 이탈리아산 숙면을 사용했고, 국내산 홍합으로 낸 국물을 소스의 베이스로 사용해서 더
+                                            깊은 맛을 완성했어요. 필요한 재료가 모두 들었고, 만들기 쉬우면서도 그 맛은 레스토랑 못지않으니 감탄하게 될 거예요. 특별한 식사를
+                                            즐기고 싶은 날, 레스토랑 못지않은 메뉴를 오직 컬리에서 만나보세요.
+                                        </p>
+                                    </div>
+                                </div>
+                    
+                    
+                                <div class="goods_point">
+                                    <h3><span>Kurly's Check Point</span></h3>
+                                    <div class="context last">
+                                        <div class="pic"> 
+                                            <img src="https://img-cf.kurly.com/shop/data/goodsview/20210120/gv20000152624_1.jpg">
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                    
+                                <div class="goods_pick">
+                                    <h3><span>Kurly’s Pick</span></h3>
+                                    <div class="context last">
+                                        <div class="pic"> <img src="https://img-cf.kurly.com/shop/data/goodsview/20210415/gv10000173257_1.jpg">
+                                        </div>
+                                        <p class="words"> 
+                                            <strong class="sub_title"><span>새우 봉골레 파스타 밀키트</span></strong> 
+                                            <b>・중량 </b>: 1팩(260g)<br> 
+                                            <b>・구성 </b>: ①스파게티 알라치타라(140g), ②엑스트라버진 올리브오일(10g), ③새우(40g), ④봉골레 올리오 소스(70g)<br> 
+                                            <b>・특징 </b>: 새우 봉골레를 만들 수 있는 파스타 밀키트입니다. 1인분 정도의 양이 들었어요.<br> 
+                                            <b>・보관법</b> : -18℃ 이하에서 냉동 보관하세요.<br> 
+                                            <b>・유의사항</b> : 소스에 페페론치노 등이 들어있어 매콤합니다. 매운 음식을 잘 드시지 못하는 경우나 아이들에게 주실 때는 유의해주세요. 
+                                        </p>
+                                    </div>
+                                </div>
+                    
+                                
+                                <div class="goods_tip">
+                                    <h3><span>Kurly’s Tip</span></h3>
+                                    <div class="tip_box">
+                                        <div class="context last">
+                                            <p class="words"> 
+                                                <strong>조리법</strong> 
+                                                1. 소스와 새우는 1~2시간 정도 냉장 해동하세요.<br> 
+                                                2. 팬에 올리브오일과 해동된 새우를 넣고 1분 정도 볶아주세요.<br> 
+                                                3. 냉동 상태의 스파게티를 끓는 물에 2분간 삶아주세요.<br> 
+                                                4. ②에 삶은 면과 소스, 면수 또는 물(50mL)을 넣고 중불에서 1분 30초간 섞어가며 볶아주세요.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                    
+                                <div class="about_brand">
+                                    <h3><span>About Brand</span></h3>
+                                    <div class="context last">
+                                        <div class="context_about">
+                                            <div class="pic"> <img src="https://img-cf.kurly.com/shop/data/goodsview/20201224/gv10000146532_1.jpg">
+                                            </div>
+                                            <p class="words"> 청담동에 자리한 쵸이닷은 스타 셰프인 최현석 셰프가 이끄는 이탈리안 파인 다이닝 레스토랑입니다. 그의
+                                                이름을 딴 점에서도 알 수 있듯, 쵸이닷은 최현석 셰프의 내공과 상상력을 고스란히 담아낸 요리를 선보여왔어요. 기본에 충실하면서도
+                                                창의적인 레시피와 아름다운 플레이팅, 무엇보다도 뛰어난 맛으로 감동을 선사하죠. 쵸이닷은 오감을 만족시킬 수 있는 레스토랑으로
+                                                미식가들의 사랑을 받고 있습니다.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 상세정보 (최경선) -->
+                        <div id="detail" style="position: relative; top: -200px;"></div>
+                        <div class="detail_wrap">
+
+                            <!-- 상세정보 이미지  -->
+                            <div class="detail_image_wrap">
+                                <img src="https://img-cf.kurly.com/shop/data/goodsview/20221024/gv10000439272_1.jpg"
+                                    alt="자세히보기 이미지" class="detail_image">
+                            </div>
+                    
+                            <!-- 상품고시정보 -->
+                            <div class="prod_info_wrap">
+                                <h3>상품고시정보</h3>
+                    
+                                <ul class="prod_info_list_wrap">
+                                    <li>제품명</li>
+                                    <li>상품설명 및 상품이미지 참조</li>
+                                    <li>식품의 유형</li>
+                                    <li>상품설명 및 상품이미지 참조</li>
+                                    <li>생산자및소재지(수입품의경우생산자,수입자및제조국)</li>
+                                    <li>상품설명 및 상품이미지 참조</li>
+                                    <li>제조연월일,유통기한또는품질유지기한</li>
+                                    <li>제품 별도 라벨 표기 참조</li>
+                                    <li>포장단위별 내용물의 용량(중량), 수량</li>
+                                    <li>상품설명 및 상품이미지 참조</li>
+                                    <li>원재료명및함량(농수산물의원산지표시에관한법률에따른원산지표시포함)</li>
+                                    <li>상품설명 및 상품이미지 참조</li>
+                                    <li>영양성분(식품등의표시·광고에관한법률에 따른 영양성분 표시대상 식품에 한함)</li>
+                                    <li>상품설명 및 상품이미지 참조</li>
+                                    <li>유전자변형식품에해당하는경우의표시</li>
+                                    <li>상품설명 및 상품이미지 참조</li>
+                                    <li>소비자안전을 위한 주의사항</li>
+                                    <li>상품설명 및 상품이미지 참조</li>
+                                    <li>수입식품에 해당하는 경우 “수입식품안전관리특별법에 따른 수입신고를 필함”의 문구</li>
+                                    <li>상품설명 및 상품이미지 참조</li>
+                                    <li>소비자상담관련전화번호</li>
+                                    <li>마켓컬리 고객행복센터 (1644-1107)</li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                            <!-- 판매자정보 -->
+                            <div class="prod_info_wrap">
+                                <h3>판매자정보</h3>
+                    
+                                <ul class="prod_info_list_wrap">
+                                    <li>판매자</li>
+                                    <li>컬리</li>
+                                </ul>
+                            </div>
+                    
+                    
+                            <!-- WHY KURLY -->
+                            <div class="why_kurly_wrap">
+                    
+                                <div class="why_kurly_title_wrap">
+                                    <span>WHY KURLY</span>
+                                </div>
+                    
+                                <div class="why_kurly_list_wrap">
+                                    <dl>
+                                        <dt class="why_kurly_list_1">깐깐한 상품위원회</dt>
+                                        <dd>나와 내 가족이 먹고 쓸 상품을 고르는<br>마음으로 매주 상품을 직접 먹어보고,<br>
+                                            경험해보고 성분, 맛, 안정성 등 다각도의<br>기준을 통과한 상품만을 판매합니다.
+                                            <span>(온라인 기준 / 자사몰, 직구 제외)</span>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt class="why_kurly_list_2">차별화된 Kurly Only 상품</dt>
+                                        <dd>전국 각지와 해외의 훌륭한 생산자가<br>믿고 선택하는 파트너, 마켓컬리.<br>
+                                            3천여 개가 넘는 컬리 단독 브랜드, 스펙의<br>Kurly Only 상품을 믿고 만나보세요.
+                                            <span>(온라인 기준 / 자사몰, 직구 제외)</span>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt class="why_kurly_list_3">신선한 풀콜드체인 배송</dt>
+                                        <dd>온라인 업계 최초로 산지에서 문 앞까지<br>상온, 냉장, 냉동 상품을 분리 포장 후<br>
+                                            최적의 온도를 유지하는 냉장 배송 시스템,<br>풀콜드체인으로 상품을 신선하게 전해드립니다.
+                                            <span>(샛별배송에 한함)</span>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt class="why_kurly_list_4">고객, 생산자를 위한 최선의 가격</dt>
+                                        <dd>매주 대형 마트와 주요 온라인 마트의 가격<br>변동 상황을 확인해 신선식품은 품질을<br>
+                                            타협하지 않는 선에서 최선의 가격으로,<br>가공식품은 언제나 합리적인 가격으로<br>정기 조정합니다.
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt class="why_kurly_list_5">환경을 생각하는 지속 가능한 유통</dt>
+                                        <dd>친환경 포장재부터 생산자가 상품에만<br>집중할 수 있는 직매입 유통구조까지,<br>
+                                            지속 가능한 유통을 고민하며 컬리를 있게<br>하는 모든 환경(생산자, 커뮤니티, 직원)이<br>더 나아질 수 있도록 노력합니다.
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                    
+                    
+                            <!-- 고객행복센터 -->
+                            <div class="customer_center_wrap">
+                    
+                                <div class="customer_center_title">
+                                    <h5>고객행복센터</h5>
+                                    <p>궁금하신 점이나 서비스 이용에 불편한 점이 있으신가요?
+                                        <span>문제가 되는 부분을 사진으로 찍어 아래 중 편하신 방법으로 접수해 주시면 빠르게 도와드리겠습니다.</span>
+                                    </p>
+                                </div>
+                    
+                                <ul class="customer_center_list_wrap">
+                                    <li>
+                                        <strong>전화 문의 1644-1107</strong>
+                                        <span>월~토요일 오전 7시 - 오후 6시</span>
+                                    </li>
+                                    <li>
+                                        <strong>카카오톡 문의</strong>
+                                        <span>월~토요일 오전 7시 - 오후 6시</span>
+                                        <span>일/공휴일 오전 7시 - 오후 1시</span>
+                                        <span class="add">카카오톡에서 '마켓컬리' 를 검색 후<br>대화창에 문의 및 불편사항을<br>남겨주세요.</span>
+                                    </li>
+                                    <li>
+                                        <strong>홈페이지 문의</strong>
+                                        <span>365일</span>
+                                        <span>로그인 &gt; 마이컬리 &gt; 1:1 문의</span>
+                                        <span class="add">고객센터 운영 시간에 순차적으로<br>답변해드리겠습니다.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                    
+                            <div>
+                    
+                                <!-- 교환 및 환불 안내 -->
+                                <div class="exch_refund_title_wrap">
+                                    <strong>교환 및 환불 안내</strong>
+                                    <p>교환 및 환불이 필요하신 경우 고객행복센터로 문의해주세요.</p>
+                                    <button type="button" id="btn_close_1" class="show" onclick="toggle_1()">닫기</button>
+                                </div>
+                    
+                                <div id="exch_refund_wrap">
+                    
+                                    <div class="exch_refund_wrap">
+                                        <strong>01. 상품에 문제가 있는 경우</strong>
+                                        <p>받으신 상품이 표시·광고 내용 또는 계약 내용과 다른 경우에는 상품을 받은 날부터 3개월 이내,
+                                            그 사실을 알게 된 날부터 30일 이내에 교환 및 환불을 요청하실 수 있습니다.
+                                            상품의 정확한 상태를 확인할 수 있도록 사진을 함께 보내주시면 더 빠른 상담이 가능합니다.
+                    
+                                            ※ 상품에 문제가 있는 것으로 확인되면 배송비는 컬리가 부담합니다.
+                                        </p>
+                                    </div>
+                                    <div class="exch_refund_wrap">
+                                        <strong>02. 단순 변심, 주문 착오의 경우</strong>
+                                        <p><bold class="bold">신선 / 냉장 / 냉동 식품</bold>재판매가 불가한 상품의 특성상, 단순 변심, 주문 착오 시 교환 및 반품이 어려운 점 양해 부탁드립니다.
+                                            상품에 따라 조금씩 맛이 다를 수 있으며, 개인의 기호에 따라 같은 상품도 다르게 느끼실 수 있습니다.
+                                            <bold class="bold">유통기한 30일 이상 식품 (신선 / 냉장 / 냉동 제외) &amp; 기타 상품</bold>상품을 받은 날부터 7일 이내에 고객행복센터로 문의해주세요.
+                                            ※ 단순 변심으로 인한 교환 또는 환불의 경우 고객님께서 배송비 6,000원을 부담하셔야 합니다.
+                                            (주문 건 배송비를 결제하셨을 경우 3,000원)
+                                        </p>
+                                    </div>
+                    
+                                    <div class="exch_refund_wrap">
+                                        <strong>03. 교환·반품이 불가한 경우</strong>
+                                        <p>다음에 해당하는 교환·환불 신청은 처리가 어려울 수 있으니 양해 부탁드립니다.
+                    
+                                            <span>- 고객님의 책임 있는 사유로 상품이 멸실되거나 훼손된 경우
+                                            (단, 상품의 내용을 확인하기 위해 포장 등을 훼손한 경우는 제외)</span>
+                                            <span>- 고객님의 사용 또는 일부 소비로 상품의 가치가 감소한 경우</span>
+                                            <span>- 시간이 지나 다시 판매하기 곤란할 정도로 상품의 가치가 감소한 경우</span>
+                                            <span>- 복제가 가능한 상품의 포장이 훼손된 경우</span>
+                                            <span>- 고객님의 주문에 따라 개별적으로 생산되는 상품의 제작이 이미 진행된 경우</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                                <!-- 주문 취소 안내 -->
+                                <div class="cancel_title_wrap">
+                                    <strong>주문 취소 안내</strong>
+                                    <p><bold>- [주문완료] 상태일 경우에만 주문 취소 가능합니다. 
+                                            <br>- [마이컬리 &gt; 주문내역 상세페이지] 에서 직접 취소하실 수 있습니다.</bold>
+                                    </p>
+                                    <button type="button" id="btn_close_2" class="show" onclick="toggle_2()">닫기</button>
+                                </div>
+                    
+                                <div id="cancel_wrap">
+                    
+                                    <div class="cancel_wrap">
+                                        <strong>주문 취소 관련</strong>
+                                        <p> - [배송준비중] 부터는 취소가 불가하니, 반품으로 진행해주세요. (상품에 따라 반품이 불가할 수 있습니다.)
+                                            - 주문마감 시간에 임박할수록 취소 가능 시간이 짧아질 수 있습니다.
+                                            - 비회원은 App 또는 모바일 웹사이트에서 [마이컬리 &gt; 비회원 주문조회 페이지] 에서 취소가 가능합니다.
+                                            - 일부 예약상품은 배송 3~4일 전에만 취소 가능합니다.
+                                            - 주문상품의 부분취소는 불가능합니다. 전체 주문 취소 후 다시 구매 해주세요.
+                                        </p>
+                                    </div>
+                                    <div class="cancel_wrap">
+                                        <strong>결제 승인 취소 / 환불 관련</strong>
+                                        <p>- 카드 환불은 카드사 정책에 따르며, 자세한 사항은 카드사에 문의해주세요. 
+                                            - 결제 취소 시, 사용하신 적립금과 쿠폰도 모두 복원됩니다.</p>
+                                    </div>
+                                </div>
+                    
+                                    <!-- 배송관련 안내 -->
+                                    <div class="delivery_title_wrap">
+                                        <strong>배송관련 안내</strong>
+                                        <p>배송 과정 중 기상 악화 및 도로교통 상황에 따라 부득이하게 지연 배송이 발생될 수 있습니다.</p>
+                                        <div id="review"></div>
+                                    </div>
+                    
+                            </div>
+                        </div>
+
+                        <!-- 후기 (최지민) -->
+                        <div class="wrap detail">
+                            <div class="wrap review">
+                                <div>
+                                    <h2 class="product_review">상품 후기</h2>
+                                </div>
+                                <div>
+                                    <ul class="review_ul">
+                                        사진후기 100원, 글후기 50원 적립금 혜택이 있어요.
+                                        <li class="review_ul_li"><b>·</b> 퍼플, 더퍼플은 2배 적립 (사진 200원, 글 100원) / 주간 베스트 후기로 선정 시 5,000원을 추가 적립
+                                        </li>
+                                        <li class="review_ul_li"><b>·</b> 후기 작성은 배송완료일로부터 30일 이내 가능합니다.</li>
+                                        <li class="review_ul_li"><b>·</b> 작성하신 후기는 확인 후 적립금이 지급됩니다. (영업일 기준 평균 1~2일 소요)</li>
+                                    </ul>
+                                </div>
+                    
+                                <!-- 상품후기 바로 밑 사진 1~8개-->
+                                <div class="reivew_photo">
+                                    <button class="review_photo1"></button>
+                                    <button class="review_photo2"></button>
+                                    <button class="review_photo3"></button>
+                                    <button class="review_photo4"></button>
+                                    <button class="review_photo5"></button>
+                                    <button class="review_photo6"></button>
+                                    <button class="review_photo7"></button>
+                                    <!-- 마지막 사진은 +더보기 기능이 있음 -->
+                                    <button class="review_photo8"></button>
+                                    <!-- +더보기 링크 -->
+                                    <button class="review_more_link"><span>+더보기</span></button>
+                                </div>
+                    
+                                <!-- 수정이 필요 -->
+                                <div class="user_review_div">
+                                    <!-- 총 게시물 수 -->
+                                    <div class="total_post">
+                                        <span class="total_post_span">총 24,146개</span>
+                                    </div>
+                                    <div class="recomm_regis">
+                                        <!-- 추천순 -->
+                                        <button class="number_of_recommendations">추천순
+                                            <!-- ::after -->
+                                        </button>
+                                        <!-- 최근 등록순 -->
+                                        <button class="last_registration">최근등록순</button>
+                                    </div>
+                                </div>
+                    
+                                <!-- 공지 -->
+                                <div class="notice first" onclick="notice_click1()">
+                                    <span class="notice_span first">공지</span>
+                                    <button class="notice_button first">상품 후기 적립금 정책 안내</button>
+                                </div>
+                                <p class="notice_content first" display="none">
+                                    [ 금주의 Best 후기 및 상품 후기 적립금 정책 변경 안내 ]
+                                    고객님 안녕하세요. 컬리 입니다.
+                                    적립금 지급 정책을 안내드리니 컬리 이용에 참고 부탁드립니다.
+                                    ■ 적립금 지급 정책 ■
+                                    1. 일반 후기
+                                    -글 후기 50원/건
+                                    -사진 후기 100원/건
+                                    *퍼플/더퍼플 러버스 고객님께는 더블 후기 적립금이 지급됩니다.
+                                    *지급에 영업일 기준 1~2일 소요됩니다.
+                                    → 금~일 작성 시, 월요일 지급
+                                    2. 베스트 후기
+                                    1) 선정 건 수 : 일주일 최대 100건
+                                    2) 혜택 : 선정 시 적립금 5,000원
+                                    3) 지급 일시 : 매주 수요일 (지급일이 공휴일의 경우 전 영업일)
+                                    *당첨 ID 및 그 주의 Best 후기는 후기 게시판에서 확인하실 수 있습니다.
+                                    3. 상품 후기 게시판(Product review) 적립금 지급 유의 사항
+                                    컬리는 믿을 수 있는 후기문화를 함께 만들어가고자 합니다. 따라서 후기 내용이 아래에 해당하는 경우에는 검토 후 삭제 및 적립금 회수 조치될 수 있습니다.
+                                    1. 욕설, 폭력성, 음란성, 상업성 등 업체나 타인에게 불쾌한 내용을 작성한 경우
+                                    2. 구매한 상품과 무관한 내용이나 동일 문자/단순 초성의 반복 등 부적합한 내용을 작성한 경우
+                                    3. 상품의 기능이나 효과 등에 오해의 소지가 있는 내용을 작성한 경우
+                                    4. 저작권, 초상권 등 타인의 권리를 침해하는 이미지, 동영상을 사용한 경우
+                                    5. 구매한 상품이 아닌 캡쳐 사진, 포장 박스 사진 등 상품과 관련 없는 이미지, 동영상을 사용한 경우
+                                    또한, 비정상적인 방법을 통해 후기를 작성하고 적립금을 취득한 경우 작성자에 법적 책임의 소지가 있음을 알려드립니다.
+                                </p>
+                                <div class="notice second" onclick="notice_click2()">
+                                    <span class="notice_span second">공지</span>
+                                    <button class="notice_button second">금주의 베스트 후기 안내</button>
+                                </div>
+                                <p class="notice_content second" display="none">
+                                    ■ 베스트 후기 당첨자 안내
+                    
+                                    고객님 안녕하세요, 컬리입니다
+                    
+                                    [ 2022년 10월 24일 ~ 2022년 10월 30일 ]의 베스트 후기 당첨자 공지드립니다.
+                    
+                                    컬리는 상품에 대한 고객 여러분의 생생한 의견을 듣고 더 나은 상품을 준비하기 위해 상품 후기 게시판을 운영하고 있습니다
+                    
+                                    실제로 상품의 후기가 구매 결정에 있어 큰 도움이 된 베스트 후기를 아래로 공유드립니다.
+                    
+                                    정성껏 후기를 작성해주신 모든 고객님께 감사드립니다.
+                    
+                                    byeol**** 김*별 5000
+                                    mingd**** 이*정 5000
+                                    swa**** 이*은 5000
+                                    market**** 노*수 5000
+                                    sx**** 천*영 5000
+                                    daw**** 김*운 5000
+                                    zzingoh**** 오*영 5000
+                                    gyd**** 장*은 5000
+                                    je**** 정*주 5000
+                                    dlrod**** 한*희 5000
+                                    river**** 강*주 5000
+                                    hwlo**** 정*원 5000
+                                    lhg**** 김*미 5000
+                                    kimjooe**** 김*은 5000
+                                    Lau**** 안*진 5000
+                                    yjt2**** 박*돈 5000
+                                    her**** 오*진 5000
+                                    Ima**** 정*나 5000
+                                    ylim**** 김*림 5000
+                                    kjec**** 김*은 5000
+                                    gounm**** 이*희 5000
+                                    rlsvkfa**** 정*은 5000
+                                    rkgus**** 이*현 5000
+                                    lh**** 이*결 5000
+                                    haha7**** 김*영 5000
+                                    eunjon**** 꼬** 5000
+                                    ew**** 한*우 5000
+                                    jhj**** 전*진 5000
+                                    lk**** 김*연 5000
+                                    heejo**** 조*주 5000
+                                    ii03**** 이*비 5000
+                                    oni**** 김*식 5000
+                                    uha**** 오*선 5000
+                                    yoojin**** 이*진 5000
+                                    vely**** 김*연 5000
+                                    pu**** 이*표 5000
+                                    real**** 리*리 5000
+                                    lemon**** 김*연 5000
+                                    cheri**** 윤*인 5000
+                                    cjka**** 강*정 5000
+                                    wlgp**** 원*혜 5000
+                                    minj**** 최*지 5000
+                                    hyx**** 김*영 5000
+                                    bonjovi**** 장*연 5000
+                                    xoz**** 홍*현 5000
+                                    bjs**** 변*성 5000
+                                    jijiwl**** 이*원 5000
+                                    lhj**** 이*정 5000
+                                    wonn**** 채*원 5000
+                                    www**** 황*주 5000
+                                    le**** 김*진 5000
+                                    jull**** 이*정 5000
+                                    bear7**** 편*란 5000
+                                    rlathfk**** 김*라 5000
+                                    CurryQue**** 정*유 5000
+                                    jeo**** 진*옥 5000
+                                    el**** 이*심 5000
+                                    pi**** 김*나 5000
+                                    hhy**** 황*연 5000
+                                    skyl**** 이*새 5000
+                                    sooyoun**** 안*영 5000
+                                    yos**** 송*선 5000
+                                    gywjd**** 구*정 5000
+                                    southp**** 이*영 5000
+                                    yesbin**** 안*진 5000
+                                    milgarud**** 박*은 5000
+                                    Mybi**** 송*란 5000
+                                    zm**** 정*두 5000
+                                    yellow**** 김*림 5000
+                                    skylo**** 김*경 5000
+                                    momol**** 이*주 5000
+                                    ql**** 띠*용 5000
+                                    inh**** 강*지 5000
+                                    wsy**** 장*기 5000
+                                    dr**** 최*지 5000
+                                    sue81**** 황*영 5000
+                                    summer**** 김*미 5000
+                                    olivia**** 강*아 5000
+                                    ka**** 공*영 5000
+                                    dson**** 김*자 5000
+                                    hyewo**** 최*원 5000
+                                    mu**** 고*호 5000
+                                    rlafm**** 김*선 5000
+                                    kz**** 김** 5000
+                                    cute05**** 이*연 5000
+                                    Ra**** 권*정 5000
+                                    lcrysta**** 강*경 5000
+                                    qkrd**** 박*연 5000
+                                    hpl**** 박*연 5000
+                                    Lucille97**** 원*지 5000
+                                    lbj**** 이*지 5000
+                    
+                                    컬리 드림.
+                                </p>
+                    
+                    
+                                <!-- 사용자 게시글 첫 번째 -->
+                                <div class="user_post_div_first first">
+                                    <div class="user_post_div_second first">
+                                        <div class="user_best_purple first">
+                                            <span class="best first">베스트</span>
+                                            <span class="purple first">퍼플</span>
+                                            <span class="user_name first">주*영</span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <!-- 글 제목, 내용, 사진, 요일 등등 -->
+                                        <div class="user_content_div_first first">
+                                            <div>
+                                                <div class="user_content_title_div first">
+                                                    <h3 class="user_content_title first">[최현석의 쵸이닷] 새우 봉골레 파스타</h3>
+                                                </div>
+                                                <p class="content_writing first">
+                                                    늦잠 실컷 자고 일어 나서 아침에 냉장고로 옮겨 둔 쵸이닷 봉골레 파스타를 꺼내봤어요.
+                    
+                                                    간단히 안내되어 있는 조리법대로 뚝딱뚝딱 따라했는데 금방 일품 요리가 완성되었어요!! ㅎㅎㅎ
+                    
+                                                    1. 면을 삶을 물을 먼저 끓여줬어요.
+                                                    2. 끓는 물에 면을 넣어서 익히는 동안
+                                                    3. 올리브유와 새우, 소스를 적당히 볶아줬어요. (간편하게!)
+                                                    4. 새우가 익어 보일 때쯤 간 마늘 한숟가락 넣어서 볶다가
+                                                    5. 면이 다 익어 갈 때 물을 반국자 정도 남겨 두고 버린 후
+                                                    6. 소스볶던 팬에 부어서 조금 더 달달달 볶아줬어요.
+                                                    7. 소스와 물이 어느 정도 면에 스며들어 잘 볶아지면 완성!!
+                    
+                                                    별다른 기술이 없어도, 다른 곁들임 반찬이 없어도 훌륭한 파스타 요리를 할 수 있어서 적극 추천해요!!
+                                                    면은 생면이라 쫀쫀하면서고 특유의 식감이 느껴지고, 소스도 잘 흡수 되어서 감칠맛이 풍부해서 맛있어요.
+                                                    주말 점심을 쵸이닷 봉골레 파스타 덕분에 잘 먹었습니다. ㅎㅎ
+                                                </p>
+                                                <div class="user_photo first">
+                                                    <button class="user_review_photo1_first"></button>
+                                                    <button class="user_review_photo2_first"></button>
+                                                    <button class="user_review_photo3_first"></button>
+                                                    <button class="user_review_photo4_first"></button>
+                                                    <button class="user_review_photo5_first"></button>
+                                                    <button class="user_review_photo6_first"></button>
+                                                </div>
+                                                <div class="user_footer first">
+                                                    <div>
+                                                        <span class="user_update first">2022.04.30</span>
+                                                    </div>
+                                                    <!-- 도움이 돼요 -->
+                                                    <button class="helpful first">
+                                                        <span class="user_heplful first"></span>
+                                                        <span>도움이 돼요 3</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <!--      두번째 게시글      -->
+                                <div class="user_post_div_first first">
+                                    <div class="user_post_div_second second ">
+                                        <div class="user_best_purple second">
+                                            <span class="best second">베스트</span>
+                                            <span class="purple second">퍼플</span>
+                                            <span class="user_name second">이*선</span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <!-- 글 제목, 내용, 사진, 요일 등등 -->
+                                        <div class="user_content_div_first second">
+                                            <div>
+                                                <div class="user_content_title_div second">
+                                                    <h3 class="user_content_title second">[최현석의 쵸이닷] 새우 봉골레 파스타</h3>
+                                                </div>
+                                                <p class="content_writing second">
+                                                    *구매하게된 계기
+                                                    유튜브를 보다가 마켓컬리에서 맛있게 드셨다고 하셔서 궁금했는데, 마침 그날 7000원 쿠폰이 들어와서 구매를 하게되었습니다. 그리고 최현석셰프님 음식
+                                                    잘하시는걸로 유명하셔서 기대를 했습니다
+                    
+                    
+                                                    *조리하는방법
+                                                    라면보다는 시간이 더 걸리지만 어렵지않아서 저같은 똥손들도 충분히 완성하실 수 있는 난이도였습니다
+                    
+                                                    - 소스와 냉동새우를 1~2시간 전 상온에서 해동해주세요
+                                                    - 동봉된 올리브오일과 해동된 새우를 2분간 볶아서 익혀주세요
+                                                    - 냉동상태의 스파게티면을 끓는 물에 2분간 삶아주세요
+                                                    - 새우를 볶던 팬에 삶아진 면과 면수 또는 물(50ml)을 해동된 소스와 넣고 1분 50초간 중불에서 섞어 볶아주세요
+                    
+                    
+                    
+                                                    *맛평가
+                                                    눈에 보이는 조개와 홍합은 없지만 소스에서 조개의 맛이 깊게 나면서 봉골레파스타의 맛이 살아납니다.
+                                                    면도 파스타면이 아니라 생면이라 식감도 좋고 소스가 더 잘 스며드는 느낌이었습니다. 그러나 원래 매운것을 좋아하시거나 느끼한것을 잘 못드시는 분들은
+                                                    베트남고추를 넣어서 드시면 훨씬 맛있을 것이라고 생각합니다
+                                                </p>
+                                                <div class="user_photo second">
+                                                    <button class="user_review_photo1_second"></button>
+                                                    <button class="user_review_photo2_second"></button>
+                                                    <button class="user_review_photo3_second"></button>
+                                                </div>
+                                                <div class="user_footer second">
+                                                    <div>
+                                                        <span class="user_update second">2021.11.13</span>
+                                                    </div>
+                                                    <!-- 도움이 돼요 -->
+                                                    <button class="helpful second">
+                                                        <span class="user_heplful second"></span>
+                                                        <span>도움이 돼요 7</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <!-- 세 번째 게시글  -->
+                    
+                                <div class="user_post_div_first first">
+                                    <div class="user_post_div_second third">
+                                        <div class="user_best_purple third">
+                                            <span class="freinds">프렌즈</span>
+                                            <span class="user_name third">최*희</span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <!-- 글 제목, 내용, 사진, 요일 등등 -->
+                                        <div class="user_content_div_first third">
+                                            <div>
+                                                <div class="user_content_title_div third">
+                                                    <h3 class="user_content_title third">[최현석의 쵸이닷] 새우 봉골레 파스타</h3>
+                                                </div>
+                                                <p class="content_writing third">
+                                                    아직 먹기 전인데 평이 좋아 구매했어요 기대기다
+                                                </p>
+                                                <div class="user_photo third">
+                                                    <button class="user_review_photo1_third"></button>
+                                                </div>
+                                                <div class="user_footer third">
+                                                    <div>
+                                                        <span class="user_update third">2021.11.10</span>
+                                                    </div>
+                                                    <!-- 도움이 돼요 -->
+                                                    <button class="helpful second">
+                                                        <span class="user_heplful third"></span>
+                                                        <span>도움이 돼요</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <!-- 네 번째 게시글  -->
+                    
+                                <div class="user_post_div_first first">
+                                    <div class="user_post_div_second forth">
+                                        <div class="user_best_purple forth">
+                                            <span class="white">화이트</span>
+                                            <span class="user_name forth">한*이</span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <!-- 글 제목, 내용, 사진, 요일 등등 -->
+                                        <div class="user_content_div_first forth">
+                                            <div>
+                                                <div class="user_content_title_div forth">
+                                                    <h3 class="user_content_title forth">[최현석의 쵸이닷] 새우 봉골레 파스타</h3>
+                                                </div>
+                                                <p class="content_writing forth">
+                                                    맛있게 잘 먹었어요ㅎ
+                                                </p>
+                                                <div class="user_photo forth">
+                                                </div>
+                                                <div class="user_footer forth">
+                                                    <div>
+                                                        <span class="user_update forth">2021.11.10</span>
+                                                    </div>
+                                                    <!-- 도움이 돼요 -->
+                                                    <button class="helpful forth">
+                                                        <span class="user_heplful forth"></span>
+                                                        <span>도움이 돼요</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <!--  다섯번째 게시글          -->
+                                <div class="user_post_div_first first">
+                                    <div class="user_post_div_second fifth">
+                                        <div class="user_best_purple fifth">
+                                            <span class="freinds">프렌즈</span>
+                                            <span class="user_name fifth">손*원</span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <!-- 글 제목, 내용, 사진, 요일 등등 -->
+                                        <div class="user_content_div_first fifth">
+                                            <div>
+                                                <div class="user_content_title_div fifth">
+                                                    <h3 class="user_content_title fifth">[최현석의 쵸이닷] 새우 봉골레 파스타</h3>
+                                                </div>
+                                                <p class="content_writing fifth">
+                                                    맵고 짭니다. 물 50미리 넣으라고 되어있는데 100미리 정도는 넣어야 간이 맞는 거 같아요ㅎㅎ 면 식감 독특하고 한번쯤 먹어볼 만해요!!
+                                                </p>
+                                                <div class="user_photo fifth">
+                                                </div>
+                                                <div class="user_footer fifth">
+                                                    <div>
+                                                        <span class="user_update fifth">2021.11.10</span>
+                                                    </div>
+                                                    <!-- 도움이 돼요 -->
+                                                    <button class="helpful fifth">
+                                                        <span class="user_heplful fifth"></span>
+                                                        <span>도움이 돼요</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <!--  여섯번째 게시글          -->
+                                <div class="user_post_div_first first">
+                                    <div class="user_post_div_second sixth">
+                                        <div class="user_best_purple sixth">
+                                            <span class="white">화이트</span>
+                                            <span class="user_name sixth">김*영</span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <!-- 글 제목, 내용, 사진, 요일 등등 -->
+                                        <div class="user_content_div_first sixth">
+                                            <div>
+                                                <div class="user_content_title_div sixth">
+                                                    <h3 class="user_content_title sixth">[최현석의 쵸이닷] 새우 봉골레 파스타</h3>
+                                                </div>
+                                                <p class="content_writing sixth">
+                                                    자주 구매
+                                                    너무 맛있어요
+                                                </p>
+                                                <div class="user_photo sixth">
+                                                    <button class="user_review_photo1_sixth"></button>
+                                                </div>
+                                                <div class="user_footer sixth">
+                                                    <div>
+                                                        <span class="user_update sixth">2021.11.10</span>
+                                                    </div>
+                                                    <!-- 도움이 돼요 -->
+                                                    <button class="helpful sixth">
+                                                        <span class="user_heplful sixth"></span>
+                                                        <span>도움이 돼요</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <!--  알곱번째 게시글          -->
+                                <div class="user_post_div_first first">
+                                    <div class="user_post_div_second seventh">
+                                        <div class="user_best_purple seventh">
+                                            <span class="rabender">라벤더</span>
+                                            <span class="user_name seventh">김*영</span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <!-- 글 제목, 내용, 사진, 요일 등등 -->
+                                        <div class="user_content_div_first seventh">
+                                            <div>
+                                                <div class="user_content_title_div seventh">
+                                                    <h3 class="user_content_title seventh">[최현석의 쵸이닷] 새우 봉골레 파스타</h3>
+                                                </div>
+                                                <p class="content_writing seventh">
+                                                    생각보다 양이 많네여^^;
+                                                    근데 제입엔 좀 매웠어요 ㅠㅠ
+                                                    바게트빵으로 매운맛 달래며 먹었네요^^;
+                                                    가끔씩 별식으로 괜찮은듯해요~
+                                                </p>
+                                                <div class="user_photo seventh">
+                                                    <button class="user_review_photo1_seventh"></button>
+                                                    <button class="user_review_photo2_seventh"></button>
+                                                </div>
+                                                <div class="user_footer seventh">
+                                                    <div>
+                                                        <span class="user_update seventh">2021.11.10</span>
+                                                    </div>
+                                                    <!-- 도움이 돼요 -->
+                                                    <button class="helpful seventh">
+                                                        <span class="user_heplful seventh"></span>
+                                                        <span>도움이 돼요</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <!--  여덟번째 게시글          -->
+                                <div class="user_post_div_first first">
+                                    <div class="user_post_div_second eighth">
+                                        <div class="user_best_purple eighth">
+                                            <span class="freinds">프렌즌</span>
+                                            <span class="user_name eighth">김*영</span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <!-- 글 제목, 내용, 사진, 요일 등등 -->
+                                        <div class="user_content_div_first eighth">
+                                            <div>
+                                                <div class="user_content_title_div eighth">
+                                                    <h3 class="user_content_title eighth">[최현석의 쵸이닷] 새우 봉골레 파스타</h3>
+                                                </div>
+                                                <p class="content_writing eighth">
+                                                    새우 봉골레 파스타 모듈러 맛있어요
+                                                </p>
+                                                <div class="user_photo eighth">
+                                                    <button class="user_review_photo1_eighth"></button>
+                                                </div>
+                                                <div class="user_footer eighth">
+                                                    <div>
+                                                        <span class="user_update eighth">2021.11.09</span>
+                                                    </div>
+                                                    <!-- 도움이 돼요 -->
+                                                    <button class="helpful eighth">
+                                                        <span class="user_heplful eighth"></span>
+                                                        <span>도움이 돼요</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- ---------------------------------------------------------------------------------- -->
+                                <!-- 사용자 게시글 첫 번째 -->
+                                <div class="user_post_div_first second">
+                                    <div class="user_post_div_second first">
+                                        <div class="user_best_purple first">
+                                            <span class="normal first">일반</span>
+                                            <span class="user_name first">강*화</span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <!-- 글 제목, 내용, 사진, 요일 등등 -->
+                                        <div class="user_content_div_first first">
+                                            <div>
+                                                <div class="user_content_title_div first">
+                                                    <h3 class="user_content_title first">[최현석의 쵸이닷] 새우 봉골레 파스타</h3>
+                                                </div>
+                                                <p class="content_writing first">
+                                                    파스타 좋아해서 최현석 여러종류 사먹어 보고 맛있어서 봉골레도 주문했어요. 아직 먹어보진 않았지만 다른것들 먹어보고 기대하고 있어요. 이번주말 기대하고
+                                                    있어요.
+                                                </p>
+                                                <div class="user_photo first">
+                                                    <button class="user_review_photo1_second first"></button>
+                                                </div>
+                                                <div class="user_footer first">
+                                                    <div>
+                                                        <span class="user_update first">2022.11.15</span>
+                                                    </div>
+                                                    <!-- 도움이 돼요 -->
+                                                    <button class="helpful first">
+                                                        <span class="user_heplful first"></span>
+                                                        <span>도움이 돼요</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <!--      두번째 게시글      -->
+                                <div class="user_post_div_first second">
+                                    <div class="user_post_div_second second ">
+                                        <div class="user_best_purple second">
+                                            <span class="normal first">일반</span>
+                                            <span class="user_name second">김*연</span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <!-- 글 제목, 내용, 사진, 요일 등등 -->
+                                        <div class="user_content_div_first second">
+                                            <div>
+                                                <div class="user_content_title_div second">
+                                                    <h3 class="user_content_title second">[최현석의 쵸이닷] 새우 봉골레 파스타</h3>
+                                                </div>
+                                                <p class="content_writing second">
+                                                    오늘해먹었는데 맛있어요
+                                                    처음에 매워서 기침이나왔는데
+                                                    먹으면 먹을수록 맛있네요
+                                                </p>
+                                                <div class="user_photo second">
+                                                    <button class="user_review_photo1_second second"></button>
+                                                </div>
+                                                <div class="user_footer second">
+                                                    <div>
+                                                        <span class="user_update second">2021.11.15</span>
+                                                    </div>
+                                                    <!-- 도움이 돼요 -->
+                                                    <button class="helpful second">
+                                                        <span class="user_heplful second"></span>
+                                                        <span>도움이 돼요</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <!-- 세 번째 게시글  -->
+                    
+                                <div class="user_post_div_first second">
+                                    <div class="user_post_div_second third">
+                                        <div class="user_best_purple third">
+                                            <span class="freinds">프렌즈</span>
+                                            <span class="user_name third">이*문</span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <!-- 글 제목, 내용, 사진, 요일 등등 -->
+                                        <div class="user_content_div_first third">
+                                            <div>
+                                                <div class="user_content_title_div third">
+                                                    <h3 class="user_content_title third">[최현석의 쵸이닷] 새우 봉골레 파스타</h3>
+                                                </div>
+                                                <p class="content_writing third">
+                                                    맛있어요..외식하는느낌나요...
+                                                </p>
+                                                <div class="user_photo third">
+                                                </div>
+                                                <div class="user_footer third">
+                                                    <div>
+                                                        <span class="user_update third">2021.11.15</span>
+                                                    </div>
+                                                    <!-- 도움이 돼요 -->
+                                                    <button class="helpful second">
+                                                        <span class="user_heplful third"></span>
+                                                        <span>도움이 돼요</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <!-- 네 번째 게시글  -->
+                    
+                                <div class="user_post_div_first second">
+                                    <div class="user_post_div_second forth">
+                                        <div class="user_best_purple forth">
+                                            <span class="normal">일반</span>
+                                            <span class="user_name forth">윤*미</span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <!-- 글 제목, 내용, 사진, 요일 등등 -->
+                                        <div class="user_content_div_first forth">
+                                            <div>
+                                                <div class="user_content_title_div forth">
+                                                    <h3 class="user_content_title forth">[최현석의 쵸이닷] 새우 봉골레 파스타</h3>
+                                                </div>
+                                                <p class="content_writing forth">
+                                                    맛있어요..
+                                                    단, 매운거 못 드시는 분은 조심!!
+                                                    매워서 느끼하지 않고 짭쪼롬하게 맛있는 것 같아요 ^^. 부족하지 않은 새우가 압권입니다.. 살짝 해물 추가해서 드시면 더 좋을 것 같아요
+                                                </p>
+                                                <div class="user_photo forth">
+                                                </div>
+                                                <div class="user_footer forth">
+                                                    <div>
+                                                        <span class="user_update forth">2021.11.15</span>
+                                                    </div>
+                                                    <!-- 도움이 돼요 -->
+                                                    <button class="helpful forth">
+                                                        <span class="user_heplful forth"></span>
+                                                        <span>도움이 돼요</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <!--  다섯번째 게시글          -->
+                                <div class="user_post_div_first second"">
+                                    <div class=" user_post_div_second fifth">
+                                    <div class="user_best_purple fifth">
+                                        <span class="white">화이트</span>
+                                        <span class="user_name fifth">박*진</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <!-- 글 제목, 내용, 사진, 요일 등등 -->
+                                    <div class="user_content_div_first fifth">
+                                        <div>
+                                            <div class="user_content_title_div fifth">
+                                                <h3 class="user_content_title fifth">[최현석의 쵸이닷] 새우 봉골레 파스타</h3>
+                                            </div>
+                                            <p class="content_writing fifth">
+                                                인기 많은 제품이라 첫구매했는데 진짜 맛있네요
+                                            </p>
+                                            <div class="user_photo fifth">
+                                                <button class="user_review_photo1_second fifth"></button>
+                                            </div>
+                                            <div class="user_footer fifth">
+                                                <div>
+                                                    <span class="user_update fifth">2021.11.15</span>
+                                                </div>
+                                                <!-- 도움이 돼요 -->
+                                                <button class="helpful fifth">
+                                                    <span class="user_heplful fifth"></span>
+                                                    <span>도움이 돼요</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <!--  여섯번째 게시글          -->
+                            <div class="user_post_div_first second">
+                                <div class="user_post_div_second sixth">
+                                    <div class="user_best_purple sixth">
+                                        <span class="normal">일반</span>
+                                        <span class="user_name sixth">송*영</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <!-- 글 제목, 내용, 사진, 요일 등등 -->
+                                    <div class="user_content_div_first sixth">
+                                        <div>
+                                            <div class="user_content_title_div sixth">
+                                                <h3 class="user_content_title sixth">[최현석의 쵸이닷] 새우 봉골레 파스타</h3>
+                                            </div>
+                                            <p class="content_writing sixth">
+                                                약간 매콤해요 맛은 좋아요
+                                            </p>
+                                            <div class="user_photo sixth">
+                                            </div>
+                                            <div class="user_footer sixth">
+                                                <div>
+                                                    <span class="user_update sixth">2021.11.15</span>
+                                                </div>
+                                                <!-- 도움이 돼요 -->
+                                                <button class="helpful sixth">
+                                                    <span class="user_heplful sixth"></span>
+                                                    <span>도움이 돼요</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <!--  알곱번째 게시글          -->
+                            <div class="user_post_div_first second">
+                                <div class="user_post_div_second seventh">
+                                    <div class="user_best_purple seventh">
+                                        <span class="normal">일반</span>
+                                        <span class="user_name seventh">배*훈</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <!-- 글 제목, 내용, 사진, 요일 등등 -->
+                                    <div class="user_content_div_first seventh">
+                                        <div>
+                                            <div class="user_content_title_div seventh">
+                                                <h3 class="user_content_title seventh">[최현석의 쵸이닷] 새우 봉골레 파스타</h3>
+                                            </div>
+                                            <p class="content_writing seventh">
+                                                재구매에 또 재구매 해서 먹어요
+                                            </p>
+                                            <div class="user_photo seventh">
+                                                <button class="user_review_photo1_second seventh"></button>
+                                            </div>
+                                            <div class="user_footer seventh">
+                                                <div>
+                                                    <span class="user_update seventh">2021.11.15</span>
+                                                </div>
+                                                <!-- 도움이 돼요 -->
+                                                <button class="helpful seventh">
+                                                    <span class="user_heplful seventh"></span>
+                                                    <span>도움이 돼요</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <!--  여덟번째 게시글          -->
+                            <div class="user_post_div_first second">
+                                <div class="user_post_div_second eighth">
+                                    <div class="user_best_purple eighth">
+                                        <span class="normal">일반</span>
+                                        <span class="user_name eighth">노*진</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <!-- 글 제목, 내용, 사진, 요일 등등 -->
+                                    <div class="user_content_div_first eighth">
+                                        <div>
+                                            <div class="user_content_title_div eighth">
+                                                <h3 class="user_content_title eighth">[최현석의 쵸이닷] 새우 봉골레 파스타</h3>
+                                            </div>
+                                            <p class="content_writing eighth">
+                                                맛있어요! 간편하게 먹기좋고 정말 자주사는 파스타에요!
+                                            </p>
+                                            <div class="user_photo eighth">
+                                                <button class="user_review_photo1_second eighth"></button>
+                                            </div>
+                                            <div class="user_footer eighth">
+                                                <div>
+                                                    <span class="user_update eighth">2021.11.15</span>
+                                                </div>
+                                                <!-- 도움이 돼요 -->
+                                                <button class="helpful eighth">
+                                                    <span class="user_heplful eighth"></span>
+                                                    <span>도움이 돼요</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <div role="presentation" class="view_more_user_wrap" id="review_more_user" style="display: none;">
+                                <div aria-hidden="true" class="view_more_user_div1"
+                                    style="opacity: 1; transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;"></div>
+                                <div tabindex="0" data-test="sentinelStart"></div>
+                                <div class="iew_more_user_div2" role="presentation" tabindex="-1"
+                                    style="opacity: 1; transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;" >
+                                    <div class="view_more_user_div_wrap"
+                                        role="dialog" aria-labelledby="mui-5">
+                                        <div class="view_more_size">
+                                            <header class="view_more_header"><span class="view_more_picture_review">사진 후기
+                                                    전체보기</span><button class="view_more_all_look"><svg width="32" height="32"
+                                                        viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" id="review_more_user_off">
+                                                        <g clip-path="url(#clip0_2073_60924)">
+                                                            <path d="M26 26L6 6" stroke="#999" stroke-linecap="square" stroke-width="0">
+                                                            </path>
+                                                            <path d="M6 26L26 6" stroke="#999" stroke-linecap="square" stroke-width="0">
+                                                            </path>
+                                                        </g>
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M6.28431 5.58859L6.35355 5.64645L16 15.293L25.6464 5.64645C25.8417 5.45118 26.1583 5.45118 26.3536 5.64645C26.5271 5.82001 26.5464 6.08944 26.4114 6.28431L26.3536 6.35355L16.707 16L26.3536 25.6464C26.5488 25.8417 26.5488 26.1583 26.3536 26.3536C26.18 26.5271 25.9106 26.5464 25.7157 26.4114L25.6464 26.3536L16 16.707L6.35355 26.3536C6.15829 26.5488 5.84171 26.5488 5.64645 26.3536C5.47288 26.18 5.4536 25.9106 5.58859 25.7157L5.64645 25.6464L15.293 16L5.64645 6.35355C5.45118 6.15829 5.45118 5.84171 5.64645 5.64645C5.82001 5.47288 6.08944 5.4536 6.28431 5.58859Z"
+                                                            fill="#999"></path>
+                                                    </svg></button></header>
+                                            <div class="view_more_box_wrap">
+                                                <div class="view_more_div_picture">
+                                                    <div class="view_more_div_picture_wrap">
+                                                        <div aria-hidden="true" tabindex="0" class="view_more_div_picture_div"><span
+                                                                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                                                    style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                                                        alt="" aria-hidden="true"
+                                                                        src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27120%27%20height=%27120%27/%3e"
+                                                                        style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                                                    alt="[최현석의 쵸이닷] 새우 봉골레 파스타"
+                                                                    srcset="https://img-cf.kurly.com/cdn-cgi/image/width=240,format=auto/shop/data/review/20221116/787b7ed1-9872-49e0-b678-30e768e5dee7.jpeg 1x, https://img-cf.kurly.com/cdn-cgi/image/width=240,format=auto/shop/data/review/20221116/787b7ed1-9872-49e0-b678-30e768e5dee7.jpeg 2x"
+                                                                    src="https://img-cf.kurly.com/cdn-cgi/image/width=240,format=auto/shop/data/review/20221116/787b7ed1-9872-49e0-b678-30e768e5dee7.jpeg"
+                                                                    decoding="async" data-nimg="intrinsic"
+                                                                    style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"><noscript></noscript></span>
+                                                        </div>
+                                                        <div aria-hidden="true" tabindex="0" class="view_more_div_picture_div"><span
+                                                                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                                                    style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                                                        alt="" aria-hidden="true"
+                                                                        src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27120%27%20height=%27120%27/%3e"
+                                                                        style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                                                    alt="[최현석의 쵸이닷] 새우 봉골레 파스타"
+                                                                    srcset="https://img-cf.kurly.com/cdn-cgi/image/width=240,format=auto/shop/data/review/20221116/79a6d4bb-d0e7-4324-97c7-07887c6caefe.jpeg 1x, https://img-cf.kurly.com/cdn-cgi/image/width=240,format=auto/shop/data/review/20221116/79a6d4bb-d0e7-4324-97c7-07887c6caefe.jpeg 2x"
+                                                                    src="https://img-cf.kurly.com/cdn-cgi/image/width=240,format=auto/shop/data/review/20221116/79a6d4bb-d0e7-4324-97c7-07887c6caefe.jpeg"
+                                                                    decoding="async" data-nimg="intrinsic"
+                                                                    style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"><noscript></noscript></span>
+                                                        </div>
+                                                        <div aria-hidden="true" tabindex="0" class="view_more_div_picture_div"><span
+                                                                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                                                    style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                                                        alt="" aria-hidden="true"
+                                                                        src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27120%27%20height=%27120%27/%3e"
+                                                                        style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                                                    alt="[최현석의 쵸이닷] 새우 봉골레 파스타"
+                                                                    srcset="https://img-cf.kurly.com/cdn-cgi/image/width=240,format=auto/shop/data/review/20221116/18c8cc1a-5f40-4e7d-9e04-38b242cd1f3a.jpg 1x, https://img-cf.kurly.com/cdn-cgi/image/width=240,format=auto/shop/data/review/20221116/18c8cc1a-5f40-4e7d-9e04-38b242cd1f3a.jpg 2x"
+                                                                    src="https://img-cf.kurly.com/cdn-cgi/image/width=240,format=auto/shop/data/review/20221116/18c8cc1a-5f40-4e7d-9e04-38b242cd1f3a.jpg"
+                                                                    decoding="async" data-nimg="intrinsic"
+                                                                    style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"><noscript></noscript></span>
+                                                        </div>
+                                                        <div aria-hidden="true" tabindex="0" class="view_more_div_picture_div"><span
+                                                                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                                                    style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                                                        alt="" aria-hidden="true"
+                                                                        src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27120%27%20height=%27120%27/%3e"
+                                                                        style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                                                    alt="[최현석의 쵸이닷] 새우 봉골레 파스타"
+                                                                    srcset="https://img-cf.kurly.com/cdn-cgi/image/width=240,format=auto/shop/data/review/20221116/d505692f-ace9-45d5-a8ed-c4c401823372.jpeg 1x, https://img-cf.kurly.com/cdn-cgi/image/width=240,format=auto/shop/data/review/20221116/d505692f-ace9-45d5-a8ed-c4c401823372.jpeg 2x"
+                                                                    src="https://img-cf.kurly.com/cdn-cgi/image/width=240,format=auto/shop/data/review/20221116/d505692f-ace9-45d5-a8ed-c4c401823372.jpeg"
+                                                                    decoding="async" data-nimg="intrinsic"
+                                                                    style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"><noscript></noscript></span>
+                                                        </div>
+                                                        <div aria-hidden="true" tabindex="0" class=view_more_div_picture_div"><span
+                                                                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                                                    style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                                                        alt="" aria-hidden="true"
+                                                                        src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27120%27%20height=%27120%27/%3e"
+                                                                        style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                                                    alt="[최현석의 쵸이닷] 새우 봉골레 파스타"
+                                                                    srcset="https://img-cf.kurly.com/cdn-cgi/image/width=240,format=auto/shop/data/review/20221116/1d4b0329-d83d-425a-a4f7-32a591d5fcfb.jpg 1x, https://img-cf.kurly.com/cdn-cgi/image/width=240,format=auto/shop/data/review/20221116/1d4b0329-d83d-425a-a4f7-32a591d5fcfb.jpg 2x"
+                                                                    src="https://img-cf.kurly.com/cdn-cgi/image/width=240,format=auto/shop/data/review/20221116/1d4b0329-d83d-425a-a4f7-32a591d5fcfb.jpg"
+                                                                    decoding="async" data-nimg="intrinsic"
+                                                                    style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"><noscript></noscript></span>
+                                                        </div>
+                                                        <div aria-hidden="true" tabindex="0" class="view_more_div_picture_div"><span
+                                                                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                                                    style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                                                        alt="" aria-hidden="true"
+                                                                        src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27120%27%20height=%27120%27/%3e"
+                                                                        style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                                                    alt="[최현석의 쵸이닷] 새우 봉골레 파스타"
+                                                                    srcset="https://img-cf.kurly.com/cdn-cgi/image/width=240,format=auto/shop/data/review/20221116/fd54cd9c-156a-428f-9e14-b803dbaa2227.jpg 1x, https://img-cf.kurly.com/cdn-cgi/image/width=240,format=auto/shop/data/review/20221116/fd54cd9c-156a-428f-9e14-b803dbaa2227.jpg 2x"
+                                                                    src="https://img-cf.kurly.com/cdn-cgi/image/width=240,format=auto/shop/data/review/20221116/fd54cd9c-156a-428f-9e14-b803dbaa2227.jpg"
+                                                                    decoding="async" data-nimg="intrinsic"
+                                                                    style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"><noscript></noscript></span>
+                                                        </div>
+                                                        <div aria-hidden="true" tabindex="0" class="view_more_div_picture_div"><span
+                                                                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                                                    style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                                                        alt="" aria-hidden="true"
+                                                                        src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27120%27%20height=%27120%27/%3e"
+                                                                        style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                                                    alt="[최현석의 쵸이닷] 새우 봉골레 파스타"
+                                                                    srcset="https://img-cf.kurly.com/cdn-cgi/image/width=240,format=auto/shop/data/review/20221116/8edc863c1bba93508c3fe5174f323be7.jpg 1x, https://img-cf.kurly.com/cdn-cgi/image/width=240,format=auto/shop/data/review/20221116/8edc863c1bba93508c3fe5174f323be7.jpg 2x"
+                                                                    src="https://img-cf.kurly.com/cdn-cgi/image/width=240,format=auto/shop/data/review/20221116/8edc863c1bba93508c3fe5174f323be7.jpg"
+                                                                    decoding="async" data-nimg="intrinsic"
+                                                                    style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"><noscript></noscript></span>
+                                                        </div>
+                                                        <div aria-hidden="true" tabindex="0" class="view_more_div_picture_div"><span
+                                                                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                                                    style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                                                        alt="" aria-hidden="true"
+                                                                        src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27120%27%20height=%27120%27/%3e"
+                                                                        style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                                                    alt="[최현석의 쵸이닷] 새우 봉골레 파스타"
+                                                                    srcset="https://img-cf.kurly.com/cdn-cgi/image/width=240,format=auto/shop/data/review/20221116/9f01f78d-0794-4bc1-a868-778a68d5563a.jpg 1x, https://img-cf.kurly.com/cdn-cgi/image/width=240,format=auto/shop/data/review/20221116/9f01f78d-0794-4bc1-a868-778a68d5563a.jpg 2x"
+                                                                    src="https://img-cf.kurly.com/cdn-cgi/image/width=240,format=auto/shop/data/review/20221116/9f01f78d-0794-4bc1-a868-778a68d5563a.jpg"
+                                                                    decoding="async" data-nimg="intrinsic"
+                                                                    style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"><noscript></noscript></span>
+                                                        </div>
+                                                        <div aria-hidden="true" tabindex="0" class="view_more_div_picture_div"><span
+                                                                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                                                    style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                                                        alt="" aria-hidden="true"
+                                                                        src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27120%27%20height=%27120%27/%3e"
+                                                                        style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                                                    alt="[최현석의 쵸이닷] 새우 봉골레 파스타"
+                                                                    srcset="https://img-cf.kurly.com/cdn-cgi/image/width=240,format=auto/shop/data/review/20221116/65624e51-3cd2-4e54-892f-922ffde73556.jpeg 1x, https://img-cf.kurly.com/cdn-cgi/image/width=240,format=auto/shop/data/review/20221116/65624e51-3cd2-4e54-892f-922ffde73556.jpeg 2x"
+                                                                    src="https://img-cf.kurly.com/cdn-cgi/image/width=240,format=auto/shop/data/review/20221116/65624e51-3cd2-4e54-892f-922ffde73556.jpeg"
+                                                                    decoding="async" data-nimg="intrinsic"
+                                                                    style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"><noscript></noscript></span>
+                                                        </div>
+                                                        <div aria-hidden="true" tabindex="0" class="view_more_div_picture_div"><span
+                                                                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                                                    style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                                                        alt="" aria-hidden="true"
+                                                                        src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27120%27%20height=%27120%27/%3e"
+                                                                        style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                                                    alt="[최현석의 쵸이닷] 새우 봉골레 파스타"
+                                                                    srcset="https://img-cf.kurly.com/cdn-cgi/image/width=240,format=auto/shop/data/review/20221116/a9847947-c48f-401a-af77-4250945dd54a.jpg 1x, https://img-cf.kurly.com/cdn-cgi/image/width=240,format=auto/shop/data/review/20221116/a9847947-c48f-401a-af77-4250945dd54a.jpg 2x"
+                                                                    src="https://img-cf.kurly.com/cdn-cgi/image/width=240,format=auto/shop/data/review/20221116/a9847947-c48f-401a-af77-4250945dd54a.jpg"
+                                                                    decoding="async" data-nimg="intrinsic"
+                                                                    style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"><noscript></noscript></span>
+                                                        </div>
+                                                        <div aria-hidden="true" tabindex="0" class="view_more_div_picture_div"><span
+                                                                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                                                    style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                                                        alt="" aria-hidden="true"
+                                                                        src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27120%27%20height=%27120%27/%3e"
+                                                                        style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                                                    alt="[최현석의 쵸이닷] 새우 봉골레 파스타"
+                                                                    srcset="https://img-cf.kurly.com/cdn-cgi/image/width=240,format=auto/shop/data/review/20221116/2f36444e-57fd-46df-8854-a5370869d7d9.jpg 1x, https://img-cf.kurly.com/cdn-cgi/image/width=240,format=auto/shop/data/review/20221116/2f36444e-57fd-46df-8854-a5370869d7d9.jpg 2x"
+                                                                    src="https://img-cf.kurly.com/cdn-cgi/image/width=240,format=auto/shop/data/review/20221116/2f36444e-57fd-46df-8854-a5370869d7d9.jpg"
+                                                                    decoding="async" data-nimg="intrinsic"
+                                                                    style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"><noscript></noscript></span>
+                                                        </div>
+                                                        <div aria-hidden="true" tabindex="0" class="view_more_div_picture_div"><span
+                                                                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                                                    style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                                                        alt="" aria-hidden="true"
+                                                                        src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27120%27%20height=%27120%27/%3e"
+                                                                        style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                                                    alt="[최현석의 쵸이닷] 새우 봉골레 파스타"
+                                                                    srcset="https://img-cf.kurly.com/cdn-cgi/image/width=240,format=auto/shop/data/review/20221116/ebe76f59-8ff1-4383-83f3-6218598e8fcf.jpeg 1x, https://img-cf.kurly.com/cdn-cgi/image/width=240,format=auto/shop/data/review/20221116/ebe76f59-8ff1-4383-83f3-6218598e8fcf.jpeg 2x"
+                                                                    src="https://img-cf.kurly.com/cdn-cgi/image/width=240,format=auto/shop/data/review/20221116/ebe76f59-8ff1-4383-83f3-6218598e8fcf.jpeg"
+                                                                    decoding="async" data-nimg="intrinsic"
+                                                                    style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"><noscript></noscript></span>
+                                                        </div>
+                                                        <div aria-hidden="true" tabindex="0" class="view_more_div_picture_div"><span
+                                                                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                                                    style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                                                        alt="" aria-hidden="true"
+                                                                        src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27120%27%20height=%27120%27/%3e"
+                                                                        style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                                                    alt="[최현석의 쵸이닷] 새우 봉골레 파스타"
+                                                                    srcset="https://img-cf.kurly.com/cdn-cgi/image/width=240,format=auto/shop/data/review/20221116/be03a656-f7ef-4ca3-84fd-701e4d263f31.jpg 1x, https://img-cf.kurly.com/cdn-cgi/image/width=240,format=auto/shop/data/review/20221116/be03a656-f7ef-4ca3-84fd-701e4d263f31.jpg 2x"
+                                                                    src="https://img-cf.kurly.com/cdn-cgi/image/width=240,format=auto/shop/data/review/20221116/be03a656-f7ef-4ca3-84fd-701e4d263f31.jpg"
+                                                                    decoding="async" data-nimg="intrinsic"
+                                                                    style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"><noscript></noscript></span>
+                                                        </div>
+                                                        <div aria-hidden="true" tabindex="0" class="view_more_div_picture_div"><span
+                                                                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                                                    style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                                                        alt="" aria-hidden="true"
+                                                                        src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27120%27%20height=%27120%27/%3e"
+                                                                        style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                                                    alt="[최현석의 쵸이닷] 새우 봉골레 파스타"
+                                                                    srcset="https://img-cf.kurly.com/cdn-cgi/image/width=240,format=auto/shop/data/review/20221116/503bfbb8-d7f3-40eb-b56a-0f22dbc0711d.jpg 1x, https://img-cf.kurly.com/cdn-cgi/image/width=240,format=auto/shop/data/review/20221116/503bfbb8-d7f3-40eb-b56a-0f22dbc0711d.jpg 2x"
+                                                                    src="https://img-cf.kurly.com/cdn-cgi/image/width=240,format=auto/shop/data/review/20221116/503bfbb8-d7f3-40eb-b56a-0f22dbc0711d.jpg"
+                                                                    decoding="async" data-nimg="intrinsic"
+                                                                    style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"><noscript></noscript></span>
+                                                        </div>
+                                                        <div aria-hidden="true" tabindex="0" class="view_more_div_picture_div"><span
+                                                                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                                                    style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                                                        alt="" aria-hidden="true"
+                                                                        src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27120%27%20height=%27120%27/%3e"
+                                                                        style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                                                    alt="[최현석의 쵸이닷] 새우 봉골레 파스타"
+                                                                    srcset="https://img-cf.kurly.com/cdn-cgi/image/width=240,format=auto/shop/data/review/20221115/59bea293-5aba-4f3c-8f00-7739f344b17b.jpeg 1x, https://img-cf.kurly.com/cdn-cgi/image/width=240,format=auto/shop/data/review/20221115/59bea293-5aba-4f3c-8f00-7739f344b17b.jpeg 2x"
+                                                                    src="https://img-cf.kurly.com/cdn-cgi/image/width=240,format=auto/shop/data/review/20221115/59bea293-5aba-4f3c-8f00-7739f344b17b.jpeg"
+                                                                    decoding="async" data-nimg="intrinsic"
+                                                                    style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"><noscript></noscript></span>
+                                                        </div>
+                                                        <div aria-hidden="true" tabindex="0" class="view_more_div_picture_div"><span
+                                                                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                                                    style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                                                        alt="" aria-hidden="true"
+                                                                        src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27120%27%20height=%27120%27/%3e"
+                                                                        style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                                                    alt="[최현석의 쵸이닷] 새우 봉골레 파스타"
+                                                                    srcset="https://img-cf.kurly.com/cdn-cgi/image/width=240,format=auto/shop/data/review/20221115/e1db857b-e293-47a0-a792-065c75656717.jpeg 1x, https://img-cf.kurly.com/cdn-cgi/image/width=240,format=auto/shop/data/review/20221115/e1db857b-e293-47a0-a792-065c75656717.jpeg 2x"
+                                                                    src="https://img-cf.kurly.com/cdn-cgi/image/width=240,format=auto/shop/data/review/20221115/e1db857b-e293-47a0-a792-065c75656717.jpeg"
+                                                                    decoding="async" data-nimg="intrinsic"
+                                                                    style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"><noscript></noscript></span>
+                                                        </div>
+                                                        <div aria-hidden="true" tabindex="0" class="view_more_div_picture_div"><span
+                                                                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                                                    style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                                                        alt="" aria-hidden="true"
+                                                                        src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27120%27%20height=%27120%27/%3e"
+                                                                        style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                                                    alt="[최현석의 쵸이닷] 새우 봉골레 파스타"
+                                                                    srcset="https://img-cf.kurly.com/cdn-cgi/image/width=240,format=auto/shop/data/review/20221115/a351bc25-3129-4ca5-b641-df970541d905.jpeg 1x, https://img-cf.kurly.com/cdn-cgi/image/width=240,format=auto/shop/data/review/20221115/a351bc25-3129-4ca5-b641-df970541d905.jpeg 2x"
+                                                                    src="https://img-cf.kurly.com/cdn-cgi/image/width=240,format=auto/shop/data/review/20221115/a351bc25-3129-4ca5-b641-df970541d905.jpeg"
+                                                                    decoding="async" data-nimg="intrinsic"
+                                                                    style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"><noscript></noscript></span>
+                                                        </div>
+                                                        <div aria-hidden="true" tabindex="0" class="view_more_div_picture_div"><span
+                                                                style="box-sizing: border-box; display: inline-block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"><span
+                                                                    style="box-sizing: border-box; display: block; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"><img
+                                                                        alt="" aria-hidden="true"
+                                                                        src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27120%27%20height=%27120%27/%3e"
+                                                                        style="display: block; max-width: 100%; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"></span><img
+                                                                    alt="[최현석의 쵸이닷] 새우 봉골레 파스타"
+                                                                    srcset="https://img-cf.kurly.com/cdn-cgi/image/width=240,format=auto/shop/data/review/20221115/75d248f9aac85865e97afcbc2fe37704.jpg 1x, https://img-cf.kurly.com/cdn-cgi/image/width=240,format=auto/shop/data/review/20221115/75d248f9aac85865e97afcbc2fe37704.jpg 2x"
+                                                                    src="https://img-cf.kurly.com/cdn-cgi/image/width=240,format=auto/shop/data/review/20221115/75d248f9aac85865e97afcbc2fe37704.jpg"
+                                                                    decoding="async" data-nimg="intrinsic"
+                                                                    style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"><noscript></noscript></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div tabindex="0" data-test="sentinelEnd"></div>
+                            </div>
+                        </div>
+                        </div>
+
+                        <!-- 문의 (최경선) -->
+                        
+                        <div id="inquiry" style="position: relative; top: -150px;"></div>
+                        <div class="inquiry_wrap">
+                
+                            <div class="inquiry_content">
+                                
+                                <!-- 문의하기 버튼 -->
+                                <div class="btn_inquiry_wrap">
+                                    <button type="button" width="120" height="40" onclick="open_pop()">
+                                        <span>문의하기</span>
+                                    </button>
+                                </div>
+                    
+                                <!-- 문의하기 팝업창 -->
+                                <div id="popup" role="presentation" style="position: fixed; z-index: 1300; inset: 0px; display: none;">
+                                    
+                                    <div class="MuiBackdrop_root" aria-hidden="true" style="opacity: 1; transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;"></div>
+                                    
+                                    <div tabindex="0" data-test="sentinelStart"></div>
+                                    
+                                    <div class="MuiDialog_container" role="none presentation" tabindex="-1" style="opacity: 1; transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;">
+                                        
+                                        <div class="MuiDialog_root" role="dialog">
+                                            
+                                            <div class="MuiDialogContent_root">
+                    
+                                                <div>
+                    
+                                                    <!-- 상품 문의하기 -->
+                                                    <div class="dialog_header">
+                                                        <div>상품 문의하기</div>
+                                                        <span id="btn_close" onclick="close_pop()"></span>
+                                                    </div>
+                    
+                                                    <!-- 이미지 -->
+                                                    <div class="dialog_image">
+                                                        <div><img src="https://img-cf.kurly.com/shop/data/goods/164820616351l0.jpeg"></div>
+                                                        <div><span>[최현석의 쵸이닷] 새우 봉골레 파스타</span></div>
+                                                    </div>
+                    
+                                                    <!-- 제목 -->
+                                                    <div class="dialog_title">
+                                                        <div><span>제목</span></div>
+                                                        <div class="dialog_title_textarea">
+                                                            <div>
+                                                                <input data-testid="input-box" name="subject" placeholder="제목을 입력해 주세요" type="text" height="42" value="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                    
+                                                    <!-- 내용 -->
+                                                    <div class="dialog_content">
+                                                        <div><span>내용</span></div>
+                                                        <div class="dialog_content_textarea">
+                                                            <div>
+                                                                <textarea inputmode="text" aria-label="textarea-message" name="content"></textarea>
+                                                                <div class="placeholder">
+                                                                    <div><strong>상품문의 작성 전 확인해 주세요</strong><br>
+                                                                        <ul>
+                                                                            <li>- 답변은 영업일 기준 2~3일 소요됩니다.</li>
+                                                                            <li>- 해당 게시판의 성격과 다른 글은 사전동의 없이 담당 게시판으로 이동될 수 있습니다.</li>
+                                                                            <li>- 배송관련, 주문(취소/교환/환불)관련 문의 및 요청사항은 마이컬리 내 1:1 문의에 남겨주세요.</li>
+                                                                        </ul><br><strong>제품</strong>
+                                                                        <ul>
+                                                                            <li>- 입고일 : 품절 상품 입고 일이 확정된 경우, 섬네일에 기재되어 있습니다. (종 모양을 클릭하여, 재입고 알림 설정
+                                                                                가능)</li>
+                                                                            <li>- 제품 상세정보 : 영양성분 및 함량, 용량, 보관 및 취급 방법 등 제품 정보는 상세이미지 또는 상세정보에서 확인
+                                                                                가능합니다.</li><br>
+                                                                        </ul><strong>주문취소</strong>
+                                                                        <ul>
+                                                                            <li>- 배송 단계별로 주문취소 방법이 상이합니다.</li>
+                                                                            <li>- [입금확인] 단계 : [마이컬리 &gt; 주문내역 상세페이지] 에서 직접 취소 가능</li>
+                                                                            <li>- [입금확인] 이후 단계 : 고객센터로 문의</li>
+                                                                            <li>- 생산이 시작된 [상품 준비중] 이후에는 취소가 제한되는 점 고객님의 양해 부탁드립니다.</li>
+                                                                            <li>- 비회원은 모바일 App 또는 모바일 웹사이트에서 [마이컬리 &gt; 비회원 주문 조회 페이지]에서 취소가
+                                                                                가능합니다.</li>
+                                                                            <li>- 일부 예약상품은 배송 3~4일 전에만 취소 가능합니다.</li>
+                                                                        </ul>
+                                                                        <p>※ 주문상품의 부분 취소는 불가능합니다. 전체 주문 취소 후 재구매 해주세요.</p><br>
+                                                                        <strong>배송</strong>
+                                                                        <ul>
+                                                                            <li>- 주문 완료 후 배송 방법(샛별/택배)은 변경이 불가능합니다.</li>
+                                                                            <li>- 배송일 배송시간 지정은 불가능합니다. (예약배송 포함)</li>
+                                                                        </ul>
+                                                                        <p>※ 전화번호, 이메일, 주소, 계좌번호 등의 상세 개인정보가 문의 내용에 저장되지 않도록 주의해 주시기 바랍니다.</p>
+                                                                    </div>
+                                                                </div><span class="content_length_counter"> 0 / 5,000</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                    
+                                                    <!-- 비밀글로 문의하기 -->
+                                                    <div class="dialog_secret">
+                                                        <div></div>
+                                                        <div>
+                                                            <label>
+                                                            <input name="isSecret" type="checkbox">
+                                                                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgc3Ryb2tlPSIjREREIj4KICAgICAgICAgICAgPGc+CiAgICAgICAgICAgICAgICA8Zz4KICAgICAgICAgICAgICAgICAgICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNjY5LjAwMDAwMCwgLTEwOTAuMDAwMDAwKSB0cmFuc2xhdGUoMTAwLjAwMDAwMCwgOTM2LjAwMDAwMCkgdHJhbnNsYXRlKDU1My4wMDAwMDAsIDE0Mi4wMDAwMDApIHRyYW5zbGF0ZSgxNi4wMDAwMDAsIDEyLjAwMDAwMCkiPgogICAgICAgICAgICAgICAgICAgICAgICA8Y2lyY2xlIGN4PSIxMiIgY3k9IjEyIiByPSIxMS41Ii8+CiAgICAgICAgICAgICAgICAgICAgICAgIDxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik03IDEyLjY2N0wxMC4zODUgMTYgMTggOC41Ii8+CiAgICAgICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICA8L2c+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K" alt="">
+                                                                <span>비밀글로 문의하기</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                    
+                                                    <!-- 취소/등록 -->
+                                                    <div class="dialog_cancel_submit">
+                                                        <button type="button">
+                                                            <span>취소</span>
+                                                        </button>
+                                                        <button type="button" disabled="">
+                                                            <span>등록</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div tabindex="0" data-test="sentinelEnd"></div>
+                                </div>
+                    
+                                <!-- 제목 부분 -->
+                                <div id="inquiry" class="inquiry_title_wrap">
+                                    <strong>상품 문의</strong>
+                                    <ul>
+                                        <li>
+                                            상품에 대한 문의를 남기는 공간입니다. 해당 게시판의 성격과 다른 글은 사전동의 없이 담당 게시판으로 이동될 수 있습니다.
+                                        </li>
+                                        <li>
+                                            배송관련, 주문(취소/교환/환불)관련 문의 및 요청사항은 마이컬리 내
+                                            <a href="#"> 1:1 문의</a>에 남겨주세요.
+                                        </li>
+                                    </ul>
+                                </div>
+                    
+                    
+                                <!-- 게시글 부분 -->
+                                <div class="inquiry_post_wrap">
+                    
+                                    <table class="inquiry_post_table">
+                    
+                                        <thead>
+                                            <tr>
+                                                <th class="title">제목</th>
+                                                <th class="author">작성자</th>
+                                                <th class="created-date">작성일</th>
+                                                <th class="status">답변상태</th>
+                                            </tr>
+                                        </thead>
+                    
+                                        <tbody>
+                                            <tr class="inquiry_post">
+                                                <td class="notice">
+                                                    <span>공지</span> 판매(일시)중단 제품 안내 (22.11.04 업데이트)
+                                                </td>
+                                                <td>Marketkurly</td>
+                                                <td>2017.02.01</td>
+                                                <td>-</td>
+                                            </tr>
+                                            <tr class="inquiry_post">
+                                                <td class="secret">
+                                                    <div>
+                                                        <span>비밀글입니다.</span><span class="secret_icon"></span>
+                                                    </div>
+                                                </td>
+                                                <td>김*은</td>
+                                                <td>2022.10.25</td>
+                                                <td class="answered">답변완료</td>
+                                            </tr>
+                                            <tr class="inquiry_post">
+                                                <td class="secret">
+                                                    <div>
+                                                        <span>비밀글입니다.</span><span class="secret_icon"></span>
+                                                    </div>
+                                                </td>
+                                                <td>김*숙</td>
+                                                <td>2022.10.24</td>
+                                                <td>답변대기</td>
+                                            </tr>
+                                            <tr class="inquiry_post">
+                                                <td>상세페이지에 제품표기사항이 다른게 들어있습니다.</td>
+                                                <td>박*안</td>
+                                                <td>2022.10.22</td>
+                                                <td>답변대기</td>
+                                            </tr>
+                                            <tr class="inquiry_post">
+                                                <td>현재 품절인데 언제 재입고 되나요?</td>
+                                                <td>김*주</td>
+                                                <td>2022.10.17</td>
+                                                <td class="answered">답변완료</td>
+                                            </tr>
+                    
+                                        </tbody>
+                    
+                                    </table>
+                                </div>
+                    
+                                <!-- 하단 좌우 버튼 -->
+                                <div class="btn_pre_next_wrapper">
+                    
+                                    <button disabled type="button" class="btn_pre"></button>
+                                    <button type="button" class="btn_next"></button>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                
+            </div>
+
+            <!-- nav -->
+            <nav id="right_nav">
+                <a class="right_nav_iLink"><img src="https://res.kurly.com/_next/static/images/deliveryInfo_20220701-a7b19dac069402e4b2aea7edbed0f6e0.png"></a>
+                <ul class="right_nav_list">
+                    <li><a>등급별 혜택</a></li>
+                    <li><a href="./recipe_list.html">레시피</a></li>
+                </ul>
+            </nav>
+            
+            <!-- 위로가기 버튼 -->
+            <div id="scrollup">
+                <a href="#">
+                    <span></span>
+                </a>
+            </div>
+        </div>
+
+        <!-- footer -->
+        <div id="footer">
+            <div class="f_f">
+                <div class="f_f_1">
+                    <div class="f_f_1_1">
+                        <h2>고객행복센터</h2>
+                        <p>1644-1107<span>월~토요일 오전 7시 - 오후 6시</span></p>
+                        <div>
+                            <div>
+                                <button>카카오톡 문의</button>
+                                <div>월~토요일 | 오전7시-오후6시<br>일/공휴일 | 오전7시-오후1시</div>
+                            </div>
+                            <div>
+                                <button>1:1 문의</button>
+                                <div>365일<br>고객센터 운영시간에 순차적으로 답변드리겠습니다.</div>
+                            </div>
+                            <div>
+                                <button>대량주문 문의</button>
+                                <div>월~금요일 | 오전9시-오후6시<br>점심시간 | 낮12시-오후1시</div>
+                            </div>
+                        </div>
+                        <div>비회원 문의 : <a href="#">help@kurlycorp.com</a>
+                            <br>비회원 대량주문 문의 : <a href="#">kurlygift@kurlycorp.com</a>
+                        </div>
+                    </div>
+                    <div class="f_f_1_2">
+                        <ul>
+                            <li><a>컬리소개</a></li>
+                            <li><a>컬리소개영상</a></li>
+                            <li><a>인재채용</a></li>
+                            <li><a>이용약관</a></li>
+                            <li><a>개인정보처리방침</a></li>
+                            <li><a>이용안내</a></li>
+                        </ul>
+                        <div>
+                            법인명 (상호) : 주식회사 컬리 | 사업자등록번호 : 261-81-23567 <a>사용자정보 확인</a>
+                            <br>통신판매업 : 제 2018-서울강남-01646 호 | 개인정보보호책임자 : 이원준
+                            <br>주소 : 서울특별시 강남구 테헤란로 133, 18층(역삼동) | 대표이사 : 김슬아
+                            <br>입점문의 : <a>입점문의하기</a> | 제휴문의 : <a>business@kurlycorp.com</a>
+                            <br>채용문의 : <a>recruit@kurlycorp.com</a>
+                            <br>팩스 : 070 - 7500 - 6098
+                        </div>
+                        <ul>
+                            <li><a target="_blank" href="https://www.instagram.com/marketkurly/"><img src="./images/instagram_logo.png" width="30" height="30"></a></li>
+                            <li><a target="_blank" href="https://www.facebook.com/marketkurly"><img src="./images/facebook_logo.png" width="30" height="30"></a></li>
+                            <li><a target="_blank" href="https://blog.naver.com/marketkurly"><img src="./images/naverblog_logo.png" width="30" height="30"></a></li>
+                            <li><a target="_blank" href="https://m.post.naver.com/marketkurly"><img src="./images/naverpost_logo.png" width="30" height="30"></a></li>
+                            <li><a target="_blank" href="https://www.youtube.com/channel/UCfpdjL5pl-1qKT7Xp4UQzQg" ><img src="./images/youtube_logo.png" width="30" height="30"></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="f_f_2">
+                    <button>
+                        <img src="https://res.kurly.com/pc/ico/2208/logo_isms.svg">
+                        <p>[인증범위] 마켓컬리 쇼핑몰 서비스 개발 · 운영<br>(심사받지 않은 물리적 인프라 제외)<br>[유효기간] 2022.01.19 ~ 2025.01.18</p>
+                    </button>
+                    <button>
+                        <img src="https://res.kurly.com/pc/ico/2208/logo_privacy.svg">
+                        <p>개인정보보호 우수 웹사이트 ·<br>개인정보처리시스템 인증 (ePRIVACY PLUS)</p>
+                    </button>
+                    <button>
+                        <img src="https://res.kurly.com/pc/ico/2208/logo_tosspayments.svg">
+                        <p>토스페이먼츠 구매안전(에스크로)<br>서비스를 이용하실 수 있습니다.</p>
+                    </button>
+                    <button>
+                        <img src="https://res.kurly.com/pc/ico/2208/logo_wooriBank.svg">
+                        <p>고객님이 현금으로 결제한 금액에 대해 우리은행과<br>채무지급보증 계약을 체결하여 안전거래를 보장하고<br>있습니다.</p>
+                    </button>
+                </div>
+            </div>
+            <div class="f_s">
+                <p>마켓컬리에서 판매되는 상품 중에는 마켓컬리에 입점한 개별 판매자가 판매하는 마켓플레이스(오픈마켓) 상품이 포함되어 있습니다.
+                    <br>마켓플레이스(오픈마켓) 상품의 경우 컬리는 통신판매중개자로서 통신판매의 당사자가 아닙니다. 컬리는 해당 상품의 주문, 품질, 교환/환불 등 의무와 책임을 부담하지 않습니다.
+                </p>
+                <p>&#169; KURLY CORP. ALL RIGHTS RESERVED</p>
+            </div>
+        </div>
+  
+    </div>
+</body>
+</html>

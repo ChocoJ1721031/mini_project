@@ -1,0 +1,398 @@
+
+.mypage_top{
+    width: 100%;
+    padding: 50px 0px;
+    margin-bottom: -20px;
+    background-color: rgb(247, 247, 247);
+}
+.mypage_top_info{
+    display: grid;
+    grid-template-columns: 372px auto;
+    width: 1050px;
+    margin: 0px auto;
+    gap: 4px;
+}
+.mypage_top_info_name{
+    padding: 30px 30px 26px;
+    grid-row: 1 / 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: rgb(255, 255, 255);
+}
+.mypage_top_info_name_1{
+    display: flex;
+}
+.mypage_top_info_name_1_1{
+    min-width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    font-weight: normal;
+    font-size: 14px;
+    border: 1px solid rgb(148, 146, 150);
+    background-color: rgb(255, 255, 255);
+    color: rgb(148, 146, 150);
+}
+.mypage_top_info_name_1_2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 50%;
+    min-height: 48px;
+    margin-left: 20px;
+}
+.mypage_top_info_name_1_2 > strong{
+    display: block;
+    overflow: hidden;
+    font-weight: 500;
+    font-size: 20px;
+    color: rgb(51, 51, 51);
+    line-height: 28px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.mypage_top_info_name_2{
+    display: flex;
+    flex-direction: column;
+}
+.mypage_top_info_name_2 p{
+    font-size: 14px;
+    line-height: 18px;
+    color: rgb(51, 51, 51);
+}
+.mypage_top_info_name_2 p:not(:first-child){
+    margin-top: 4px;
+}
+.mypage_top_info_name_3{
+    display: flex;
+    justify-content: center;
+}
+.mypage_top_info_name_3 > button{
+    width: 50%;
+    height: 42px;
+    border: 1px solid rgb(244, 244, 244);
+    border-radius: 30px;
+    background-color: rgb(244, 244, 244);
+    font-size: 13px;
+    color: rgb(51, 51, 51);
+    text-align: center;
+    flex-grow: 1;
+}
+.mypage_top_info_name_3 > button:last-child{
+    margin-left: 10px;
+}
+/* 적립금 쿠폰 나의컬리스타일 */
+.mypage_top_info_2{
+    display: flex;
+    column-gap: 4px;
+}
+.mypage_top_info_button{
+    flex: 1 1 0%;
+    overflow: hidden;
+    background: rgb(255, 255, 255);
+}
+.mypage_top_info_button_1{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 26px 0px 30px 30px;
+}
+.mypage_top_info_button_1_1{
+    position: relative;
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    color: rgb(51, 51, 51);
+}
+.mypage_top_info_button_1_1 > span{
+    width: 23px;
+    height: 23px;
+    background: url(../images/mypage_button.png) 50% 50% / cover no-repeat;
+}
+.mypage_top_info_button_1_2{
+    font-weight: 700;
+    font-size: 20px;
+    color: rgb(95, 0, 128);
+    margin-top: 20px;
+}
+.mypage_top_info_button_1_2 > span{
+    font-weight: 400;
+}
+.mypage_top_info_button_1_3{
+    font-size: 12px;
+    color: rgb(153, 153, 153);
+    margin-top: 10px;
+}
+/* 알아보기 */
+.mypage_top_info_div{
+    flex: 1 1 0%;
+    overflow: hidden;
+    background: rgb(255, 255, 255);
+}
+.mypage_top_info_div_button{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 20px 30px;
+}
+.mypage_top_info_button_1_4{
+    font-weight: 700;
+    font-size: 20px;
+    color: rgb(95, 0, 128);
+}
+/* 중간 광고 */
+.mypage_top_a{
+    display: block;
+    width: 1050px;
+    overflow: hidden;
+    margin: 20px auto 0px;
+}
+.mypage_top_a > img{
+    width: 100%;
+    height: 60px;
+    object-fit: cover;
+}
+
+
+/* 마이컬리 mid */
+.mypage_mid{
+    display: flex;
+    width: 1050px;
+    padding: 50px 0px 80px;
+    margin: 0px auto;
+    flex-direction: row;
+    justify-content: space-between;
+}
+/* 좌측 목록 */
+.mypage_mid_l{
+    width: 200px;
+}
+.mypage_mid_l_div{
+    height: 75px;
+    padding: 5px 0px 35px 1px;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 35px;
+    color: rgb(51, 51, 51);
+}
+.mypage_mid_l_ul{
+    border: 1px solid rgb(242, 242, 242);
+}
+.mypage_mid_l_ul_li_a.active, .mypage_mid_l_ul_li_a:hover {
+    background-color: rgb(250, 250, 250);
+    color: rgb(95, 0, 128);
+    font-weight: 500;
+}
+.mypage_mid_l_ul_li_a{
+    cursor: pointer;
+    border-bottom: 1px solid rgb(242, 242, 242);
+    padding: 14px 20px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 19px;
+    letter-spacing: -0.3px;
+    font-size: 14px;
+    color: rgb(102, 102, 102);
+}
+.mypage_mid_l_ul_li_a > span{
+    display: inline-block;
+    width: 6px;
+    height: 11px;
+    background-image: url(../images/mypage_button_2.svg);
+    background-size: cover;
+    background-position: center center;
+}
+.mypage_mid_l_3{
+    width: 100%;
+    height: 60px;
+    padding: 0px 20px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0px 100px 100px 0px;
+    background-color: rgb(250, 250, 250);
+    line-height: 20px;
+}
+.mypage_mid_l_3_1{
+    display: flex;
+    flex-direction: column;
+    color: rgb(51, 51, 51);
+}
+.mypage_mid_l_3_1_1{
+    font-size: 14px;
+    font-weight: 500;
+}
+.mypage_mid_l_3_1_2{
+    font-size: 12px;
+}
+.mypage_mid_l_3_2{
+    display: inline-block;
+    width: 6px;
+    height: 11px;
+    background-image: url(../images/mypage_button_3.svg);
+    background-size: cover;
+    background-position: center center;
+}
+/* 중앙 페이지 */
+.mypage_mid_r{
+    width: 820px;
+    height: 48px;
+}
+.mypage_mid_r_t{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding-bottom: 27px;
+    justify-content: space-between;
+}
+.mypage_mid_r_t_l{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.mypage_mid_r_t_l > h2{
+    font-weight: 500;
+    font-size: 24px;
+    color: rgb(51, 51, 51);
+    letter-spacing: -0.5px;
+    line-height: 48px;
+}
+.mypage_mid_r_t_l > span{
+    padding-left: 11px;
+    font-size: 14px;
+    letter-spacing: -0.3px;
+    color: rgb(153, 153, 153);
+    line-height: 20px;
+}
+
+
+.mypage_mid_r_t_r{
+    display: block;
+    align-items: center;
+    width: 157px;
+    height: 100%;
+}
+.mypage_mid_r_t_r_time {
+    cursor: pointer;
+    width: 100%;
+    height: 45px;
+    border: 1px solid rgb(219, 219, 219);
+    padding: 16.5px 14px;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    align-items: center;
+    letter-spacing: -0.3px;
+    font-size: 14px;
+    color: rgb(71, 71, 71);
+}
+.mypage_mid_r_t_r_time span:last-child{
+    background-image: url(https://res.kurly.com/pc/ico/1908/ico_down_8x5.png);
+    width: 8px;
+    height: 5px;
+    margin-left: 5px;
+    margin-bottom: 1px;
+}
+.mypage_mid_r_t_r_timechoice {
+    display: none;
+    position: absolute;
+    width: 157px;
+    height: 100%;
+    cursor: pointer;
+    z-index: 20;
+}
+.mypage_mid_r_t_r_li {
+    cursor: pointer;
+    width: 100%;
+    height: 45px;
+    font-weight: 200;
+    border-left: 1px solid rgb(219, 219, 219);
+    border-right: 1px solid rgb(219, 219, 219);
+    background-color: white;
+    padding: 16.5px 14px;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    align-items: center;
+    letter-spacing: -0.3px;
+    font-size: 14px;
+    color: rgb(71, 71, 71);
+}
+.mypage_mid_r_t_r_li:first-child{
+    color: #5f0080;
+    font-weight: 500;
+}
+.mypage_mid_r_t_r_li:last-child{
+    border-bottom: 1px solid rgb(219, 219, 219);
+}
+.mypage_mid_r_t_r_li:hover {
+    background-color: rgb(250, 250, 250);
+    font-weight: 500;
+}
+
+
+
+
+
+/* 중앙 선 아래 */
+.mypage_mid_r_m{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    border-bottom: 2px solid rgb(51, 51, 51);
+}
+.mypage_mid_r_b{
+    padding-top: 20px;
+    position: relative;
+    height: 100%;
+}
+.mypage_mid_r_b_1{
+    height: 540px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mypage_mid_r_b_1_1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.mypage_mid_r_b_1_1 > p{
+    margin: 8px 0px 24px;
+    font-size: 16px;
+    color: rgb(181, 181, 181);
+    text-align: center;
+}
+.mypage_mid_r_b_1_1 > p::before{
+    display: block;
+    margin: 0px auto 8px;
+    width: 68px;
+    height: 68px;
+    background: url(../images/mypage_주문목록.svg) 0px 0px no-repeat;
+    content: "";
+}
+.mypage_mid_r_b_1_1 > button{
+    display: block;
+    padding: 0px 10px;
+    text-align: center;
+    overflow: hidden;
+    width: 150px;
+    height: 44px;
+    border-radius: 3px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(95, 0, 128);
+    border: 0px none;
+}
+.mypage_mid_r_b_1_1 > button > span{
+    font-size: 14px;
+}
