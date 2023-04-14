@@ -3,10 +3,10 @@
 # Contents 📖
 1. [팀 소개](#1️⃣-팀-소개)
 2. [프로젝트 개요](#2️⃣-프로젝트-개요)
-3. [개발환경](#4️⃣-개발환경)
-4. [주요기능](#5️⃣-주요기능)
-5. [Document](#6️⃣-Document)
-6. [최종발표자료(Google Drive)](https://drive.google.com/file/d/1LI3UM28ueqm9kzr87VhodErINULVYqpP/view?usp=sharing)
+3. [개발환경](#3️⃣-개발환경)
+4. [주요기능](#4️⃣-주요기능)
+5. [Document](#5️⃣-Document)
+6. [최종발표자료(Google Drive)](https://drive.google.com/file/d/1g3g-U4HDLos4LJ45NXzrflV2JtUJQB2k/view?usp=sharing)
 
 ## 1️⃣ 팀 소개
 ![팀소개](https://user-images.githubusercontent.com/116356234/231974268-eac56d7e-298a-4f70-b06b-63ff112c3fd6.png)
@@ -20,7 +20,7 @@
 ![개발 환경](https://user-images.githubusercontent.com/116356234/231971358-5b9481a6-57c5-4f37-b3d9-6ab1cf54c021.png)
 
 
-## 5️⃣ 주요기능
+## 4️⃣ 주요기능
 <p align="center"><img src="https://user-images.githubusercontent.com/116356234/231973089-0fdd61df-5888-437b-bc02-dc6d4fee9c82.png" width="170" height="280"></p>
 
 <hr>
@@ -142,4 +142,17 @@ Aside
 <hr>
 
 <p align="center"><img src="https://user-images.githubusercontent.com/116356234/231973614-5f87fdaa-930c-4431-a3e1-1004d6089b32.png" width="170" height="280"></p>
+
+
+## 5️⃣ Document
+## 1.개발일정
+![일정](https://user-images.githubusercontent.com/116356234/231979652-452722d2-7daf-464d-960e-d5219843e5c8.png)
+
+
+## 2.요구사항 정의서
+![요구사항정의서](https://user-images.githubusercontent.com/116356234/231980588-0f0ed202-2a4c-4d77-920f-a852c388a035.png)
+[요구사항 정의서 전체보기(Google Drive)](https://docs.google.com/spreadsheets/d/14_HYeCuHo044f3q1GDPPEEsgHHmVY8LDn7y-pp48d7w/edit?usp=sharing)
+
+## 3.UI설계서
+[UI설계서 전체보기(Google Drive)](https://drive.google.com/file/d/1Gh1tS7en5Uz-n-bErYZiVyEaJC4VQwkY/view?usp=sharing)
 
