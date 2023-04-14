@@ -127,6 +127,55 @@ Aside
 
 <p align="center"><img src="https://user-images.githubusercontent.com/116356234/231973096-726aa4e9-4a43-4146-8b64-09091a599d70.png" width="170" height="280"></p>
 
+<h3>✅ 상품 페이지 상단 </h3>
+
+<div align="center">
+<img src="https://res.cloudinary.com/dnik5jlzd/image/upload/c_scale,h_10,w_225/v1679302400/readme/%EC%84%A0_vkktmh.png">
+전체 구조 배치
+<img src="https://res.cloudinary.com/dnik5jlzd/image/upload/c_scale,h_10,w_225/v1679302400/readme/%EC%84%A0_vkktmh.png">
+</div><br>
+
+![1  상품상세페이지 상단](https://user-images.githubusercontent.com/111377620/232041359-db95eaf0-0771-48ad-b6fb-8243d9c11fba.png)
+![1  상품상세페이지 상단(2)](https://user-images.githubusercontent.com/111377620/232041392-f39e415b-3508-4e54-8ca1-b8dc7cb5aac1.png)
+![1  상품상세페이지 상단(3)](https://user-images.githubusercontent.com/111377620/232041406-e4dc02af-f8a1-4444-8439-b4dddeccbbbb.png)
+![1  상품상세페이지 상단(4)](https://user-images.githubusercontent.com/111377620/232041431-d24c8535-2f4b-412a-b655-988d0d8ce645.png)
+![1  상품상세페이지 상단(5)](https://user-images.githubusercontent.com/111377620/232041445-dc2c1cef-f1c3-4377-bcbd-87de3deaa68e.png)
+![1  상품상세페이지 상단(6)](https://user-images.githubusercontent.com/111377620/232041569-4f65be10-8ef4-4ac9-86cb-623018250ce0.png)
+
+<br>
+
+<div align="center">
+<img src="https://res.cloudinary.com/dnik5jlzd/image/upload/c_scale,h_10,w_225/v1679302400/readme/%EC%84%A0_vkktmh.png">
+상품 찜하기 기능
+<img src="https://res.cloudinary.com/dnik5jlzd/image/upload/c_scale,h_10,w_225/v1679302400/readme/%EC%84%A0_vkktmh.png">
+</div><br>
+
+![1  상품상세페이지 상단(7)](https://user-images.githubusercontent.com/111377620/232041663-7a244a3b-4b1b-42f9-9ad4-e4f3fed3fddc.png)
+
+<br>
+
+<h3>✅ 카테고리 페이지 상단 </h3>
+
+<div align="center">
+<img src="https://res.cloudinary.com/dnik5jlzd/image/upload/c_scale,h_10,w_225/v1679302400/readme/%EC%84%A0_vkktmh.png">
+전체 구조 배치 및 카테고리 기능
+<img src="https://res.cloudinary.com/dnik5jlzd/image/upload/c_scale,h_10,w_225/v1679302400/readme/%EC%84%A0_vkktmh.png">
+</div><br>
+
+![2  카테고리 페이지 상단](https://user-images.githubusercontent.com/111377620/232042715-7e213a29-8acf-42c8-98aa-3c6bbf614766.png)
+
+<br>
+
+<h3>✅ 고객센터 페이지 </h3>
+
+<div align="center">
+<img src="https://res.cloudinary.com/dnik5jlzd/image/upload/c_scale,h_10,w_225/v1679302400/readme/%EC%84%A0_vkktmh.png">
+전체 구조 배치 및 카테고리 기능
+<img src="https://res.cloudinary.com/dnik5jlzd/image/upload/c_scale,h_10,w_225/v1679302400/readme/%EC%84%A0_vkktmh.png">
+</div><br>
+
+![3  고객센터 페이지](https://user-images.githubusercontent.com/111377620/232042947-42a67f5e-1cf6-4911-9074-82c2327d70ee.png)
+
 <hr>
 
 <p align="center"><img src="https://user-images.githubusercontent.com/116356234/231973098-7ce8e7f1-d8a5-4179-8359-f1e676df788b.png" width="170" height="280"></p>
@@ -148,9 +197,9 @@ Aside
 ## 1.개발일정
 ![일정](https://user-images.githubusercontent.com/116356234/231979652-452722d2-7daf-464d-960e-d5219843e5c8.png)
 
-
 ## 2.요구사항 정의서
 ![요구사항정의서](https://user-images.githubusercontent.com/116356234/231980588-0f0ed202-2a4c-4d77-920f-a852c388a035.png)
+
 [요구사항 정의서 전체보기(Google Drive)](https://docs.google.com/spreadsheets/d/14_HYeCuHo044f3q1GDPPEEsgHHmVY8LDn7y-pp48d7w/edit?usp=sharing)
 
 ## 3.UI설계서
